@@ -1,0 +1,46 @@
+name: 生成 Protobuf 序列化数据
+on:
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Install protoc
+        uses: arduino/setup-protoc@v3
+        with:
+          version: 28.x
+      - name: Generate protobuf
+        run: |
+          bash generate_protobuf.sh
+      - name: Generate entries database
+        run: |
+          python3 generate_entries_db.py
+      - name: Ensure that entries.pb exists
+        run: |
+          ls -l entries.pb
+      - name: Upload entries database
+        uses: actions/upload-artifact@v4
+        with:
+          name: entries.pb
+          path: entries.pb
