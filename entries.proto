@@ -28,7 +28,7 @@ message EntryDetailExample {
   optional string mandarin = 3;
 }
 
-message EntryDetails {
+message EntryDetail {
   // 释义
   optional string meaning = 1;
   // 例词
@@ -61,5 +61,9 @@ message Entry {
   // 参考字（讹用字、错读字、训读字、异体字，等等）
   optional string char_ref = 7;
   // 字音详细信息
-  repeated EntryDetails details = 8;
+  repeated EntryDetail details = 8;
+}
+
+message Entries {
+  repeated Entry entries = 1;
 }
