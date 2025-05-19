@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package puj;
+
+enum EntryCategory {
+  EC_NONE = 0;
+  EC_COLLOQUIAL = 1;
+  EC_LITERARY = 2;
+  EC_CONVENTIONAL = 3;
+}
+
+enum EntryFrequency {
+  EF_COMMON = 0;
+  EF_LESS_COMMON = 1;
+  EF_RARE = 2;
+  EF_VERY_RARE = 3;
+}
+
+enum EntrySpecialNasalization {
+  ESN_NONE = 0;
+  ESN_OPTIONAL = 1;
+  ESN_ALWAYS = 2;
+}
+
+message EntryDetailExample {
+  string teochew = 1;
+  optional string puj = 2;
+  optional string mandarin = 3;
+}
+
+message EntryDetails {
+  // 释义
+  optional string meaning = 1;
+  // 例词
+  repeated EntryDetailExample examples = 2;
+}
+
+message Pronunciation {
+  // 声母
+  string initial = 1;
+  // 韵母
+  string final = 2;
+  // 音调
+  int32 tone = 3;
+  // 阴声韵特殊鼻化标记
+  EntrySpecialNasalization sp_nasal = 4;
+}
+
+message Entry {
+  uint32 index = 1;
+  // 繁体字
+  string char = 2;
+  // 简体字
+  string char_sim = 3;
+  // 发音
+  Pronunciation pron = 4;
+  // 字音类型
+  EntryCategory cat = 5;
+  // 字音使用频率
+  EntryFrequency freq = 6;
+  // 参考字（讹用字、错读字、训读字、异体字，等等）
+  optional string char_ref = 7;
+  // 字音详细信息
+  repeated EntryDetails details = 8;
+}
