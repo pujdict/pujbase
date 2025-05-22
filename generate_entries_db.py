@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
 import yaml
-from entries_pb2 import *
+from puj.entries_pb2 import *
 
 
 def _create_entries(yaml_entries) -> Entries:
@@ -45,9 +45,10 @@ def main():
     with open(entries_file, 'r', encoding='utf-8') as f:
         yaml_entries = yaml.load(f, yaml.Loader)
     entries = _create_entries(yaml_entries)
-    with open('entries.pb', 'wb') as f:
+    Path('dist').mkdir(exist_ok=True)
+    with open('dist/entries.pb', 'wb') as f:
         f.write(entries.SerializeToString())
-    with open('entries.pb', 'rb') as f:
+    with open('dist/entries.pb', 'rb') as f:
         entries = Entries()
         entries.ParseFromString(f.read())
 

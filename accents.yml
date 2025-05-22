@@ -1,0 +1,229 @@
+All:
+  area: ""
+  subarea: ""
+  rules:
+    - V_As_U
+    - R_As_O
+    - R_As_E
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UINN
+    - UOINN_As_UAINN
+    - OI_As_UE
+    - OU_As_AU
+    - UE_As_UEI
+    - VN_As_IN
+    - IN_As_EN
+    - UENG_As_ENG
+    - UEK_As_UAK
+    - IO_As_IE
+    - IAU_As_IEU
+    - IAU_As_IOU
+    - IAN_As_IEN
+    - UAN_As_UEN
+    - IAM_As_IEM
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - L_As_N_ForMEnding
+    - MU_As_BU_ForNasalEnding
+    - BU_As_MU_ForNasalEnding
+    - N_As_NG
+    - M_As_NG
+    - ENG_As_EN
+    - NG_As_UNG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+ChaoZhou_FuCheng:
+  area: 潮州
+  subarea: 府城
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - UOINN_As_UINN
+    - IO_As_IE
+    - IAU_As_IEU
+    - IAN_As_IEN
+    - UAN_As_UEN
+    - IAM_As_IEM
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - NG_As_UNG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+XiQiang:
+  area: 戏腔
+  subarea: ""
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - UOINN_As_UINN
+    - IO_As_IE
+    - IAU_As_IOU
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+ChaoAn_FengHuang:
+  area: 潮安
+  subarea: 凤凰
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - UOINN_As_UINN
+    - OI_As_UE
+    - IAN_As_IEN
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+FengShun_LiuHuang:
+  area: 丰顺
+  subarea: 𨻧隍
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - UOINN_As_UINN
+    - IO_As_IE
+    - IAU_As_IEU
+    - IAN_As_IEN
+    - UAN_As_UEN
+    - IAM_As_IEM
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - ENG_As_EN
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+RaoPing_SanRao:
+  area: 饶平
+  subarea: 三饶
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - UOINN_As_UINN
+    - OI_As_UE
+    - N_As_L_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - BU_As_MU_ForNasalEnding
+    - N_As_NG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+ChengHai_ChengCheng:
+  area: 澄海
+  subarea: 澄城
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - UOINN_As_UINN
+    - UENG_As_ENG
+    - UEK_As_UAK
+    - IO_As_IE
+    - IAU_As_IOU
+    - L_As_N_ForMEnding
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - M_As_NG
+    - NG_As_UNG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+JieYang_RongCheng:
+  area: 揭阳
+  subarea: 榕城
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - N_As_L_ForNOrNGEnding
+    - MU_As_BU_ForNasalEnding
+    - VN_As_IN
+    - IN_As_EN
+    - N_As_NG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
+ChaoYang_MianCheng:
+  area: 潮阳
+  subarea: 棉城
+  rules:
+    - V_As_U
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - MU_As_BU_ForNasalEnding
+    - VN_As_IN
+    - N_As_NG
+    - NG_As_VNG
+PuNing_LiuSha:
+  area: 普宁
+  subarea: 流沙
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - VN_As_IN
+    - N_As_NG
+    - NG_As_VNG
+    - NGU_As_U
+HuiLai_HuiCheng:
+  area: 惠来
+  subarea: 惠城
+  rules:
+    - V_As_U
+    - R_As_O
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - MU_As_BU_ForNasalEnding
+    - VN_As_IN
+    - N_As_NG
+    - NG_As_VNG
+LuFeng_SanJia:
+  area: 陆丰
+  subarea: 三甲
+  rules:
+    - V_As_U
+    - R_As_E
+    - RH_As_OH
+    - RM_As_IAM
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - OU_As_AU
+    - MU_As_BU_ForNasalEnding
+    - UE_As_UEI
+    - N_As_NG
+    - NG_As_VNG

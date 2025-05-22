@@ -1,5 +1,11 @@
-entries_pb2.py
-entries_pb2.pyi
+puj/entries_pb2.py
+puj/entries_pb2.pyi
 entries.pb
 
+puj/accents_pb2.py
+puj/accents_pb2.pyi
+accents.pb
+
 __pycache__
+
+dist

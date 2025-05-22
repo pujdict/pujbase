@@ -1,4 +1,4 @@
-from entries_pb2 import *
+from puj.entries_pb2 import *
 
 entry_index = 0
 

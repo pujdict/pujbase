@@ -36,11 +36,13 @@ jobs:
       - name: Generate entries database
         run: |
           python3 generate_entries_db.py
-      - name: Ensure that entries.pb exists
+          ls -l dist/entries.pb
+      - name: Generate accents database
         run: |
-          ls -l entries.pb
-      - name: Upload entries database
+          python3 generate_accents_db.py
+          ls -l dist/entries.pb
+      - name: Upload databases
         uses: actions/upload-artifact@v4
         with:
-          name: entries.pb
-          path: entries.pb
+          name: dist
+          path: dist

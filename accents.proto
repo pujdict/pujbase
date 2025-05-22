@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package puj;
+
+enum AccentRule {
+  None = 0;
+  V_As_U = 1;
+  R_As_O = 2;
+  R_As_E = 3;
+  RH_As_OH = 4;
+  RM_As_IAM = 5;
+  EU_As_IU = 6;
+  OINN_As_AINN = 7;
+  UOINN_As_UINN = 8;
+  UOINN_As_UAINN = 9;
+  OI_As_UE = 10;
+  OU_As_AU = 11;
+  UE_As_UEI = 12;
+  VN_As_IN = 13;
+  IN_As_EN = 14;
+  UENG_As_ENG = 15;
+  UEK_As_UAK = 16;
+  IO_As_IE = 17;
+  IAU_As_IEU = 18;
+  IAU_As_IOU = 19;
+  IAN_As_IEN = 20;
+  UAN_As_UEN = 21;
+  IAM_As_IEM = 22;
+  N_As_L_ForMEnding = 23;
+  N_As_L_ForNOrNGEnding = 24;
+  L_As_N_ForMEnding = 25;
+  MU_As_BU_ForNasalEnding = 26;
+  BU_As_MU_ForNasalEnding = 27;
+  N_As_NG = 28;
+  M_As_NG = 29;
+  ENG_As_EN = 30;
+  NG_As_UNG = 31;
+  NG_As_VNG = 32;
+  IONG_As_ONG = 33;
+  NGU_As_U = 34;
+}
+
+message Accent {
+  string area = 1;
+  optional string subarea = 2;
+  repeated AccentRule rules = 3;
+}
+
+message Accents {
+  repeated Accent accents = 1;
+}

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pathlib
-from entries_pb2 import *
+from puj.entries_pb2 import *
 from pujcommon import FuzzyRule as _FuzzyRule
 from pujcommon import BUILTIN_FUZZY_RULE_GROUPS as _BUILTIN_FUZZY_RULE_GROUPS
 

@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-protoc entries.proto --python_out=. --pyi_out=.
+mkdir -p puj
+
+protoc accents.proto --python_out=puj --pyi_out=puj
+protoc entries.proto --python_out=puj --pyi_out=puj
