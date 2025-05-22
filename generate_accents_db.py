@@ -20,6 +20,7 @@ def main():
         rules = v['rules']
         for rule in rules:
             assert rule in rules_all, f'{rule} not in rules_all'
+        rules = [f'AR_{rule}' for rule in rules]
         accents.accents.append(Accent(
             area=area,
             subarea=subarea,
