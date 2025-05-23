@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
 import yaml
+from pujcommon import BUILTIN_FUZZY_RULE_GROUPS
 from puj.entries_pb2 import *
 
 

@@ -8,7 +8,6 @@ enum AccentRule {
   AR_R_As_O = 2;
   AR_R_As_E = 3;
   AR_RH_As_OH = 4;
-  AR_RM_As_IAM = 5;
   AR_EU_As_IU = 6;
   AR_OINN_As_AINN = 7;
   AR_UOINN_As_UINN = 8;

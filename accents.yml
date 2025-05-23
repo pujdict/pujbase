@@ -6,7 +6,6 @@ All:
     - R_As_O
     - R_As_E
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UINN
@@ -42,7 +41,6 @@ ChaoZhou_FuCheng:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -64,7 +62,6 @@ XiQiang:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -97,7 +94,6 @@ FengShun_LiuHuang:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -133,7 +129,6 @@ ChengHai_ChengCheng:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - UOINN_As_UINN
     - UENG_As_ENG
@@ -155,7 +150,6 @@ JieYang_RongCheng:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -174,7 +168,6 @@ ChaoYang_MianCheng:
     - V_As_U
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -188,7 +181,6 @@ PuNing_LiuSha:
   rules:
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -203,7 +195,6 @@ HuiLai_HuiCheng:
     - V_As_U
     - R_As_O
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -218,7 +209,6 @@ LuFeng_SanJia:
     - V_As_U
     - R_As_E
     - RH_As_OH
-    - RM_As_IAM
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
