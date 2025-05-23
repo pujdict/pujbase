@@ -225,7 +225,7 @@ class FuzzyRule_BU_As_MU_ForNasalEnding(FuzzyRule):
 
 class FuzzyRule_N_As_NG(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
-        if result.final.endswith('n'):
+        if result.final.endswith('n') and not result.final.endswith('nn'):
             result.final = result.final.replace('n', 'ng')
         elif result.final.endswith('t'):
             result.final = result.final.replace('t', 'k')
