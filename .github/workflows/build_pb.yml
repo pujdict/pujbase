@@ -30,17 +30,9 @@ jobs:
         uses: arduino/setup-protoc@v3
         with:
           version: 28.x
-      - name: Generate protobuf
+      - name: Build distribution
         run: |
-          bash generate_protobuf.sh
-      - name: Generate entries database
-        run: |
-          python3 generate_entries_db.py
-          ls -l dist/entries.pb
-      - name: Generate accents database
-        run: |
-          python3 generate_accents_db.py
-          ls -l dist/entries.pb
+          bash build_dist.sh
       - name: Upload databases
         uses: actions/upload-artifact@v4
         with:
