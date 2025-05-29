@@ -223,6 +223,17 @@ class FuzzyRule_BU_As_MU_ForNasalEnding(FuzzyRule):
             result.initial = 'm'
 
 
+class FuzzyRule_Labiodentalized(FuzzyRule):
+    def _fuzzy(self, result: Pronunciation):
+        if result.final.startswith('u'):
+            if result.initial == 'h':
+                result.initial = 'f'
+            elif result.initial in ['p', 'ph']:
+                result.initial += 'f'
+            elif result.initial in ['m', 'b']:
+                result.initial += 'v'
+
+
 class FuzzyRule_N_As_NG(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
         if result.final.endswith('n') and not result.final.endswith('nn'):
