@@ -1634,8 +1634,8 @@
 - 篪,篪:
    tsh,i,1,0,0,0,:
 - 尺,尺:
-   tsh,e,1,0,2,0,:
-    "工尺谱专用的特殊读音": [["工尺谱", "kong1-tshe1-phou2", ""], ["合四一上尺工凡六五乙", "ho5 sv3 i1 siang6 tshe1 kong1 huan5 liu3 u2 i2", ""]]
+   tsh,e,2,0,2,0,:
+    "工尺谱专用的特殊读音": [["工尺谱", "kong1-tshe2-phou2", ""], ["合四一上尺工凡六五乙", "ho5 sv3 i1 siang6 tshe2 kong1 huan5 liu3 u2 i2", ""]]
    tsh,ioh,4,0,1,0,:
    tsh,ek,4,0,2,3,:
 - 呎,呎:
