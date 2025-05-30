@@ -199,7 +199,10 @@ class FuzzyRule_N_As_L_ForMEnding(FuzzyRule):
 
 class FuzzyRule_N_As_L_ForNOrNGEnding(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'n' and (result.final.endswith('n') or result.final.endswith('ng')):
+        if result.initial == 'n' and (
+                (not result.final.endswith('nn') and result.final.endswith('n')) or
+                result.final.endswith('ng')
+        ):
             result.initial = 'l'
 
 
@@ -211,15 +214,19 @@ class FuzzyRule_L_As_N_ForMEnding(FuzzyRule):
 
 class FuzzyRule_MU_As_BU_ForNasalEnding(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'm' and (
-                result.final.endswith('m') or result.final.endswith('n') or result.final.endswith('ng')):
+        if result.initial == 'm' and result.final.startswith('u') and (
+                (not result.final.endswith('nn') and result.final.endswith('n')) or
+                result.final.endswith('ng')
+        ):
             result.initial = 'b'
 
 
 class FuzzyRule_BU_As_MU_ForNasalEnding(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'b' and (
-                result.final.endswith('m') or result.final.endswith('n') or result.final.endswith('ng')):
+        if result.initial == 'b' and result.final.startswith('u') and (
+                (not result.final.endswith('nn') and result.final.endswith('n')) or
+                result.final.endswith('ng')
+        ):
             result.initial = 'm'
 
 
