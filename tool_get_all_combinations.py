@@ -7,8 +7,9 @@ def pron_to_str(pron: Pronunciation):
 
 
 def print_combinations(entries):
-    pron : dict[str, list[Entry]] = {}
-    initials = ['p','ph','m','b','pf','phf','mv','bv','t','th','n','l','k','kh','ng','g','h','f','ts','tsh','s','j','0']
+    pron: dict[str, list[Entry]] = {}
+    initials = ['p', 'ph', 'm', 'b', 'pf', 'phf', 'mv', 'bv', 't', 'th', 'n', 'l', 'k', 'kh', 'ng', 'g', 'h', 'f', 'ts',
+                'tsh', 's', 'j', '0']
     finals = set()
     for entry in entries.entries:
         finals.add(entry.pron.final)
@@ -27,7 +28,7 @@ def print_combinations(entries):
             for final in sorted(finals):
                 for i in range(8):
                     j = i + 1
-                    if (j == 4 or j == 8) ^ (final[-1] in ['p','t','k','h']):
+                    if (j == 4 or j == 8) ^ (final[-1] in ['p', 't', 'k', 'h']):
                         continue
                     comb = f'{initial}{final}{j}'
                     if comb not in pron:
@@ -36,43 +37,50 @@ def print_combinations(entries):
                         f.write(f'{initial},{final},{j},{pron[comb][0].char}\n')
 
 
-def print_all_in_table_combinations(entries):
-    combinations = set()
+class MyBaseRule(FuzzyRuleGroup):
+    # 删掉鼻音声母后的 nn
+    def _fuzzy(self, result: Pronunciation):
+        if result.initial in ['m', 'n', 'ng'] and result.final.endswith('nn'):
+            result.final = result.final[:-2]
+
+
+my_base_rules = MyBaseRule()
+
+
+def print_all_in_table_combinations(entries, original_combinations, combinations):
     for entry in entries:
-        comb = pron_to_str(entry.pron)
+        pron = my_base_rules.fuzzy_result(entry.pron)
+        comb = pron_to_str(pron)
         combinations.add(comb)
+        original_combinations[comb] = entry.pron
     for comb in sorted(combinations):
         print(comb)
     print(len(combinations))
 
 
-def print_extra_combinations_chao_zhou(entries):
-    combinations = {}
-    for entry in entries.entries:
-        comb = pron_to_str(entry.pron)
-        combinations[comb] = entry.pron
-    rule_chao_zhou = FuzzyRulesGroup_ChaoZhou()
+def print_extra_combinations(original_combinations, rule, combinations):
     fuzzy_combinations = set()
-    for comb, pron in combinations.items():
-        res_pron = rule_chao_zhou.fuzzy_result(pron)
+    for comb, pron in original_combinations.items():
+        res_pron = rule.fuzzy_result(pron)
         res_comb = pron_to_str(res_pron)
-        if res_comb.startswith('bang'):
-            res_pron = rule_chao_zhou.fuzzy_result(pron)
-            res_comb = pron_to_str(res_pron)
-
         if res_comb not in combinations:
             fuzzy_combinations.add(res_comb)
     for comb in sorted(fuzzy_combinations):
         print(comb)
     print(len(fuzzy_combinations))
+    combinations.update(fuzzy_combinations)
 
 
 def main():
-    with open('entries.pb', 'rb') as f:
+    with open('dist/entries.pb', 'rb') as f:
         entries = Entries()
         entries.ParseFromString(f.read())
-    print_all_in_table_combinations(entries.entries)
-    print_extra_combinations_chao_zhou(entries)
+    combinations = set()
+    original_combinations = {}
+    print_all_in_table_combinations(entries.entries, original_combinations, combinations)
+    print_extra_combinations(original_combinations, FuzzyRulesGroup_ChaoZhou(), combinations)
+    print_extra_combinations(original_combinations, FuzzyRulesGroup_ShanTou(), combinations)
+    print_extra_combinations(original_combinations, FuzzyRulesGroup_JieYang(), combinations)
 
 
 if __name__ == '__main__':
