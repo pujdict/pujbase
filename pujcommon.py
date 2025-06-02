@@ -287,6 +287,7 @@ class FuzzyRule_IONG_As_ONG(FuzzyRule):
 
 class FuzzyRule_RemoveApostrophe(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
+        result.initial = result.initial.replace("'", '')
         result.final = result.final.replace("'", '')
 
 
