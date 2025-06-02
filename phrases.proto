@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package puj;
+
+message Phrase {
+  string teochew = 1;
+  string puj = 2;
+  optional string mandarin = 3;
+  optional string node = 4;
+}
+
+message Phrases {
+  repeated Phrase phrases = 1;
+}

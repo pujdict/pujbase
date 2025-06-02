@@ -6,6 +6,10 @@ puj/accents_pb2.py
 puj/accents_pb2.pyi
 accents.pb
 
+puj/phrases_pb2.py
+puj/phrases_pb2.pyi
+phrases.pb
+
 __pycache__
 
 dist
