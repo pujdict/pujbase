@@ -5,6 +5,18 @@ from pujcommon import BUILTIN_FUZZY_RULE_GROUPS
 from puj.entries_pb2 import *
 
 
+def _verify_pronunciation(entry: Entry):
+    pron = entry.pron
+    if pron.final[-1] in ['p', 't', 'k', 'h']:
+        assert pron.tone in [4, 8], f"入声声调错误: {pron.tone} {entry}"
+    else:
+        assert pron.tone in [1, 2, 3, 5, 6, 7], f"舒声声调错误: {pron.tone} {entry}"
+    if pron.tone in [4, 8]:
+        assert pron.final[-1] in ['p', 't', 'k', 'h'], f"入声韵尾错误: {pron.final} {entry}"
+    else:
+        assert pron.final[-1] not in ['p', 't', 'k', 'h'], f"舒声韵尾错误: {pron.final} {entry}"
+
+
 def _create_entries(yaml_entries) -> Entries:
     ESN = EntrySpecialNasalization
     EF = EntryFrequency
@@ -37,6 +49,8 @@ def _create_entries(yaml_entries) -> Entries:
                 details=entry_details,
             ))
             index += 1
+    for entry in entries.entries:
+        _verify_pronunciation(entry)
     return entries
 
 
