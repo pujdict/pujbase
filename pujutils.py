@@ -3,14 +3,17 @@
 import pathlib
 import pujpb as pb
 from pujcommon import (
+    Accent as _Accent,
+    Accent_Dummy as _Accent_Dummy,
     FuzzyRule as _FuzzyRule,
     Pronunciation as _Pronunciation,
 )
-from pujcommon import BUILTIN_FUZZY_RULE_GROUPS as _BUILTIN_FUZZY_RULE_GROUPS
 
 
 class PUJUtils:
-    _entries: pb.Entries
+    _accents_raw: pb.Accents
+    _entries_raw: pb.Entries
+    _accents: dict[str, _Accent]
     _possible_pronunciations: list[pb.Pronunciation] = None
     _han_trd_to_entry: dict[str, list[pb.Entry]] = None
     _han_sim_to_entry: dict[str, list[pb.Entry]] = None
@@ -19,16 +22,24 @@ class PUJUtils:
     This maps {initial: {final: {tone: [entry, ...]}.
     """
 
-    def __init__(self, pb_path):
-        pb_path = pathlib.Path(pb_path)
-        assert pb_path.exists()
-        with open(pb_path, 'rb') as f:
-            self._entries = pb.Entries()
-            self._entries.ParseFromString(f.read())
-        self._possible_pronunciations = [_Pronunciation.from_pb(e.pron) for e in self._entries.entries]
+    def __init__(self, accents_pb_path, entries_pb_path):
+        accents_pb_path = pathlib.Path(accents_pb_path)
+        with open(accents_pb_path, 'rb') as f:
+            self._accents_raw = pb.Accents()
+            self._accents_raw.ParseFromString(f.read())
+        self._accents = {}
+        for a in self._accents_raw.accents:
+            accent = _Accent.from_pb(a)
+            self._accents[a.id] = accent
+
+        entries_pb_path = pathlib.Path(entries_pb_path)
+        with open(entries_pb_path, 'rb') as f:
+            self._entries_raw = pb.Entries()
+            self._entries_raw.ParseFromString(f.read())
+        self._possible_pronunciations = [_Pronunciation.from_pb(e.pron) for e in self._entries_raw.entries]
         self._han_trd_to_entry = {}
         self._han_sim_to_entry = {}
-        for e in self._entries.entries:
+        for e in self._entries_raw.entries:
             self._han_sim_to_entry.setdefault(e.char_sim, []).append(e)
             self._han_trd_to_entry.setdefault(e.char, []).append(e)
         for l in [self._han_trd_to_entry, self._han_sim_to_entry]:
@@ -37,8 +48,6 @@ class PUJUtils:
                 if len(entry) > 1:
                     l[han] = sorted(entry, key=lambda e: (-int(e.freq), -int(e.cat)))
         self._pronunciation_map = {}
-        for fuzzy_group in _BUILTIN_FUZZY_RULE_GROUPS:
-            fuzzy_group.cache_possible_pronunciations_map(self._possible_pronunciations)
 
     def get_entry_from_han(self, han) -> list[pb.Entry]:
         if han in self._han_sim_to_entry:
@@ -46,6 +55,12 @@ class PUJUtils:
         if han in self._han_trd_to_entry:
             return self._han_trd_to_entry[han]
         return []
+
+    def get_accent(self, accent_id: str):
+        return self._accents.get(accent_id, _Accent_Dummy())
+
+    def get_accents(self):
+        return self._accents.values()
 
     @staticmethod
     def is_cjk_character(char, basic_only=False) -> bool:
@@ -86,7 +101,7 @@ class PUJUtils:
 
 
 def _test():
-    puj = PUJUtils('entries.pb')
+    puj = PUJUtils('dist/accents.pb', 'dist/entries.pb')
     while True:
         try:
             chars = input('Enter Han characters: ')

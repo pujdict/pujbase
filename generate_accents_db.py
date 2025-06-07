@@ -22,6 +22,7 @@ def main():
             assert rule in rules_all, f'{rule} not in rules_all'
         rules = [f'FR_{rule}' for rule in rules]
         accents.accents.append(Accent(
+            id=k,
             area=area,
             subarea=subarea,
             rules=rules,

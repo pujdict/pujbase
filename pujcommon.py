@@ -39,6 +39,15 @@ class FuzzyRule:
         self._possible_pronunciations_map_reverse: dict[Pronunciation, list[Pronunciation]] = {}
         pass
 
+    @classmethod
+    def from_pb(cls, data: pb.FuzzyRule):
+        rule_name: str = pb.FuzzyRule.Name(data)
+        rule_class_name = rule_name.replace("FR_", "FuzzyRule_")
+        rule_class = globals()[rule_class_name]
+        if rule_class is None:
+            return cls()
+        return rule_class()
+
     def _fuzzy(self, result: Pronunciation):
         pass
 
@@ -310,287 +319,40 @@ class FuzzyRule_IONG_As_ONG(FuzzyRule):
             result.final = 'ok'
 
 
+class FuzzyRule_NGU_As_U(FuzzyRule):
+    def _fuzzy(self, result: Pronunciation):
+        if result.initial == 'ng' and result.final == 'u':
+            result.initial = '0'
+
+
 class FuzzyRule_RemoveApostrophe(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
         result.initial = result.initial.replace("'", '')
         result.final = result.final.replace("'", '')
 
 
-class FuzzyRuleGroup(FuzzyRule):
-    index: int
-    name: str
+class Accent(FuzzyRule):
+    id: str
+    area: str
+    subarea: str
     rules: list[FuzzyRule]
 
     def _fuzzy(self, result: Pronunciation):
         for rule in self.rules:
             rule._fuzzy(result)
 
+    @classmethod
+    def from_pb(cls, data: pb.Accent):
+        result = Accent()
+        result.id = data.id
+        result.area = data.area
+        result.subarea = data.subarea
+        result.rules = [FuzzyRule.from_pb(rule) for rule in data.rules]
+        return result
 
-class FuzzyRulesGroup_Dummy(FuzzyRuleGroup):
-    index = 0
-    name = '辞典'
+
+class Accent_Dummy(Accent):
+    id = 'Dummy'
+    area = ''
+    subarea = ''
     rules = []
-
-
-class FuzzyRulesGroup_ChaoZhou(FuzzyRuleGroup):
-    index = 1
-    name = '潮州'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_IO_As_IE(),
-        FuzzyRule_IAU_As_IEU(),
-        FuzzyRule_IAN_As_IEN(),
-        FuzzyRule_UAN_As_UEN(),
-        FuzzyRule_IAM_As_IEM(),
-        FuzzyRule_N_As_L_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_UNG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_XiQiang(FuzzyRuleGroup):
-    index = 2
-    name = '戏腔'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_IO_As_IE(),
-        FuzzyRule_IAU_As_IOU(),
-        FuzzyRule_N_As_L_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_N_As_NG(),
-    ]
-
-
-class FuzzyRulesGroup_ChaoAn(FuzzyRuleGroup):
-    index = 3
-    name = '潮安'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_OI_As_UE(),
-        FuzzyRule_IAN_As_IEN(),
-        FuzzyRule_N_As_L_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_FengShun(FuzzyRuleGroup):
-    index = 4
-    name = '丰顺'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_IO_As_IE(),
-        FuzzyRule_IAU_As_IEU(),
-        FuzzyRule_IAN_As_IEN(),
-        FuzzyRule_UAN_As_UEN(),
-        FuzzyRule_IAM_As_IEM(),
-        FuzzyRule_N_As_L_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_ENG_As_EN(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_RaoPing(FuzzyRuleGroup):
-    index = 5
-    name = '饶平'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_OI_As_UE(),
-        FuzzyRule_N_As_L_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_BU_As_MU_ForNasalEnding(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_ChengHai(FuzzyRuleGroup):
-    index = 6
-    name = '澄海'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_UENG_As_ENG(),
-        FuzzyRule_UEK_As_UAK(),
-        FuzzyRule_IO_As_IE(),
-        FuzzyRule_IAU_As_IOU(),
-        FuzzyRule_L_As_N_ForMEnding(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_M_As_NG(),
-        FuzzyRule_NG_As_UNG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_ShanTou(FuzzyRuleGroup):
-    index = 7
-    name = '汕头'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_UOINN_As_UINN(),
-        FuzzyRule_UENG_As_ENG(),
-        FuzzyRule_UEK_As_UAK(),
-        FuzzyRule_IO_As_IE(),
-        FuzzyRule_IAU_As_IOU(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_UNG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_JieYang(FuzzyRuleGroup):
-    index = 8
-    name = '揭阳'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_OINN_As_AINN(),
-        FuzzyRule_UOINN_As_UAINN(),
-        FuzzyRule_N_As_L_ForNOrNGEnding(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_VN_As_IN(),
-        FuzzyRule_IN_As_EN(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_IONG_As_ONG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_ChaoYang(FuzzyRuleGroup):
-    index = 9
-    name = '潮阳'
-    rules = [
-        FuzzyRule_V_As_U(),
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_OINN_As_AINN(),
-        FuzzyRule_UOINN_As_UAINN(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_VN_As_IN(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_PuNing(FuzzyRuleGroup):
-    index = 10
-    name = '普宁'
-    rules = [
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_OINN_As_AINN(),
-        FuzzyRule_UOINN_As_UAINN(),
-        FuzzyRule_VN_As_IN(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_HuiLai(FuzzyRuleGroup):
-    index = 11
-    name = '惠来'
-    rules = [
-        FuzzyRule_V_As_U(),
-        FuzzyRule_R_As_O(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_OINN_As_AINN(),
-        FuzzyRule_UOINN_As_UAINN(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_VN_As_IN(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-class FuzzyRulesGroup_LuFeng(FuzzyRuleGroup):
-    index = 12
-    name = '陆丰'
-    rules = [
-        FuzzyRule_V_As_U(),
-        FuzzyRule_R_As_E(),
-        FuzzyRule_RH_As_OH(),
-        FuzzyRule_RM_As_IAM(),
-        FuzzyRule_EU_As_IU(),
-        FuzzyRule_OINN_As_AINN(),
-        FuzzyRule_UOINN_As_UAINN(),
-        FuzzyRule_OU_As_AU(),
-        FuzzyRule_MU_As_BU_ForNasalEnding(),
-        FuzzyRule_UE_As_UEI(),
-        FuzzyRule_N_As_NG(),
-        FuzzyRule_NG_As_VNG(),
-        FuzzyRule_RemoveApostrophe(),
-    ]
-
-
-BUILTIN_FUZZY_RULE_GROUPS = [
-    FuzzyRulesGroup_Dummy(),
-    FuzzyRulesGroup_ChaoZhou(),
-    FuzzyRulesGroup_XiQiang(),
-    FuzzyRulesGroup_ChaoAn(),
-    FuzzyRulesGroup_FengShun(),
-    FuzzyRulesGroup_RaoPing(),
-    FuzzyRulesGroup_ChengHai(),
-    FuzzyRulesGroup_ShanTou(),
-    FuzzyRulesGroup_JieYang(),
-    FuzzyRulesGroup_ChaoYang(),
-    FuzzyRulesGroup_PuNing(),
-    FuzzyRulesGroup_HuiLai(),
-    FuzzyRulesGroup_LuFeng(),
-]

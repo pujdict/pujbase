@@ -40,9 +40,10 @@ enum FuzzyRule {
 }
 
 message Accent {
-  string area = 1;
-  optional string subarea = 2;
-  repeated FuzzyRule rules = 3;
+  string id = 1;
+  string area = 2;
+  optional string subarea = 3;
+  repeated FuzzyRule rules = 4;
 }
 
 message Accents {
