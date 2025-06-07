@@ -1,4 +1,31 @@
-from puj.entries_pb2 import *
+import pujpb as pb
+
+
+class Pronunciation:
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0, sp_nasal: int = 0):
+        self.initial = initial
+        self.final = final
+        self.tone = tone
+        self.sp_nasal = sp_nasal
+
+    def __copy__(self):
+        return Pronunciation(self.initial, self.final, self.tone, self.sp_nasal)
+
+    def __str__(self):
+        return f'{self.initial}{self.final}{self.tone} {self.sp_nasal}'
+
+    @classmethod
+    def from_pb(cls, data: pb.Pronunciation):
+        return cls(data.initial, data.final, data.tone, data.sp_nasal)
+
+    def to_pb(self):
+        return pb.Pronunciation(
+            initial=self.initial,
+            final=self.final,
+            tone=self.tone,
+            sp_nasal=pb.EntrySpecialNasalization.Name(self.sp_nasal),
+        )
+
 
 entry_index = 0
 
@@ -8,7 +35,7 @@ class FuzzyRule:
     example_chars: list[str]
 
     def __init__(self):
-        self._possible_pronunciations_map: dict[Pronunciation, Pronunciation] = {}
+        self._possible_pronunciations_map: dict[str, Pronunciation] = {}
         self._possible_pronunciations_map_reverse: dict[Pronunciation, list[Pronunciation]] = {}
         pass
 
@@ -16,10 +43,9 @@ class FuzzyRule:
         pass
 
     def fuzzy_result(self, origin: Pronunciation) -> Pronunciation:
-        if origin.SerializeToString() in self._possible_pronunciations_map:
-            return self._possible_pronunciations_map[origin.SerializeToString()]
-        result = Pronunciation()
-        result.CopyFrom(origin)
+        if origin.__str__() in self._possible_pronunciations_map:
+            return self._possible_pronunciations_map[origin.__str__()]
+        result = origin.__copy__()
         self._fuzzy(result)
         return result
 
@@ -27,11 +53,10 @@ class FuzzyRule:
         self._possible_pronunciations_map = {}
         self._possible_pronunciations_map_reverse = {}
         for pronunciation in possible_pronunciations:
-            fuzzy_pronunciation = Pronunciation()
-            fuzzy_pronunciation.CopyFrom(pronunciation)
+            fuzzy_pronunciation = pronunciation.__copy__()
             self._fuzzy(fuzzy_pronunciation)
-            self._possible_pronunciations_map[pronunciation.SerializeToString()] = fuzzy_pronunciation
-            self._possible_pronunciations_map_reverse.setdefault(fuzzy_pronunciation.SerializeToString(), []).append(
+            self._possible_pronunciations_map[pronunciation.__str__()] = fuzzy_pronunciation
+            self._possible_pronunciations_map_reverse.setdefault(fuzzy_pronunciation.__str__(), []).append(
                 pronunciation)
 
 

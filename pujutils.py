@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 
 import pathlib
-from puj.entries_pb2 import *
-from pujcommon import FuzzyRule as _FuzzyRule
+import pujpb as pb
+from pujcommon import (
+    FuzzyRule as _FuzzyRule,
+    Pronunciation as _Pronunciation,
+)
 from pujcommon import BUILTIN_FUZZY_RULE_GROUPS as _BUILTIN_FUZZY_RULE_GROUPS
 
 
 class PUJUtils:
-    _entries: Entries
-    _possible_pronunciations: list[Pronunciation] = None
-    _han_trd_to_entry: dict[str, list[Entry]] = None
-    _han_sim_to_entry: dict[str, list[Entry]] = None
-    _pronunciation_fast_map: dict[str, dict[str, dict[int, list[Entry]]]] = None
+    _entries: pb.Entries
+    _possible_pronunciations: list[pb.Pronunciation] = None
+    _han_trd_to_entry: dict[str, list[pb.Entry]] = None
+    _han_sim_to_entry: dict[str, list[pb.Entry]] = None
+    _pronunciation_fast_map: dict[str, dict[str, dict[int, list[pb.Entry]]]] = None
     """
     This maps {initial: {final: {tone: [entry, ...]}.
     """
@@ -20,9 +23,9 @@ class PUJUtils:
         pb_path = pathlib.Path(pb_path)
         assert pb_path.exists()
         with open(pb_path, 'rb') as f:
-            self._entries = Entries()
+            self._entries = pb.Entries()
             self._entries.ParseFromString(f.read())
-        self._possible_pronunciations = [e.pron for e in self._entries.entries]
+        self._possible_pronunciations = [_Pronunciation.from_pb(e.pron) for e in self._entries.entries]
         self._han_trd_to_entry = {}
         self._han_sim_to_entry = {}
         for e in self._entries.entries:
@@ -37,15 +40,12 @@ class PUJUtils:
         for fuzzy_group in _BUILTIN_FUZZY_RULE_GROUPS:
             fuzzy_group.cache_possible_pronunciations_map(self._possible_pronunciations)
 
-    def get_entry_from_han(self, han) -> list[Entry]:
+    def get_entry_from_han(self, han) -> list[pb.Entry]:
         if han in self._han_sim_to_entry:
             return self._han_sim_to_entry[han]
         if han in self._han_trd_to_entry:
             return self._han_trd_to_entry[han]
         return []
-
-    def fuzzy(self, fuzzy: _FuzzyRule, pronunciation: Pronunciation) -> Pronunciation:
-        return fuzzy.fuzzy_result(pronunciation)
 
     @staticmethod
     def is_cjk_character(char, basic_only=False) -> bool:

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package puj;
+
+import "accents.proto";
+import "entries.proto";
+import "phrases.proto";
+
+message Data {
+  repeated Accent accents = 1;
+  repeated Entry entries = 2;
+  repeated Phrase phrases = 3;
+}
