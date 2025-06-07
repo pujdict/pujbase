@@ -2,47 +2,47 @@ syntax = "proto3";
 
 package puj;
 
-enum AccentRule {
-  AR_NONE = 0;
-  AR_V_As_U = 1;
-  AR_R_As_O = 2;
-  AR_R_As_E = 3;
-  AR_RH_As_OH = 4;
-  AR_EU_As_IU = 6;
-  AR_OINN_As_AINN = 7;
-  AR_UOINN_As_UINN = 8;
-  AR_UOINN_As_UAINN = 9;
-  AR_OI_As_UE = 10;
-  AR_OU_As_AU = 11;
-  AR_UE_As_UEI = 12;
-  AR_VN_As_IN = 13;
-  AR_IN_As_EN = 14;
-  AR_UENG_As_ENG = 15;
-  AR_UEK_As_UAK = 16;
-  AR_IO_As_IE = 17;
-  AR_IAU_As_IEU = 18;
-  AR_IAU_As_IOU = 19;
-  AR_IAN_As_IEN = 20;
-  AR_UAN_As_UEN = 21;
-  AR_IAM_As_IEM = 22;
-  AR_N_As_L_ForMEnding = 23;
-  AR_N_As_L_ForNOrNGEnding = 24;
-  AR_L_As_N_ForMEnding = 25;
-  AR_MU_As_BU_ForNasalEnding = 26;
-  AR_BU_As_MU_ForNasalEnding = 27;
-  AR_N_As_NG = 28;
-  AR_M_As_NG = 29;
-  AR_ENG_As_EN = 30;
-  AR_NG_As_UNG = 31;
-  AR_NG_As_VNG = 32;
-  AR_IONG_As_ONG = 33;
-  AR_NGU_As_U = 34;
+enum FuzzyRule {
+  FR_NONE = 0;
+  FR_V_As_U = 1;
+  FR_R_As_O = 2;
+  FR_R_As_E = 3;
+  FR_RH_As_OH = 4;
+  FR_EU_As_IU = 6;
+  FR_OINN_As_AINN = 7;
+  FR_UOINN_As_UINN = 8;
+  FR_UOINN_As_UAINN = 9;
+  FR_OI_As_UE = 10;
+  FR_OU_As_AU = 11;
+  FR_UE_As_UEI = 12;
+  FR_VN_As_IN = 13;
+  FR_IN_As_EN = 14;
+  FR_UENG_As_ENG = 15;
+  FR_UEK_As_UAK = 16;
+  FR_IO_As_IE = 17;
+  FR_IAU_As_IEU = 18;
+  FR_IAU_As_IOU = 19;
+  FR_IAN_As_IEN = 20;
+  FR_UAN_As_UEN = 21;
+  FR_IAM_As_IEM = 22;
+  FR_N_As_L_ForMEnding = 23;
+  FR_N_As_L_ForNOrNGEnding = 24;
+  FR_L_As_N_ForMEnding = 25;
+  FR_MU_As_BU_ForNasalEnding = 26;
+  FR_BU_As_MU_ForNasalEnding = 27;
+  FR_N_As_NG = 28;
+  FR_M_As_NG = 29;
+  FR_ENG_As_EN = 30;
+  FR_NG_As_UNG = 31;
+  FR_NG_As_VNG = 32;
+  FR_IONG_As_ONG = 33;
+  FR_NGU_As_U = 34;
 }
 
 message Accent {
   string area = 1;
   optional string subarea = 2;
-  repeated AccentRule rules = 3;
+  repeated FuzzyRule rules = 3;
 }
 
 message Accents {
