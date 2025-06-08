@@ -8,5 +8,7 @@ ls -l dist/accents.pb
 python3 generate_phrases_db.py
 ls -l dist/phrases.pb
 
+rm -rf puj/__pycache__
+
 cp -r puj dist
 cp LICENSE* dist
