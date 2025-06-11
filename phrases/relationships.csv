@@ -28,7 +28,8 @@ teochew,puj,mandarin,note
 丈人,tionn6-nang5,岳父,
 丈姆婆,tionn6-m2-phua5,岳母,
 丈姆,tionn6-m2,岳母,
-阿爸,a1-pa1/a1-pa5,爸爸,
+阿爸,a1-pa1,爸爸,
+阿爸,a1-pa5,爸爸,
 父,pe6,父亲,
 阿妈,a1-ma5,妈妈,
 母,bo2,母亲,
@@ -46,7 +47,7 @@ teochew,puj,mandarin,note
 走仔,tsau2-kiann2,女儿,“查某仔”的合音
 孙,sun1,孙子/侄子,
 外甥,gua7-seng1,外甥,
-丈夫孙兜孙,ta1-pou1-sun1,孙子,
+丈夫孙,ta1-pou1-sun1,孙子,
 兜孙,tau1-sun1,孙子,
 查某孙,tsa1-bou2-sun1,孙女,
 走孙,tsau2-sun1,孙女,
@@ -64,7 +65,7 @@ teochew,puj,mandarin,note
 阿舅,a1-ku6,舅舅,
 阿妗,a1-kim6,舅妈,
 阿姨,a1-i5,姨妈,
-,an5--thi7,姨妈,英语“aunt”
+**,an5--thi7,姨妈,英语“aunt”
 阿姑娘,a1-kou1-nionn5,姑姑,
 阿姑娘,a1-ku1-niang6,姑姑,普通话“姑娘”
 阿姑,a1-kou1,姑姑,
