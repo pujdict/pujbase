@@ -144,6 +144,23 @@ ChengHai_ChengCheng:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+ShanTou_ShiQu:
+  area: 汕头
+  subarea: 市区
+  rules:
+    - R_As_O
+    - RH_As_OH
+    - EU_As_IU
+    - UOINN_As_UINN
+    - UENG_As_ENG
+    - UEK_As_UAK
+    - IAU_As_IOU
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - NG_As_UNG
+    - NG_As_VNG
+    - IONG_As_ONG
+    - NGU_As_U
 JieYang_RongCheng:
   area: 揭阳
   subarea: 榕城
