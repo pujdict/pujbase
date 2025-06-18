@@ -9,17 +9,11 @@ def main():
     assert accents_file.exists(), 'accents.yml not found'
     with open(accents_file, 'r', encoding='utf-8') as f:
         yaml_entries = yaml.load(f, yaml.Loader)
-    ent_all = yaml_entries['All']
-    rules_all = set(ent_all['rules'])
     accents = Accents()
     for k, v in yaml_entries.items():
-        if k == 'All':
-            continue
         area = v['area']
         subarea = v['subarea']
         rules = v['rules']
-        for rule in rules:
-            assert rule in rules_all, f'{rule} not in rules_all'
         rules = [f'FR_{rule}' for rule in rules]
         accents.accents.append(Accent(
             id=k,

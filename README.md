@@ -28,13 +28,13 @@
 
 ### 口音表 `accents`
 
-口音表原始数据记录为 YAML 形式，具体格式请参考 [accents.yml](./accents.yml)。其中 `All` 这一组数据的 `rules` 定义了所有的口音规则。后续可再新增的口音规则格式示例如下：
+口音表原始数据记录为 YAML 形式，具体格式请参考 [accents.yml](./accents.yml)。所有的口音规则可参考 [accents.proto](./accents.proto) 和 [pujcommon.py](./pujcommon.py)。后续可再新增的口音规则格式示例如下：
 
 ```yml
 ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
   area: 潮州  # 地区
   subarea: 府城  # 子区域，可留空
-  rules: # 规则列表，可选项参见 All
+  rules: # 规则列表，可选项参见 accents.proto
     - R_As_O
     # ...
 ```
