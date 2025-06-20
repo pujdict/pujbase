@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
 import yaml
-from puj.entries_pb2 import *
+from entries_pb2 import *
 
 
 def _verify_pronunciation(entry: Entry):
@@ -54,15 +54,15 @@ def _create_entries(yaml_entries) -> Entries:
 
 
 def main():
-    entries_file = Path('entries.yml')
+    entries_file = Path('../data/entries.yml')
     assert entries_file.exists(), 'entries.yml not found'
     with open(entries_file, 'r', encoding='utf-8') as f:
         yaml_entries = yaml.load(f, yaml.Loader)
     entries = _create_entries(yaml_entries)
-    Path('dist').mkdir(exist_ok=True)
-    with open('dist/entries.pb', 'wb') as f:
+    Path('../dist').mkdir(exist_ok=True)
+    with open('../dist/entries.pb', 'wb') as f:
         f.write(entries.SerializeToString())
-    with open('dist/entries.pb', 'rb') as f:
+    with open('../dist/entries.pb', 'rb') as f:
         entries = Entries()
         entries.ParseFromString(f.read())
 

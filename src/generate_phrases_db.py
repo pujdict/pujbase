@@ -1,10 +1,10 @@
 import csv
-from puj.phrases_pb2 import *
+from phrases_pb2 import *
 from pathlib import Path
 
 
 def main():
-    phrases_dir = Path('phrases')
+    phrases_dir = Path('../data/phrases')
     assert phrases_dir.exists() and phrases_dir.is_dir()
     phrases = Phrases()
     for phrase_file in phrases_dir.glob('*.csv'):
@@ -20,9 +20,9 @@ def main():
                 node=row[3] or None,
             )
             phrases.phrases.append(phrase)
-    with open('dist/phrases.pb', 'wb') as f:
+    with open('../dist/phrases.pb', 'wb') as f:
         f.write(phrases.SerializeToString())
-    with open('dist/phrases.pb', 'rb') as f:
+    with open('../dist/phrases.pb', 'rb') as f:
         phrases = Phrases()
         phrases.ParseFromString(f.read())
 

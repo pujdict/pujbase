@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "protobuf"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pujdict-base"
+version = "0.3.0"
+authors = [
+    { name = "Brang Pakdring", email = "brangpd@outlook.com" },
+]
+description = "Basic components for the Peh-Ue-Ji dictionary of the Teochew-Swatow dialect"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyyaml==6.0.2",
+    "protobuf==5.29.5",
+]
+license = "AGPL-3.0-or-later AND CC-BY-SA-4.0"
+license-files = ["LICENSE-AGPL"]
+keywords = ["潮州话", "潮汕方言", "潮汕话", "白话字", "辞典", "Teochew", "Swatow"]
+
+[project.urls]
+Repository = "https://github.com/pujdict/pujdict-base"

@@ -1,15 +1,12 @@
-puj/entries_pb2.py
-puj/entries_pb2.pyi
-entries.pb
+.idea
+.venv
+venv
 
-puj/accents_pb2.py
-puj/accents_pb2.pyi
-accents.pb
+src/*_pb2.py
+src/*_pb2.pyi
 
-puj/phrases_pb2.py
-puj/phrases_pb2.pyi
-phrases.pb
-
-__pycache__
+**/__pycache__
 
 dist
+
+**/*.egg-info

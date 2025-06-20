@@ -1,11 +1,11 @@
 from pathlib import Path
-from puj.accents_pb2 import *
+from accents_pb2 import *
 
 import yaml
 
 
 def main():
-    accents_file = Path('accents.yml')
+    accents_file = Path('../data/accents.yml')
     assert accents_file.exists(), 'accents.yml not found'
     with open(accents_file, 'r', encoding='utf-8') as f:
         yaml_entries = yaml.load(f, yaml.Loader)
@@ -21,10 +21,10 @@ def main():
             subarea=subarea,
             rules=rules,
         ))
-    Path('dist').mkdir(exist_ok=True)
-    with open('dist/accents.pb', 'wb') as f:
+    Path('../dist').mkdir(exist_ok=True)
+    with open('../dist/accents.pb', 'wb') as f:
         f.write(accents.SerializeToString())
-    with open('dist/accents.pb', 'rb') as f:
+    with open('../dist/accents.pb', 'rb') as f:
         accents = Accents()
         accents.ParseFromString(f.read())
 
