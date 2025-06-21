@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package puj;
 
+import "entries.proto";
+
 enum FuzzyRule {
   FR_NONE = 0;
   FR_V_As_U = 1;
@@ -44,6 +46,7 @@ message Accent {
   string area = 2;
   optional string subarea = 3;
   repeated FuzzyRule rules = 4;
+  map<uint32, Pronunciation> exceptions = 5;
 }
 
 message Accents {

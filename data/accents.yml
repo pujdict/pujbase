@@ -26,6 +26,14 @@ ChaoZhou_FuCheng:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,vng,2
+    恁,恁,n,vn,2: n,vng,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 XiQiang:
   area: 戏腔
   subarea: ""
@@ -49,6 +57,14 @@ XiQiang:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 ChaoAn_FengHuang:
   area: 潮安
   subarea: 凤凰
@@ -68,6 +84,13 @@ ChaoAn_FengHuang:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,an,2
+    俺,俺,n,an,2: n,an,2
+    您,您,n,vn,2: n,vn,2
+    恁,恁,n,vn,2: n,vn,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
 FengShun_LiuHuang:
   area: 丰顺
   subarea: 𨻧隍
@@ -95,6 +118,14 @@ FengShun_LiuHuang:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,an,2
+    俺,俺,n,an,2: n,an,2
+    您,您,n,vn,2: n,vn,2
+    恁,恁,n,vn,2: n,vn,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 RaoPing_SanRao:
   area: 饶平
   subarea: 三饶
@@ -114,6 +145,13 @@ RaoPing_SanRao:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
 ChengHai_ChengCheng:
   area: 澄海
   subarea: 澄城
@@ -143,6 +181,14 @@ ChengHai_ChengCheng:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,vng,2
+    恁,恁,n,vn,2: n,vng,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 ShanTou_ShiQu:
   area: 汕头
   subarea: 市区
@@ -164,6 +210,14 @@ ShanTou_ShiQu:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 JieYang_RongCheng:
   area: 揭阳
   subarea: 榕城
@@ -188,6 +242,14 @@ JieYang_RongCheng:
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,eng,2
+    恁,恁,n,vn,2: n,eng,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: k,au,6
 ChaoYang_MianCheng:
   area: 潮阳
   subarea: 棉城
@@ -206,6 +268,14 @@ ChaoYang_MianCheng:
     - VN_As_IN
     - N_As_NG
     - NG_As_VNG
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    藕,藕,ng,au,6: n,au,6
 PuNing_LiuSha:
   area: 普宁
   subarea: 流沙
@@ -223,6 +293,16 @@ PuNing_LiuSha:
     - N_As_NG
     - NG_As_VNG
     - NGU_As_U
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
+    看,看,th,oinn,2: kh,oinn,2
+    睇,睇,th,oinn,2: kh,oinn,2
+    藕,藕,ng,au,6: k,au,6
 HuiLai_HuiCheng:
   area: 惠来
   subarea: 惠城
@@ -241,6 +321,13 @@ HuiLai_HuiCheng:
     - VN_As_IN
     - N_As_NG
     - NG_As_VNG
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5
 LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
@@ -260,3 +347,10 @@ LuFeng_SanJia:
     - UE_As_UEI
     - N_As_NG
     - NG_As_VNG
+  exceptions:
+    咱,咱,n,an,2: n,ang,2
+    俺,俺,n,an,2: n,ang,2
+    您,您,n,vn,2: n,ing,2
+    恁,恁,n,vn,2: n,ing,2
+    人,人,n,ang,5: n,ang,5
+    儂,侬,n,ang,5: n,ang,5

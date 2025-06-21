@@ -2,6 +2,7 @@
 from pathlib import Path
 import yaml
 from entries_pb2 import *
+from accents_pb2 import *
 
 
 def _verify_pronunciation(entry: Entry):
@@ -21,7 +22,7 @@ def _create_entries(yaml_entries) -> Entries:
     EF = EntryFrequency
     EC = EntryCategory
     entries = Entries()
-    index = 0
+    index = 1
     for yaml_ent in yaml_entries:
         chars, pronunciations = yaml_ent
         char, char_sim = chars.split(',')
@@ -65,6 +66,47 @@ def main():
     with open('../dist/entries.pb', 'rb') as f:
         entries = Entries()
         entries.ParseFromString(f.read())
+
+    entries_index_map = {
+        f"{entry.char},{entry.char_sim},{entry.pron.initial},{entry.pron.final},{entry.pron.tone}": entry.index
+        for entry in entries.entries
+    }
+
+    accents_file = Path('../data/accents.yml')
+    assert accents_file.exists(), 'accents.yml not found'
+    with open(accents_file, 'r', encoding='utf-8') as f:
+        yaml_entries = yaml.load(f, yaml.Loader)
+    accents = Accents()
+    for k, v in yaml_entries.items():
+        area = v['area']
+        subarea = v['subarea']
+        rules = v['rules']
+        rules = [f'FR_{rule}' for rule in rules]
+        exceptions = {}
+        exceptions_list = v['exceptions']
+        for k_original, v_expected in exceptions_list.items():
+            entry_index = entries_index_map[k_original]
+            ex_initial, ex_final, ex_tone = v_expected.split(',')
+            ex_pron = Pronunciation(
+                initial=ex_initial,
+                final=ex_final,
+                tone=int(ex_tone),
+            )
+            exceptions[entry_index] = ex_pron
+        accents.accents.append(Accent(
+            id=k,
+            area=area,
+            subarea=subarea,
+            rules=rules,
+            exceptions=exceptions,
+        ))
+
+    Path('../dist').mkdir(exist_ok=True)
+    with open('../dist/accents.pb', 'wb') as f:
+        f.write(accents.SerializeToString())
+    with open('../dist/accents.pb', 'rb') as f:
+        accents = Accents()
+        accents.ParseFromString(f.read())
 
 
 if __name__ == '__main__':

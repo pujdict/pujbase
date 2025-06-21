@@ -1,10 +1,8 @@
-import generate_accents_db
 import generate_entries_db
 import generate_phrases_db
 
 
 def main():
-    generate_accents_db.main()
     generate_entries_db.main()
     generate_phrases_db.main()
 
