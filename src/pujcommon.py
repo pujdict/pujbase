@@ -1,11 +1,84 @@
 import pujpb as pb
+import re
+import unicodedata
 
 
-class Pronunciation:
-    def __init__(self, initial: str = None, final: str = None, tone: int = 0, sp_nasal: int = 0):
+class AbstractPronunciation:
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         self.initial = initial
         self.final = final
         self.tone = tone
+
+    def __str__(self):
+        return f'{self.initial}{self.final}{self.tone}'
+
+
+class Pronunciation(AbstractPronunciation):
+    """
+    ASCII 白话字拼音。
+    """
+    __special_vowels = {
+        "v": "ṳ",
+        "V": "Ṳ",
+        "r": "o̤",
+        "R": "O̤",
+    }
+    __vowel_order = [
+        'A', 'a', 'E', 'e', 'O', 'o', 'I', 'i', 'U', 'u', 'V', 'v', 'R', 'r',
+        __special_vowels['V'], __special_vowels['v'],
+        __special_vowels['R'], __special_vowels['r'],
+    ]
+    __vowels = set(__vowel_order)
+    __regexp_word = re.compile(
+        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z|0)'?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiuvr]))?(?P<nucleus>a|e|o|i|u|v|r|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn'?|p|t|k|h)*)(?P<tone>\d)?)$",
+        re.IGNORECASE)
+    __puj_tone_marks = [
+        "",  # 0
+        "",  # 1
+        "\u0301",  # 2 锐音符 ́
+        "\u0300",  # 3 抑音符 ̀
+        "",  # 4
+        "\u0302",  # 5 扬抑符 ̂
+        "\u0303",  # 6 波浪符 ̃
+        "\u0304",  # 7 长音符 ̄
+        "\u0301",  # 8 锐音符 ́
+    ]
+    __puj_possible_tone_marks = [
+        [],  # 0
+        [],  # 1
+        ["\u0301", "\u0341"],  # 2
+        ["\u0300", "\u0340"],  # 3
+        [],  # 4
+        ["\u0302"],  # 5
+        ["\u0303", "\u0342", "\u030C", "\u0306"],  # 6
+        ["\u0304"],  # 7
+        ["\u0301", "\u0341", "\u0302", "\u030D"],  # 8
+    ]
+    __puj_dp_initial_map = {
+        '': '',
+        '0': '',
+        'p': 'b',
+        'ph': 'p',
+        'm': 'm',
+        'b': 'bh',
+        't': 'd',
+        'th': 't',
+        'n': 'n',
+        'l': 'l',
+        'k': 'g',
+        'kh': 'k',
+        'ng': 'ng',
+        'g': 'gh',
+        'h': 'h',
+        'ts': 'z',
+        'tsh': 'c',
+        's': 's',
+        'j': 'r',
+    }
+    __dp_puj_initial_map = {dp: puj for puj, dp in __puj_dp_initial_map.items()}
+
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0, sp_nasal: int = 0):
+        super().__init__('0' if initial == '' else initial, final, tone)
         self.sp_nasal = sp_nasal
 
     def __copy__(self):
@@ -14,20 +87,179 @@ class Pronunciation:
     def __str__(self):
         return f'{self.initial}{self.final}{self.tone} {self.sp_nasal}'
 
+    def __bool__(self):
+        return self.initial or self.final or self.tone or self.sp_nasal
+
     @classmethod
     def from_pb(cls, data: pb.Pronunciation):
         return cls(data.initial, data.final, data.tone, data.sp_nasal)
 
-    def to_pb(self):
+    def to_pb(self) -> pb.Pronunciation:
+        """
+        ASCII 白话字转 Protobuf。
+        """
         return pb.Pronunciation(
-            initial=self.initial,
+            initial=self.initial or '0',
             final=self.final,
             tone=self.tone,
             sp_nasal=pb.EntrySpecialNasalization.Name(self.sp_nasal),
         )
 
+    @classmethod
+    def from_written(cls, written: str) -> 'Pronunciation':
+        if not written:
+            return cls()
+        written = unicodedata.normalize('NFD', written)
+        tone = 0
+        # 消除调符
+        for i, possible_marks in enumerate(cls.__puj_possible_tone_marks):
+            for possible_tone_mark in possible_marks:
+                if possible_tone_mark in written:
+                    written = written.replace(possible_tone_mark, '')
+                    tone = i
+                    break
+            else:
+                continue
+            break
+        # 消除末尾的数字声调
+        if written[-1].isdigit():
+            if tone:
+                return cls()
+            tone = int(written[-1])
+            if not (1 <= tone <= 8):
+                return cls()
+            written = written[:-1]
+        # 特殊字符转 ASCII
+        written = written.replace(cls.__special_vowels['v'], 'v')
+        written = written.replace(cls.__special_vowels['V'], 'V')
+        written = written.replace(cls.__special_vowels['r'], 'r')
+        written = written.replace(cls.__special_vowels['R'], 'R')
+        # 入声做一次额外处理：4 声无调符，8 声的调符可能与 2 声或 5 声相同。
+        # 这里简化了判断的依据。如果是入声韵并且有声调符号，那么就认为是 8 声。
+        # 如果是入声韵并且前面没发现调符，就是 4 声。
+        if written[-1] in 'ptkhPTKH':
+            tone = 8 if tone else 4
+        match = cls.__regexp_word.match(written)
+        if not match:
+            return cls()
+        initial = match.group('initial') or '0'
+        final = match.group('final')
+        return cls(initial, final, tone)
 
-entry_index = 0
+    def to_written(self) -> str:
+        """
+        ASCII 白话字转书面白话字。
+        """
+        initial = self.initial if self.initial != '0' else ''
+        final = self.final
+        if not final:
+            return ''
+        final = final.replace('v', self.__special_vowels['v'])
+        final = final.replace('V', self.__special_vowels['V'])
+        final = final.replace('r', self.__special_vowels['r'])
+        final = final.replace('R', self.__special_vowels['R'])
+        coda_index = self.__get_coda_index(final)
+        if coda_index == -1:
+            return ''
+        tone = self.tone
+        if not (0 <= tone <= 8):
+            return ''
+        tone_mark = self.__puj_tone_marks[tone]
+        return f"{initial}{final[:coda_index + 1]}{tone_mark}{final[coda_index + 1:]}"
+
+    @classmethod
+    def __get_coda_index(cls, final: str) -> int:
+        """
+        给定韵母求韵腹。
+        """
+        if final:
+            if final[0].lower() in 'iu' and len(final) > 1 and final[1] in cls.__vowels:
+                return 1
+            return 0
+        return -1
+
+    @classmethod
+    def from_combination(cls, combination: str) -> 'Pronunciation':
+        match = cls.__regexp_word.match(combination)
+        if match:
+            initial = match.group('initial') or '0'
+            final = match.group('final')
+            tone = match.group('tone')
+            return cls(initial, final, tone)
+        return cls()
+
+    def to_combination(self) -> str:
+        return (f"{self.initial if self.initial != '0' else ''}"
+                f"{self.final}"
+                f"{self.tone}")
+
+    @classmethod
+    def from_dp(cls, dp: 'DPPronunciation') -> 'Pronunciation':
+        return Pronunciation(
+            initial=cls.__from_dp_initial_or_final(dp.initial),
+            final=cls.__from_dp_initial_or_final(dp.final),
+            tone=dp.tone,
+        )
+
+    def to_dp(self) -> 'DPPronunciation':
+        return DPPronunciation(
+            initial=self.__to_dp_initial_or_final(self.initial),
+            final=self.__to_dp_initial_or_final(self.final),
+            tone=self.tone,
+        )
+
+    @classmethod
+    def __to_dp_initial_or_final(cls, part: str) -> str:
+        try_to_map_initial = cls.__puj_dp_initial_map.get(part, None)
+        if try_to_map_initial:
+            return try_to_map_initial
+        part = part.replace('e', 'ê')
+        part = part.replace('v', 'e')
+        part = part.replace('r', 'er')
+        part = part.replace('au', 'ao')
+        if part[-1] == 'n':
+            if part.endswith('nn'):
+                part = part[:-1]
+            else:
+                part += 'd'
+        if part[-1] == 'p':
+            part = part[:-1] + 'b'
+        if part[-1] == 't':
+            part = part[:-1] + 'd'
+        if part[-1] == 'k':
+            part = part[:-1] + 'g'
+        return part
+
+    @classmethod
+    def __from_dp_initial_or_final(cls, part: str) -> str:
+        try_to_map_initial = cls.__dp_puj_initial_map.get(part, None)
+        if try_to_map_initial:
+            return try_to_map_initial
+        part = unicodedata.normalize('NFC', part)
+        part = part.replace('ê', 'e')
+        part = part.replace('e', 'v')
+        part = part.replace('er', 'r')
+        part = part.replace('ao', 'au')
+        if part[-1] == 'n':
+            part += 'n'
+        if part.endswith('nd'):
+            part = part[:-1]
+        if part[-1] == 'b':
+            part = part[:-1] + 'p'
+        if part[-1] == 'd':
+            part = part[:-1] + 't'
+        if part[-1] == 'g':
+            part = part[:-1] + 'k'
+        return part
+
+
+class DPPronunciation(AbstractPronunciation):
+    """
+    潮拼拼音。
+    """
+
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
+        super().__init__(initial, final, tone)
 
 
 class FuzzyRule:
