@@ -15,7 +15,7 @@ class AbstractPronunciation:
 
 class Pronunciation(AbstractPronunciation):
     """
-    ASCII 白话字拼音。
+    ASCII 白话字拼音。内部存储为 ASCII 形式（特殊字母 ṳ o̤ 记录为 v r），可输出为书面形式。
     """
     __special_vowels = {
         "v": "ṳ",
@@ -76,6 +76,52 @@ class Pronunciation(AbstractPronunciation):
         'j': 'r',
     }
     __dp_puj_initial_map = {dp: puj for puj, dp in __puj_dp_initial_map.items()}
+    __puj_ipa_initial_map = {
+        '': '',
+        '0': '',
+        'p': 'p',
+        'pf': 'p_df',
+        'ph': 'p_h',
+        'phf': 'p_d_hf',
+        'pfh': 'p_d_hf',
+        'm': 'm',
+        'mv': 'F',
+        'b': 'b',
+        'bv': 'b_d',
+        't': 't',
+        'th': 't_h',
+        'n': 'n',
+        'l': 'l',
+        'k': 'k',
+        'kh': 'k_h',
+        'ng': 'N',
+        'g': 'g',
+        'h': 'h',
+        'ts': 'ts',
+        'ch': 'tS',
+        'tsh': 'ts_h',
+        'chh': 'tS_h',
+        's': 's',
+        'j': 'dz',
+        'z': 'z',
+    }
+    __puj_ipa_final_map = {
+        'a': 'a',
+        'o': 'o',
+        'v': 'M',
+        'r': '@',
+        'e': 'e',
+        'i': 'i',
+        'u': 'u',
+        # 'nn': '~', # 特殊处理
+        'ng': 'N',
+        'n': 'n',
+        'm': 'm',
+        'h': '?',
+        'k': 'k_}',
+        't': 't_}',
+        'p': 'p_}',
+    }
 
     def __init__(self, initial: str = None, final: str = None, tone: int = 0, sp_nasal: int = 0):
         super().__init__('0' if initial == '' else initial, final, tone)
@@ -252,6 +298,21 @@ class Pronunciation(AbstractPronunciation):
             part = part[:-1] + 'k'
         return part
 
+    def to_ipa(self) -> 'IPAPronunciation':
+        initial = self.__puj_ipa_initial_map.get(self.initial, '')
+        final_tmp = self.final
+        nasalize = final_tmp.endswith('nn')
+        if nasalize:
+            final_tmp = final_tmp[:-2]
+        final = ''
+        for i, c in enumerate(final_tmp):
+            final_map = self.__puj_ipa_final_map.get(c, '')
+            if final_map:
+                final += final_map
+            if nasalize and c in self.__vowels:
+                final += '~'
+        return IPAPronunciation(initial, final, self.tone)
+
 
 class DPPronunciation(AbstractPronunciation):
     """
@@ -260,6 +321,66 @@ class DPPronunciation(AbstractPronunciation):
 
     def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         super().__init__(initial, final, tone)
+
+
+class IPAPronunciation(AbstractPronunciation):
+    """
+    国际音标。内部存储为 X-SAMPA 形式，可输出为书面形式。
+    此处存储声调为调序，并非实际调值。实际调值另外建模处理。
+    """
+
+    __x_sampa_ipa_map = {
+        '__1': '¹', '__2': '²', '__3': '³', '__4': '⁴', '__5': '⁵', '__6': '⁶', '__7': '⁷', '__8': '⁸', '__9': '⁹',
+        't`_m': 'ȶ', 'd`_m': 'ȡ', 'n`_m': 'ȵ', 'l`_m': 'ȴ', 'ts': 'ts', 'dz': 'dz', 'tS': 'tʃ',
+        'dZ': 'dʒ', 'ts\\': 'tɕ', 'dz\\': 'dʑ', 't`s`': 'ʈʂ', 'd`z`': 'ɖʐ',
+        '_h': 'ʰ', '_j': 'ʲ', '_P': '̪', '_=': '̩', '=': '̩', '_}': '̚', "'": 'ʲ', '_(': '₍', '_)': '₎',
+        '+h\\': 'ʱ', '+h': 'ʰ', '+j': 'ʲ',
+        'a': 'a', 'a\\': 'ä', 'A\\': 'ɐ̠', 'A': 'ɑ',
+        'b\\': 'ⱱ', 'b': 'b', 'B\\': 'ʙ', 'B': 'β',
+        'c': 'c',
+        'C': 'ç', 'd': 'd', 'D`': 'ɻ̝',
+        'D\\': 'ʓ', 'D': 'ð',
+        'e': 'e', 'E\\': 'e̽', 'E': 'ɛ',
+        'f\\': 'ʩ', 'F\\': 'Ɬ', 'f': 'f', 'F': 'ɱ', 'g': 'ɡ',
+        'G\\': 'ɢ', 'G': 'ɣ',
+        'h\\': 'ɦ', 'h': 'h', 'H\\': 'ʜ', 'H': 'ɥ', 'i\\': 'ɨ',
+        'i': 'i', 'I\\': 'ᵻ', 'I': 'ɪ',
+        'j\\': 'ʝ', 'J\\': 'ɟ', 'j': 'j', 'J': 'ɲ',
+        'k': 'k',
+        'l': 'l',
+        'm\\': 'ɯ̽', 'M\\': 'ɰ', 'm': 'm', 'M': 'ɯ',
+        'n`': 'ɳ', 'n': 'n', 'N\\': 'ɴ', 'N': 'ŋ',
+        'o': 'o', 'O': 'ɔ',
+        'p\\': 'ɸ', 'p': 'p',
+        'q': 'q',
+        'r\\`': 'ɻ', 'r\\': 'ɹ', 'r`': 'ɽ', 'r': 'r', 'R\\': 'ʀ', 'R': 'ʁ',
+        's`': 'ʂ', 's\\': 'ɕ', 's': 's', 'S': 'ʃ',
+        't`': 'ʈ', 't': 't', 'T': 'θ',
+        'u\\': 'ʉ', 'u': 'u', 'U\\': 'ᵿ', 'U': 'ʊ',
+        'v\\': 'ʋ', 'v': 'v', 'V': 'ʌ',
+        'w': 'w',
+        'x': 'x', 'X\\': 'ħ', 'X': 'χ',
+        'y': 'y', 'Y': 'ʏ',
+        'z`': 'ʐ', 'z\\': 'ʑ', 'z': 'z', 'Z': 'ʒ',
+        '.': '.', '"': 'ˈ', ',': 'ˌ', '%\\': 'я', '%': 'ˌ', '@`': 'ɚ', '@\\': 'ɘ', '@': 'ə',
+        '{': 'æ', '}': 'ʉ', '1': 'ɨ', '2\\': 'ø̽', '2': 'ø', '3\\': 'ɞ', '3`': 'ɝ', '3': 'ɜ',
+        '4\\': 'ɢ̆', '4': 'ɾ', '5\\': 'ꬸ', '5': 'ɫ', '6\\': 'ʎ̝', '6': 'ɐ', '7\\': 'ɤ̽', '7': 'ɤ',
+        '8\\': 'ɥ̝̊', '8': 'ɵ', '9\\': 'ʡ̮', '9': 'œ', '0': 'Ø', ':\\': 'ˑ', ':': 'ː', '?\\': 'ʕ',
+        '?': 'ʔ', '^\\': 'ğ', '^': 'ꜛ', '!': 'ꜜ', '&\\': 'ɶ̈', '&': 'ɶ',
+        '*\\': '\\*', '$\\': 'ʀ̟', '$': '͢', ')': '͡', '(': '͜', '-\\\\': '\\\\', '-\\': '‿', '-': '',
+        '||': '‖', '|': '|', '+\\': '⦀', ';': '¡'}
+
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
+        super().__init__(initial, final, tone)
+
+    def to_written(self) -> str:
+        initial = self.initial
+        final = self.final
+        for x_sampa, ipa in self.__x_sampa_ipa_map.items():
+            initial = initial.replace(x_sampa, ipa, 1)
+            final = final.replace(x_sampa, ipa, 1)
+        tone = f"__{self.tone}"
+        return f"{initial}{final}{tone}"
 
 
 class FuzzyRule:
