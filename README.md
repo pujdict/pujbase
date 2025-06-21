@@ -1,5 +1,5 @@
-# pujdict-data
-白话字辞典字词表
+# pujdict-base
+白话字辞典基础数据
 
 ## 字典数据与现状说明
 
@@ -49,13 +49,13 @@
 
 正则表达式举例：
 
-```jsregexp
+```js
 /^(?<initial>(p|ph|m|b|t|th|n|l|k|kh|ng|g|h|ts|tsh|s|j|0)'?)?(?<final>(?<medial>(i|u)(?=[aeoiuvr]))?(?<nucleus>a|e|o|i|u|v|r|ng|m)(?<coda>(i|u)?(m|n|ng|p|t|k|h)*)(?<tone>[1-8])?)$/i
 ```
 
 ### 口音表 `accents`
 
-口音表原始数据记录为 YAML 形式，具体格式请参考 [accents.yml](./accents.yml)。所有的口音规则可参考 [accents.proto](./accents.proto) 和 [pujcommon.py](./pujcommon.py)。后续可再新增的口音规则格式示例如下：
+口音表原始数据记录为 YAML 形式，具体格式请参考 [accents.yml](./data/accents.yml)。所有的口音规则可参考 [accents.proto](./src/accents.proto) 和 [pujcommon.py](./src/pujcommon.py)。后续可再新增的口音规则格式示例如下：
 
 ```yml
 ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
