@@ -12,6 +12,16 @@ class AbstractPronunciation:
     def __str__(self):
         return f'{self.initial}{self.final}{self.tone}'
 
+    def __repr__(self):
+        return self.__str__()
+
+    def __eq__(self, other: 'AbstractPronunciation'):
+        return (
+                self.initial == other.initial and
+                self.final == other.final and
+                self.tone == other.tone
+        )
+
 
 class Pronunciation(AbstractPronunciation):
     """
@@ -104,6 +114,11 @@ class Pronunciation(AbstractPronunciation):
         's': 's',
         'j': 'dz',
         'z': 'z',
+    }
+    __puj_ipa_special_map = {
+        'm': 'm=',
+        'ng': 'N=',
+        'ngh': 'N=_}',
     }
     __puj_ipa_final_map = {
         'a': 'a',
@@ -200,10 +215,6 @@ class Pronunciation(AbstractPronunciation):
         final = self.final
         if not final:
             return ''
-        final = final.replace('v', self.__special_vowels['v'])
-        final = final.replace('V', self.__special_vowels['V'])
-        final = final.replace('r', self.__special_vowels['r'])
-        final = final.replace('R', self.__special_vowels['R'])
         coda_index = self.__get_coda_index(final)
         if coda_index == -1:
             return ''
@@ -211,7 +222,12 @@ class Pronunciation(AbstractPronunciation):
         if not (0 <= tone <= 8):
             return ''
         tone_mark = self.__puj_tone_marks[tone]
-        return f"{initial}{final[:coda_index + 1]}{tone_mark}{final[coda_index + 1:]}"
+        final = f"{final[:coda_index + 1]}{tone_mark}{final[coda_index + 1:]}"
+        final = final.replace('v', self.__special_vowels['v'])
+        final = final.replace('V', self.__special_vowels['V'])
+        final = final.replace('r', self.__special_vowels['r'])
+        final = final.replace('R', self.__special_vowels['R'])
+        return f"{initial}{final}"
 
     @classmethod
     def __get_coda_index(cls, final: str) -> int:
@@ -301,16 +317,25 @@ class Pronunciation(AbstractPronunciation):
     def to_ipa(self) -> 'IPAPronunciation':
         initial = self.__puj_ipa_initial_map.get(self.initial, '')
         final_tmp = self.final
-        nasalize = final_tmp.endswith('nn')
-        if nasalize:
-            final_tmp = final_tmp[:-2]
-        final = ''
-        for i, c in enumerate(final_tmp):
-            final_map = self.__puj_ipa_final_map.get(c, '')
-            if final_map:
-                final += final_map
-            if nasalize and c in self.__vowels:
-                final += '~'
+        if final_tmp in ['m', 'ng', 'ngh']:
+            # 声化韵特殊处理
+            final = self.__puj_ipa_special_map.get(final_tmp)
+            if self.initial == 'h':
+                if final_tmp in ['ng', 'ngh']:
+                    initial = self.__puj_ipa_final_map.get('ng') + '_0'
+                if final_tmp == 'm':
+                    initial = self.__puj_ipa_final_map.get('m') + '_0'
+        else:
+            nasalize = final_tmp.endswith('nn')
+            if nasalize:
+                final_tmp = final_tmp[:-2]
+            final = ''
+            for i, c in enumerate(final_tmp):
+                final_map = self.__puj_ipa_final_map.get(c, '')
+                if final_map:
+                    final += final_map
+                if nasalize and c in self.__vowels:
+                    final += '~'
         return IPAPronunciation(initial, final, self.tone)
 
 
@@ -333,18 +358,18 @@ class IPAPronunciation(AbstractPronunciation):
         '__1': '¹', '__2': '²', '__3': '³', '__4': '⁴', '__5': '⁵', '__6': '⁶', '__7': '⁷', '__8': '⁸', '__9': '⁹',
         't`_m': 'ȶ', 'd`_m': 'ȡ', 'n`_m': 'ȵ', 'l`_m': 'ȴ', 'ts': 'ts', 'dz': 'dz', 'tS': 'tʃ',
         'dZ': 'dʒ', 'ts\\': 'tɕ', 'dz\\': 'dʑ', 't`s`': 'ʈʂ', 'd`z`': 'ɖʐ',
-        '_h': 'ʰ', '_j': 'ʲ', '_P': '̪', '_=': '̩', '=': '̩', '_}': '̚', "'": 'ʲ', '_(': '₍', '_)': '₎',
+        '_h': 'ʰ', '_j': 'ʲ', '_P': '̪', '_0': '̊',
+        '_=': '̩', '=': '̍', '_}': '̚', '~': '̃', "'": 'ʲ', '_(': '₍', '_)': '₎',
         '+h\\': 'ʱ', '+h': 'ʰ', '+j': 'ʲ',
         'a': 'a', 'a\\': 'ä', 'A\\': 'ɐ̠', 'A': 'ɑ',
         'b\\': 'ⱱ', 'b': 'b', 'B\\': 'ʙ', 'B': 'β',
-        'c': 'c',
-        'C': 'ç', 'd': 'd', 'D`': 'ɻ̝',
-        'D\\': 'ʓ', 'D': 'ð',
+        'c': 'c', 'C': 'ç',
+        'd': 'd', 'D`': 'ɻ̝', 'D\\': 'ʓ', 'D': 'ð',
         'e': 'e', 'E\\': 'e̽', 'E': 'ɛ',
-        'f\\': 'ʩ', 'F\\': 'Ɬ', 'f': 'f', 'F': 'ɱ', 'g': 'ɡ',
-        'G\\': 'ɢ', 'G': 'ɣ',
-        'h\\': 'ɦ', 'h': 'h', 'H\\': 'ʜ', 'H': 'ɥ', 'i\\': 'ɨ',
-        'i': 'i', 'I\\': 'ᵻ', 'I': 'ɪ',
+        'f\\': 'ʩ', 'F\\': 'Ɬ', 'f': 'f', 'F': 'ɱ',
+        'g': 'ɡ', 'G\\': 'ɢ', 'G': 'ɣ',
+        'h\\': 'ɦ', 'h': 'h', 'H\\': 'ʜ', 'H': 'ɥ',
+        'i\\': 'ɨ', 'i': 'i', 'I\\': 'ᵻ', 'I': 'ɪ',
         'j\\': 'ʝ', 'J\\': 'ɟ', 'j': 'j', 'J': 'ɲ',
         'k': 'k',
         'l': 'l',
@@ -379,7 +404,7 @@ class IPAPronunciation(AbstractPronunciation):
         for x_sampa, ipa in self.__x_sampa_ipa_map.items():
             initial = initial.replace(x_sampa, ipa, 1)
             final = final.replace(x_sampa, ipa, 1)
-        tone = f"__{self.tone}"
+        tone = self.__x_sampa_ipa_map.get(f"__{self.tone}", '')
         return f"{initial}{final}{tone}"
 
 
