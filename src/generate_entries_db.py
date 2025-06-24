@@ -82,6 +82,13 @@ def main():
         subarea = v['subarea']
         rules = v['rules']
         rules = [f'FR_{rule}' for rule in rules]
+        tones = v['tones']
+        citation = tones['citation']
+        sandhi = tones['sandhi']
+        neutral = tones['neutral']
+        specials = tones.get('specials') or []
+        specials = [ToneSpecial.Value(f"TS_{special_name}") for special_name in specials]
+        tones = Tones(citation=citation, sandhi=sandhi, neutral=neutral, specials=specials)
         exceptions = {}
         exceptions_list = v['exceptions']
         for k_original, v_expected in exceptions_list.items():
@@ -99,6 +106,7 @@ def main():
             subarea=subarea,
             rules=rules,
             exceptions=exceptions,
+            tones=tones,
         ))
 
     Path('../dist').mkdir(exist_ok=True)

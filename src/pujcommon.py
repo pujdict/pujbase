@@ -1,26 +1,20 @@
+import dataclasses
 import pujpb as pb
 import re
 import unicodedata
 
 
+@dataclasses.dataclass
 class AbstractPronunciation:
-    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
-        self.initial = initial
-        self.final = final
-        self.tone = tone
+    initial: str = None
+    final: str = None
+    tone: int = 0
 
     def __str__(self):
         return f'{self.initial}{self.final}{self.tone}'
 
     def __repr__(self):
         return self.__str__()
-
-    def __eq__(self, other: 'AbstractPronunciation'):
-        return (
-                self.initial == other.initial and
-                self.final == other.final and
-                self.tone == other.tone
-        )
 
 
 class Pronunciation(AbstractPronunciation):
@@ -40,7 +34,7 @@ class Pronunciation(AbstractPronunciation):
     ]
     __vowels = set(__vowel_order)
     __regexp_word = re.compile(
-        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z|0)'?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiuvr]))?(?P<nucleus>a|e|o|i|u|v|r|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn'?|p|t|k|h)*)(?P<tone>\d)?)$",
+        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z|0)'?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiuvr]))?(?P<nucleus>a|e|o|i|u|v|r|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn'?|p|t|k|h)*))(?P<tone>\d)?$",
         re.IGNORECASE)
     __puj_tone_marks = [
         "",  # 0
@@ -247,7 +241,7 @@ class Pronunciation(AbstractPronunciation):
             initial = match.group('initial') or '0'
             final = match.group('final')
             tone = match.group('tone')
-            return cls(initial, final, tone)
+            return cls(initial, final, int(tone))
         return cls()
 
     def to_combination(self) -> str:
@@ -406,6 +400,75 @@ class IPAPronunciation(AbstractPronunciation):
             final = final.replace(x_sampa, ipa, 1)
         tone = self.__x_sampa_ipa_map.get(f"__{self.tone}", '')
         return f"{initial}{final}{tone}"
+
+
+@dataclasses.dataclass
+class Entry:
+    index: int
+    char: str
+    char_sim: str
+    pron: Pronunciation
+    cat: int
+    freq: int
+    char_ref: str
+    details: list[pb.EntryDetail]
+
+    @classmethod
+    def from_pb(cls, entry: pb.Entry) -> 'Entry':
+        return cls(
+            index=entry.index,
+            char=entry.char,
+            char_sim=entry.char_sim,
+            pron=Pronunciation.from_pb(entry.pron),
+            cat=entry.cat,
+            freq=entry.freq,
+            char_ref=entry.char_ref,
+            details=list(entry.details),
+        )
+
+
+@dataclasses.dataclass
+class Tone:
+    tone_number: int
+    tone_pitch: int
+
+
+@dataclasses.dataclass
+class SandhiGroup:
+    entries: list[Entry]
+    citation_index: int
+    begin_index: int
+    end_index: int
+
+    def __iter__(self):
+        return iter(self.entries[self.begin_index : self.end_index])
+
+    def __len__(self):
+        return len(self.entries)
+
+    def __getitem__(self, item) -> Entry:
+        if isinstance(item, int):
+            if item >= 0:
+                return self.entries[self.begin_index + item]
+            else:
+                return self.entries[self.end_index + item]
+        else:
+            raise TypeError(f"{SandhiGroup.__name__}.{SandhiGroup.__getitem__.__name__} only accepts integer index")
+
+
+@dataclasses.dataclass
+class Sentence:
+    entries: list[Entry]
+    """汉字集合"""
+    sandhi_groups: SandhiGroup
+    """连调单位列表"""
+    word_groups: list[tuple[int, int, str]]
+    """分词列表"""
+
+
+@dataclasses.dataclass
+class Paragraph:
+    sentences: list[Sentence]
 
 
 class FuzzyRule:
@@ -714,6 +777,16 @@ class Accent(FuzzyRule):
     area: str
     subarea: str
     rules: list[FuzzyRule]
+    citation_tones: list[int]
+    sandhi_tones: list[int]
+    neutral_tones: list[int]
+    tones_special_smooth_2nd_3rd_4th: bool = False
+    tones_special_smooth_neutral: bool = False
+    tones_special_variable_3rd_2nd: bool = False
+
+    __tone_2nd_3rd_4th_left_smooth = [0, 0, 23, 32, 3]
+    __tone_2nd_right_smooth = 21
+    __tone_3rd_left_variant = 25
 
     def _fuzzy(self, result: Pronunciation):
         for rule in self.rules:
@@ -726,6 +799,51 @@ class Accent(FuzzyRule):
         result.area = data.area
         result.subarea = data.subarea
         result.rules = [FuzzyRule.from_pb(rule) for rule in data.rules]
+        result.citation_tones = [0] + list(data.tones.citation)
+        result.sandhi_tones = [0] + list(data.tones.sandhi)
+        result.neutral_tones = [0] + list(data.tones.neutral)
+        for special in data.tones.specials:
+            if special == pb.ToneSpecial.TS_SMOOTH_2ND_3RD_4TH:
+                result.tones_special_smooth_2nd_3rd_4th = True
+            elif special == pb.ToneSpecial.TS_SMOOTH_NEUTRAL:
+                result.tones_special_smooth_neutral = True
+            elif special == pb.ToneSpecial.TS_VARIABLE_3RD_2ND:
+                result.tones_special_variable_3rd_2nd = True
+        return result
+
+    def get_actual_tones(self, sandhi_group: SandhiGroup) -> list[int]:
+        length = len(sandhi_group)
+        citation_index = sandhi_group.citation_index
+        citation_tone_number = sandhi_group[citation_index].pron.tone
+        result = [0] * length
+        i = length - 1
+        while i >= 0:
+            tone_number = sandhi_group[i].pron.tone
+            if i < citation_index:
+                tone = self.sandhi_tones[tone_number]
+                if self.tones_special_smooth_2nd_3rd_4th:
+                    if i + 1 == citation_index:
+                        if tone_number == 3 and citation_tone_number == 2:
+                            if self.tones_special_variable_3rd_2nd:
+                                tone = self.__tone_3rd_left_variant
+                            else:
+                                tone = self.__tone_2nd_3rd_4th_left_smooth[tone_number]
+                        elif 2 <= tone_number <= 4:
+                            if citation_tone_number not in [2, 5, 8]:
+                                tone = self.__tone_2nd_3rd_4th_left_smooth[tone_number]
+                result[i] = tone
+            elif i == citation_index:
+                tone = self.citation_tones[tone_number]
+                if self.tones_special_smooth_2nd_3rd_4th:
+                    if tone_number == 2 and i != 0:
+                        left_tone_number = sandhi_group[i - 1].pron.tone
+                        if 2 <= left_tone_number <= 4:
+                            tone = self.__tone_2nd_right_smooth
+                result[i] = tone
+            else:
+                tone = self.neutral_tones[tone_number]
+                result[i] = tone
+            i -= 1
         return result
 
 

@@ -41,12 +41,27 @@ enum FuzzyRule {
   FR_NGU_As_U = 34;
 }
 
+enum ToneSpecial {
+  TS_NONE = 0;
+  TS_SMOOTH_2ND_3RD_4TH = 1;
+  TS_SMOOTH_NEUTRAL = 2;
+  TS_VARIABLE_3RD_2ND = 3;
+}
+
+message Tones {
+  repeated uint32 citation = 1;
+  repeated uint32 sandhi = 2;
+  repeated uint32 neutral = 3;
+  repeated ToneSpecial specials = 4;
+}
+
 message Accent {
   string id = 1;
   string area = 2;
   optional string subarea = 3;
   repeated FuzzyRule rules = 4;
   map<uint32, Pronunciation> exceptions = 5;
+  Tones tones = 6;
 }
 
 message Accents {

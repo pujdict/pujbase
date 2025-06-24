@@ -5,7 +5,7 @@ ChaoZhou_FuCheng:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
-    special:
+    specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
@@ -41,7 +41,7 @@ XiQiang:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 33, 25, 52, 5, 22, 21, 22, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
-    special:
+    specials:
       - SMOOTH_2ND_3RD_4TH
   rules:
     - R_As_O
@@ -98,7 +98,7 @@ FengShun_LiuHuang:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
-    special:
+    specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
@@ -159,7 +159,7 @@ ChengHai_ChengCheng:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
-    special:
+    specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
       - VARIABLE_3RD_2ND
@@ -225,7 +225,7 @@ JieYang_RongCheng:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
-    special:
+    specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
