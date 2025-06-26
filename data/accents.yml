@@ -27,12 +27,17 @@ ChaoZhou_FuCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,vng,2
     恁,恁,n,vn,2: n,vng,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,ieng,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 XiQiang:
   area: 戏腔
@@ -58,12 +63,17 @@ XiQiang:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,ing,2
     恁,恁,n,vn,2: n,ing,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,iang,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ChaoAn_FengHuang:
   area: 潮安
@@ -85,12 +95,17 @@ ChaoAn_FengHuang:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,an,2
     俺,俺,n,an,2: n,an,2
     您,您,n,vn,2: n,vn,2
     恁,恁,n,vn,2: n,vn,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,ien,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
 FengShun_LiuHuang:
   area: 丰顺
   subarea: 𨻧隍
@@ -119,12 +134,17 @@ FengShun_LiuHuang:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,an,2
     俺,俺,n,an,2: n,an,2
     您,您,n,vn,2: n,vn,2
     恁,恁,n,vn,2: n,vn,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,ien,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 RaoPing_SanRao:
   area: 饶平
@@ -146,12 +166,16 @@ RaoPing_SanRao:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,ing,2
     恁,恁,n,vn,2: n,ing,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,iang,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
 ChengHai_ChengCheng:
   area: 澄海
   subarea: 澄城
@@ -182,12 +206,17 @@ ChengHai_ChengCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,vng,2
     恁,恁,n,vn,2: n,vng,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,iang,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ShanTou_ShiQu:
   area: 汕头
@@ -211,12 +240,17 @@ ShanTou_ShiQu:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,ing,2
     恁,恁,n,vn,2: n,ing,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,iang,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 JieYang_RongCheng:
   area: 揭阳
@@ -243,12 +277,17 @@ JieYang_RongCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
+    # N_As_L_ForNOrNGEnding 规则例外
     咱,咱,n,an,2: n,ang,2
     俺,俺,n,an,2: n,ang,2
     您,您,n,vn,2: n,eng,2
     恁,恁,n,vn,2: n,eng,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    年,年,n,ian,5: n,iang,5
+    孃,娘,n,iang,5: n,iang,5
+    孃,娘,n,iang,6: n,iang,6
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ChaoYang_MianCheng:
   area: 潮阳
@@ -269,12 +308,7 @@ ChaoYang_MianCheng:
     - N_As_NG
     - NG_As_VNG
   exceptions:
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
+    # 其他特殊字音
     藕,藕,ng,au,6: n,au,6
 PuNing_LiuSha:
   area: 普宁
@@ -294,14 +328,9 @@ PuNing_LiuSha:
     - NG_As_VNG
     - NGU_As_U
   exceptions:
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
     看,看,th,oinn,2: kh,oinn,2
     睇,睇,th,oinn,2: kh,oinn,2
+    # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 HuiLai_HuiCheng:
   area: 惠来
@@ -322,12 +351,9 @@ HuiLai_HuiCheng:
     - N_As_NG
     - NG_As_VNG
   exceptions:
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
     人,人,n,ang,5: n,ang,5
     儂,侬,n,ang,5: n,ang,5
+    # 其他特殊字音
 LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
@@ -348,9 +374,4 @@ LuFeng_SanJia:
     - N_As_NG
     - NG_As_VNG
   exceptions:
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
+    # 其他特殊字音

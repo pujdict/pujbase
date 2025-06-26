@@ -90,7 +90,7 @@ def main():
         specials = [ToneSpecial.Value(f"TS_{special_name}") for special_name in specials]
         tones = Tones(citation=citation, sandhi=sandhi, neutral=neutral, specials=specials)
         exceptions = {}
-        exceptions_list = v['exceptions']
+        exceptions_list = v['exceptions'] or {}
         for k_original, v_expected in exceptions_list.items():
             entry_index = entries_index_map[k_original]
             ex_initial, ex_final, ex_tone = v_expected.split(',')
