@@ -822,7 +822,9 @@ class Accent(FuzzyRule):
             if i < citation_index:
                 tone = self.sandhi_tones[tone_number]
                 if self.tones_special_smooth_2nd_3rd_4th:
-                    if i + 1 == citation_index:
+                    if i + 1 != citation_index and 2 <= tone_number <= 4:
+                        tone = self.__tone_2nd_3rd_4th_left_smooth[tone_number]
+                    else:
                         if tone_number == 3 and citation_tone_number == 2:
                             if self.tones_special_variable_3rd_2nd:
                                 tone = self.__tone_3rd_left_variant

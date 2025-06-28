@@ -42,11 +42,29 @@ class AccentActualTonesTest(AccentTestCase):
 
     def test_ChengHai_ChengCheng(self):
         accent = self.pujutils.get_accent("ChengHai_ChengCheng")
-        self.expect_sandhi_group(
-            accent,
-            self.create_sandhi_group(["liah8", "ngiau2", "tshv2"], 2),
-            [2, 25, 21],
-        )
+        test_cases = [
+            [['liah8', 'ngiau2', 'tshv2'], 2 , [2, 25, 21]],
+            [['ua2'], 0 , [52]],
+            [['si6', 'tua7', 'meng5', 'tshenn1'], 3, [21, 212, 212, 33]],
+            [['tsin6', 'tiong1'], 1, [21, 33]],
+            [['tseh4', 'siu2'], 1, [5, 21]],
+            [['jit8'], 0, [5]],
+            [['sua3', 'menn5'], 1, [52, 55]],
+            [['ngiau2', 'tshv2'], 1, [25, 21]],
+            [['tann2'], 0, [52]],
+            [['kann2', 'lai5', 'tau2', 'luan6'], 3, [23, 212, 23, 25]],
+            [['ua2'], 0, [52]],
+            [['tsiat4', 'si5'], 1, [5, 55]],
+            [['kio3', 'i1', 'hue5', 'lau6', 'ke1'], 4, [32, 23, 212, 21, 33]],
+        ]
+        for i, test_case in enumerate(test_cases):
+            combs, citation_index, expected_actual_tones = test_case
+            with self.subTest(i=i, case=' '.join(combs)):
+                self.expect_sandhi_group(
+                    accent,
+                    self.create_sandhi_group(combs, citation_index),
+                    expected_actual_tones,
+                )
 
 
 if __name__ == '__main__':
