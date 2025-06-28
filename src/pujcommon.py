@@ -581,7 +581,7 @@ class FuzzyRule_UOINN_As_UAINN(FuzzyRule):
 
 class FuzzyRule_OI_As_UE(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
-        if result.initial in ['p', 'ph', 'm', 'b'] and result.final == 'oi':
+        if result.initial in ['p', 'ph', 'm', 'b'] and result.final in ['oi', 'oinn', 'oih']:
             result.final = result.final.replace('oi', 'ue')
 
 
