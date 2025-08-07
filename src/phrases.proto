@@ -2,11 +2,45 @@ syntax = "proto3";
 
 package puj;
 
+message PhraseAccent {
+  string accent_id = 1;
+  repeated string puj = 2;
+}
+
+enum PhraseLoanDonorLanguage {
+  PLDL_NONE = 0; // 无
+  PLDL_ENGLISH = 1; // 英语
+  PLDL_MANDARIN = 2; // 普通话
+  PLDL_CANTONESE = 3; // 粤语
+  PLDL_MALAY = 4; // 马来语
+  PLDL_INDONESIAN = 5; // 印尼语
+  PLDL_THAI = 6; // 泰语
+}
+
 message Phrase {
-  string teochew = 1;
-  string puj = 2;
-  optional string mandarin = 3;
-  optional string node = 4;
+  uint32 index = 1;
+  // 一种主要写法
+  string teochew = 2;
+  // 一种主要读音
+  string puj = 3;
+  // 词性
+  string word_class = 4;
+  // 中文释义
+  optional string desc = 5;
+  // 普通话对译词
+  repeated string cmn = 6;
+  // 其他写法
+  repeated string char_var = 7;
+  // 其他读音
+  repeated string puj_var = 8;
+  // 变读口音
+  repeated PhraseAccent accents = 9;
+  // 借词语源
+  optional PhraseLoanDonorLanguage donor_lang = 10;
+  // 借词
+  optional string loan_word = 11;
+  // 例句
+  repeated string examples = 12;
 }
 
 message Phrases {

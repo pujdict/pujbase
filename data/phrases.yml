@@ -1,0 +1,49 @@
+# 例：字同而音义不同
+- 高丽,ko1-le6,n: # key 固定为单词的一种写法（无汉字者以*代替，外来语可不写汉字） + 其中一种惯用音 + 词性
+    cmn: [包菜, 卷心菜] # cmn 即 Chinese Mandarin，普通话对译词，可为 str 或 list[str]
+- 高丽,kau1-li5,n:
+    cmn: [高丽参, 人参]
+- 后日,au6--jit8,n:
+    cmn: 后天
+- 后日,au6-jit8,n:
+    cmn: [今后, 日后]
+# 例：多种读音，多种写法，多种含义，需拆分为多个条目。
+- 阮,uan2,pron:
+    cmn: 我们
+    puj-var: ua2--nang5  # PUJ Variation，表示其他发音。不一定一字一音。值可为 str 或 list[str]
+    char-var: [我人, 我侬]  # 其他可选写法，值可为 str 或 list[str]
+- 阮,uan2,n:
+    desc: 一种乐器  # desc 只用于释义
+- 奶茶,nai2-te5,n:
+    puj-var: ni6-te5
+- 疫情,mok8-tsheng5,n:
+    puj-var: ek8-tsheng5
+# 例：具体口音变体
+- 莲藕,noinn5-kau6,n:
+    puj-var: [noinn5-ngau6, noinn5-nau6]
+    accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
+      ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
+      ChaoAn_FengHuang: noinn5-ngau6
+- 作田,tsoh4-tshan5,vi:
+    char-var: 作塍
+    cmn: 种田
+- 荠葱,tshinn5-tsang5,n:
+    char-var: 钱葱
+    cmn: [马蹄葱, 马蹄, 荸荠]
+# 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
+- aunt,an5--thi7,pron:
+    char-var: "**"
+    cmn: 姨妈
+    loan: aunt  # 如果不写借自何种语言，默认借英语
+- 咸煎饼,ham5-tsin5 peng6,n:
+    loan: 咸煎饼
+    donor: 粤语
+- 干筒,kan1-tang5,n:
+    loan: kentang
+    donor: 马来语
+    cmn: 土豆
+    char-var: 干茼
+# 英语音素
+- K,khe1,n:
+- XO,ek8 svh4 ou1,n:
+- offer,o5--fv7,n:
