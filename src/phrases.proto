@@ -7,6 +7,12 @@ message PhraseAccent {
   repeated string puj = 2;
 }
 
+message PhraseExample {
+  string teochew = 1;
+  optional string puj = 2;
+  optional string mandarin = 3;
+}
+
 enum PhraseLoanDonorLanguage {
   PLDL_NONE = 0; // 无
   PLDL_ENGLISH = 1; // 英语
@@ -40,7 +46,7 @@ message Phrase {
   // 借词
   optional string loan_word = 11;
   // 例句
-  repeated string examples = 12;
+  repeated PhraseExample examples = 12;
 }
 
 message Phrases {

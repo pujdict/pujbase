@@ -5,10 +5,15 @@
     cmn: [高丽参, 人参]
 - 后日,au6--jit8,n:
     cmn: 后天
+    desc: 日期上的后天。如果用于合成词，不读轻声调。
+    examples:
+    - [伊后日过来, i1 au6--jit8 kue3--lai5, 他后天过来]
+    - [伊后日才来, i1 au6--jit8 tsia3-lai5, 他后天才来]
+    - [后日夜, au6-jit8-menn5, 后天晚上]
 - 后日,au6-jit8,n:
     cmn: [今后, 日后]
 # 例：多种读音，多种写法，多种含义，需拆分为多个条目。
-- 阮,uan2,pron:
+- 阮,uan2,r:
     cmn: 我们
     puj-var: ua2--nang5  # PUJ Variation，表示其他发音。不一定一字一音。值可为 str 或 list[str]
     char-var: [我人, 我侬]  # 其他可选写法，值可为 str 或 list[str]
@@ -22,8 +27,8 @@
 - 莲藕,noinn5-kau6,n:
     puj-var: [noinn5-ngau6, noinn5-nau6]
     accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
-      ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
-      ChaoAn_FengHuang: noinn5-ngau6
+    - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
+    - ChaoAn_FengHuang: noinn5-ngau6
 - 作田,tsoh4-tshan5,vi:
     char-var: 作塍
     cmn: 种田
@@ -31,7 +36,7 @@
     char-var: 钱葱
     cmn: [马蹄葱, 马蹄, 荸荠]
 # 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
-- aunt,an5--thi7,pron:
+- aunt,an5--thi7,r:
     char-var: "**"
     cmn: 姨妈
     loan: aunt  # 如果不写借自何种语言，默认借英语
@@ -43,6 +48,19 @@
     donor: 马来语
     cmn: 土豆
     char-var: 干茼
+# 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
+- 硗,khiau1,a:
+    cmn: [穷, 贫瘠]
+    desc: 原意指土地贫瘠，引申为穷。
+    examples: [
+      [硗过梦龙, khiau1-kue3-mang7-leng5, 穷得堪比梦龙],
+    ]
+- 硗,khiau1,m:
+    cmn: [余]
+    desc: 原意指土地贫瘠，引申为表示概数的数词。用于个位少于一半的情况。个位大于五需用“外@(gua7)”。
+    examples:
+    - [二十硗人, ji7-tsap8-khiau1-nang5, 二十余人（少于二十五人）]
+    - [二点硗, nonn6-tiam2-khiau1, 两点多（早于两点半）]
 # 英语音素
 - K,khe1,n:
 - XO,ek8 svh4 ou1,n:

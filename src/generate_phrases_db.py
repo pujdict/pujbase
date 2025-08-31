@@ -30,6 +30,17 @@ def main_deprecated():
         phrases.ParseFromString(f.read())
 
 
+def get_donor_lang(item):
+    if isinstance(item, str):
+        if any(s in item.upper() for s in ['粤语']):
+            return PLDL_CANTONESE
+        if any(s in item.upper() for s in ['普通话']):
+            return PLDL_MANDARIN
+        if any(s in item.upper() for s in ['英语']):
+            return PLDL_ENGLISH
+    return PLDL_NONE
+
+
 def main():
     phrases_file = Path('../data/phrases.yml')
     assert phrases_file.exists(), 'phrases.yml not found'
@@ -38,16 +49,40 @@ def main():
     phrases = Phrases()
     for i, yaml_phrase in enumerate(yaml_phrases):
         k, v = next(iter(yaml_phrase.items()))
+        v = v or {}
         teochew, puj, word_class = k.split(',')
+        accents = []
+        for accent in v.get('accents', []):
+            for accent_id, puj in accent.items():
+                accents.append(PhraseAccent(
+                    accent_id=accent_id,
+                    puj=list(puj),
+                ))
+        loan = v.get('loan')
+        donor_lang = PLDL_NONE if not loan else get_donor_lang(v.get('lang', '英语'))
+        examples = []
+        for example in v.get('examples', []):
+            teochew, puj, mandarin = example
+            examples.append(
+                PhraseExample(
+                    teochew=teochew,
+                    puj=puj,
+                    mandarin=mandarin,
+                )
+            )
         phrase = Phrase(
             index=i + 1,
             teochew=teochew,
             puj=puj,
             word_class=word_class,
-            desc=(v or {}).get('desc'),
-            cmn=list((v or {}).get('cmn') or []),
-            char_var=list((v or {}).get('char_var') or []),
-            puj_var=list((v or {}).get('puj_var') or []),
+            desc=v.get('desc'),
+            cmn=list(v.get('cmn', [])),
+            char_var=list(v.get('char_var', [])),
+            puj_var=list(v.get('puj_var', [])),
+            accents=accents,
+            donor_lang=donor_lang,
+            loan_word=loan,
+            examples=examples,
         )
         phrases.phrases.append(phrase)
     Path('../dist').mkdir(exist_ok=True)
