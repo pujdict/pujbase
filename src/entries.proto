@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package puj;
+package pujpb;
 
 enum EntryCategory {
   EC_NONE = 0;

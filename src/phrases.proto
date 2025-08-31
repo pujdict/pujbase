@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package puj;
+package pujpb;
 
 message PhraseAccent {
   string accent_id = 1;

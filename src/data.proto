@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package puj;
+package pujpb;
 
 import "accents.proto";
 import "entries.proto";
