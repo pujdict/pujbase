@@ -53,21 +53,21 @@ def main():
         teochew, puj, word_class = k.split(',')
         accents = []
         for accent in v.get('accents', []):
-            for accent_id, puj in accent.items():
+            for accent_id, accent_puj in accent.items():
                 accents.append(PhraseAccent(
                     accent_id=accent_id,
-                    puj=list(puj),
+                    puj=list(accent_puj),
                 ))
         loan = v.get('loan')
         donor_lang = PLDL_NONE if not loan else get_donor_lang(v.get('lang', '英语'))
         examples = []
         for example in v.get('examples', []):
-            teochew, puj, mandarin = example
+            e_teochew, e_puj, e_mandarin = example
             examples.append(
                 PhraseExample(
-                    teochew=teochew,
-                    puj=puj,
-                    mandarin=mandarin,
+                    teochew=e_teochew,
+                    puj=e_puj,
+                    mandarin=e_mandarin,
                 )
             )
         phrase = Phrase(
