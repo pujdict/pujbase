@@ -41,6 +41,14 @@ def get_donor_lang(item):
     return PLDL_NONE
 
 
+def get_list_of_str(item):
+    if not item:
+        return []
+    if isinstance(item, str):
+        return [item]
+    return item
+
+
 def main():
     phrases_file = Path('../data/phrases.yml')
     assert phrases_file.exists(), 'phrases.yml not found'
@@ -70,15 +78,19 @@ def main():
                     mandarin=e_mandarin,
                 )
             )
+        desc = v.get('desc')
+        cmn = get_list_of_str(v.get('cmn'))
+        char_var = get_list_of_str(v.get('char-var'))
+        puj_var = get_list_of_str(v.get('puj-var'))
         phrase = Phrase(
             index=i + 1,
             teochew=teochew,
             puj=puj,
             word_class=word_class,
-            desc=v.get('desc'),
-            cmn=list(v.get('cmn', [])),
-            char_var=list(v.get('char_var', [])),
-            puj_var=list(v.get('puj_var', [])),
+            desc=desc,
+            cmn=cmn,
+            char_var=char_var,
+            puj_var=puj_var,
             accents=accents,
             donor_lang=donor_lang,
             loan_word=loan,
