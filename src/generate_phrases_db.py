@@ -41,6 +41,18 @@ def get_donor_lang(item):
     return PLDL_NONE
 
 
+PHRASE_TAG_MAP = {
+    '动物': PT_ANIMALS,
+    '蔬菜': PT_VEGETABLES,
+}
+
+def get_phrase_tag(item):
+    if isinstance(item, str):
+        if item in PHRASE_TAG_MAP:
+            return PHRASE_TAG_MAP[item]
+    return PT_NONE
+
+
 def get_list_of_str(item):
     if not item:
         return []
@@ -58,7 +70,7 @@ def main():
     for i, yaml_phrase in enumerate(yaml_phrases):
         k, v = next(iter(yaml_phrase.items()))
         v = v or {}
-        teochew, puj, word_class = k.split(',')
+        teochew, puj, word_class, tag = k.split(',')
         accents = []
         for accent in v.get('accents', []):
             for accent_id, accent_puj in accent.items():
@@ -82,15 +94,19 @@ def main():
         cmn = get_list_of_str(v.get('cmn'))
         char_var = get_list_of_str(v.get('char-var'))
         puj_var = get_list_of_str(v.get('puj-var'))
+        tag = get_phrase_tag(tag)
+        tag_var = [get_phrase_tag(s) for s in get_list_of_str(v.get('tag-var'))]
         phrase = Phrase(
             index=i + 1,
             teochew=teochew,
             puj=puj,
+            tag=tag,
             word_class=word_class,
             desc=desc,
             cmn=cmn,
             char_var=char_var,
             puj_var=puj_var,
+            tag_var=tag_var,
             accents=accents,
             donor_lang=donor_lang,
             loan_word=loan,

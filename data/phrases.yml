@@ -1,67 +1,240 @@
 # 例：字同而音义不同
-- 高丽,ko1-le6,n: # key 固定为单词的一种写法（无汉字者以*代替，外来语可不写汉字） + 其中一种惯用音 + 词性
+- 高丽,ko1-le6,n,蔬菜: # key 固定为单词的一种写法（无汉字者以*代替，外来语可不写汉字） + 其中一种惯用音 + 词性 + 标签
     cmn: [包菜, 卷心菜] # cmn 即 Chinese Mandarin，普通话对译词，可为 str 或 list[str]
-- 高丽,kau1-li5,n:
+- 高丽,kau1-li5,n,:
     cmn: [高丽参, 人参]
-- 后日,au6--jit8,n:
+- 后日,au6--jit8,n,:
     cmn: 后天
     desc: 日期上的后天。如果用于合成词，不读轻声调。
     examples:
     - [伊后日过来, i1 au6--jit8 kue3--lai5, 他后天过来]
     - [伊后日才来, i1 au6--jit8 tsia3-lai5, 他后天才来]
     - [后日夜, au6-jit8-menn5, 后天晚上]
-- 后日,au6-jit8,n:
+- 后日,au6-jit8,n,:
     cmn: [今后, 日后]
 # 例：多种读音，多种写法，多种含义，需拆分为多个条目。
-- 阮,uan2,r:
+- 阮,uan2,r,:
     cmn: 我们
     puj-var: ua2--nang5  # PUJ Variation，表示其他发音。不一定一字一音。值可为 str 或 list[str]
     char-var: [我人, 我侬]  # 其他可选写法，值可为 str 或 list[str]
-- 阮,uan2,n:
+- 阮,uan2,n,:
     desc: 一种乐器  # desc 只用于释义
-- 奶茶,nai2-te5,n:
+- 奶茶,nai2-te5,n,:
     puj-var: ni6-te5
-- 疫情,mok8-tsheng5,n:
+- 疫情,mok8-tsheng5,n,:
     puj-var: ek8-tsheng5
 # 例：具体口音变体
-- 莲藕,noinn5-kau6,n:
+- 莲藕,noinn5-kau6,n,:
     puj-var: [noinn5-ngau6, noinn5-nau6]
     accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
     - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
     - ChaoAn_FengHuang: noinn5-ngau6
-- 作田,tsoh4-tshan5,vi:
+- 作田,tsoh4-tshan5,vi,:
     char-var: 作塍
     cmn: 种田
-- 荠葱,tshinn5-tsang5,n:
+- 荠葱,tshinn5-tsang5,n,:
     char-var: 钱葱
     cmn: [马蹄葱, 马蹄, 荸荠]
 # 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
-- aunt,an5--thi7,r:
+- aunt,an5--thi7,r,:
     char-var: "**"
     cmn: 姨妈
     loan: aunt  # 如果不写借自何种语言，默认借英语
-- 咸煎饼,ham5-tsin5 peng6,n:
+- 咸煎饼,ham5-tsin5 peng6,n,:
     loan: 咸煎饼
     donor: 粤语
-- 干筒,kan1-tang5,n:
+- 干筒,kan1-tang5,n,:
     loan: kentang
     donor: 马来语
     cmn: 土豆
     char-var: 干茼
 # 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
-- 硗,khiau1,a:
+- 硗,khiau1,a,:
     cmn: [穷, 贫瘠]
     desc: 原意指土地贫瘠，引申为穷。
     examples: [
       [硗过梦龙, khiau1-kue3-mang7-leng5, 穷得堪比梦龙],
     ]
-- 硗,khiau1,m:
+- 硗,khiau1,m,:
     cmn: [余]
     desc: 原意指土地贫瘠，引申为表示概数的数词。用于个位少于一半的情况。个位大于五需用“外@{gua7}”。
     examples:
     - [二十硗人, ji7-tsap8-khiau1-nang5, 二十余人（少于二十五人）]
     - [二点硗, nonn6-tiam2-khiau1, 两点多（早于两点半）]
 # 英语音素
-- K,khe1,n:
-- XO,ek8 svh4 ou1,n:
-- offer,o5--fv7,n:
+- K,khe1,n,:
+- XO,ek8 svh4 ou1,n,:
+- offer,o5--fv7,n,:
+
+# -------------------------- 动物 ------------------------
+- 动物,tong6-mueh8,n,动物:
+- 牲牲,tseng1-senn1,n,动物:
+    cmn: [牲畜]
+- 狮,sai1,n,动物:
+    cmn: 狮子
+- 虎,hounn2,n,动物:
+    cmn: 老虎
+- 象,tshionn6,n,动物:
+    cmn: 大象
+- 犀牛,sai1-gu5,n,动物:
+- 骆驼,loh8-thoh8,n,动物:
+- 驴,lv5,n,动物:
+- 骡,lo5,n,动物:
+- 鹿,tek8,n,动物:
+- 豺狼,tshai5-lang5,n,动物:
+- 狐狸,hu5-li5,n,动物:
+    puj-var: hou5-lai5
+- 蛇,tsua5,n,动物:
+- 猴,kau5,n,动物:
+- 熊,him5,n,动物:
+- 熊猫,him5-ngiau1,n,动物:
+- 孔雀,khong2-tshiak4,n,动物:
+- 山鸡,suann1-koi1,n,动物:
+- 凤凰,hong6-uang5,n,动物:
+- 龙,leng5,n,动物:
+- 鸟,tsiau2,n,动物:
+- 鹦哥,eng1-ko1,n,动物:
+    cmn: 鹦鹉
+- 鹰婆,eng1-po5,n,动物:
+    cmn: [老鹰, 鹰]
+- 鹤,hoh8,n,动物:
+- 麻雀,mua5-tsiah4,n,动物:
+- 粉鸟,hun2-tsiau2,n,动物:
+    cmn: 鸽子
+- 美翼,bue2-iah8,n,动物:
+    cmn: 蝴蝶
+- 蝴蝶,hu5-tiap8,n,动物:
+- 翼,iah8,n,动物:
+    cmn: 飞蛾
+- 沙螟,sua1-menn1,n,动物:
+    cmn: 蜻蜓
+- 唪嗄,ong6-enn1,n,动物:
+    cmn: 蝉
+- 蛄䖲,kou1-sun5,n,动物:
+    cmn: 蝉
+- 叽䖲,ki5-sun5,n,动物:
+    cmn: 蝉
+- 草蜢,tshau2-menn2,n,动物:
+    cmn: 蝗虫
+- 蜂,phang1,n,动物:
+- 水牛,tsui2-gu5,n,动物:
+- 羊,ionn5,n,动物:
+- 牛,gu5,n,动物:
+- 马,be2,n,动物:
+- 猪,tv1,n,动物:
+- 狗,kau2,n,动物:
+- 猫,ngiau1,n,动物:
+- 鸡,koi1,n,动物:
+- 鸭,ah4,n,动物:
+- 鸭仔,ah4-kiann2,n,动物:
+    cmn: 小鸭子
+- 鸭咪,ah4-bi6,n,动物:
+    cmn: 小鸭子
+- 鹅,go5,n,动物:
+- 猴,kau5,n,动物:
+- 老鼠,ngiau2-tshv2,n,动物:
+- 吱鼠,tsih4-tshv2,n,动物:
+    cmn: 盲鼠
+- 蜈蚣,ge5-kang1,n,动物:
+- 水鸡,tsui2-koi1,n,动物:
+    cmn: 田鸡
+- 蛤𧊅,kap4-kuai2,n,动物:
+    cmn: 青蛙
+- 蛤虯,kap4-kiu2,n,动物:
+    cmn: 青蛙
+- 蛤婆,kap4-po5,n,动物:
+    cmn: 蛤蟆
+- 青蛙,tshenn1-ua1,n,动物:
+- 点𧊅,tiam2-kuai2,n,动物:
+    cmn: 蝌蚪
+- 蝌蚪,khue1-tau2,n,动物:
+- 虼蚻,ka1-tsuah8,n,动物:
+    cmn: 蟑螂
+- 虼蚤,ka1-tsau2,n,动物:
+    cmn: 跳蚤
+- 檐龙,tsinn5-leng5,n,动物:
+    cmn: 壁虎
+- 草猴,tshau2-kau5,n,动物:
+    cmn: 螳螂
+- 土蝠,tou6-pit8,n,动物:
+    cmn: 螳螂
+- 灶鸡,tsau3-koi1,n,动物:
+    cmn: 蟋蟀
+- 蝠婆,pit8-po5,n,动物:
+    cmn: 蝙蝠
+- 马龙骑,be2-leng5-khia5,n,动物:
+    cmn: 高脚蛛
+- 𮔚蜈,la5-gia5,n,动物:
+    puj-var: la5-ia5
+    cmn: 高脚蛛
+    desc: 高脚蛛，潮阳、惠来等地的叫法
+- 蜘蛛,ti1-tu1,n,动物:
+- 胡蝇,hou5-sin5,n,动物:
+    cmn: 苍蝇
+- 金胡蝇,kim1-hou5-sin5,n,动物:
+    cmn: 丽蝇
+    desc: 一类金属色的苍蝇
+- 蠓,mang2,n,动物:
+    cmn: 蚊子
+- 暗䟙蠓,am3-tshih4-mang2,n,动物:
+    cmn: 小蚊子
+    desc: 指难以被察觉的小蚊子
+- 蚊,bun1,n,动物:
+    cmn: 蠓虫
+- 虫,thang5,n,动物:
+- 蚁,hiann6,n,动物:
+    cmn: 蚂蚁
+- 蚼蚁,kau1-hiann6,n,动物:
+    cmn: 蚂蚁
+- 蚂蚁,ma2-hiann6,n,动物:
+- 木虱,bak8-sat4,n,动物:
+- 猫头鹘,ngiau1-thau5-kuh8,n,动物:
+    cmn: 猫头鹰
+- 兔,thou3,n,动物:
+- 狼,lang5,n,动物:
+- 豹,pa3,n,动物:
+- 龟,ku1,n,动物:
+- 牯,kou2,n,动物:
+    cmn: 公
+    desc: 指雄性动物
+    examples: [
+      [牛牯, gu5-kou2, 公牛],
+    ]
+- 母,bo2,n,动物:
+    cmn: 母
+    desc: 指雌性动物
+    examples: [
+      [牛母, gu5-bo2, 母牛],
+    ]
+- 牛牯,gu5-kou2,n,动物:
+    cmn: 公牛
+- 牛母,gu5-bo2,n,动物:
+    cmn: 母牛
+- 羊牯,gu5-kou2,n,动物:
+    cmn: 公羊
+- 羊母,gu5-bo2,n,动物:
+    cmn: 母羊
+- 狗母蛇,kau2-bo2-tsua5,n,动物:
+    cmn: 蜥蜴
+- 暗螺,am3-lo5,n,动物:
+    cmn: 蜗牛
+- 蚕,tshoinn5,n,动物:
+- 蛀蛘,tsu3-ionn5,n,动物:
+    cmn: 米虫
+- 牛屎核,gu5-sai2-hut8,n,动物:
+    cmn: 屎壳郎
+- 土猴,tou6-kau5,n,动物:
+    cmn: 蝼蛄
+- 蜱蛢,pi5-pang5,n,动物:
+    cmn: 金龟子
+- 火暝蛄,hue2-menn5-kou1,n,动物:
+    cmn: 萤火虫
+- 火金蛄,hue2-kim1-kou1,n,动物:
+    cmn: 萤火虫
+- 火金蚼,hue2-kim1-ku1,n,动物:
+    cmn: 萤火虫
+- 蚯蚓,kau6-un2,n,动物:
+- 蛄蝇,kou1-sin5,n,动物:
+    cmn: 蚜虫
+- 蛆,tsv1,n,动物:
+    cmn: 蛆虫

@@ -23,6 +23,12 @@ enum PhraseLoanDonorLanguage {
   PLDL_THAI = 6; // 泰语
 }
 
+enum PhraseTag {
+  PT_NONE = 0; // 无
+  PT_ANIMALS = 1; // 动物
+  PT_VEGETABLES = 2; // 蔬菜
+}
+
 message Phrase {
   uint32 index = 1;
   // 一种主要写法
@@ -31,22 +37,26 @@ message Phrase {
   string puj = 3;
   // 词性
   string word_class = 4;
+  // 主要标签
+  PhraseTag tag = 5;
   // 中文释义
-  optional string desc = 5;
+  optional string desc = 10;
   // 普通话对译词
-  repeated string cmn = 6;
+  repeated string cmn = 11;
   // 其他写法
-  repeated string char_var = 7;
+  repeated string char_var = 12;
   // 其他读音
-  repeated string puj_var = 8;
+  repeated string puj_var = 13;
   // 变读口音
-  repeated PhraseAccent accents = 9;
+  repeated PhraseAccent accents = 14;
+  // 其他标签
+  repeated PhraseTag tag_var = 15;
   // 借词语源
-  optional PhraseLoanDonorLanguage donor_lang = 10;
+  optional PhraseLoanDonorLanguage donor_lang = 16;
   // 借词
-  optional string loan_word = 11;
+  optional string loan_word = 17;
   // 例句
-  repeated PhraseExample examples = 12;
+  repeated PhraseExample examples = 18;
 }
 
 message Phrases {
