@@ -70,7 +70,7 @@ def main():
     for i, yaml_phrase in enumerate(yaml_phrases):
         k, v = next(iter(yaml_phrase.items()))
         v = v or {}
-        teochew, puj, word_class, tag = k.split(',')
+        teochew, puj, word_class, tag = k.split('|')
         accents = []
         for accent in v.get('accents', []):
             for accent_id, accent_puj in accent.items():
