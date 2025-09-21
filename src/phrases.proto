@@ -26,7 +26,16 @@ enum PhraseLoanDonorLanguage {
 enum PhraseTag {
   PT_NONE = 0; // 无
   PT_ANIMALS = 1; // 动物
-  PT_VEGETABLES = 2; // 蔬菜
+  PT_SEAFOOD = 2; // 水产
+  PT_VEGETABLES = 3; // 蔬菜
+  PT_FRUITS = 4; // 水果
+  PT_SPECIALTIES = 5; // 特产
+  PT_RELATIONSHIPS = 6; // 人称
+  PT_HUMAN_BODY = 7; // 人体
+  PT_MUSICAL = 8; // 音乐
+  PT_ONOMATOPOEIA =  9; // 拟声拟态词
+  PT_ONOMATOPOEIA_AAB = 10; // 拟声拟态词 AAB 式
+  PT_ONOMATOPOEIA_KIO = 11; // 拟声拟态 XX叫 式
 }
 
 message Phrase {

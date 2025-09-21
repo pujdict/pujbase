@@ -1,51 +1,4 @@
-#  -------------------------- 示例 ------------------------
-# 例：字同而音义不同
-- 高丽|ko1-le6|包菜/卷心菜|n|蔬菜: # key 固定为单词的写法（无汉字者以*代替，外来语可不写汉字） + 发音 + 普通话对译词 + 词性 + 标签
-- 高丽|kau1-li5|高丽参/人参|n|:
-- 后日|au6--jit8|后天|n|:
-   cmn: 后天
-   desc: 日期上的后天。如果用于合成词，不读轻声调。
-   examples:
-   - [伊后日过来, i1 au6--jit8 kue3--lai5, 他后天过来]
-   - [伊后日才来, i1 au6--jit8 tsia3-lai5, 他后天才来]
-   - [后日夜, au6-jit8-menn5, 后天晚上]
-- 后日|au6-jit8|今后/日后|n|:
-# 例：多种读音，多种写法，多种含义，需拆分为多个条目。
-- 阮/我人/我侬|uan2/ua2--nang5|我们|r|:
-- 阮|uan2||n|:
-   desc: 一种乐器  # desc 只用于释义
-- 奶茶|nai2-te5/ni6-te5/ne6-te5||n|:
-- 疫情|mok8-tsheng5/ek8-tsheng5||n|:
-# 例：具体口音变体
-- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|:
-   accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
-   - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
-   - ChaoAn_FengHuang: noinn5-ngau6
-- 作田/作塍|tsoh4-tshan5|种田|vi|:
-- 荠葱/钱葱|tshinn5-tsang5|马蹄葱/马蹄/荸荠|n|:
-# 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
-- "**|an5--thi7|姨妈|r|":
-   loan: 英语/aunt
-- 咸煎饼|ham5-tsin5 peng6||n|:
-   loan: 粤语/咸煎饼
-- 干筒/干茼|kan1-tang5|土豆/马铃薯|n|:
-   loan: 马来语/kentang
-# 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
-- 硗|khiau1|穷/贫瘠|a|:
-   desc: 原意指土地贫瘠，引申为穷。
-   examples:
-   - [硗过梦龙, khiau1-kue3-mang7-leng5, 比梦龙穷]
-- 硗|khiau1|余|m|:
-   desc: 原意指土地贫瘠，引申为表示概数的数词。用于个位少于一半的情况。个位大于五需用“外@{gua7}”。
-   examples:
-   - [二十硗人, ji7-tsap8-khiau1-nang5, 二十余人（少于二十五人）]
-   - [二点硗, nonn6-tiam2-khiau1, 两点多（早于两点半）]
-# 英语音素
-- K|khe1||n|:
-- XO|ek8--svh4 ou1||n|:
-- offer|o5--fv7||n|:
-
-# -------------------------- 动物 ------------------------
+# -------------------------- 动物 ANIMALS --------------------------
 - 动物|tong6-mueh8||n|动物:
 - 牲牲|tseng1-senn1|牲畜|n|动物:
 - 狮|sai1|狮子|n|动物:
@@ -68,6 +21,12 @@
 - 龙|leng5||n|动物:
 - 鸟|tsiau2||n|动物:
 - 鹦哥|eng1-ko1|鹦鹉|n|动物:
+- 婆|po5||k|动物:
+    desc: 动物名称后缀
+    examples:
+    - [ 鹰婆, eng1-po5, 老鹰 ]
+    - [ 蛤婆, kap8-po5, 蛤蟆 ]
+    - [ 蝠婆, pit8-po5, 蝙蝠 ]
 - 鹰婆|eng1-po5|鹰/老鹰|n|动物:
 - 鹤|hoh8||n|动物:
 - 麻雀|mua5-tsiah4||n|动物:
@@ -135,11 +94,11 @@
 - 牯|kou2|公|n/k|动物:
     desc: 指雄性动物
     examples:
-    - [牛牯, gu5-kou2, 公牛]
+    - [ 牛牯, gu5-kou2, 公牛 ]
 - 母|bo2||n/k|动物:
     desc: 指雌性动物
     examples:
-    - [牛母, gu5-bo2, 母牛]
+    - [ 牛母, gu5-bo2, 母牛 ]
 - 牛牯|gu5-kou2|公牛|n|动物:
 - 牛母|gu5-bo2|母牛|n|动物:
 - 羊牯|gu5-kou2|公羊|n|动物:
@@ -157,3 +116,956 @@
 - 蚯蚓|kau6-un2||n|动物:
 - 蛄蝇|kou1-sin5|蚜虫|n|动物:
 - 蛆|tsv1|蛆虫|n|动物:
+
+# -------------------------- 水产 SEAFOOD --------------------------
+- 海鲜|hai2-tshinn1||n|水产:
+- 鱼|hv5||n|水产:
+- 虾|he5||n|水产:
+- 蟹|hoi6||n|水产:
+- 马鲛|be2-ka1||n|水产:
+- 鲨鱼|sua1-hv5||n|水产:
+- 峇仔|buah4-kiann2|鳄鱼|n|水产:
+    loan: 马来语/buaya
+- 鲸鱼|kheng5-hv5||n|水产:
+- 鲍鱼|pau6-hv5||n|水产:
+- 鱼翅|hv5-tshi3||n|水产:
+- 鳗|muann5||n|水产:
+- 鳝|tshuann6|黄鳝|n|水产:
+- 䖳|the7|海蜇|n|水产:
+- 鲿|tshionn5|黄鳍鲷|n|水产:
+- 鲫鱼|tsit4-hv5||n|水产:
+- 鲳鱼|tshionn1-hv5||n|水产:
+- 午笋|ngou2-sun2|午鱼|n|水产:
+- 乌鱼|ou1-hv5|鲻鱼|n|水产:
+- 草鱼|tshau2-hv5||n|水产:
+- 斑鱼|poinn1-hv5||n|水产:
+- 䖳鱼|the7-hv5|龙头鱼|n|水产:
+- 𠕇鱼|toinn7-hv5|龙头鱼|n|水产:
+- 红目鳞|ang5-mak8-lin5||n|水产:
+- 鹦哥鱼|eng1-ko1-hv5||n|水产:
+- 黄花鱼|ng5-hue1-hv5|小黄鱼|n|水产:
+- 沙尖|sua1-tsiam1||n|水产:
+- 赤目|tshiah4-mak8|赤眼鳟|n|水产:
+- 癞哥鱼/那哥鱼|lai3-ko1-hv5/na3-ko1-hv5|多齿蛇鲻|n|水产:
+- 鹿仔鱼/竹仔鱼|tek8-kiann2-hv5/tek4-kiann2-hv5|马面鲀|n|水产:
+- 剃皮鹿|thi3-phue5-tek8|马面鲀|n|水产:
+- 带鱼|tua3-hv5||n|水产:
+- 鞭鱼|pian1-hv5||n|水产:
+- 东星|tang1-seng1|石斑鱼|n|水产:
+- 过鱼|kue3-hv5|石斑鱼|n|水产:
+- 沙毛|sua1-mo5|鳗鲶|n|水产:
+- 黄粚|ng5-thi1|泥猛鱼|n|水产:
+- 巴浪|pa1-lang1|蓝圆鲹|n|水产:
+- 阔目|khuah4-mak8|竹夹鱼|n|水产:
+- 秀才鱼|siu3-tsai5-hv5|短鳍红娘鱼|n|水产:
+- 鸡腿鱼|koi1-thui2-hv5|马掌丁鱼|n|水产:
+- 非洲鲫|hui1-tsiu1-tsit4||n|水产:
+- 钓鲤|tionn3-li2|金线鱼|n|水产:
+- 红杉鱼|ang5-sann1-hv5|金线鱼|n|水产:
+- 鲤蛄|li2-kou1|鲤鱼|n|水产:
+- 金鲤|kim1-li2|金鱼|n|水产:
+- 龙舌|leng5-tsih8||n|水产:
+- 鞋底鱼|oi5-toi2-hv5|龙舌鱼|n|水产:
+- 花仙鱼|hue1-sian1-hv5|鲐鱼|n|水产:
+- 鲈鱼|lou5-hv5||n|水产:
+- 鲑鱼|kuai1-hv5|河豚|n|水产:
+- 金鼓|kim1-kou2|金钱鱼|n|水产:
+- 秋刀|tshiu1-to1||n|水产:
+- 赤岭|tshiah4-niann2||n|水产:
+- 鲮箭|leng5-tsinn3|鲮鱼|n|水产:
+- 码头鱼|be2-thau5-hv5||n|水产:
+- 脚鱼|kha1-hv5|鳖|n|水产:
+- 鳖|pih4||n|水产:
+- 油箸|iu5-tv7|鳗根|n|水产:
+- 龙虾|leng5-he5||n|水产:
+- 虾米|he5-bi2||n|水产:
+- 虾蛄/虾姑|he5-kou1|皮皮虾|n|水产:
+- 鱿鱼|jiu5-hv5||n|水产:
+- 染|ninn2||n|水产:
+- 猴染|kau5-ninn2||n|水产:
+- 墨斗|bak8-tau2|乌贼|n|水产:
+- 鱼子|hv5-tsi2||n|水产:
+- 鱼春|hv5-tshun1||n|水产:
+- 螺|lo5||n|水产:
+- 田螺|tshan5-lo5||n|水产:
+- 石螺|tsioh8-lo5||n|水产:
+- 烟筒钗|in1-tang5-thoi1|海钉螺|n|水产:
+- 蚝|o5|牡蛎|n|水产:
+- 蚶|ham1||n|水产:
+- 蛏|thang1|蛏子|n|水产:
+- 花蛤|hue1-kap4||n|水产:
+- 花蚶|hue1-ham1||n|水产:
+- 血蚶|hueh4-ham1||n|水产:
+- 指甲蚶|tsng1-kah4-ham1|蛏子|n|水产:
+- 车白/沙白|tshia1-peh8|沙白|n|水产:
+- 蚬|hoinn2||n|水产:
+- 青贻|tshenn1-si5|翡翠贻贝|n|水产:
+- 干贝|kan1-pue6||n|水产:
+- 干鱼柱|kan1-hv5-tsu6|干贝|n|水产:
+- 薄壳|poh8-khak4|寻氏肌蛤|n|水产:
+- 薄壳米|poh8-khak4-bi2||n|水产:
+- 红肉|ang5-nek8|红肉河蓝蛤|n|水产:
+- 红肉米|ang5-nek8-bi2||n|水产:
+- 紫菜|tsi2-tshai3||n|水产:
+- 龙须菜|leng5-tsheu1-tshai3||n|水产:
+- 海带|hai2-tua3||n|水产:
+- 鲎|hau7||n|水产:
+- 蠘|tshih8|梭子蟹|n|水产:
+- 三目蠘|sann1-mak8-tshih8||n|水产:
+- 田蟹|tshan5-hoi6||n|水产:
+- 水蟹|tsui2-hoi6||n|水产:
+- 青蟹|tshenn1-hoi6||n|水产:
+- 毛蟹|mo5-hoi6|大闸蟹|n|水产:
+- 蟛蜞|phenn5-khi5||n|水产:
+- 𰴕蟹|bih4-hoi6|蟛蜞|n|水产:
+    desc: 一种小型蟹
+- 膏蟹|ko1-hoi6||n|水产:
+    desc: 指蟹膏丰满的（雌）蟹
+
+# -------------------------- 蔬菜 VEGETABLES --------------------------
+- 蔬菜|so1-tshai3||n|蔬菜:
+- 羹菜|kenn1-tshai3|蔬菜|n|蔬菜:
+- 荷兰薯|ho5-lan1-tsv5|土豆|n|蔬菜:
+- 干筒/干茼|kan1-tang5|土豆/马铃薯|n|蔬菜:
+    loan: 马来语/kentang
+- 番薯|huan1-tsv5||n|蔬菜:
+- 番葛|huan1-kuah4|红薯|n|蔬菜:
+- 番葛叶|huan1-kuah4-hioh8|红薯叶|n|蔬菜:
+- 麦|beh8|小麦|n|蔬菜:
+- 薏米|i3-bi2|玉米|n|蔬菜:
+- 幼米|iunn3-bi2|玉米|n|蔬菜:
+- 金黍米|kim1-seu2-bi2|玉米|n|蔬菜:
+- 硕莪米|sia5-ngo5-bi2|玉米|n|蔬菜:
+    desc: 原意西米，讹为玉米
+- 荷兰豆|ho5-lan1-tau7|豌豆|n|蔬菜:
+- 青豆|tshenn1-tau7|豌豆|n|蔬菜:
+- 白菜|peh8-tshai3||n|蔬菜:
+- 西兰花|sai1-lan5-hue1||n|蔬菜:
+- 菜花|tshai3-hue1|花菜|n|蔬菜:
+- 菜头|tshai3-thau5|萝卜|n|蔬菜:
+- 白菜头|peh8-tshai3-thau5|白萝卜|n|蔬菜:
+- 红菜头|ang5-tshai3-thau5|红萝卜|n|蔬菜:
+- 芥蓝|khah4-nann5||n|蔬菜:
+- 芥蓝花|khah4-nann5-hue1|芥蓝|n|蔬菜:
+- 番茄|huan1-kio5||n|蔬菜:
+- 西红柿|sai1-ang5-sai6||n|蔬菜:
+- 菠菱|pue1-leng5|菠菜|n|蔬菜:
+- 蕹菜|eng3-tshai3|空心菜|n|蔬菜:
+- 韭菜|ku1-tshai3||n|蔬菜:
+- 高丽|ko1-le6|包菜|n|蔬菜:
+- 高丽蕾|ko1-le6-lui5|包菜|n|蔬菜:
+- 葱|tshang1||n|蔬菜:
+- 番葱|huan1-tshang1|洋葱|n|蔬菜:
+- 大菜|tua7-tshai3|芥菜|n|蔬菜:
+- 絮瓜/须瓜|tsheu3-kue1/tsheu1-kue1|丝瓜|n|蔬菜:
+- 吊瓜|tiau3-kue1|黄瓜|n|蔬菜:
+- 冬瓜|tang1-kue1||n|蔬菜:
+- 角瓜|kak4-kue1||n|蔬菜:
+- 刺瓜|tshi3-kue1||n|蔬菜:
+- 荠葱/钱葱|tshinn5-tshang1|马蹄葱/马蹄/荸荠|n|蔬菜:
+- 苋菜|hoinn7-tshai3||n|蔬菜:
+- 莶椒|hiam1-tsio1|辣椒|n|蔬菜:
+- 猴栗|kau5-lat8|板栗|n|蔬菜:
+- 榄|lam2|乌榄|n|蔬菜:
+- 地豆|ti7-tau7|花生|n|蔬菜:
+- 豆芽|tau7-ge5||n|蔬菜:
+- 粉豆|hun2-tau7|豆角|n|蔬菜:
+- 刀豆|to1-tau7||n|蔬菜:
+- 乌豆|ou1-tau7|黑豆|n|蔬菜:
+- 红豆|ang5-tau7||n|蔬菜:
+- 绿豆|lek8-tau7||n|蔬菜:
+- 黄豆|ng5-tau7||n|蔬菜:
+- 玻璃菜|po1-li5-tshai3|生菜|n|蔬菜:
+- 春菜|tshun1-tshai3|小芥菜|n|蔬菜:
+- 芹菜|khvn5-tshai3||n|蔬菜:
+- 芫荽|uan5-sui1|香菜|n|蔬菜:
+- 芋|ou7|芋头|n|蔬菜:
+- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|蔬菜:
+    accents:
+    - ChaoYang_MianCheng: [ nainn5-ngau6, nainn5-nau6 ]
+    - ChaoAn_FengHuang: noinn5-ngau6
+- 奶瓜|ni1-kue1|木瓜|n|蔬菜:
+- 笋|sun2|竹笋|n|蔬菜:
+- 茼蒿|tang5-o1||n|蔬菜:
+- 芳菜/香菜|phang1-tshai3|油麦菜|n|蔬菜:
+- 生菜|tshenn1-tshai3||n|蔬菜:
+- 姜|kionn1||n|蔬菜:
+- 东洋草|tang1-ionn5-tshau3|西洋菜|n|蔬菜:
+- 东洋菜|tang1-ionn5-tshai3|西洋菜|n|蔬菜:
+    desc: 同“东洋草”
+- 芦笋|lou5-sun2||n|蔬菜:
+- 百合|peh4-hah8||n|蔬菜:
+- 芡实|khiam6-sit8||n|蔬菜:
+- 苦瓜|khou2-kue1||n|蔬菜:
+- 茄|kio5|茄子|n|蔬菜:
+- 番瓜|huan1-kue1|南瓜|n|蔬菜:
+- 薄荷|po6-ho3||n|蔬菜:
+- 九层塔|kau2-tsan5-thah4||n|蔬菜:
+- 金不换|kim1-put4-huan3||n|蔬菜:
+- 蒜|sng3||n|蔬菜:
+- 蒜白|sng3-peh8|蒜黄|n|蔬菜:
+- 蒜头|sng3-thau5||n|蔬菜:
+- 木耳|bak8-jv2||n|蔬菜:
+- 香菇|hionn1-kou1||n|蔬菜:
+- 淮山|huai5-suann1|山药|n|蔬菜:
+- 枸杞|kau2-khi2||n|蔬菜:
+- 党参|tang2-siam1||n|蔬菜:
+- 北芪|pak4-khi5|黄芪|n|蔬菜:
+- 沙参|sua1-siam1||n|蔬菜:
+- 玉竹|gek8-tek4||n|蔬菜:
+- 麦冬|beh8-tong1||n|蔬菜:
+- 桑垂|sng1-sui5/siang1-sui5|桑葚|n|蔬菜:
+- 灯芯草|teng1-sim1-tshau2||n|蔬菜:
+- 无花果|bo5-hue1-kue2||n|蔬菜:
+- 霍斛|khak4-hok8|石斛|n|蔬菜:
+- 高丽|kau1-li5|高丽参/人参|n|蔬菜:
+- 人参|jin5-siam1||n|蔬菜:
+- 洋参|ionn5-siam1||n|蔬菜:
+
+# -------------------------- 水果 FRUITS --------------------------
+- 青果|tshenn1-kue2|水果|n|水果:
+- 柑|kann1|蜜柑|n|水果:
+- 橘|kit4|橘子|n|水果:
+- 桔|kit4|桔子|n|水果:
+- 橙|tsheng5|橙子|n|水果:
+- 弓蕉|keng1-tsio1|香蕉|n|水果:
+- 肉蕉|bah4-tsio1||n|水果:
+    desc: 一种肥大的香蕉
+- 米蕉|bi2-tsio1||n|水果:
+    desc: 一种细小的香蕉
+- 柚|iu7|柚子|n|水果:
+- 番梨/凤梨|huan1-lai5|凤梨|n|水果:
+- 桃|tho5|桃子|n|水果:
+- 梨|lai5||n|水果:
+- 雪梨|srh4-lai5||n|水果:
+- 檨|suainn7|芒果|n|水果:
+- 柿|sai6|柿子|n|水果:
+- 桲仔/木仔|bat8-kiann2|番石榴|n|水果:
+- 西瓜|si1-kue1||n|水果:
+- 芒胶|mang5-ka1|菠萝蜜|n|水果:
+- 林檎|lim5-khim5|番荔枝|n|水果:
+- 石榴|sioh8-liu5||n|水果:
+- 榴莲|liu5-lian5||n|水果:
+- 杨梅|ionn5-bue5||n|水果:
+- 李|li2|李子|n|水果:
+- 柰|nai6|柰子|n|水果:
+- 杨桃|ionn5-to5||n|水果:
+- 枇杷|pi5-pe5||n|水果:
+- 葡萄|phu5-tho5||n|水果:
+- 无花果|bo5-hue1-kue2||n|水果:
+- 山竹|suann1-tek4||n|水果:
+- 橄榄|kann1-nann2||n|水果:
+- 油柑|iu5-kann1||n|水果:
+- 山楂|suann1-tsa1||n|水果:
+- 龙眼|nek8-oinn2||n|水果:
+- 荔果|noi7-kue2|荔枝|n|水果:
+- 莲角|noinn5-kak4|菱角|n|水果:
+- 蔗|tsia3|甘蔗|n|水果:
+- 梅|bue5|梅子|n|水果:
+- 枣|tso2||n|水果:
+- 红枣|tso2||n|水果:
+- 莲子|noinn5-tsi2||n|水果:
+- 莲雾|lian5-bu7||n|水果:
+- 香雾|hiang1-bu7|莲雾|n|水果:
+- 苹果|phin5-kue2||n|水果:
+- 哈密瓜|hah4-bit8-kue1||n|水果:
+- 黄弹|ng5-tuainn7|黄皮|n|水果:
+- 红毛丹|ang5-mo5-tan1||n|水果:
+- 柿|sai6||n|水果:
+- 红柿|ang5-sai6||n|水果:
+
+# -------------------------- 特产 SPECIALTIES --------------------------
+- 牛肉粿条|gu5-nek8-kue2-tiau5||n|特产:
+- 牛肉丸|gu5-nek8-inn5||n|特产:
+- 丸|inn5|肉丸|n|特产:
+- 肉丸|inn5||n|特产:
+- 鱼丸|hv5-inn5||n|特产:
+- 鲜鱼丸|tshinn1-hv5-inn5||n|特产:
+- 菜头丸|tshai3-thau5-inn5||n|特产:
+- 猪肉丸|tv5-nek8-inn5||n|特产:
+- 墨斗丸|bak8-tau2-inn5||n|特产:
+- 胡椒丸|hou5-tsio1-inn5||n|特产:
+- 粿条|kue2-tiau5||n|特产:
+- 粿条汤|kue2-tiau5-thng1||n|特产:
+- 炒粿条|tsha2-kue2-tiau5||n|特产:
+- 粉签|hun2-tshiam1|粉丝|n|特产:
+- 粉签汤|hun2-tshiam1|粉丝汤|n|特产:
+- 粉签蛋|hun2-tshiam1-nng6|粉丝蛋汤|n|特产:
+- 炒粉签|tsha2-hun2-tshiam1|炒粉丝|n|特产:
+- 米粉|bi2-hun2||n|特产:
+- 米粉汤|bi2-hun2-thng1||n|特产:
+- 炒米粉|tsha2-bi2-hun2||n|特产:
+- 面|minn7|面/面条|n|特产:
+- 炒面|tsha2-minn7||n|特产:
+- 面汤|minn7-thng1||n|特产:
+- 面薄|minn7-poh8|扁面|n|特产:
+- 尖米圆|tsiam1-bi2-inn5||n|特产:
+- 薯粉|tsv5-hun2||n|特产:
+- 杂粮|tsap8-nionn5||n|特产:
+- 粿|kue2||n|特产:
+    desc: 潮汕本地各类小吃称呼的后缀，也作为统称。
+- 粿汁|kue2-tsap4||n|特产:
+- 麦粿汁|beh8-kue2-tsap4||n|特产:
+- 红粿桃|ang5-kue2-tho5||n|特产:
+    desc: 同“红桃粿”
+- 红桃粿|ang5-tho5-kue2||n|特产:
+- 白桃粿|peh8-tho5-kue2||n|特产:
+- 鼠曲粿/鼠壳粿|tshv2-khak4-kue2||n|特产:
+- 馒头|muan2-thau5||n|特产:
+- 包|pau1|包子|n|特产:
+- 面包|minn7-pau1|面包|n|特产:
+- 臭酸包|tshau3-sng1-pau1|面包|n|特产:
+    desc: 专指西式面包
+- 蛋粿|nng6-kue2||n|特产:
+    desc: 本地小吃，也用于指称西式糕点。
+- 蛋粿|nng6-kue2|蛋糕/糕点|n|特产:
+    desc: 西式糕点。
+- 包|pau1|馅|h|特产:
+    desc: 名词前缀，包~，指~馅。
+    examples:
+    - [ 包饭, pau1-png7, 米饭馅 ]
+    - [ 包豆沙, pau1-tau7-sa1, 豆沙馅 ]
+- 包饭|pau1-png7|米饭馅|n|特产:
+- 馅|ann7|咸绿豆沙馅|n|特产:
+    desc: 潮汕小吃中，单说“馅”的一般都指咸绿豆沙馅
+- 包馅|pau1-ann7|咸绿豆沙馅|n|特产:
+- 包豆沙|pau1-tau7-sa1|豆沙馅|n|特产:
+- 包芋泥|pau1-ou7-ni5|芋泥馅|n|特产:
+- 包笋|pau1-sun2|笋馅|n|特产:
+- 包菜|pau1-tshai3|蔬菜馅|n|特产:
+- 包韭菜|pau1-ku1-tshai3|韭菜馅|n|特产:
+- 草粿|tshau2-kue2|烧仙草|n|特产:
+- 甜粿|tiam5-kue2||n|特产:
+- 发粿|huat4-kue2||n|特产:
+- 朴子粿|phok4-tsi2-kue2||n|特产:
+- 猪𦛨粿|tv1-la5-kue2||n|特产:
+- 咸水粿|kiam5-tsui2-kue2||n|特产:
+- 米豆粿|bi2-tau7-kue2||n|特产:
+- 乒乓粿|pin1-pong5-kue2||n|特产:
+- 菜头粿|tshai3-thau5-kue2||n|特产:
+- 无米粿|bo5-bi2-kue2||n|特产:
+- 韭菜粿|ku1-tshai2-kue2||n|特产:
+- 芋粿|ou7-kue2||n|特产:
+- 鲎粿|hau7-kue2||n|特产:
+- 栀粿|ki1-kue2||n|特产:
+- 糕粿|ko1-kue2||n|特产:
+- 酵粿|ka3-kue2||n|特产:
+- 油粿|iu5-kue2||n|特产:
+- 麦粿|beh8-kue2||n|特产:
+- 芋泥|ou7-ni5||n|特产:
+- 豆沙|tau7-sa1||n|特产:
+- 绿豆沙|lek8-tau7-sa1||n|特产:
+- 红豆沙|ang5-tau7-sa1||n|特产:
+- 乌豆沙|ou1-tau7-sa1|黑豆沙|n|特产:
+- 狮头鹅|sai1-thau5-go5||n|特产:
+- 卤鹅|lou2-go5||n|特产:
+- 卤狮头鹅|lou6-sai1-thau5-go5||n|特产:
+- 鹅卤|go5-lou2|卤鹅汤|n|特产:
+- 卤汤|lou2-thng1||n|特产:
+- 烧鹅|sio1-go5||n|特产:
+- 卤虾蛄|lou6-he5-kou1||n|特产:
+- 鹅肉|go5-nek8||n|特产:
+- 鹅头|go5-thau5||n|特产:
+- 鹅颔|go5-am6|鹅颈|n|特产:
+- 鹅脚|go5-kha2||n|特产:
+- 鹅肠|go5-tng5||n|特产:
+- 鹅肝|go5-kuann1||n|特产:
+- 鹅翼|go5-sit8|鹅翅|n|特产:
+- 鸡翼|koi1-sit8|鸡翅|n|特产:
+- 鸡脚|koi1-kha1|鸡爪|n|特产:
+- 鸡肌|koi1-kui1|鸡嗉囊/气球|n|特产:
+    desc: 因形状相像，也指气球。
+- 鸡卵|koi1-nng6|鸡蛋|n|特产:
+- 粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
+- 童子鸡|thong5-tsv2-koi1||n|特产:
+- 猪肚|tv1-tou6||n|特产:
+- 猪肚|tv1-tou2||n|特产:
+- 猪肝|tv1-kuann1||n|特产:
+- 猪肠|tv1-tng5||n|特产:
+- 猪血|tv1-hueh4||n|特产:
+- 猪杂|tv1-tsap8||n|特产:
+- 猪脚|tv1-kha1||n|特产:
+- 肾子|sian6-tsi2|肾脏|n|特产:
+- 糯米猪肠|tsut8-bi2-tv1-tng5||n|特产:
+- 味素|bi7-sou3|味精|n|特产:
+- 味精|bi7-tseng1||n|特产:
+- 醋|tshou3||n|特产:
+- 盐|iam5||n|特产:
+- 鸡精|koi1-tseng1||n|特产:
+- 蒜泥醋|sng3-ni5-tshou3||n|特产:
+- 浙醋|tsit4-tshou3||n|特产:
+- 米酒|bi2-tsiu2||n|特产:
+- 豆豉|tau7-si7||n|特产:
+- 豆豉酱|tau7-si7-tsionn3||n|特产:
+- 豉油|si7-iu5|酱油|n|特产:
+- 臊汤|tsho1-thng1|鱼露|n|特产:
+- 沙茶|sa1-te5||n|特产:
+- 红莶|ang5-hiam1|红辣酱|n|特产:
+- 三渗酱|sann1-siam1-tsionn3/sann1-tsham1-tsionn3||n|特产:
+- 蒜头𦛨|sng3-thau5-la5|蒜头油|n|特产:
+- 葱珠𦛨|tshang1-tsu1-la5|葱花油|n|特产:
+- 豆酱|tau7-tsionn3||n|特产:
+- 生抽|tshenn1-thiu1||n|特产:
+- 桔油|kit4-iu5||n|特产:
+- 番茄酱|huan1-kio5-tsionn3||n|特产:
+- 芝麻酱|tsv1-mua5-tsionn3||n|特产:
+- 花生酱|hue1-senn1-tsionn3||n|特产:
+- 芥辣|kai3-luah8|芥末|n|特产:
+- 米糍|bi2-tsinn5||n|特产:
+- 落汤糍|loh8-thng1-tsinn5||n|特产:
+- 肠粉|tng5-hun2||n|特产:
+- 饺|kiau2|饺子|n|特产:
+- 笋饺|sun2-kiau2||n|特产:
+- 春卷|tshun1-kng2||n|特产:
+- 春饼|tshun1-piann2||n|特产:
+- 圆|inn5|汤圆|n|特产:
+- 汤圆|thng1-inn5||n|特产:
+- 粽球|tsang3-kiu5|粽子|n|特产:
+- 猪头粽|tv1-thau5-tsang3||n|特产:
+- 栀粽|ki1-tsang3||n|特产:
+- 𦛨饼|la5-piann2|猪油饼|n|特产:
+- 月饼|gueh8-piann2||n|特产:
+- 冬瓜册|tang1-kue1-tsheh4||n|特产:
+- 柿饼|sai6-piann2||n|特产:
+- 龙眼干|nek8-oinn2-kuann1||n|特产:
+- 葡萄干|phu5-tho5-kuann1||n|特产:
+- 绿豆饼|lek8-tau7-piann2||n|特产:
+- 绿豆糕|lek8-tau7-ko1||n|特产:
+- 油麻糕|iu5-mua5-ko1||n|特产:
+- 鸡卵饼|koi1-nng6-piann2|鸡蛋饼|n|特产:
+- 鸡面|koi1-minn7|方便面|n|特产:
+- 碗仔面|uann2-kiann2-minn7||n|特产:
+- 蟹皇面|hoi6-uang5-minn7||n|特产:
+- 蚝烙|o5-luah4||n|特产:
+- 絮瓜烙|tsheu3-kue1-luah4|丝瓜烙|n|特产:
+- 须瓜烙|tsheu1-kue1-luah4|丝瓜烙|n|特产:
+- 番瓜烙|huan1-kue1-luah4|南瓜烙|n|特产:
+- 菜头烙|huan1-kue1-luah4|萝卜烙|n|特产:
+- 猪脚饭|tv1-kha1-png7||n|特产:
+- 香饭|phang1-png7||n|特产:
+    desc: 一切包含其他食材的炒饭、焖饭
+- 菜头饭|tshai3-thau5-png7||n|特产:
+- 砂锅糜|sua1-ue1-mue5|砂锅粥|n|特产:
+- 番葛糜|huan1-kuah4-mue5|红薯粥|n|特产:
+- 猪骨糜|tv1-kut4-mue5|猪骨粥|n|特产:
+- 工夫茶|kang1-hu1-te5||n|特产:
+- 金含|kim1-kam5|糖果|n|特产:
+- 物食|mueh8-tsiah8|零食|n|特产:
+- 糕仔|ko1-kiann2||n|特产:
+- 糖葱薄饼|thng5-tshang1-poh8-piann2||n|特产:
+- 姜薯酥|kionn1-tsv5-sou1||n|特产:
+- 地豆方|ti7-tau7-pang1||n|特产:
+- 麻豆薄|mua5-tau7-poh8||n|特产:
+- 橄榄|kann1-nann2||n|特产:
+- 甘草橄榄|kam1-tshau2-kann1-nann2||n|特产:
+- 咸煎饼|ham5-tsin5 peng6||n|特产:
+    loan: 粤语/咸煎饼
+- 清凉糖|tsheng1-liang5-thng5||n|特产:
+- 薄荷糖|po6-ho3-thng5||n|特产:
+- 泡泡糖|pha6-pha6-thng5||n|特产:
+- 香口胶|hiang1-khau2-ka1|口香糖|n|特产:
+- 老鼠屎|ngiau2-tshv2-sai2|济公丹|n|特产:
+- 肉茸|nek8-jiong5|肉松|n|特产:
+- 肉卷|nek8-kng2||n|特产:
+- 肉剉/肉脞|nek8-tsho3|肉碎|n|特产:
+- 肉脯|nek8-pou2||n|特产:
+- 猪肉脯|tv1-nek8-pou2||n|特产:
+- 虾脯|he5-pou2||n|特产:
+- 鱼干|hv5-kuann1||n|特产:
+- 鱼脯|hv5-pou2||n|特产:
+- 鱼饭|hv5-png7||n|特产:
+- 咸鱼|kiam5-hv5||n|特产:
+- 咸蛋/咸卵|kiam5-nng6|咸鸭蛋|n|特产:
+- 咸鸭蛋/咸鸭卵|kiam5-ah4-nng6|咸鸭蛋|n|特产:
+- 凤凰茶|hong6-uang5-te5||n|特产:
+- 单枞|tuann1-tsang5||n|特产:
+- 铁观音|thih4-kuan1-im1||n|特产:
+- 腐枝|hu7-ki1|腐竹|n|特产:
+- 豆干|tau7-kuann1||n|特产:
+- 烰豆干|phu5-tau7-kuann1|油炸豆干|n|特产:
+- 香腐|hiang1-hu7|腌豆干|n|特产:
+- 豆腐|tau7-hu7||n|特产:
+- 日本豆腐|jit8-png2-tau7-hu7||n|特产:
+- 豆腐浆|tau7-hu7-tsionn1|豆浆|n|特产:
+- 豆浆|tau7-tsionn1||n|特产:
+- 海霸王|hai2-pa3-uang5||n|特产:
+- 杂咸|tsap8-kiam5||n|特产:
+- 咸菜|kiam5-tshai3||n|特产:
+- 贡菜|kong3-tshai3||n|特产:
+- 冬菜|tang2-tshai3||n|特产:
+- 橄榄菜|kann1-nann2-tshai3|梅菜|n|特产:
+- 贡腐|kong3-hu7|腌豆腐|n|特产:
+- 菜脯|tshai3-pou2|腌萝卜干|n|特产:
+- 菜脯麸|tshai3-pou2-hu1|碎腌萝卜干|n|特产:
+- 菜脯丝|tshai3-pou2-si1|腌萝卜丝|n|特产:
+- 菜脯卵|tshai3-pou2-nng6|萝卜干炒蛋|n|特产:
+- 菜头槁|tshai3-thau5-khau2|干腌萝卜条|n|特产:
+- 莲花峰茶|noinn5-hue1-hong1-te5||n|特产:
+- 魔术油|mo5-sut8-iu5||n|特产:
+- 活络油|uah8-lok8-iu5||n|特产:
+- 风油精|huang1-iu5-tseng1||n|特产:
+- 王老吉|heng5-lau6-kit4||n|特产:
+- 杏仁露|heng6-jin5-lou3||n|特产:
+- 椰子汁|ia5-tsi2-tsap4||n|特产:
+- 燕窝|ian3-o1||n|特产:
+- 食桌|tsiah8-toh4|吃席|v|特产:
+
+# -------------------------- 人称 RELATIONSHIPS --------------------------
+- 人/侬|nang5||n|人称:
+- 我|ua2||r|人称:
+- 家己|ka1-ki7/ka1-ti7/ka1-li7|自己|n|人称:
+- 家己人|ka1-ki7-nang5|自己人|n|人称:
+- 你/汝|lv2|你|r|人称:
+- 阮/我人/我侬|uan2/ua2--nang5/un2|我们|r|:
+    desc: 我们（不含听话人）
+- 咱/你我人/你我侬|nan2/lv2-ua2--nang5|我们|r|人称:
+    desc: 我们（包含听话人）
+- 恁/您/你人|nvn2/lv2--nang5|你们|r|人称:
+- 恁阿/您阿/令|nvn2-a1/niann2|你的|n|人称:
+- 伊|i1|他/她|r|人称:
+- 𪜶/伊人|in1/i1--nang5|他们/她们|r|人称:
+- 底人/底𫢗/𫢗|ti7-nang5/ti7-tiang5/tiang5|谁|r|人称:
+- 阿|a1||h|人称:
+    desc: 人称前缀。称呼时通常都添加这个前缀。
+    examples:
+    - [伊阿父, i1-a1-pe6, 他父亲]
+    - [恁父, nvn2-pe6, 你爸]
+    - [阮阿叔, uan2-a1-tsek4, 我叔]
+- 翁|ang1|丈夫|n|人称:
+- 𡚸|bou2|妻子|n|人称:
+- 老|lau6|老公/老婆|n|人称:
+    desc: 单读叫“老”指老公或老婆。
+    examples:
+    - [阿老啊, a1-lau6--a1, 老公啊/老婆啊]
+- 老|lau6||h|人称:
+    desc: 潮汕特有的人称前缀，用于对父母的上一辈长辈的称呼。例如父母称呼为“阿公”的，则子女称呼“老公”；父母称呼为“二叔”的，则子女称呼“二老叔”或“老二叔”。
+    examples:
+    - [老公, lau6-kong1, 曾祖父]
+- 翁姐|ang1-tsia2|夫妻|n|人称:
+- 亲情|tshin1-tsiann5|亲戚|n|人称:
+- 祖公|tsou2-kong1|先祖|n|人称:
+- 公|kong1|爷爷|n|人称:
+- 嬷/妈|ma2|奶奶|n|人称:
+    desc: 因“妈”字已被用于在现代汉语中指代母亲，为避免歧义，建议统一使用“嬷”。“妈”字仍用于少量专有名词。
+    examples:
+    - [阿嬷, a1-ma2, 奶奶]
+    - [老妈宫粽球, lau6-ma2-keng1 tsang3-kiu5, 老妈宫粽子]
+    - [妈祖, ma2-zu2, 妈祖]
+- 老公|lau6-kong1|曾祖父|n|人称:
+- 老嬷|lau6-ma2|曾祖母|n|人称:
+- 外公|gua7-kong1|外公|n|人称:
+- 外嬷|gua7-ma2|外婆|n|人称:
+- 大官|ta1-kuann1|公公|n|人称:
+- 大家|ta1-ke1|婆婆|n|人称:
+- 大家官|ta1-ke1-kuann1|公公婆婆|n|人称:
+- 丈人公|tionn6-nang5-kong1|岳父|n|人称:
+- 丈人|tionn6-nang5|岳父|n|人称:
+- 丈姆婆|tionn6-m2-phua5|岳母|n|人称:
+- 丈姆|tionn6-m2|岳母|n|人称:
+- 爸|pa1/pa5||n|人称:
+- 父/爸|pe6|父亲|n|人称:
+    desc: “爸”字已被用于在现代汉语中作为更口语化的称呼，该书面语读音建议统一用“父”。
+- 妈|a1-ma5||n|人称:
+- 母|bo2|母亲|n|人称:
+- 姨|i5|母亲|n|人称:
+    desc: 旧称。年轻一代已经非常少用，多用“妈”。“姨”受普通话影响现多用于指称姨妈，称呼母亲的情况现多只存于詈语。
+    examples:
+    - [阿姨, a1-i5, 妈妈]
+    - [令姨块膣, niann2-i5 kr3-tsi1, 你妈逼的]
+- 嫒/姨/𡟓|ai5|母亲|n|人称:
+    desc: 旧称
+- 姈|nenn1|母亲|n|人称:
+    desc: 不是特别礼貌的俗称
+- 父嫒/父姨/父𡟓|pe6-ai5|母亲|n|人称:
+- 奴|nou5|孩子|n|人称:
+- 仔/囝/崽|kiann2|儿子|n|人称:
+- 丈夫|ta1-pou1|男|n|人称:
+- 丈夫人|ta1-pou1-nang5|男人|n|人称:
+- 丈夫丈人|ta1-pou1-ta1-nang5|男子汉大丈夫|i|人称:
+- 姿娘/诸娘|tsv1-nionn5|女|n|人称:
+- 姿娘人/诸娘人|tsv1-nionn5-nang5|女人|n|人称:
+- 后生仔|hau6-senn1-kiann2|年轻人|n|人称:
+- 后生后仔|hau6-senn1-hau6-kiann2|年纪轻轻|i|人称:
+- 丈夫仔/兜仔|ta1-pou1-kiann2/tau1-kiann2|儿子/男孩子/男孩/男子|n|人称:
+- 姿娘仔/诸娘仔|tsv1-nionn5-kiann2|女孩子/女孩/女子|n|人称:
+    desc: 不同于“丈夫仔”，“姿娘仔”只能泛称女孩，不能称女儿。称呼女儿应用“查某仔/走仔”。
+- 查某仔/走仔|tsa1-bou2-kiann2/tsau2-kiann2|女儿|n|人称:
+    desc: 现多用合音的“走仔”，而“查某”一词现已较少用。
+- 孙|sun1|孙子/侄子|n|人称:
+    desc: “侄子”一义现已较少用。
+- 外甥|gua7-seng1|外甥|n|人称:
+- 丈夫孙/兜孙|ta1-pou1-sun1/tau1-sun1|孙子|n|人称:
+- 查某孙/走孙|tsa1-bou2-sun1/tsau2-sun1|孙女|n|人称:
+- 曾孙|tseng1-sun1|曾孙|n|人称:
+- 外孙|gua7-sun1|外孙|n|人称:
+- 新妇|sin1-pu6|媳妇|n|人称:
+- 仔婿|kiann2-sai3|女婿|n|人称:
+- 新人|sin1-nang5||n|人称:
+- 阿伯|a1-peh4|伯伯|n|人称:
+- 阿姆|a1-m2|伯母|n|人称:
+- 阿叔|a1-tsek4|叔叔|n|人称:
+- 老叔|lau6-tsek4|叔公|n|人称:
+- 老叔|lau6-su5||n|人称:
+    loan: 普通话/老叔
+- 阿婶|a1-sim2|婶婶|n|人称:
+- 阿舅|a1-ku6|舅舅|n|人称:
+- 阿妗|a1-kim6|舅妈|n|人称:
+- 阿姨|a1-i5|姨妈|n|人称:
+- "**|an5--thi7|姨妈|n|人称":
+    loan: 英语/aunt
+- 姑娘|kou1-nionn5|姑姑|n|人称:
+- 姑娘|ku5 niang6|姑姑|n|人称:
+    loan: 普通话/姑娘
+- 阿姑|a1-kou1|姑姑|n|人称:
+- 阿娘|a1-nionn5|姑姑|n|人称:
+- 阿丈|a1-tionn6|姑丈/姨丈|n|人称:
+- 阿嫂|a1-so2|嫂子|n|人称:
+- 阿嫂|a1-sau2|兄嫂|n|人称:
+- 妻舅|tshi1-ku6|舅子|n|人称:
+- 妻姨|tshi1-i5|姨子|n|人称:
+- 小姆|sio2-m2|弟妇|n|人称:
+- 大小姆|tua7-sio2-m2|妯娌|n|人称:
+- 姐夫|tse2-hu1|姐夫|n|人称:
+- 妹婿|mue6-sai3|妹夫|n|人称:
+- 阿兄|a1-hiann1|哥哥|n|人称:
+    desc: 称呼不分堂、表、胞兄弟姐妹。
+- 阿哥|a1-ko5|哥哥|n|人称:
+- 阿弟|a1-ti6|弟弟|n|人称:
+- 阿姐|a1-tse2|姐姐|n|人称:
+- 阿妹|a1-mue7|妹妹|n|人称:
+- 阿妹|a1-mue6|妹妹|n|人称:
+- 堂|thang5||h|人称:
+- 表|pio2||h|人称:
+- 双生|sang1-senn1|双胞胎|n|人称:
+
+
+# -------------------------- 人体 HUMAN BODY --------------------------
+- 头|thau5||n|人体:
+- 毛|mo5|毛发|n|人体:
+- 头毛|thau5-mo5|头发|n|人体:
+- 辫|pinn1|辫子|n|人体:
+- 圆头卵|inn5-thau5-nng6|光头|n|人体:
+- 毛𩮴|mo5-sui1|刘海|n|人体:
+- 面|min7|脸|n|人体:
+- 目|mak8|眼睛|n|人体:
+- 目珠/目睭|mak8-tsiu1|眼珠|n|人体:
+- 目箍/目圈|mak8-khou1|眼圈|n|人体:
+- 目眉|mak8-bai5|眉毛|n|人体:
+- 目皮|mak8-phue5|眼皮|n|人体:
+- 目仁|mak8-jin5|眼球|n|人体:
+- 目屎|mak8-sai2|眼屎|n|人体:
+- 目屎膏|mak8-sai2-ko1|眼眵|n|人体:
+- 目箭|mak8-tsinn3|眼色|n|人体:
+    examples:
+    - [射目箭, suh8-mak8-tsinn3, 使眼色]
+- 鼻|phinn7|鼻子|n|人体:
+- 鼻空/鼻腔|phinn7-khang1|鼻孔|n|人体:
+- 鼻屎|phinn7-sai2||n|人体:
+- 鼻头|phinn7-thau5|鼻尖|n|人体:
+- 鼻水|phinn7-tsui2|鼻涕|n|人体:
+- 嘴/喙|tshui3|嘴|n|人体:
+- 嘴面皮|tshui3-min7-phue5|嘴唇|n|人体:
+- 嘴唇|tshui3-tun5||n|人体:
+- 嘴残|tshui3-tsuann5|口水|n|人体:
+    desc: 指沾上的口水
+    examples:
+    - [个杯有你的嘴残, kai5-pue1 u6-lv2-kai5-tshui3-tsuann5, 这个杯子沾了你的口水]
+- 胡须|hou5-tsheu1||n|人体:
+- 下颏|e6-hai5|下巴|n|人体:
+- 颊沟|kih4-kau1/kih4-kuai1|脸颊|n|人体:
+- 酒盅窟|tsiu2-tseng1-uh4|酒窝|n|人体:
+- 额头|hiah4-thau5||n|人体:
+- 草眼|tshau2-ngan2|太阳穴|n|人体:
+- 耳|hinn6|耳朵|n|人体:
+- 耳屎|hinn6-sai2||n|人体:
+- 耳塞屎|hinn6 sak4-sai2|没长耳朵|i|人体:
+    desc: 用于骂人
+- 耳空/耳腔|hinn6-khang1|耳孔|n|人体:
+- 颔|am6|脖子|n|人体:
+- 心肝头|sim1-kuann1-thau5|胸口|n|人体:
+- 𩩍篱|phiann1-li5|肋骨|n|人体:
+- 肚|tou2|肚子|n|人体:
+- 肚肠|tou2|肠胃|n|人体:
+- 屎肚|sai2-tou2|腹部|n|人体:
+    desc: 俗称
+- 肚脐|tou2-tsai5|肚脐|n|人体:
+- 胳囊下|koh4-lang5-e6/koh4-lang1-e6|腋下|n|人体:
+- 腰脊|io1-tsiah4|背部|n|人体:
+- 尻脊|ka1-tsiah4|背部|n|人体:
+- 尻脊枋|ka1-tsiah4-pang1|背部|n|人体:
+- 尻脊后|ka1-tsiah4-au6|背后|n|人体:
+- 腰脊骨|io1-tsiah4-kut4|脊骨|n|人体:
+- 腰龙骨|io1-leng5-kut4|脊骨|n|人体:
+- 饭匙骨|png7-si5-kut4|肩胛骨|n|人体:
+- 肩头|koinn1-thau5|肩膀|n|人体:
+- 手|tshiu2||n|人体:
+- 手肘|tshiu2-thng6||n|人体:
+- 手指|tshiu2-tsoinn2||n|人体:
+- 手指|tshiu2-tsi2|戒指|n|人体:
+- 指甲|tsng2-kah4||n|人体:
+- 指头公|tsng2-thau5-kong1|大拇指|n|人体:
+- 指尾囝|tsng2-bue2-kiann2|小指|n|人体:
+- 拳头|khun5-thau5||n|人体:
+- 拳头母|khun5-thau5-bo2||n|人体:
+- 尻川斗|ka1-tshng1-tau2/kha1-tshng1-tau2|屁股|n|人体:
+- 尻川|ka1-tshng1/kha1-tshng1|屁股|n|人体:
+- 脚/骹/跤|kha1|脚|n|人体:
+    desc: 潮汕方言中“脚”可指整只脚，包含大腿、小腿。
+- 脚肠肚|kha1-tng5-tou2|小腿|n|人体:
+- 脚头趺|kha1-thau5-u1|膝盖|n|人体:
+- 脚头|kha1-thau5|膝盖|n|人体:
+- 脚目|kha1-mak8|脚踝|n|人体:
+- 脚盘|kha1-puann5|脚背|n|人体:
+- 脚后蹬|kha1-au6-tenn1|脚后跟|n|人体:
+- 齿龈|khi2-ngvn5|牙龈|n|人体:
+- 舌|tsih8|舌头|n|人体:
+- 喉咙|au5-leng5||n|人体:
+- 涎|nuann6|口水/唾液|n|人体:
+- 痰|tham5||n|人体:
+- 肺|hui3||n|人体:
+- 冇肝|phann3-kuann1|肺|n|人体:
+- 肠|tng5||n|人体:
+- 心|sim1||n|人体:
+- 肝|kuann1||n|人体:
+- 肾子|sian6-tsi2|肾|n|人体:
+- 胆|tann2||n|人体:
+- 筋|kvn1||n|人体:
+- 骨|kut4||n|人体:
+- 𦛨|la5|肥/油|n|人体:
+- 肉|nek8||n|人体:
+- 血|hueh4||n|人体:
+- 力|lat8||n|人体:
+- 脉|meh8||n|人体:
+- 汗|kuann7||n|人体:
+- 尿|jio7||n|人体:
+- 屎|sai2||n|人体:
+- 屁|phui3||n|人体:
+- 𡳞/卵/屌|lan6|屌|n|人体:
+    desc: 男阴的俗称
+- 𡳞鸟/卵鸟|lan6-tsiau2|屌|n|人体:
+- 𡳞核/卵核|lan6-hut8|蛋|n|人体:
+    desc: 睾丸的俗称
+- 𡳞脬/卵脬|lan6|蛋袋|n|人体:
+    desc: 阴囊的俗称
+- 膣/腟/屄|tsi1|屄|n|人体:
+    desc: 女阴的俗称
+
+# -------------------------- 音乐 MUSICAL --------------------------
+- 音乐|im1-gauh8/im1-ngauh8||n|音乐:
+- 潮州音乐|tio5-tsiu1 im1-gauh8||n|音乐:
+- 潮剧|tio5-kiah8||n|音乐:
+- 弦诗|hinn5-si1||n|音乐:
+- 笛套|tek8-thau3||n|音乐:
+- 英歌舞|eng1-ko1-bu2||n|音乐:
+- 纸影|tsua2-iann2|皮影戏|n|音乐:
+- 生|seng1||n|音乐:
+- 旦|tuann3||n|音乐:
+- 净|tseng6||n|音乐:
+- 丑|thiu2||n|音乐:
+- 丛声|tsang5-siann1||n|音乐:
+- 锣鼓|lo5-kou2||n|音乐:
+- 大锣鼓|tua7-lo5-kou2||n|音乐:
+- 潮州大锣鼓|tio5-tsiu1 tua7-lo5-kou2||n|音乐:
+- 文爿|bun5-poinn5|管弦乐部分|n|音乐:
+- 武爿|bu2-poinn5|打击乐部分|n|音乐:
+- 司鼓|si1-kou2||n|音乐:
+- 鼓槌|kou2-thui5||n|音乐:
+- 镲|tshenn6||n|音乐:
+- 苏锣|sou1-lo5||n|音乐:
+- 月锣|gueh8-lo5||n|音乐:
+- 深波|tshim1-po1||n|音乐:
+- 钦仔|khin1-kiann2||n|音乐:
+- 钹|buah8||n|音乐:
+- 小钹|siau2-buah8||n|音乐:
+- 大钹|tua7-buah8||n|音乐:
+- 啲咊/的禾|ti1-tann5|唢呐|n|音乐:
+    desc: 唢呐发出的声音，用于代指唢呐。另外，因为葬礼中常吹唢呐，该词也用于形容人去世。
+    examples:
+    - [㖹啲咊, pun5-ti1-tann5, 吹唢呐]
+    - [伊昨日啲咊去, i1 tsa2-jit8 ti1-tann5--khv3, 他去世了]
+- 笛|tek8||n|音乐:
+- 笛仔|tek8-kiann2||n|音乐:
+- 洞箫|thong5-siau1||n|音乐:
+- 冇弦|phann3-hinn5|椰胡|n|音乐:
+- 椰胡|ia5-hu5||n|音乐:
+- 二胡|ji7-hu5||n|音乐:
+- 二弦|ji7-hinn5||n|音乐:
+- 三弦|sann1-hinn5||n|音乐:
+- 扬琴|iang5-khim5||n|音乐:
+- 古筝|kou2-tseng1||n|音乐:
+- 琵琶|pi5-pe5||n|音乐:
+- 阮|uan2||n|音乐:
+    desc: 一种乐器
+- 中阮|tiong1-uan2||n|音乐:
+- 月琴|gueh8-khim5||n|音乐:
+- 梅花琴|bue5-hue1-khim5||n|音乐:
+- 大提琴|tua7-thi5-khim5||n|音乐:
+    desc: 大提琴被潮州音乐吸收并作为了低声部演奏乐器
+- 钢琴|kng3-khim5||n|音乐:
+- 吉他|kit4-tha2||n|音乐:
+- 加花|kia1-hue1||n|音乐:
+- 设科|siat4-khue1||n|音乐:
+- 锣鼓介|lo5-kou2-kai3||n|音乐:
+- 科介|khue1-kai3||n|音乐:
+- 工尺谱|kang1-tshioh4-phou2/kong1-tshe2-phou2||n|音乐:
+- 合|ho5||n|音乐:
+    desc: 工尺谱专用读音
+- 四|sv3||n|音乐:
+    desc: 工尺谱专用读音
+- 一|i1||n|音乐:
+    desc: 工尺谱专用读音
+- 上|siang6||n|音乐:
+    desc: 工尺谱专用读音
+- 尺|tshe2||n|音乐:
+    desc: 工尺谱专用读音
+- 工|kong1||n|音乐:
+    desc: 工尺谱专用读音
+- 凡|huan5||n|音乐:
+    desc: 工尺谱专用读音
+- 六|liu3||n|音乐:
+    desc: 工尺谱专用读音
+- 五|u2||n|音乐:
+    desc: 工尺谱专用读音
+- 乙|i2||n|音乐:
+    desc: 工尺谱专用读音
+- 多|toh4||n|音乐:
+- 隆|long7||n|音乐:
+- 冬|tong7||n|音乐:
+- 告|kauh4||n|音乐:
+- 主|tsuh4||n|音乐:
+- 冲|tshong7||n|音乐:
+- 壮|tshann7||n|音乐:
+- 仄|tsheh4||n|音乐:
+- 乙|ih4||n|音乐:
+- 仓|tshang7||n|音乐:
+- 焦|tsiauh4||n|音乐:
+- 空|khong7||n|音乐:
+- 哲|tiat4||n|音乐:
+- 力|lat4||n|音乐:
+- 达|tat4||n|音乐:
+- 青|tshin5||n|音乐:
+- 册|tshe7||n|音乐:
+- 村|tshng5||n|音乐:
+- 乔|kiau7||n|音乐:
+
+# -------------------------- 拟声拟态词 ONOMATOPOEIA --------------------------
+# -------------------------- 拟声拟态词 AAB 式 --------------------------
+- 嗷嗷𰇼|ngau7-ngau7-tsham1||o|拟声拟态/AAB:
+    desc: 低声呢喃的样子
+- 嗐嗐𰇼|hainn7-hainn7-tsham1||o|拟声拟态/AAB:
+    desc: 低声呢喃的样子
+- 滒滒溶|ko1-ko1-ionn5||o|拟声拟态/AAB:
+    desc: 黏黏糊糊的样子
+- 哒哒滴|tat8-tat8-tih||o|拟声拟态/AAB:
+    desc: 水滴不停的样子
+- 叨叨念|to7-to7-niam7||o|拟声拟态/AAB:
+    desc: 念念叨叨的样子
+- 烨烨烁|iap8-iap8-sih4||o|拟声拟态/AAB:
+    desc: 灯火忽明忽暗地闪烁的样子
+- 䀰䀰金|kok4-kok4-kim1||o|拟声拟态/AAB:
+    desc: 眼睛瞪大、炯炯有神的样子
+- "***|tong6-tong6-hinn3||o|拟声拟态/AAB":
+    desc: 不停甩动的样子
+- "***|niauh8-niauh8-nng3||o|拟声拟态/AAB":
+    desc: 蠕动的样子
+- "***|huainnh8-huainnh8-soh4||o|拟声拟态/AAB":
+    desc: 心神不宁地动来动去的样子
+- "***|lah8-lah8-so1||o|拟声拟态/AAB":
+    desc: 闲庭信步的样子
+- "***|long6-long6-so6||o|拟声拟态/AAB":
+    desc: 游手好闲的样子
+- "***|pha1-pha1-phin5||o|拟声拟态/AAB":
+    desc: 身体失去平衡的样子
+- "***|phih8-phih8-puah8||o|拟声拟态/AAB":
+    desc: 摇摇欲坠的样子
+- "***|lok4-lok4-khuann3||o|拟声拟态/AAB":
+    desc: 散装在容器中的物品相互撞击的样子
+- "***|hv7-hv7-khiu7||o|拟声拟态/AAB":
+    desc: 瑟瑟发抖的样子
+
+# -------------------------- 拟声拟态词 XX叫 式 --------------------------
+- "*一叫|piang7 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|piang7 e6-kio3||o|拟声拟态/KIO":
+- "**叫|piang7 piang7 kio3||o|拟声拟态/KIO":
+- "**叫|pi7 piang7 kio3||o|拟声拟态/KIO":
+- "***叫|pi7 piang7 liang7 kio3||o|拟声拟态/KIO":
+- "*一叫|phiang7 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|phiang7 e6-kio3||o|拟声拟态/KIO":
+- "**叫|phiang7 phiang7 kio3||o|拟声拟态/KIO":
+- "**叫|phi7 phiang7 kio3||o|拟声拟态/KIO":
+- "***叫|phi7 phiang7 liang7 kio3||o|拟声拟态/KIO":
+- "*一叫|pong7 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|pong7 e6-kio3||o|拟声拟态/KIO":
+- "**叫|pong7 pong7 kio3||o|拟声拟态/KIO":
+- "**叫|pi7 pong7 kio3||o|拟声拟态/KIO":
+- "***叫|pi7 pong7 long7 kio3||o|拟声拟态/KIO":
+- "*一叫|phong7 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|phong7 e6-kio3||o|拟声拟态/KIO":
+- "**叫|phong7 phong7 kio3||o|拟声拟态/KIO":
+- "**叫|phi7 phong7 kio3||o|拟声拟态/KIO":
+- "***叫|phi7 phong7 long7 kio3||o|拟声拟态/KIO":
+- "*一叫|phiak4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|phiak4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|phiak4 phiak4 kio3||o|拟声拟态/KIO":
+- "**叫|phih4 phiak4 kio3||o|拟声拟态/KIO":
+- "***叫|phih4 phiak4 liak4 kio3||o|拟声拟态/KIO":
+- "*一叫|piak4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|piak4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|piak4 piak4 kio3||o|拟声拟态/KIO":
+- "**叫|pih4 piak4 kio3||o|拟声拟态/KIO":
+- "***叫|pih4 piak4 liak4 kio3||o|拟声拟态/KIO":
+- "*一叫|tong6 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|tong6 e6-kio3||o|拟声拟态/KIO":
+- "**叫|tong6 tong6 kio3||o|拟声拟态/KIO":
+- "**叫|ti6 tong6 kio3||o|拟声拟态/KIO":
+- "***叫|ti6 tong6 long6 kio3||o|拟声拟态/KIO":
+- "一叫|ku6 tsek8-kio3||o|拟声拟态/KIO":
+- "下叫|ku6 e6-kio3||o|拟声拟态/KIO":
+- "咕叫|ku6 ku6 kio3||o|拟声拟态/KIO":
+- "咕叫|ki6 ku6 kio3||o|拟声拟态/KIO":
+- "咕噜叫|ki6 ku6 lu6 kio3||o|拟声拟态/KIO":
+- "一叫|hong7 tsek8-kio3||o|拟声拟态/KIO":
+- "下叫|hong7 e6-kio3||o|拟声拟态/KIO":
+- "轰叫|hong7 hong7 kio3||o|拟声拟态/KIO":
+- "*轰叫|hi7 hong7 kio3||o|拟声拟态/KIO":
+- "*轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/KIO":
+- "一叫|tshoh4 tsek8-kio3||o|拟声拟态/KIO":
+- "下叫|tshoh4 e6-kio3||o|拟声拟态/KIO":
+- "亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/KIO":
+- "亍叫|tshih4 tshoh4 kio3||o|拟声拟态/KIO":
+- "亍*叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/KIO":
+- "一叫|sok4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|sok4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|sok4 sok4 kio3||o|拟声拟态/KIO":
+- "**叫|sih4 sok4 kio3||o|拟声拟态/KIO":
+- "***叫|sih4 sok4 lok4 kio3||o|拟声拟态/KIO":
+- "*一叫|siauh4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|siauh4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|siauh4 siauh4 kio3||o|拟声拟态/KIO":
+- "**叫|sih4 siauh4 kio3||o|拟声拟态/KIO":
+- "***叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/KIO":
+- "*一叫|tsiauh4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|tsiauh4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/KIO":
+- "**叫|tsih4 tsiauh4 kio3||o|拟声拟态/KIO":
+- "***叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/KIO":
+- "一叫|phuh4 tsek8-kio3||o|拟声拟态/KIO":
+- "下叫|phuh4 e6-kio3||o|拟声拟态/KIO":
+- "噗叫|phuh4 phuh4 kio3||o|拟声拟态/KIO":
+- "噗叫|phih4 phuh4 kio3||o|拟声拟态/KIO":
+- "*噗*叫|phih4 phuh4 luh4 kio3||o|拟声拟态/KIO":
+- "*一叫|khok4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|khok4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|khok4 khok4 kio3||o|拟声拟态/KIO":
+- "**叫|khih4 khok4 kio3||o|拟声拟态/KIO":
+- "***叫|khih4 khok4 lok4 kio3||o|拟声拟态/KIO":
+- "*一叫|thuh4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|thuh4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|thuh4 thuh4 kio3||o|拟声拟态/KIO":
+- "**叫|thih4 thuh4 kio3||o|拟声拟态/KIO":
+- "***叫|thih4 thuh4 luh4 kio3||o|拟声拟态/KIO":
+- "*一叫|hainnh4 tsek8-kio3||o|拟声拟态/KIO":
+- "*下叫|hainnh4 e6-kio3||o|拟声拟态/KIO":
+- "**叫|hainnh4 hainnh4 kio3||o|拟声拟态/KIO":
+- "**叫|hinnh4 hainnh4 kio3||o|拟声拟态/KIO":
+- "***叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/KIO":

@@ -1,0 +1,46 @@
+#  -------------------------- 示例 ------------------------
+# 例：字同而音义不同
+- 高丽|ko1-le6|包菜/卷心菜|n|蔬菜: # key 固定为单词的写法（无汉字者以*代替，外来语可不写汉字） + 发音 + 普通话对译词 + 词性 + 标签
+- 高丽|kau1-li5|高丽参/人参|n|:
+- 后日|au6--jit8|后天|n|:
+    cmn: 后天
+    desc: 日期上的后天。如果用于合成词，不读轻声调。
+    examples:
+    - [伊后日过来, i1 au6--jit8 kue3--lai5, 他后天过来]
+    - [伊后日才来, i1 au6--jit8 tsia3-lai5, 他后天才来]
+    - [后日夜, au6-jit8-menn5, 后天晚上]
+- 后日|au6-jit8|今后/日后|n|:
+# 例：多种读音，多种写法，多种含义，需拆分为多个条目。
+- 阮/我人/我侬|uan2/ua2--nang5|我们|r|:
+- 阮|uan2||n|:
+    desc: 一种乐器  # desc 只用于释义
+- 奶茶|nai2-te5/ni6-te5/ne6-te5||n|:
+- 疫情|mok8-tsheng5/ek8-tsheng5||n|:
+# 例：具体口音变体
+- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|:
+    accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
+    - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
+    - ChaoAn_FengHuang: noinn5-ngau6
+- 作田/作塍|tsoh4-tshan5|种田|vi|:
+- 荠葱/钱葱|tshinn5-tsang5|马蹄葱/马蹄/荸荠|n|:
+# 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
+- "**|an5--thi7|姨妈|r|":
+    loan: 英语/aunt
+- 咸煎饼|ham5-tsin5 peng6||n|:
+    loan: 粤语/咸煎饼
+- 干筒/干茼|kan1-tang5|土豆/马铃薯|n|:
+    loan: 马来语/kentang
+# 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
+- 硗|khiau1|穷/贫瘠|a|:
+    desc: 原意指土地贫瘠，引申为穷。
+    examples:
+    - [硗过梦龙, khiau1-kue3-mang7-leng5, 比梦龙穷]
+- 硗|khiau1|余|m|:
+    desc: 原意指土地贫瘠，引申为表示概数的数词。用于个位少于一半的情况。个位大于五需用“外@{gua7}”。
+    examples:
+    - [二十硗人, ji7-tsap8-khiau1-nang5, 二十余人（少于二十五人）]
+    - [二点硗, nonn6-tiam2-khiau1, 两点多（早于两点半）]
+# 英语音素
+- K|khe1||n|:
+- XO|ek8--svh4 ou1||n|:
+- offer|o5--fv7||n|:

@@ -38,7 +38,16 @@ def get_word_class(item):
 
 PHRASE_TAG_MAP = {
     '动物': PT_ANIMALS,
+    '水产': PT_SEAFOOD,
     '蔬菜': PT_VEGETABLES,
+    '水果': PT_FRUITS,
+    '特产': PT_SPECIALTIES,
+    '人称': PT_RELATIONSHIPS,
+    '人体': PT_HUMAN_BODY,
+    '音乐': PT_HUMAN_BODY,
+    '拟声拟态': PT_ONOMATOPOEIA,
+    'AAB': PT_ONOMATOPOEIA_AAB,
+    'KIO': PT_ONOMATOPOEIA_KIO,
 }
 
 
