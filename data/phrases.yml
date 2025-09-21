@@ -24,14 +24,12 @@
 - 作田/作塍|tsoh4-tshan5|种田|vi|:
 - 荠葱/钱葱|tshinn5-tsang5|马蹄葱/马蹄/荸荠|n|:
 # 例：外来语，无汉字者以*代替，在辞典中展示时，改成豆腐块□
-- aunt/**|an5--thi7|姨妈|r|:
-   loan: aunt  # 如果不写借自何种语言，默认借英语
+- "**|an5--thi7|姨妈|r|":
+   loan: 英语/aunt
 - 咸煎饼|ham5-tsin5 peng6||n|:
-   loan: 咸煎饼
-   donor: 粤语
+   loan: 粤语/咸煎饼
 - 干筒/干茼|kan1-tang5|土豆/马铃薯|n|:
-   loan: kentang
-   donor: 马来语
+   loan: 马来语/kentang
 # 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
 - 硗|khiau1|穷/贫瘠|a|:
    desc: 原意指土地贫瘠，引申为穷。

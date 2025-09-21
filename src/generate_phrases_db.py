@@ -6,46 +6,41 @@ import yaml
 from phrases_pb2 import *
 from pathlib import Path
 
-
-def main_deprecated():
-    phrases_dir = Path('../data/phrases')
-    assert phrases_dir.exists() and phrases_dir.is_dir()
-    phrases = Phrases()
-    for phrase_file in phrases_dir.glob('*.csv'):
-        with open(phrase_file, 'r', encoding='utf-8') as f:
-            reader = csv.reader(f)
-            rows = list(reader)
-        assert len(rows) > 1
-        for row in rows[1:]:
-            phrase = Phrase(
-                teochew=row[0],
-                puj=row[1],
-                mandarin=row[2] or None,
-                node=row[3] or None,
-            )
-            phrases.phrases.append(phrase)
-    with open('../dist/phrases.pb', 'wb') as f:
-        f.write(phrases.SerializeToString())
-    with open('../dist/phrases.pb', 'rb') as f:
-        phrases = Phrases()
-        phrases.ParseFromString(f.read())
+DONOR_LANG_MAP = {
+    '英语': PLDL_ENGLISH,
+    '普通话': PLDL_MANDARIN,
+    '粤语': PLDL_CANTONESE,
+    '马来语': PLDL_MALAY,
+    '印尼语': PLDL_INDONESIAN,
+    '泰语': PLDL_THAI,
+}
 
 
 def get_donor_lang(item):
+    if not item:
+        return PLDL_NONE
     if isinstance(item, str):
-        if any(s in item.upper() for s in ['粤语']):
-            return PLDL_CANTONESE
-        if any(s in item.upper() for s in ['普通话']):
-            return PLDL_MANDARIN
-        if any(s in item.upper() for s in ['英语']):
-            return PLDL_ENGLISH
+        if item in DONOR_LANG_MAP:
+            return DONOR_LANG_MAP[item]
+        raise ValueError(f'Unknown donor language: {item}')
     return PLDL_NONE
+
+
+def get_word_class(item):
+    if not item:
+        return ''
+    if isinstance(item, str):
+        if item.isalpha():
+            return item
+        raise ValueError(f'Unknown word class: {item}')
+    return ''
 
 
 PHRASE_TAG_MAP = {
     '动物': PT_ANIMALS,
     '蔬菜': PT_VEGETABLES,
 }
+
 
 def get_phrase_tag(item):
     if not item:
@@ -64,14 +59,14 @@ def main():
         yaml_phrases = yaml.load(f, yaml.Loader)
     phrases = Phrases()
     for i, yaml_phrase in enumerate(yaml_phrases):
+        k, v = next(iter(yaml_phrase.items()))
+        v = v or {}
         try:
-            k, v = next(iter(yaml_phrase.items()))
-            v = v or {}
             teochew_list, puj_list, cmn_list, word_class_list, tag_list = k.split('|')
             teochew_list = teochew_list.split('/')
             puj_list = puj_list.split('/')
             cmn_list = cmn_list.split('/')
-            word_class_list = word_class_list.split('/')
+            word_class_list = [get_word_class(x) for x in word_class_list.split('/')] if word_class_list else []
             tag_list = [get_phrase_tag(x) for x in tag_list.split('/')] if tag_list else []
             accents = []
             for accent in v.get('accents', []):
@@ -81,7 +76,10 @@ def main():
                         puj=list(accent_puj),
                     ))
             loan = v.get('loan')
-            donor_lang = PLDL_NONE if not loan else get_donor_lang(v.get('lang', '英语'))
+            donor_lang, loan_word = None, None
+            if loan:
+                donor_lang, loan_word = loan.split('/')
+                donor_lang = get_donor_lang(donor_lang)
             examples = []
             for example in v.get('examples', []):
                 e_teochew, e_puj, e_mandarin = example
@@ -103,12 +101,12 @@ def main():
                 desc=desc,
                 accents=accents,
                 donor_lang=donor_lang,
-                loan_word=loan,
+                loan_word=loan_word,
                 examples=examples,
             )
             phrases.phrases.append(phrase)
         except Exception as e:
-            print(f'Error in phrase {i + 1}: {e}', file=sys.stderr)
+            print(f'Error in phrase {i + 1} {k} {v}: {e}', file=sys.stderr)
             raise e
     Path('../dist').mkdir(exist_ok=True)
     with open('../dist/phrases.pb', 'wb') as f:
