@@ -31,32 +31,26 @@ enum PhraseTag {
 
 message Phrase {
   uint32 index = 1;
-  // 一种主要写法
-  string teochew = 2;
-  // 一种主要读音
-  string puj = 3;
+  // 潮州话写法
+  repeated string teochew = 2;
+  // 潮州话读音
+  repeated string puj = 3;
+  // 普通话对译
+  repeated string cmn = 4;
   // 词性
-  string word_class = 4;
+  repeated string word_class = 5;
   // 主要标签
-  PhraseTag tag = 5;
-  // 中文释义
-  optional string desc = 10;
-  // 普通话对译词
-  repeated string cmn = 11;
-  // 其他写法
-  repeated string char_var = 12;
-  // 其他读音
-  repeated string puj_var = 13;
+  repeated PhraseTag tag = 6;
+  // 中文释义/说明
+  optional string desc = 7;
   // 变读口音
-  repeated PhraseAccent accents = 14;
-  // 其他标签
-  repeated PhraseTag tag_var = 15;
+  repeated PhraseAccent accents = 8;
   // 借词语源
-  optional PhraseLoanDonorLanguage donor_lang = 16;
+  optional PhraseLoanDonorLanguage donor_lang = 9;
   // 借词
-  optional string loan_word = 17;
+  optional string loan_word = 10;
   // 例句
-  repeated PhraseExample examples = 18;
+  repeated PhraseExample examples = 11;
 }
 
 message Phrases {

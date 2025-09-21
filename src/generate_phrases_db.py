@@ -1,5 +1,6 @@
 import csv
 
+import sys
 import yaml
 
 from phrases_pb2 import *
@@ -47,18 +48,13 @@ PHRASE_TAG_MAP = {
 }
 
 def get_phrase_tag(item):
+    if not item:
+        return PT_NONE
     if isinstance(item, str):
         if item in PHRASE_TAG_MAP:
             return PHRASE_TAG_MAP[item]
+        raise ValueError(f'Unknown phrase tag: {item}')
     return PT_NONE
-
-
-def get_list_of_str(item):
-    if not item:
-        return []
-    if isinstance(item, str):
-        return [item]
-    return item
 
 
 def main():
@@ -68,51 +64,52 @@ def main():
         yaml_phrases = yaml.load(f, yaml.Loader)
     phrases = Phrases()
     for i, yaml_phrase in enumerate(yaml_phrases):
-        k, v = next(iter(yaml_phrase.items()))
-        v = v or {}
-        teochew, puj, word_class, tag = k.split('|')
-        accents = []
-        for accent in v.get('accents', []):
-            for accent_id, accent_puj in accent.items():
-                accents.append(PhraseAccent(
-                    accent_id=accent_id,
-                    puj=list(accent_puj),
-                ))
-        loan = v.get('loan')
-        donor_lang = PLDL_NONE if not loan else get_donor_lang(v.get('lang', '英语'))
-        examples = []
-        for example in v.get('examples', []):
-            e_teochew, e_puj, e_mandarin = example
-            examples.append(
-                PhraseExample(
-                    teochew=e_teochew,
-                    puj=e_puj,
-                    mandarin=e_mandarin,
+        try:
+            k, v = next(iter(yaml_phrase.items()))
+            v = v or {}
+            teochew_list, puj_list, cmn_list, word_class_list, tag_list = k.split('|')
+            teochew_list = teochew_list.split('/')
+            puj_list = puj_list.split('/')
+            cmn_list = cmn_list.split('/')
+            word_class_list = word_class_list.split('/')
+            tag_list = [get_phrase_tag(x) for x in tag_list.split('/')] if tag_list else []
+            accents = []
+            for accent in v.get('accents', []):
+                for accent_id, accent_puj in accent.items():
+                    accents.append(PhraseAccent(
+                        accent_id=accent_id,
+                        puj=list(accent_puj),
+                    ))
+            loan = v.get('loan')
+            donor_lang = PLDL_NONE if not loan else get_donor_lang(v.get('lang', '英语'))
+            examples = []
+            for example in v.get('examples', []):
+                e_teochew, e_puj, e_mandarin = example
+                examples.append(
+                    PhraseExample(
+                        teochew=e_teochew,
+                        puj=e_puj,
+                        mandarin=e_mandarin,
+                    )
                 )
+            desc = v.get('desc')
+            phrase = Phrase(
+                index=i + 1,
+                teochew=teochew_list,
+                puj=puj_list,
+                cmn=cmn_list,
+                word_class=word_class_list,
+                tag=tag_list,
+                desc=desc,
+                accents=accents,
+                donor_lang=donor_lang,
+                loan_word=loan,
+                examples=examples,
             )
-        desc = v.get('desc')
-        cmn = get_list_of_str(v.get('cmn'))
-        char_var = get_list_of_str(v.get('char-var'))
-        puj_var = get_list_of_str(v.get('puj-var'))
-        tag = get_phrase_tag(tag)
-        tag_var = [get_phrase_tag(s) for s in get_list_of_str(v.get('tag-var'))]
-        phrase = Phrase(
-            index=i + 1,
-            teochew=teochew,
-            puj=puj,
-            tag=tag,
-            word_class=word_class,
-            desc=desc,
-            cmn=cmn,
-            char_var=char_var,
-            puj_var=puj_var,
-            tag_var=tag_var,
-            accents=accents,
-            donor_lang=donor_lang,
-            loan_word=loan,
-            examples=examples,
-        )
-        phrases.phrases.append(phrase)
+            phrases.phrases.append(phrase)
+        except Exception as e:
+            print(f'Error in phrase {i + 1}: {e}', file=sys.stderr)
+            raise e
     Path('../dist').mkdir(exist_ok=True)
     with open('../dist/phrases.pb', 'wb') as f:
         f.write(phrases.SerializeToString())
