@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel", "protobuf"]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pujdict-base"
-version = "0.3.0"
+dynamic = ["version"]
 authors = [
     { name = "Brang Pakdring", email = "brangpd@outlook.com" },
 ]
@@ -25,3 +25,5 @@ keywords = ["潮州话", "潮汕方言", "潮汕话", "白话字", "辞典", "Te
 
 [project.urls]
 Repository = "https://github.com/pujdict/pujdict-base"
+
+[tool.setuptools_scm]
