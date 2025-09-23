@@ -47,7 +47,7 @@ PHRASE_TAG_MAP = {
     '音乐': PT_HUMAN_BODY,
     '拟声拟态': PT_ONOMATOPOEIA,
     'AAB': PT_ONOMATOPOEIA_AAB,
-    'KIO': PT_ONOMATOPOEIA_KIO,
+    'XX叫': PT_ONOMATOPOEIA_KIO,
 }
 
 
@@ -59,6 +59,18 @@ def get_phrase_tag(item):
             return PHRASE_TAG_MAP[item]
         raise ValueError(f'Unknown phrase tag: {item}')
     return PT_NONE
+
+
+def get_list_of_str(item):
+    if not item:
+        return []
+    if isinstance(item, str):
+        return [item]
+    return item
+
+
+def is_punctuation_full_width(c):
+    return c in '，。？！：；、'
 
 
 def main():
@@ -92,6 +104,9 @@ def main():
             examples = []
             for example in v.get('examples', []):
                 e_teochew, e_puj, e_mandarin = example
+                e_teochew = e_teochew.split('/')
+                e_puj = e_puj.split('/')
+                e_mandarin = e_mandarin.split('/')
                 examples.append(
                     PhraseExample(
                         teochew=e_teochew,
@@ -100,6 +115,9 @@ def main():
                     )
                 )
             desc = v.get('desc')
+            if desc and not is_punctuation_full_width(desc[-1]):
+                desc += '。'
+            informal = get_list_of_str(v.get('informal'))
             phrase = Phrase(
                 index=i + 1,
                 teochew=teochew_list,
@@ -112,6 +130,7 @@ def main():
                 donor_lang=donor_lang,
                 loan_word=loan_word,
                 examples=examples,
+                informal=informal,
             )
             phrases.phrases.append(phrase)
         except Exception as e:

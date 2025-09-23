@@ -8,9 +8,9 @@ message PhraseAccent {
 }
 
 message PhraseExample {
-  string teochew = 1;
-  optional string puj = 2;
-  optional string mandarin = 3;
+  repeated string teochew = 1;
+  repeated string puj = 2;
+  repeated string mandarin = 3;
 }
 
 enum PhraseLoanDonorLanguage {
@@ -60,6 +60,8 @@ message Phrase {
   optional string loan_word = 10;
   // 例句
   repeated PhraseExample examples = 11;
+  // 非正式写法
+  repeated string informal = 12;
 }
 
 message Phrases {

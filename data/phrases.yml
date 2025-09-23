@@ -329,9 +329,9 @@
 - 桔|kit4|桔子|n|水果:
 - 橙|tsheng5|橙子|n|水果:
 - 弓蕉|keng1-tsio1|香蕉|n|水果:
-- 肉蕉|bah4-tsio1||n|水果:
+- 肉蕉|bah4-tsio1|香蕉|n|水果:
     desc: 一种肥大的香蕉
-- 米蕉|bi2-tsio1||n|水果:
+- 米蕉|bi2-tsio1|香蕉|n|水果:
     desc: 一种细小的香蕉
 - 柚|iu7|柚子|n|水果:
 - 番梨/凤梨|huan1-lai5|凤梨|n|水果:
@@ -613,23 +613,49 @@
 # -------------------------- 人称 RELATIONSHIPS --------------------------
 - 人/侬|nang5||n|人称:
 - 我|ua2||r|人称:
+    informal: 瓦
 - 家己|ka1-ki7/ka1-ti7/ka1-li7|自己|n|人称:
+    informal: 胶己
 - 家己人|ka1-ki7-nang5|自己人|n|人称:
+    informal: 胶己人
+- 大家|tai6-ke1||n|人称:
+- 大家人|tai6-ke1-nang5|大伙/大家|n|人称:
 - 你/汝|lv2|你|r|人称:
+    informal: [吕, 鲁]
 - 阮/我人/我侬|uan2/ua2--nang5/un2|我们|r|:
     desc: 我们（不含听话人）
-- 咱/你我人/你我侬|nan2/lv2-ua2--nang5|我们|r|人称:
+- 咱/俺/你我人/汝我侬|nan2/lv2-ua2--nang5|我们|r|人称:
     desc: 我们（包含听话人）
-- 恁/您/你人|nvn2/lv2--nang5|你们|r|人称:
-- 恁阿/您阿/令|nvn2-a1/niann2|你的|n|人称:
+- 我们|ua2-mng5||r|人称:
+    desc: 书面语
+- 恁/您/你人/汝侬|nvn2/lv2--nang5|你们|r|人称:
+- 恁阿/您阿/令|nvn2-a1-/niann1-/niann2--|你的|n|人称:
+    informal: 领
+- 你们|lv2-mng5||r|人称:
+    desc: 书面语
 - 伊|i1|他/她|r|人称:
 - 𪜶/伊人|in1/i1--nang5|他们/她们|r|人称:
-- 底人/底𫢗/𫢗|ti7-nang5/ti7-tiang5/tiang5|谁|r|人称:
+- 他|tha1||r|人称:
+    desc: 书面语
+- 她|tha1||r|人称:
+    desc: 书面语
+- 它|tha1||r|人称:
+    desc: 书面语
+- 他们|tha1-mng5||r|人称:
+    desc: 书面语
+- 她们|tha1-mng5||r|人称:
+    desc: 书面语
+- 它们|tha1-mng5||r|人称:
+    desc: 书面语
+- 底人/底𫢗/𫢗|ti7-nang5/ti7-tian5/tian5|谁|r|人称:
+- 谁|sui5||r|人称:
+    desc: 书面语
 - 阿|a1||h|人称:
     desc: 人称前缀。称呼时通常都添加这个前缀。
     examples:
-    - [伊阿父, i1-a1-pe6, 他父亲]
-    - [恁父, nvn2-pe6, 你爸]
+    - [伊阿父, i1-a1-pe6/ia1-pe6, 他父亲]
+    - [恁阿父, nvn2-a1-pe6/niann1-pe6, 你爸]
+    - [恁父, nvn2-pe6, 你爸（不同于“恁阿父”，不出现“阿”时多用于自称）]
     - [阮阿叔, uan2-a1-tsek4, 我叔]
 - 翁|ang1|丈夫|n|人称:
 - 𡚸|bou2|妻子|n|人称:
@@ -643,14 +669,17 @@
     - [老公, lau6-kong1, 曾祖父]
 - 翁姐|ang1-tsia2|夫妻|n|人称:
 - 亲情|tshin1-tsiann5|亲戚|n|人称:
+- 四亲二情|si3-tshin1 ji7-tsiann5|亲戚朋友|i|人称:
 - 祖公|tsou2-kong1|先祖|n|人称:
 - 公|kong1|爷爷|n|人称:
+- 阿公|a1-kong1|爷爷|n|人称:
 - 嬷/妈|ma2|奶奶|n|人称:
     desc: 因“妈”字已被用于在现代汉语中指代母亲，为避免歧义，建议统一使用“嬷”。“妈”字仍用于少量专有名词。
     examples:
     - [阿嬷, a1-ma2, 奶奶]
     - [老妈宫粽球, lau6-ma2-keng1 tsang3-kiu5, 老妈宫粽子]
     - [妈祖, ma2-zu2, 妈祖]
+- 阿嬷|a1-ma2|奶奶|n|人称:
 - 老公|lau6-kong1|曾祖父|n|人称:
 - 老嬷|lau6-ma2|曾祖母|n|人称:
 - 外公|gua7-kong1|外公|n|人称:
@@ -663,15 +692,17 @@
 - 丈姆婆|tionn6-m2-phua5|岳母|n|人称:
 - 丈姆|tionn6-m2|岳母|n|人称:
 - 爸|pa1/pa5||n|人称:
+- 阿爸|a1-pa1/a1-pa5||n|人称:
 - 父/爸|pe6|父亲|n|人称:
     desc: “爸”字已被用于在现代汉语中作为更口语化的称呼，该书面语读音建议统一用“父”。
-- 妈|a1-ma5||n|人称:
+- 妈|ma5||n|人称:
+- 阿妈|a1-ma5||n|人称:
 - 母|bo2|母亲|n|人称:
 - 姨|i5|母亲|n|人称:
     desc: 旧称。年轻一代已经非常少用，多用“妈”。“姨”受普通话影响现多用于指称姨妈，称呼母亲的情况现多只存于詈语。
     examples:
     - [阿姨, a1-i5, 妈妈]
-    - [令姨块膣, niann2-i5 kr3-tsi1, 你妈逼的]
+    - [令姨块膣, niann1-i5 kr3-tsi1, 你妈逼的]
 - 嫒/姨/𡟓|ai5|母亲|n|人称:
     desc: 旧称
 - 姈|nenn1|母亲|n|人称:
@@ -679,6 +710,7 @@
 - 父嫒/父姨/父𡟓|pe6-ai5|母亲|n|人称:
 - 奴|nou5|孩子|n|人称:
 - 仔/囝/崽|kiann2|儿子|n|人称:
+- 父儿母仔|pe6-ji5-bo2-kiann2|父母儿女|i|人称:
 - 丈夫|ta1-pou1|男|n|人称:
 - 丈夫人|ta1-pou1-nang5|男人|n|人称:
 - 丈夫丈人|ta1-pou1-ta1-nang5|男子汉大丈夫|i|人称:
@@ -732,8 +764,8 @@
 - 阿哥|a1-ko5|哥哥|n|人称:
 - 阿弟|a1-ti6|弟弟|n|人称:
 - 阿姐|a1-tse2|姐姐|n|人称:
-- 阿妹|a1-mue7|妹妹|n|人称:
-- 阿妹|a1-mue6|妹妹|n|人称:
+- 阿妹|a1-mue7/a1-mue6|妹妹|n|人称:
+- 兄弟姐妹|hiann1-ti7 tse2-mue7/hiann1-ti6-ts2-mue6||n|人称:
 - 堂|thang5||h|人称:
 - 表|pio2||h|人称:
 - 双生|sang1-senn1|双胞胎|n|人称:
@@ -841,13 +873,25 @@
 - 屎|sai2||n|人体:
 - 屁|phui3||n|人体:
 - 𡳞/卵/屌|lan6|屌|n|人体:
+    informal: 浪
     desc: 男阴的俗称
 - 𡳞鸟/卵鸟|lan6-tsiau2|屌|n|人体:
+    informal: 浪鸟
+    desc: 阴茎的俗称
 - 𡳞核/卵核|lan6-hut8|蛋|n|人体:
+    informal: [浪核, 浪佛]
     desc: 睾丸的俗称
 - 𡳞脬/卵脬|lan6|蛋袋|n|人体:
+    informal: [浪趴]
     desc: 阴囊的俗称
+- 潲|siau5|精液|n|人体:
+    desc: 精液的俗称，也用作许多粗俗语的后缀
+    examples:
+    - [勿扱潲伊, mai3-tshap4-siau5--i1, 别理他妈的]
+    - [你喝潲上勥, lv2 huah4-siau5 siang6-khiang3, 你真会吹牛逼]
+    - [勿嘴潲, mai3-tshui3-siau5, 别吹牛逼]
 - 膣/腟/屄|tsi1|屄|n|人体:
+    informal: 鸡
     desc: 女阴的俗称
 
 # -------------------------- 音乐 MUSICAL --------------------------
@@ -984,88 +1028,88 @@
     desc: 瑟瑟发抖的样子
 
 # -------------------------- 拟声拟态词 XX叫 式 --------------------------
-- "*一叫|piang7 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|piang7 e6-kio3||o|拟声拟态/KIO":
-- "**叫|piang7 piang7 kio3||o|拟声拟态/KIO":
-- "**叫|pi7 piang7 kio3||o|拟声拟态/KIO":
-- "***叫|pi7 piang7 liang7 kio3||o|拟声拟态/KIO":
-- "*一叫|phiang7 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|phiang7 e6-kio3||o|拟声拟态/KIO":
-- "**叫|phiang7 phiang7 kio3||o|拟声拟态/KIO":
-- "**叫|phi7 phiang7 kio3||o|拟声拟态/KIO":
-- "***叫|phi7 phiang7 liang7 kio3||o|拟声拟态/KIO":
-- "*一叫|pong7 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|pong7 e6-kio3||o|拟声拟态/KIO":
-- "**叫|pong7 pong7 kio3||o|拟声拟态/KIO":
-- "**叫|pi7 pong7 kio3||o|拟声拟态/KIO":
-- "***叫|pi7 pong7 long7 kio3||o|拟声拟态/KIO":
-- "*一叫|phong7 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|phong7 e6-kio3||o|拟声拟态/KIO":
-- "**叫|phong7 phong7 kio3||o|拟声拟态/KIO":
-- "**叫|phi7 phong7 kio3||o|拟声拟态/KIO":
-- "***叫|phi7 phong7 long7 kio3||o|拟声拟态/KIO":
-- "*一叫|phiak4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|phiak4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|phiak4 phiak4 kio3||o|拟声拟态/KIO":
-- "**叫|phih4 phiak4 kio3||o|拟声拟态/KIO":
-- "***叫|phih4 phiak4 liak4 kio3||o|拟声拟态/KIO":
-- "*一叫|piak4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|piak4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|piak4 piak4 kio3||o|拟声拟态/KIO":
-- "**叫|pih4 piak4 kio3||o|拟声拟态/KIO":
-- "***叫|pih4 piak4 liak4 kio3||o|拟声拟态/KIO":
-- "*一叫|tong6 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|tong6 e6-kio3||o|拟声拟态/KIO":
-- "**叫|tong6 tong6 kio3||o|拟声拟态/KIO":
-- "**叫|ti6 tong6 kio3||o|拟声拟态/KIO":
-- "***叫|ti6 tong6 long6 kio3||o|拟声拟态/KIO":
-- "一叫|ku6 tsek8-kio3||o|拟声拟态/KIO":
-- "下叫|ku6 e6-kio3||o|拟声拟态/KIO":
-- "咕叫|ku6 ku6 kio3||o|拟声拟态/KIO":
-- "咕叫|ki6 ku6 kio3||o|拟声拟态/KIO":
-- "咕噜叫|ki6 ku6 lu6 kio3||o|拟声拟态/KIO":
-- "一叫|hong7 tsek8-kio3||o|拟声拟态/KIO":
-- "下叫|hong7 e6-kio3||o|拟声拟态/KIO":
-- "轰叫|hong7 hong7 kio3||o|拟声拟态/KIO":
-- "*轰叫|hi7 hong7 kio3||o|拟声拟态/KIO":
-- "*轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/KIO":
-- "一叫|tshoh4 tsek8-kio3||o|拟声拟态/KIO":
-- "下叫|tshoh4 e6-kio3||o|拟声拟态/KIO":
-- "亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/KIO":
-- "亍叫|tshih4 tshoh4 kio3||o|拟声拟态/KIO":
-- "亍*叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/KIO":
-- "一叫|sok4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|sok4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|sok4 sok4 kio3||o|拟声拟态/KIO":
-- "**叫|sih4 sok4 kio3||o|拟声拟态/KIO":
-- "***叫|sih4 sok4 lok4 kio3||o|拟声拟态/KIO":
-- "*一叫|siauh4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|siauh4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|siauh4 siauh4 kio3||o|拟声拟态/KIO":
-- "**叫|sih4 siauh4 kio3||o|拟声拟态/KIO":
-- "***叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/KIO":
-- "*一叫|tsiauh4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|tsiauh4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/KIO":
-- "**叫|tsih4 tsiauh4 kio3||o|拟声拟态/KIO":
-- "***叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/KIO":
-- "一叫|phuh4 tsek8-kio3||o|拟声拟态/KIO":
-- "下叫|phuh4 e6-kio3||o|拟声拟态/KIO":
-- "噗叫|phuh4 phuh4 kio3||o|拟声拟态/KIO":
-- "噗叫|phih4 phuh4 kio3||o|拟声拟态/KIO":
-- "*噗*叫|phih4 phuh4 luh4 kio3||o|拟声拟态/KIO":
-- "*一叫|khok4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|khok4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|khok4 khok4 kio3||o|拟声拟态/KIO":
-- "**叫|khih4 khok4 kio3||o|拟声拟态/KIO":
-- "***叫|khih4 khok4 lok4 kio3||o|拟声拟态/KIO":
-- "*一叫|thuh4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|thuh4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|thuh4 thuh4 kio3||o|拟声拟态/KIO":
-- "**叫|thih4 thuh4 kio3||o|拟声拟态/KIO":
-- "***叫|thih4 thuh4 luh4 kio3||o|拟声拟态/KIO":
-- "*一叫|hainnh4 tsek8-kio3||o|拟声拟态/KIO":
-- "*下叫|hainnh4 e6-kio3||o|拟声拟态/KIO":
-- "**叫|hainnh4 hainnh4 kio3||o|拟声拟态/KIO":
-- "**叫|hinnh4 hainnh4 kio3||o|拟声拟态/KIO":
-- "***叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/KIO":
+- "*一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|piang7 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|piang7 piang7 kio3||o|拟声拟态/XX叫":
+- "**叫|pi7 piang7 kio3||o|拟声拟态/XX叫":
+- "***叫|pi7 piang7 liang7 kio3||o|拟声拟态/XX叫":
+- "*一叫|phiang7 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|phiang7 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|phiang7 phiang7 kio3||o|拟声拟态/XX叫":
+- "**叫|phi7 phiang7 kio3||o|拟声拟态/XX叫":
+- "***叫|phi7 phiang7 liang7 kio3||o|拟声拟态/XX叫":
+- "*一叫|pong7 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|pong7 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|pong7 pong7 kio3||o|拟声拟态/XX叫":
+- "**叫|pi7 pong7 kio3||o|拟声拟态/XX叫":
+- "***叫|pi7 pong7 long7 kio3||o|拟声拟态/XX叫":
+- "*一叫|phong7 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|phong7 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|phong7 phong7 kio3||o|拟声拟态/XX叫":
+- "**叫|phi7 phong7 kio3||o|拟声拟态/XX叫":
+- "***叫|phi7 phong7 long7 kio3||o|拟声拟态/XX叫":
+- "*一叫|phiak4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|phiak4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|phiak4 phiak4 kio3||o|拟声拟态/XX叫":
+- "**叫|phih4 phiak4 kio3||o|拟声拟态/XX叫":
+- "***叫|phih4 phiak4 liak4 kio3||o|拟声拟态/XX叫":
+- "*一叫|piak4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|piak4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|piak4 piak4 kio3||o|拟声拟态/XX叫":
+- "**叫|pih4 piak4 kio3||o|拟声拟态/XX叫":
+- "***叫|pih4 piak4 liak4 kio3||o|拟声拟态/XX叫":
+- "*一叫|tong6 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|tong6 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|tong6 tong6 kio3||o|拟声拟态/XX叫":
+- "**叫|ti6 tong6 kio3||o|拟声拟态/XX叫":
+- "***叫|ti6 tong6 long6 kio3||o|拟声拟态/XX叫":
+- "咕一叫|ku6 tsek8-kio3||o|拟声拟态/XX叫":
+- "咕下叫|ku6 e6-kio3||o|拟声拟态/XX叫":
+- "咕咕叫|ku6 ku6 kio3||o|拟声拟态/XX叫":
+- "叽咕叫|ki6 ku6 kio3||o|拟声拟态/XX叫":
+- "叽咕噜叫|ki6 ku6 lu6 kio3||o|拟声拟态/XX叫":
+- "轰一叫|hong7 tsek8-kio3||o|拟声拟态/XX叫":
+- "轰下叫|hong7 e6-kio3||o|拟声拟态/XX叫":
+- "轰轰叫|hong7 hong7 kio3||o|拟声拟态/XX叫":
+- "*轰叫|hi7 hong7 kio3||o|拟声拟态/XX叫":
+- "*轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/XX叫":
+- "亍一叫|tshoh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "亍下叫|tshoh4 e6-kio3||o|拟声拟态/XX叫":
+- "亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/XX叫":
+- "彳亍叫|tshih4 tshoh4 kio3||o|拟声拟态/XX叫":
+- "彳亍*叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/XX叫":
+- "一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|sok4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|sok4 sok4 kio3||o|拟声拟态/XX叫":
+- "**叫|sih4 sok4 kio3||o|拟声拟态/XX叫":
+- "***叫|sih4 sok4 lok4 kio3||o|拟声拟态/XX叫":
+- "*一叫|siauh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|siauh4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|siauh4 siauh4 kio3||o|拟声拟态/XX叫":
+- "**叫|sih4 siauh4 kio3||o|拟声拟态/XX叫":
+- "***叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/XX叫":
+- "*一叫|tsiauh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|tsiauh4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/XX叫":
+- "**叫|tsih4 tsiauh4 kio3||o|拟声拟态/XX叫":
+- "***叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/XX叫":
+- "噗一叫|phuh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "噗下叫|phuh4 e6-kio3||o|拟声拟态/XX叫":
+- "噗噗叫|phuh4 phuh4 kio3||o|拟声拟态/XX叫":
+- "*噗叫|phih4 phuh4 kio3||o|拟声拟态/XX叫":
+- "*噗*叫|phih4 phuh4 luh4 kio3||o|拟声拟态/XX叫":
+- "*一叫|khok4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|khok4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|khok4 khok4 kio3||o|拟声拟态/XX叫":
+- "**叫|khih4 khok4 kio3||o|拟声拟态/XX叫":
+- "***叫|khih4 khok4 lok4 kio3||o|拟声拟态/XX叫":
+- "*一叫|thuh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|thuh4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|thuh4 thuh4 kio3||o|拟声拟态/XX叫":
+- "**叫|thih4 thuh4 kio3||o|拟声拟态/XX叫":
+- "***叫|thih4 thuh4 luh4 kio3||o|拟声拟态/XX叫":
+- "*一叫|hainnh4 tsek8-kio3||o|拟声拟态/XX叫":
+- "*下叫|hainnh4 e6-kio3||o|拟声拟态/XX叫":
+- "**叫|hainnh4 hainnh4 kio3||o|拟声拟态/XX叫":
+- "**叫|hinnh4 hainnh4 kio3||o|拟声拟态/XX叫":
+- "***叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/XX叫":
