@@ -19,7 +19,6 @@ ChaoZhou_FuCheng:
     - UAN_As_UEN
     - IAM_As_IEM
     - N_As_L_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_UNG
@@ -27,16 +26,6 @@ ChaoZhou_FuCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,vng,2
-    恁,恁,n,vn,2: n,vng,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,ieng,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 XiQiang:
@@ -56,23 +45,12 @@ XiQiang:
     - IO_As_IE
     - IAU_As_IOU
     - N_As_L_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,iang,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ChaoAn_FengHuang:
@@ -89,22 +67,11 @@ ChaoAn_FengHuang:
     - OI_As_UE
     - IAN_As_IEN
     - N_As_L_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,an,2
-    俺,俺,n,an,2: n,an,2
-    您,您,n,vn,2: n,vn,2
-    恁,恁,n,vn,2: n,vn,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,ien,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
 FengShun_LiuHuang:
   area: 丰顺
@@ -127,23 +94,12 @@ FengShun_LiuHuang:
     - UAN_As_UEN
     - IAM_As_IEM
     - N_As_L_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - ENG_As_EN
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,an,2
-    俺,俺,n,an,2: n,an,2
-    您,您,n,vn,2: n,vn,2
-    恁,恁,n,vn,2: n,vn,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,ien,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 RaoPing_SanRao:
@@ -159,23 +115,12 @@ RaoPing_SanRao:
     - UOINN_As_UINN
     - OI_As_UE
     - N_As_L_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - BU_As_MU_ForNasalEnding
     - N_As_NG
     - NG_As_VNG
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,iang,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
 ChengHai_ChengCheng:
   area: 澄海
   subarea: 澄城
@@ -197,7 +142,6 @@ ChengHai_ChengCheng:
     - IO_As_IE
     - IAU_As_IOU
     - L_As_N_ForMEnding
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - M_As_NG
@@ -206,16 +150,6 @@ ChengHai_ChengCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,vng,2
-    恁,恁,n,vn,2: n,vng,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,iang,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ShanTou_ShiQu:
@@ -240,16 +174,6 @@ ShanTou_ShiQu:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,ing,2
-    恁,恁,n,vn,2: n,ing,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,iang,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 JieYang_RongCheng:
@@ -268,7 +192,6 @@ JieYang_RongCheng:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - N_As_L_ForNOrNGEnding
     - MU_As_BU_ForNasalEnding
     - VN_As_IN
     - IN_As_EN
@@ -277,16 +200,6 @@ JieYang_RongCheng:
     - IONG_As_ONG
     - NGU_As_U
   exceptions:
-    # N_As_L_ForNOrNGEnding 规则例外
-    咱,咱,n,an,2: n,ang,2
-    俺,俺,n,an,2: n,ang,2
-    您,您,n,vn,2: n,eng,2
-    恁,恁,n,vn,2: n,eng,2
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
-    年,年,n,ian,5: n,iang,5
-    孃,娘,n,iang,5: n,iang,5
-    孃,娘,n,iang,6: n,iang,6
     # 其他特殊字音
     藕,藕,ng,au,6: k,au,6
 ChaoYang_MianCheng:
@@ -351,8 +264,6 @@ HuiLai_HuiCheng:
     - N_As_NG
     - NG_As_VNG
   exceptions:
-    人,人,n,ang,5: n,ang,5
-    儂,侬,n,ang,5: n,ang,5
     # 其他特殊字音
 LuFeng_SanJia:
   area: 陆丰
