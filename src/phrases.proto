@@ -67,4 +67,5 @@ message Phrase {
 
 message Phrases {
   repeated Phrase phrases = 1;
+  map<string, string> phrase_tag_display = 2;
 }

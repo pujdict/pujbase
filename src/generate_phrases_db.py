@@ -137,6 +137,7 @@ def main():
         except Exception as e:
             print(f'Error in phrase {i + 1} {k} {v}: {e}', file=sys.stderr)
             raise e
+    phrases.phrase_tag_display.update({PhraseTag.Name(v): k for k, v in PHRASE_TAG_MAP.items()})
     Path('../dist').mkdir(exist_ok=True)
     with open('../dist/phrases.pb', 'wb') as f:
         f.write(phrases.SerializeToString())
