@@ -320,7 +320,7 @@
 - 无花果|bo5-hue1-kue2||n|蔬菜:
 - 霍斛|khak4-hok8|石斛|n|蔬菜:
 - 高丽|kau1-li5|高丽参/人参|n|蔬菜:
-- 人参|jin5-siam1||n|蔬菜:
+- 人参|jin5-siam1/jin5-som1||n|蔬菜:
 - 洋参|ionn5-siam1||n|蔬菜:
 
 # -------------------------- 水果 FRUITS --------------------------
@@ -617,7 +617,7 @@
     informal: 瓦
 - 家己|ka1-ki7/ka1-ti7/ka1-li7|自己|n|人称:
     informal: 胶己
-- 家己人|ka1-ki7-nang5|自己人|n|人称:
+- 家己人|ka1-ki7-nang5/ka1-ti7-nang5/ka1-li7-nang5|自己人|n|人称:
     informal: 胶己人
 - 大家|tai6-ke1||n|人称:
 - 大家人|tai6-ke1-nang5|大伙/大家|n|人称:
@@ -750,7 +750,7 @@
 - 阿舅|a1-ku6|舅舅|n|人称:
 - 阿妗|a1-kim6|舅妈|n|人称:
 - 阿姨|a1-i5|姨妈|n|人称:
-- "**|an5--thi7|姨妈|n|人称":
+- ＊＊|an5--thi7|姨妈|n|人称:
     loan: 英语/aunt
 - 姑娘|kou1-nionn5|姑姑|n|人称:
 - 姑娘|ku5 niang6|姑姑|n|人称:
@@ -1020,377 +1020,377 @@
     desc: 灯火忽明忽暗地闪烁的样子
 - 䀰䀰金|kok4-kok4-kim1||o|拟声拟态/AAB:
     desc: 眼睛瞪大、炯炯有神的样子
-- "***|tong6-tong6-hinn3||o|拟声拟态/AAB":
+- ＊＊＊|tong6-tong6-hinn3||o|拟声拟态/AAB:
     desc: 不停甩动的样子
-- "***|niauh8-niauh8-nng3||o|拟声拟态/AAB":
+- ＊＊＊|niauh8-niauh8-nng3||o|拟声拟态/AAB:
     desc: 蠕动的样子
-- "***|huainnh8-huainnh8-soh4||o|拟声拟态/AAB":
+- ＊＊＊|huainnh8-huainnh8-soh4||o|拟声拟态/AAB:
     desc: 心神不宁地动来动去的样子
-- "***|lah8-lah8-so1||o|拟声拟态/AAB":
+- ＊＊＊|lah8-lah8-so1||o|拟声拟态/AAB:
     desc: 闲庭信步的样子
-- "***|long6-long6-so6||o|拟声拟态/AAB":
+- ＊＊＊|long6-long6-so6||o|拟声拟态/AAB:
     desc: 游手好闲的样子
-- "***|pha1-pha1-phin5||o|拟声拟态/AAB":
+- ＊＊＊|pha1-pha1-phin5||o|拟声拟态/AAB:
     desc: 身体失去平衡的样子
-- "***|phih8-phih8-puah8||o|拟声拟态/AAB":
+- ＊＊＊|phih8-phih8-puah8||o|拟声拟态/AAB:
     desc: 摇摇欲坠的样子
-- "***|lok4-lok4-khuann3||o|拟声拟态/AAB":
+- ＊＊＊|lok4-lok4-khuann3||o|拟声拟态/AAB:
     desc: 散装在容器中的物品相互撞击的样子
-- "***|hv7-hv7-khiu7||o|拟声拟态/AAB":
+- ＊＊＊|hv7-hv7-khiu7||o|拟声拟态/AAB:
     desc: 瑟瑟发抖的样子
 
 # -------------------------- 拟声拟态词 XX叫 式 --------------------------
-- "*一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|piang7 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|piang7 piang7 kio3||o|拟声拟态/XX叫":
-- "**叫|pi7 piang7 kio3||o|拟声拟态/XX叫":
-- "***叫|pi7 piang7 liang7 kio3||o|拟声拟态/XX叫":
-- "*一叫|phiang7 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|phiang7 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|phiang7 phiang7 kio3||o|拟声拟态/XX叫":
-- "**叫|phi7 phiang7 kio3||o|拟声拟态/XX叫":
-- "***叫|phi7 phiang7 liang7 kio3||o|拟声拟态/XX叫":
-- "*一叫|pong7 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|pong7 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|pong7 pong7 kio3||o|拟声拟态/XX叫":
-- "**叫|pi7 pong7 kio3||o|拟声拟态/XX叫":
-- "***叫|pi7 pong7 long7 kio3||o|拟声拟态/XX叫":
-- "*一叫|phong7 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|phong7 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|phong7 phong7 kio3||o|拟声拟态/XX叫":
-- "**叫|phi7 phong7 kio3||o|拟声拟态/XX叫":
-- "***叫|phi7 phong7 long7 kio3||o|拟声拟态/XX叫":
-- "*一叫|phiak4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|phiak4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|phiak4 phiak4 kio3||o|拟声拟态/XX叫":
-- "**叫|phih4 phiak4 kio3||o|拟声拟态/XX叫":
-- "***叫|phih4 phiak4 liak4 kio3||o|拟声拟态/XX叫":
-- "*一叫|piak4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|piak4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|piak4 piak4 kio3||o|拟声拟态/XX叫":
-- "**叫|pih4 piak4 kio3||o|拟声拟态/XX叫":
-- "***叫|pih4 piak4 liak4 kio3||o|拟声拟态/XX叫":
-- "*一叫|tong6 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|tong6 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|tong6 tong6 kio3||o|拟声拟态/XX叫":
-- "**叫|ti6 tong6 kio3||o|拟声拟态/XX叫":
-- "***叫|ti6 tong6 long6 kio3||o|拟声拟态/XX叫":
-- "咕一叫|ku6 tsek8-kio3||o|拟声拟态/XX叫":
-- "咕下叫|ku6 e6-kio3||o|拟声拟态/XX叫":
-- "咕咕叫|ku6 ku6 kio3||o|拟声拟态/XX叫":
-- "叽咕叫|ki6 ku6 kio3||o|拟声拟态/XX叫":
-- "叽咕噜叫|ki6 ku6 lu6 kio3||o|拟声拟态/XX叫":
-- "轰一叫|hong7 tsek8-kio3||o|拟声拟态/XX叫":
-- "轰下叫|hong7 e6-kio3||o|拟声拟态/XX叫":
-- "轰轰叫|hong7 hong7 kio3||o|拟声拟态/XX叫":
-- "*轰叫|hi7 hong7 kio3||o|拟声拟态/XX叫":
-- "*轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/XX叫":
-- "亍一叫|tshoh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "亍下叫|tshoh4 e6-kio3||o|拟声拟态/XX叫":
-- "亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/XX叫":
-- "彳亍叫|tshih4 tshoh4 kio3||o|拟声拟态/XX叫":
-- "彳亍*叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/XX叫":
-- "一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|sok4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|sok4 sok4 kio3||o|拟声拟态/XX叫":
-- "**叫|sih4 sok4 kio3||o|拟声拟态/XX叫":
-- "***叫|sih4 sok4 lok4 kio3||o|拟声拟态/XX叫":
-- "*一叫|siauh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|siauh4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|siauh4 siauh4 kio3||o|拟声拟态/XX叫":
-- "**叫|sih4 siauh4 kio3||o|拟声拟态/XX叫":
-- "***叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/XX叫":
-- "*一叫|tsiauh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|tsiauh4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/XX叫":
-- "**叫|tsih4 tsiauh4 kio3||o|拟声拟态/XX叫":
-- "***叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/XX叫":
-- "噗一叫|phuh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "噗下叫|phuh4 e6-kio3||o|拟声拟态/XX叫":
-- "噗噗叫|phuh4 phuh4 kio3||o|拟声拟态/XX叫":
-- "*噗叫|phih4 phuh4 kio3||o|拟声拟态/XX叫":
-- "*噗*叫|phih4 phuh4 luh4 kio3||o|拟声拟态/XX叫":
-- "*一叫|khok4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|khok4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|khok4 khok4 kio3||o|拟声拟态/XX叫":
-- "**叫|khih4 khok4 kio3||o|拟声拟态/XX叫":
-- "***叫|khih4 khok4 lok4 kio3||o|拟声拟态/XX叫":
-- "*一叫|thuh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|thuh4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|thuh4 thuh4 kio3||o|拟声拟态/XX叫":
-- "**叫|thih4 thuh4 kio3||o|拟声拟态/XX叫":
-- "***叫|thih4 thuh4 luh4 kio3||o|拟声拟态/XX叫":
-- "*一叫|hainnh4 tsek8-kio3||o|拟声拟态/XX叫":
-- "*下叫|hainnh4 e6-kio3||o|拟声拟态/XX叫":
-- "**叫|hainnh4 hainnh4 kio3||o|拟声拟态/XX叫":
-- "**叫|hinnh4 hainnh4 kio3||o|拟声拟态/XX叫":
-- "***叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/XX叫":
+- ＊一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|piang7 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|piang7 piang7 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pi7 piang7 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|pi7 piang7 liang7 kio3||o|拟声拟态/XX叫:
+- ＊一叫|phiang7 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|phiang7 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phiang7 phiang7 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phi7 phiang7 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|phi7 phiang7 liang7 kio3||o|拟声拟态/XX叫:
+- ＊一叫|pong7 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|pong7 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pong7 pong7 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pi7 pong7 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|pi7 pong7 long7 kio3||o|拟声拟态/XX叫:
+- ＊一叫|phong7 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|phong7 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phong7 phong7 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phi7 phong7 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|phi7 phong7 long7 kio3||o|拟声拟态/XX叫:
+- ＊一叫|phiak4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|phiak4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phiak4 phiak4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|phih4 phiak4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|phih4 phiak4 liak4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|piak4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|piak4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|piak4 piak4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pih4 piak4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 piak4 liak4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|tong6 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|tong6 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|tong6 tong6 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|ti6 tong6 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|ti6 tong6 long6 kio3||o|拟声拟态/XX叫:
+- 咕一叫|ku6 tsek8-kio3||o|拟声拟态/XX叫:
+- 咕下叫|ku6 e6-kio3||o|拟声拟态/XX叫:
+- 咕咕叫|ku6 ku6 kio3/ku7 ku7 kio3||o|拟声拟态/XX叫:
+- 叽咕叫|ki6 ku6 kio3/ki7 ku7 kio3||o|拟声拟态/XX叫:
+- 叽咕噜叫|ki6 ku6 lu6 kio3/ki7 ku7 lu8 kio3||o|拟声拟态/XX叫:
+- 轰一叫|hong7 tsek8-kio3||o|拟声拟态/XX叫:
+- 轰下叫|hong7 e6-kio3||o|拟声拟态/XX叫:
+- 轰轰叫|hong7 hong7 kio3||o|拟声拟态/XX叫:
+- ＊轰叫|hi7 hong7 kio3||o|拟声拟态/XX叫:
+- ＊轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/XX叫:
+- 亍一叫|tshoh4 tsek8-kio3||o|拟声拟态/XX叫:
+- 亍下叫|tshoh4 e6-kio3||o|拟声拟态/XX叫:
+- 亍亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/XX叫:
+- 彳亍叫|tshih4 tshoh4 kio3||o|拟声拟态/XX叫:
+- 彳亍＊叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/XX叫:
+- 一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|sok4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|sok4 sok4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|sih4 sok4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|sih4 sok4 lok4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|siauh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|siauh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|siauh4 siauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|sih4 siauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|tsiauh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|tsiauh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|tsih4 tsiauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/XX叫:
+- 噗一叫|phuh4 tsek8-kio3||o|拟声拟态/XX叫:
+- 噗下叫|phuh4 e6-kio3||o|拟声拟态/XX叫:
+- 噗噗叫|phuh4 phuh4 kio3||o|拟声拟态/XX叫:
+- ＊噗叫|phih4 phuh4 kio3||o|拟声拟态/XX叫:
+- ＊噗＊叫|phih4 phuh4 luh4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|khok4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|khok4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|khok4 khok4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|khih4 khok4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|khih4 khok4 lok4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|thuh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|thuh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|thuh4 thuh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|thih4 thuh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|thih4 thuh4 luh4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|hainnh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|hainnh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|hainnh4 hainnh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|hinnh4 hainnh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/XX叫:
   
 # -------------------------- 动词汇总，按读音排序 --------------------------
 
-- "摆|pai2||v|动词":
-- "拜|pai3||v|动词":
-- "拜老爷|pai3-lau6-ia5||v|动词":
-- "排|pai5||v|动词":
-- "排比|pai5-pi2|安排|v|动词":
-- "缚|pak8|捆|v|动词":
-- "放|pang3||v|动词":
-- "放尿|pang3-jio7|撒尿|v|动词":
-- "放屎|pang3-sai2|拉屎|v|动词":
-- "放屁|pang3-phui3||v|动词":
-- "*|pann1/pann5|鸣笛|v|动词":
+- 摆|pai2||v|动词:
+- 拜|pai3||v|动词:
+- 拜老爷|pai3-lau6-ia5||v|动词:
+- 排|pai5||v|动词:
+- 排比|pai5-pi2|安排|v|动词:
+- 缚|pak8|捆|v|动词:
+- 放|pang3||v|动词:
+- 放尿|pang3-jio7|撒尿|v|动词:
+- 放屎|pang3-sai2|拉屎|v|动词:
+- 放屁|pang3-phui3||v|动词:
+- ＊|pann1/pann5|鸣笛|v|动词:
     desc: 汽车鸣笛声，用做动词
-- "捌|pat4|认识|v|动词":
-- "捌|pat4|曾经|v|动词":
-- "爬|pe5||v|动词":
-- "扒|pe5|挠|v|动词":
-- "扒痒|pe5|挠痒|v|动词":
-- "掰|peh4||v|动词":
-- "逼|pek4||v|动词":
-- "煏|pek4|蒸烤|v|动词":
-- "愊|pek4|烦躁|v|动词":
-- "愊恻|pek4-tshek4|烦躁|v|动词":
-- "*着|peng1--tioh8|中暑|v|动词":
-- "扳|penn1|扳|v|动词":
+- 捌|pat4|认识|v|动词:
+- 捌|pat4|曾经|v|动词:
+- 爬|pe5||v|动词:
+- 扒|pe5|挠|v|动词:
+- 扒痒|pe5|挠痒|v|动词:
+- 掰|peh4||v|动词:
+- 逼|pek4||v|动词:
+- 煏|pek4|蒸烤|v|动词:
+- 愊|pek4|烦躁|v|动词:
+- 愊恻|pek4-tshek4|烦躁|v|动词:
+- ＊着|peng1--tioh8|中暑|v|动词:
+- 扳|penn1|扳|v|动词:
     examples:
     - [扳开门, penn1-khui1-mng5, 扳开门]
-- "比|pi2|比较|v|动词":
-- "比|pi2|比划|v|动词":
-- "畀面|pi2-min7|给面子|v|动词":
-- "背|pi3|背负|v|动词":
-- "痹|pi3||v|动词":
-- "避|pi7||v|动词":
-- "*|pian1|打耳光|v|动词":
+- 比|pi2|比较|v|动词:
+- 比|pi2|比划|v|动词:
+- 畀面|pi2-min7|给面子|v|动词:
+- 背|pi3|背负|v|动词:
+- 痹|pi3||v|动词:
+- 避|pi7||v|动词:
+- ＊|pian1|打耳光|v|动词:
     examples:
-    - ['*你两下灵精', pian1-lv2-nonn6-e7-leng5-tseng1, 打你两下]
-- "变|pian3||v|动词":
-- "无办/无变|bo5-pian3|没办法/没法|v|动词":
-- "无办忍/无变忍|bo5-pian3-lun2|没法忍受/受不了|v|动词":
-- "有办/有变|u6-pian3|有办法|v|动词":
-- "拼|piann3||v|动词":
-- "*|piann5|照搬|v|动词":
-- "*|pin6|从|v|动词":
+    - [＊你两下灵精, pian1-lv2-nonn6-e7-leng5-tseng1, 打你两下]
+- 变|pian3||v|动词:
+- 无办/无变|bo5-pian3|没办法/没法|v|动词:
+- 无办忍/无变忍|bo5-pian3-lun2|没法忍受/受不了|v|动词:
+- 有办/有变|u6-pian3|有办法|v|动词:
+- 拼|piann3||v|动词:
+- ＊|piann5|照搬|v|动词:
+- ＊|pin6|从|v|动词:
     examples:
-    - ["*底天时开始", pin6-ti7-thian1-si5-khai1-si2, 从什么时候开始]
-    - ["*底块开始", pin6-ti7-kr3-khai1-si2, 从哪里开始]
-- "变|pinn3||v|动词":
-- "标|pio1||v|动词":
-- "漂|pio3||v|动词":
-- "*|pit4|裂开|v|动词":
+    - [＊底天时开始, pin6-ti7-thian1-si5-khai1-si2, 从什么时候开始]
+    - [＊底块开始, pin6-ti7-kr3-khai1-si2, 从哪里开始]
+- 变|pinn3||v|动词:
+- 标|pio1||v|动词:
+- 漂|pio3||v|动词:
+- ＊|pit4|裂开|v|动词:
     examples:
-    - [片墙*去, phinn3-tshionn5 pit4--khv3, 墙裂开了]
-- "保|po2|保护|v|动词":
-- "报|po3||v|动词":
-- "*|poh4|教训|v|动词":
-- "拼*|piann3-poh4||v|动词":
-- "拔|poih8||v|动词":
-- "啵|pok8||v|动词":
+    - [片墙＊去, phinn3-tshionn5 pit4--khv3, 墙裂开了]
+- 保|po2|保护|v|动词:
+- 报|po3||v|动词:
+- ＊|poh4|教训|v|动词:
+- 拼＊|piann3-poh4||v|动词:
+- 拔|poih8||v|动词:
+- 啵|pok8||v|动词:
     desc: 指接吻
-- "*|pong1|打耳光|v|动词":
-- "*|pong5|打气|v|动词":
-- "*风|pong5-huang1|打气|v|动词":
-- "补|pou2||v|动词":
-- "哺|pou7|咀嚼|v|动词":
-- "*|pu1|踢|v|动词":
-- "*|pu5|烧|v|动词":
+- ＊|pong1|打耳光|v|动词:
+- ＊|pong5|打气|v|动词:
+- ＊风|pong5-huang1|打气|v|动词:
+- 补|pou2||v|动词:
+- 哺|pou7|咀嚼|v|动词:
+- ＊|pu1|踢|v|动词:
+- ＊|pu5|烧|v|动词:
     examples:
-    - ["*水", pu5-tsui2, 烧水]
-- "播|pua3||v|动词":
-- "跋|puah8|摔跤|v|动词":
-- "博|puah8|赌|v|动词":
+    - [＊水, pu5-tsui2, 烧水]
+- 播|pua3||v|动词:
+- 跋|puah8|摔跤|v|动词:
+- 博|puah8|赌|v|动词:
     desc: 因为赌博非法，该字现在用在“博木虱”等扑克牌游戏中，一般都没有赌钱的含义，但在这些词组中动词仍沿用“博”字，不会用“打”“拍”等字
     examples:
     - [博钱, puah8-tsinn5, 赌钱]
     - [博扑克, puah8-phok4-khiok4, 打扑克]
-- "*|puan6|舞|v|动词":
+- ＊|puan6|舞|v|动词:
     desc: 指民间各种化装游行活动
     examples:
-    - ["*蜈蚣", puan6-ge5-kang1, 舞蜈蚣]
-- "搬|puann1||v|动词":
-- "*|puann6||v|动词":
+    - [＊蜈蚣, puan6-ge5-kang1, 舞蜈蚣]
+- 搬|puann1||v|动词:
+- ＊|puann6||v|动词:
     desc: 抡着棍棒甩打
-- "飞|pue1||v|动词":
-- "㧳|pue2|掀开|v|动词":
+- 飞|pue1||v|动词:
+- 㧳|pue2|掀开|v|动词:
     desc: 分开、掀开、张开，并使掩藏着的东西露出来
     examples:
     - [个衫㧳起来, kai5-sann1 pue2--khi2-lai5, 把衣服掀起来]
-- "背|pue3|背诵|v|动词":
-- "陪|pue5||v|动词":
-- "赔|pue5||v|动词":
-- "焙|pue7||v|动词":
-- "*|puh4|戳|v|动词":
-- "分|pun1||v|动词":
-- "㖹|pun5|吹|v|动词":
-- "抔|put4|清扫|v|动词":
+- 背|pue3|背诵|v|动词:
+- 陪|pue5||v|动词:
+- 赔|pue5||v|动词:
+- 焙|pue7||v|动词:
+- ＊|puh4|戳|v|动词:
+- 分|pun1||v|动词:
+- 㖹|pun5|吹|v|动词:
+- 抔|put4|清扫|v|动词:
     desc: 用扫帚将清扫垃圾
     examples:
     - [抔掉撮垃圾, put4-tiau7-tshoh4-nah4-sap4, 把垃圾扫到一边]
-- "反|poinn2||v|动词":
-- "*|pha1|翻|v|动词":
-- "***|pha1-sua1-lin1|翻跟斗|v|动词":
-- "拍|phah4||v|动词":
-- "*|phak8|暴晒|v|动词":
-- "纺|phang2||v|动词":
-- "纺|phang2|转圈|v|动词":
-- "趴|phat4||v|动词":
-- "泡|phau6||v|动词":
-- "*|phe6|荡|v|动词":
-- "*登秋|phe6-teng1-tshiu1|荡秋千|v|动词":
-- "*龙船|phe6-leng5-tsun5|划龙舟|v|动词":
-- "拼|pheng1||v|动词":
-- "聘|pheng3||v|动词":
-- "披|phi1||v|动词":
-- "*|phi5|打盹|v|动词":
-- "骗|phian3||v|动词":
-- "*|phiat8||v|动词":
+- 反|poinn2||v|动词:
+- ＊|pha1|翻|v|动词:
+- ＊＊＊|pha1-sua1-lin1|翻跟斗|v|动词:
+- 拍|phah4||v|动词:
+- ＊|phak8|暴晒|v|动词:
+- 纺|phang2||v|动词:
+- 纺|phang2|转圈|v|动词:
+- 趴|phat4||v|动词:
+- 泡|phau6||v|动词:
+- ＊|phe6|荡|v|动词:
+- ＊登秋|phe6-teng1-tshiu1|荡秋千|v|动词:
+- ＊龙船|phe6-leng5-tsun5|划龙舟|v|动词:
+- 拼|pheng1||v|动词:
+- 聘|pheng3||v|动词:
+- 披|phi1||v|动词:
+- ＊|phi5|打盹|v|动词:
+- 骗|phian3||v|动词:
+- ＊|phiat8||v|动词:
     desc: 甩，并使物体摊开
-- "嫖|phiau5||v|动词":
-- "*|phih4|趴|v|动词":
-- "鼻|phinn7|闻|v|动词":
-- "匹|phit4|比/比量|v|动词":
+- 嫖|phiau5||v|动词:
+- ＊|phih4|趴|v|动词:
+- 鼻|phinn7|闻|v|动词:
+- 匹|phit4|比/比量|v|动词:
     examples:
     - [匹看地条裤大, phit4-thoinn2-ti7-tiau5-khou3-tua7, 比比看那条裤子大]
-- "覆|phiu3||v|动词":
-- "𠜱|phoi1|削|v|动词":
+- 覆|phiu3||v|动词:
+- 𠜱|phoi1|削|v|动词:
     examples:
     - [𠜱苹果, phoi1-phin5-kue2, 削苹果]
-- "办|phoinn7||v|动词":
-- "*|phok4||v|动词":
-- "碰|phong3||v|动词":
-- "铺|phou1||v|动词":
-- "肏|phu2|性交|v|动词":
-- "相肏|sionn1-phu2|性交|v|动词":
-- "浮|phu5||v|动词":
-- "*|phuah8|悬吊|v|动词":
-- "判|phuan3||v|动词":
-- "盘|phuan5|围着|v|动词":
-- "判|phuann3|批改|v|动词":
-- "诐|phueh8|聊|v|动词":
-- "呸|phui3|吐|v|动词":
-- "喷|phun3||v|动词":
-- "*|ba7|拉扯|v|动词":
-- "骲|ba7|揍|v|动词":
+- 办|phoinn7||v|动词:
+- ＊|phok4||v|动词:
+- 碰|phong3||v|动词:
+- 铺|phou1||v|动词:
+- 肏|phu2|性交|v|动词:
+- 相肏|sionn1-phu2|性交|v|动词:
+- 浮|phu5||v|动词:
+- ＊|phuah8|悬吊|v|动词:
+- 判|phuan3||v|动词:
+- 盘|phuan5|围着|v|动词:
+- 判|phuann3|批改|v|动词:
+- 诐|phueh8|聊|v|动词:
+- 呸|phui3|吐|v|动词:
+- 喷|phun3||v|动词:
+- ＊|ba7|拉扯|v|动词:
+- 骲|ba7|揍|v|动词:
     desc: 一般指打击头部
-- "睸|bai7|眯眼|v|动词":
-- "铆|bau2|揍|v|动词":
-- "沕|bi7|潜水|v|动词":
-- "沕头游/沕头泅|bi7-thau5-siu5|潜泳|v|动词":
-- "𰴕|bih4|躲藏|v|动词":
-- "瞄|bio5||v|动词":
-- "买|boi2||v|动词":
-- "卖|boi7||v|动词":
-- "拊|bu2|揍|v|动词":
-- "磨|bua5||v|动词":
-- "抹|buah4||v|动词":
-- "忘|buang5/buang6||v|动词":
-- "*|bun3|钻|v|动词":
-- "吻|but4||v|动词":
-- "*|ma1|遮盖|v|动词":
-- "埋|mai5||v|动词":
-- "*|mak4|抓/玩|v|动词":
-- "*沙|mak4-sua1|玩泥巴|v|动词":
-- "*水|mak4-tsui2|玩水|v|动词":
-- "网|mang6||v|动词":
-- "梦|mang7||v|动词":
-- "猫|mau1||v|动词":
-- "㨠|menn1|抓|v|动词":
-- "骂|me7||v|动词":
-- "脉|meh8|把脉|v|动词":
-- "眯|mi1||v|动词":
-- "免|mian2||v|动词":
-- "免|min2||v|动词":
-- "灭|mit8||v|动词":
-- "问|mng7||v|动词":
-- "*|moh4|发呆|v|动词":
-- "摸|mong5||v|动词":
-- "望|monn7||v|动词":
-- "*|mua1|包着|v|动词":
-- "物|mueh8|搞|v|动词":
-- "打|ta2||v|动词":
-- "贴|tah4||v|动词":
-- "踏|tah8||v|动词":
-- "等|tan2||v|动词":
-- "担|tann1||v|动词":
-- "呾|tann3|说|v|动词":
-- "掷|tann6||v|动词":
-- "耷|tap4|点/点头|v|动词":
-- "耷睡夗|tap4-sut4-ut8|打瞌睡|v|动词":
-- "倒|tau2||v|动词":
-- "倒倒|to2-tau2|反过来|v|动词":
-- "颠倒倒|tin1-to2-tau2|颠倒|v|动词":
-- "*|tau3|组装|v|动词":
-- "投|tau5|投掷|v|动词":
-- "投|tau5|状告|v|动词":
-- "笮|teh4|挤压|v|动词":
-- "*|tek8|拉伸|v|动词":
-- "登|teng1||v|动词":
-- "戥|teng2|称量|v|动词":
-- "中|teng3|击中|v|动词":
-- "订|teng3||v|动词":
-- "叮|teng3||v|动词":
-- "*|tenn3|假装|v|动词":
-- "*|tenn6|捏|v|动词":
-- "摘|tiah4||v|动词":
-- "惦|tiam3|藏|v|动词":
-- "电|tian6||v|动词":
-- "沾|tiann1||v|动词":
-- "定|tiann7||v|动词":
-- "跌|tiat4||v|动词":
-- "吊|tiau3||v|动词":
-- "调|tiau6||v|动词":
-- "*|tiauh4|小跳|v|动词":
-- "滴|tih4||v|动词":
-- "*|tim1|烧/煮|v|动词":
+- 睸|bai7|眯眼|v|动词:
+- 铆|bau2|揍|v|动词:
+- 沕|bi7|潜水|v|动词:
+- 沕头游/沕头泅|bi7-thau5-siu5|潜泳|v|动词:
+- 𰴕|bih4|躲藏|v|动词:
+- 瞄|bio5||v|动词:
+- 买|boi2||v|动词:
+- 卖|boi7||v|动词:
+- 拊|bu2|揍|v|动词:
+- 磨|bua5||v|动词:
+- 抹|buah4||v|动词:
+- 忘|buang5/buang6||v|动词:
+- ＊|bun3|钻|v|动词:
+- 吻|but4||v|动词:
+- ＊|ma1|遮盖|v|动词:
+- 埋|mai5||v|动词:
+- ＊|mak4|抓/玩|v|动词:
+- ＊沙|mak4-sua1|玩泥巴|v|动词:
+- ＊水|mak4-tsui2|玩水|v|动词:
+- 网|mang6||v|动词:
+- 梦|mang7||v|动词:
+- 猫|mau1||v|动词:
+- 㨠|menn1|抓|v|动词:
+- 骂|me7||v|动词:
+- 脉|meh8|把脉|v|动词:
+- 眯|mi1||v|动词:
+- 免|mian2||v|动词:
+- 免|min2||v|动词:
+- 灭|mit8||v|动词:
+- 问|mng7||v|动词:
+- ＊|moh4|发呆|v|动词:
+- 摸|mong5||v|动词:
+- 望|monn7||v|动词:
+- ＊|mua1|包着|v|动词:
+- 物|mueh8|搞|v|动词:
+- 打|ta2||v|动词:
+- 贴|tah4||v|动词:
+- 踏|tah8||v|动词:
+- 等|tan2||v|动词:
+- 担|tann1||v|动词:
+- 呾|tann3|说|v|动词:
+- 掷|tann6||v|动词:
+- 耷|tap4|点/点头|v|动词:
+- 耷睡夗|tap4-sut4-ut8|打瞌睡|v|动词:
+- 倒|tau2||v|动词:
+- 倒倒|to2-tau2|反过来|v|动词:
+- 颠倒倒|tin1-to2-tau2|颠倒|v|动词:
+- ＊|tau3|组装|v|动词:
+- 投|tau5|投掷|v|动词:
+- 投|tau5|状告|v|动词:
+- 笮|teh4|挤压|v|动词:
+- ＊|tek8|拉伸|v|动词:
+- 登|teng1||v|动词:
+- 戥|teng2|称量|v|动词:
+- 中|teng3|击中|v|动词:
+- 订|teng3||v|动词:
+- 叮|teng3||v|动词:
+- ＊|tenn3|假装|v|动词:
+- ＊|tenn6|捏|v|动词:
+- 摘|tiah4||v|动词:
+- 惦|tiam3|藏|v|动词:
+- 电|tian6||v|动词:
+- 沾|tiann1||v|动词:
+- 定|tiann7||v|动词:
+- 跌|tiat4||v|动词:
+- 吊|tiau3||v|动词:
+- 调|tiau6||v|动词:
+- ＊|tiauh4|小跳|v|动词:
+- 滴|tih4||v|动词:
+- ＊|tim1|烧/煮|v|动词:
     examples:
-    - [杯水*烧, pue1-tsui2 tim1-sio1, 把水烧热]
-- "沉|tim5||v|动词":
-- "镇|tin3|占|v|动词":
-- "镇地|tin3-tr3|占地方|v|动词":
-- "缠|tinn5||v|动词":
-- "*|tinn6|满溢|v|动词":
-- "*|tio7|颠簸|v|动词":
-- "中|tiong3||v|动词":
-- "张/装|tionn1|假装|v|动词":
-- "张神张鬼/装神装鬼|tionn1-sin5-tionn1-kui2|装神弄鬼|i|动词":
-- "张样做相/装样做相|tionn1-ionn7 tso3-sionn3|装模作样|i|动词":
-- "钓|tionn3||v|动词":
-- "得|tit4||v|动词":
-- "丢|tiu1||v|动词":
-- "*|tiu3|击打|v|动词":
-- "转|tng2|返回|v|动词":
-- "转内|tng2-lai6|回家|v|动词":
-- "*|tng3|摔|v|动词":
-- "当|tng3||v|动词":
-- "断|tng6||v|动词":
-- "倒|to2||v|动词":
-- "逃|to5||v|动词":
-- "在|to6||v|动词":
-- "择|toh8|挑选|v|动词":
-- "典|toinn2||v|动词":
-- "剁|tok4||v|动词":
-- "懂|tong2||v|动词":
-- "*|tong7|闯|v|动词":
-- "*开拼埋|tong7-khui1-piann3-bua5|跑来跑去|i|动词":
-- "*来拼去|tong7-lai5-piann3-khv3|跑来跑去|i|动词":
-- "斗|tou3||v|动词":
-- "渡|tou7||v|动词":
-- "夺|trh8||v|动词":
-- "赌|tu2||v|动词":
-- "拄|tu2||v|动词":
-- "怼|tu6||v|动词":
-- "叱|tuah4|呵斥|v|动词":
-- "缀|tue3|跟|v|动词":
-- "对|tui3|校对|v|动词":
-- "对|tui3|向|v|动词":
-- "交对|ka1-tui3|向|v|动词":
+    - [杯水＊烧, pue1-tsui2 tim1-sio1, 把水烧热]
+- 沉|tim5||v|动词:
+- 镇|tin3|占|v|动词:
+- 镇地|tin3-tr3|占地方|v|动词:
+- 缠|tinn5||v|动词:
+- ＊|tinn6|满溢|v|动词:
+- ＊|tio7|颠簸|v|动词:
+- 中|tiong3||v|动词:
+- 张/装|tionn1|假装|v|动词:
+- 张神张鬼/装神装鬼|tionn1-sin5-tionn1-kui2|装神弄鬼|i|动词:
+- 张样做相/装样做相|tionn1-ionn7 tso3-sionn3|装模作样|i|动词:
+- 钓|tionn3||v|动词:
+- 得|tit4||v|动词:
+- 丢|tiu1||v|动词:
+- ＊|tiu3|击打|v|动词:
+- 转|tng2|返回|v|动词:
+- 转内|tng2-lai6|回家|v|动词:
+- ＊|tng3|摔|v|动词:
+- 当|tng3||v|动词:
+- 断|tng6||v|动词:
+- 倒|to2||v|动词:
+- 逃|to5||v|动词:
+- 在|to6||v|动词:
+- 择|toh8|挑选|v|动词:
+- 典|toinn2||v|动词:
+- 剁|tok4||v|动词:
+- 懂|tong2||v|动词:
+- ＊|tong7|闯|v|动词:
+- ＊开拼埋|tong7-khui1-piann3-bua5|跑来跑去|i|动词:
+- ＊来拼去|tong7-lai5-piann3-khv3|跑来跑去|i|动词:
+- 斗|tou3||v|动词:
+- 渡|tou7||v|动词:
+- 夺|trh8||v|动词:
+- 赌|tu2||v|动词:
+- 拄|tu2||v|动词:
+- 怼|tu6||v|动词:
+- 叱|tuah4|呵斥|v|动词:
+- 缀|tue3|跟|v|动词:
+- 对|tui3|校对|v|动词:
+- 对|tui3|向|v|动词:
+- 交对|ka1-tui3|向|v|动词:
     examples:
     - [交对地块去？, ka1-tui3-ti7-kr3-khv3, 往哪里去]
-- "屯|tun1||v|动词":
-- "凸|tut8||v|动词":
-- "除|tv5||v|动词":
-- "除|tv5|烦|v|动词":
-- "*除|ti2-tv5|烦|v|动词":
-- "沉|thim5||v|动词":
-- "添|thinn1||v|动词":
-- "绽|thinn7|缝补|v|动词":
-- "*|thinn6|补充|v|动词":
+- 屯|tun1||v|动词:
+- 凸|tut8||v|动词:
+- 除|tv5||v|动词:
+- 除|tv5|烦|v|动词:
+- ＊除|ti2-tv5|烦|v|动词:
+- 沉|thim5||v|动词:
+- 添|thinn1||v|动词:
+- 绽|thinn7|缝补|v|动词:
+- ＊|thinn6|补充|v|动词:
