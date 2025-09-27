@@ -44,7 +44,7 @@ PHRASE_TAG_MAP = {
     '特产': PT_SPECIALTIES,
     '人称': PT_RELATIONSHIPS,
     '人体': PT_HUMAN_BODY,
-    '音乐': PT_HUMAN_BODY,
+    '音乐': PT_MUSICAL,
     '拟声拟态': PT_ONOMATOPOEIA,
     'AAB': PT_ONOMATOPOEIA_AAB,
     'XX叫': PT_ONOMATOPOEIA_KIO,
