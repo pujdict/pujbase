@@ -28,6 +28,8 @@ def _create_entries(yaml_entries) -> Entries:
         char, char_sim = chars.split(',')
         for pronunciation, details in pronunciations.items():
             initial, final, tone, sp_nasal, cat, freq, char_ref = pronunciation.split(',')
+            if initial == '0':
+                initial = ''
             entry_details: list[EntryDetail] = []
             if details:
                 for meaning, examples in details.items():

@@ -9,8 +9,8 @@ ChaoZhou_FuCheng:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -38,8 +38,8 @@ XiQiang:
     specials:
       - SMOOTH_2ND_3RD_4TH
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -61,8 +61,8 @@ ChaoAn_FengHuang:
     sandhi: [ 33, 212, 442, 5, 21, 21, 21, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - UOINN_As_UINN
     - OI_As_UE
     - IAN_As_IEN
@@ -84,8 +84,8 @@ FengShun_LiuHuang:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
     - IO_As_IE
@@ -110,8 +110,8 @@ RaoPing_SanRao:
     sandhi: [ 33, 25, 55, 5, 22, 21, 21, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - UOINN_As_UINN
     - OI_As_UE
     - N_As_L_ForMEnding
@@ -133,8 +133,8 @@ ChengHai_ChengCheng:
       - SMOOTH_NEUTRAL
       - VARIABLE_3RD_2ND
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
     - UENG_As_ENG
@@ -160,8 +160,8 @@ ShanTou_ShiQu:
     sandhi: [ 33, 25, 55, 5, 22, 21, 21, 2 ]
     neutral: [ 22, 212, 21, 2, 21, 21, 22, 2 ]
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
     - UENG_As_ENG
@@ -187,8 +187,8 @@ JieYang_RongCheng:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -210,9 +210,9 @@ ChaoYang_MianCheng:
     sandhi: [ 21, 52, 33, 5, 332, 32, 21, 3 ]
     neutral: [ 332, 32, 332, 2, 332, 332, 332, 2 ]
   rules:
-    - V_As_U
-    - R_As_O
-    - RH_As_OH
+    - UR_As_U
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -231,8 +231,8 @@ PuNing_LiuSha:
     sandhi: [ 33, 212, 55, 54, 31, 33, 33, 3 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
-    - R_As_O
-    - RH_As_OH
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -253,9 +253,9 @@ HuiLai_HuiCheng:
     sandhi: [ 33, 213, 44, 43, 31, 33, 33, 21 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
-    - V_As_U
-    - R_As_O
-    - RH_As_OH
+    - UR_As_U
+    - OR_As_O
+    - ORH_As_OH
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
@@ -273,9 +273,9 @@ LuFeng_SanJia:
     sandhi: [ 33, 24, 55, 5, 31, 33, 33, 3 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
-    - V_As_U
-    - R_As_E
-    - RH_As_OH
+    - UR_As_U
+    - OR_As_E
+    - ORH_As_OH
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN

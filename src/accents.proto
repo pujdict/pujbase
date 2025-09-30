@@ -6,10 +6,10 @@ import "entries.proto";
 
 enum FuzzyRule {
   FR_NONE = 0;
-  FR_V_As_U = 1;
-  FR_R_As_O = 2;
-  FR_R_As_E = 3;
-  FR_RH_As_OH = 4;
+  FR_UR_As_U = 1;
+  FR_OR_As_O = 2;
+  FR_OR_As_E = 3;
+  FR_ORH_As_OH = 4;
   FR_EU_As_IU = 6;
   FR_OINN_As_AINN = 7;
   FR_UOINN_As_UINN = 8;

@@ -510,7 +510,7 @@ class FuzzyRule:
                 pronunciation)
 
 
-class FuzzyRule_V_As_U(FuzzyRule):
+class FuzzyRule_UR_As_U(FuzzyRule):
     description = '单元音 ur 转为 u。潮阳、普宁、惠来、陆丰等地的口音。'
     example_chars = ['书', '之', '居', '鱼']
 
@@ -519,7 +519,7 @@ class FuzzyRule_V_As_U(FuzzyRule):
             result.final = 'u'
 
 
-class FuzzyRule_R_As_O(FuzzyRule):
+class FuzzyRule_OR_As_O(FuzzyRule):
     description = '单元音 er 转为 o。潮汕大部分地区口音。'
     example_chars = ['坐', '罪', '短', '退']
 
@@ -528,7 +528,7 @@ class FuzzyRule_R_As_O(FuzzyRule):
             result.final = 'o'
 
 
-class FuzzyRule_R_As_E(FuzzyRule):
+class FuzzyRule_OR_As_E(FuzzyRule):
     description = '单元音 er 转为 e。陆丰口音。'
     example_chars = ['坐', '罪', '短', '退']
 
@@ -537,7 +537,7 @@ class FuzzyRule_R_As_E(FuzzyRule):
             result.final = 'e'
 
 
-class FuzzyRule_RH_As_OH(FuzzyRule):
+class FuzzyRule_ORH_As_OH(FuzzyRule):
     description = '单元音 erh 转为 oh。潮汕大部分地区口音。'
     example_chars = ['夺', '绝', '鳕', '雪']
 
