@@ -31,8 +31,8 @@
 本仓库中记音所用方案为白话字拼音方案。为方便输入，记音时，声调以数字进行记录（不直接将声调符号标注在韵母中），另有几个特殊音素记法如下：
 
 - 零声母：`0`
-- 韵母“余”：`v`
-- 韵母“倭”：`r`
+- 韵母“余”：`ur`
+- 韵母“倭”：`or`
 - 鼻化韵：`nn`
 
 单个汉字的拼音文法定义如下：
@@ -42,7 +42,7 @@
 声母 ::= "p" | "ph" | "m" | "b" | "t" | "th" | "n" | "l" | "k" | "kh" | "ng" | "g" | "h" | "ts" | "tsh" | "s" | "j" | "0"
 韵母 ::= (介音) 韵腹 (韵尾)
 介音 ::= "i" | "u"
-韵腹 ::= "a" | "e" | "o" | "i" | "u" | "v" | "r" | "m" | "ng"
+韵腹 ::= "a" | "e" | "o" | "i" | "u" | "ṳ" | "o̤" | "m" | "ng"
 韵尾 ::= "i" | "u" | "m" | "n" | "ng" | "nn" | "p" | "t" | "k" | "h" | "nnh"
 声调 ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8"
 ```
@@ -50,7 +50,7 @@
 正则表达式举例：
 
 ```js
-/^(?<initial>(p|ph|m|b|t|th|n|l|k|kh|ng|g|h|ts|tsh|s|j|0)'?)?(?<final>(?<medial>(i|u)(?=[aeoiuvr]))?(?<nucleus>a|e|o|i|u|v|r|ng|m)(?<coda>(i|u)?(m|n|ng|p|t|k|h)*)(?<tone>[1-8])?)$/i
+/^(?<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z|0)'?)?(?<final>(?<medial>(y|yi|i|u)(?=[aeoiu]))?(?<nucleus>a|e|o|i|u|v|ur|ir|ṳ|or|er|o̤|ng|m)(?<coda>(y|yi|i|u)?(m|n|ng|nn'?|p|t|k|h)*)(?<tone>\d)?)$/i
 ```
 
 ### 口音表 `accents`
@@ -62,7 +62,7 @@ ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
   area: 潮州  # 地区
   subarea: 府城  # 子区域，可留空
   rules: # 规则列表，可选项参见 accents.proto
-    - R_As_O
+    - OR_As_O
     # ...
 ```
 
@@ -115,12 +115,58 @@ ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
 
 ### 词表 `phrases`
 
-词表放置于 `phrases` 目录下归类为多个文件，数据以 CSV 形式记录。每个 CSV 文件中有四列，分别记录：
+词表放置于 `phrases.yml` 中。示例如下：
 
-- `teochew`：潮州话表达（汉字形式，如果“本字”未知则以 `*` 代替）
-- `puj`：白话字拼音（带连字符）
-- `mandarin`：普通话对应的表达形式（如果为空，表示与潮州话表达所用字完全相同，或者该词没有对应的普通话表达）
-- `note`：一些注释，可以为空
+```yml
+#  -------------------------- 示例 ------------------------
+- 我|ua2||r|人称:
+    informal: [瓦]  # 非正式的写法列表，对于社交平台上常用的，但不正式的写法予以收录。类型为 str 或 list[str]
+# 例：字同而音义不同
+- 高丽|ko1-le6|包菜/卷心菜|n|蔬菜: # key 固定为单词的写法（无汉字者以*代替，外来语可不写汉字） + 发音 + 普通话对译词 + 词性 + 标签
+- 高丽|kau1-li5|高丽参/人参|n|:
+- 后日|au6--jit8|后天|n|:
+    cmn: 后天
+    desc: 日期上的后天。如果用于合成词，不读轻声调。
+    examples:
+    - [伊后日过来, i1 au6--jit8 kue3--lai5, 他后天过来]
+    - [伊后日才来, i1 au6--jit8 tsia3-lai5, 他后天才来]
+    - [后日夜, au6-jit8-menn5, 后天晚上]
+- 后日|au6-jit8|今后/日后|n|:
+# 例：多种读音，多种写法，多种含义，需拆分为多个条目。
+- 阮/我人/我侬|uan2/ua2--nang5|我们|r|:
+- 阮|uan2||n|:
+    desc: 一种乐器  # desc 只用于释义
+- 奶茶|nai2-te5/ni6-te5/ne6-te5||n|:
+- 疫情|mok8-tsheng5/ek8-tsheng5||n|:
+# 例：具体口音变体
+- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|:
+    accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
+    - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
+    - ChaoAn_FengHuang: noinn5-ngau6
+- 作田/作塍|tsoh4-tshan5|种田|vi|:
+- 荠葱/钱葱|tshinn5-tsang5|马蹄葱/马蹄/荸荠|n|:
+# 例：外来语，无汉字者以全角星号＊代替
+- ＊＊|an5--thi7|姨妈|r|:
+    loan: 英语/aunt
+- 咸煎饼|ham5-tsin5 peng6||n|:
+    loan: 粤语/咸煎饼
+- 干筒/干茼|kan1-tang5|土豆/马铃薯|n|:
+    loan: 马来语/kentang
+# 单字，理论上可以考虑将字表中的内容都迁移到这个表里来，释义的添加方式更加准确自由
+- 硗|khiau1|穷/贫瘠|a|:
+    desc: 原意指土地贫瘠，引申为穷。
+    examples:
+    - [硗过梦龙, khiau1-kue3-mang7-leng5, 比梦龙穷]
+- 硗|khiau1|余|m|:
+    desc: 原意指土地贫瘠，引申为表示概数的数词。用于个位少于一半的情况。个位大于五需用“外@{gua7}”。
+    examples:
+    - [二十硗人, ji7-tsap8-khiau1-nang5, 二十余人（少于二十五人）]
+    - [二点硗, nonn6-tiam2-khiau1, 两点多（早于两点半）]
+# 英语音素
+- K|khe1||n|:
+- XO|ek8--surh4 ou1||n|:
+- offer|o5--fur7||n|:
+```
 
 ## 开源协议
 
