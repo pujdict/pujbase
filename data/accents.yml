@@ -22,7 +22,7 @@ ChaoZhou_FuCheng:
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_UNG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 XiQiang:
@@ -44,7 +44,7 @@ XiQiang:
     - N_As_L_ForMEnding
     - MU_As_BU_ForNasalEnding
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 ChaoAn_FengHuang:
@@ -62,7 +62,7 @@ ChaoAn_FengHuang:
     - IAN_As_IEN
     - N_As_L_ForMEnding
     - MU_As_BU_ForNasalEnding
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 FengShun_LiuHuang:
@@ -88,7 +88,7 @@ FengShun_LiuHuang:
     - N_As_L_ForMEnding
     - MU_As_BU_ForNasalEnding
     - ENG_As_EN
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 RaoPing_SanRao:
@@ -106,7 +106,7 @@ RaoPing_SanRao:
     - N_As_L_ForMEnding
     - BU_As_MU_ForNasalEnding
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 ChengHai_ChengCheng:
@@ -134,7 +134,7 @@ ChengHai_ChengCheng:
     - N_As_NG
     - M_As_NG
     - NG_As_UNG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 ShanTou_ShiQu:
@@ -155,7 +155,7 @@ ShanTou_ShiQu:
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_UNG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 JieYang_RongCheng:
@@ -175,10 +175,10 @@ JieYang_RongCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - MU_As_BU_ForNasalEnding
-    - VN_As_IN
+    - URN_As_IN
     - IN_As_EN
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
 ChaoYang_MianCheng:
@@ -196,9 +196,9 @@ ChaoYang_MianCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - MU_As_BU_ForNasalEnding
-    - VN_As_IN
+    - URN_As_IN
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
 PuNing_LiuSha:
   area: 普宁
   subarea: 流沙
@@ -212,9 +212,9 @@ PuNing_LiuSha:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - VN_As_IN
+    - URN_As_IN
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
     - NGU_As_U
 HuiLai_HuiCheng:
   area: 惠来
@@ -231,9 +231,9 @@ HuiLai_HuiCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - MU_As_BU_ForNasalEnding
-    - VN_As_IN
+    - URN_As_IN
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG
 LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
@@ -252,4 +252,4 @@ LuFeng_SanJia:
     - MU_As_BU_ForNasalEnding
     - UE_As_UEI
     - N_As_NG
-    - NG_As_VNG
+    - NG_As_URNG

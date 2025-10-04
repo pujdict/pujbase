@@ -597,7 +597,7 @@ class FuzzyRule_UE_As_UEI(FuzzyRule):
             result.final = result.final.replace('ue', 'uei')
 
 
-class FuzzyRule_VN_As_IN(FuzzyRule):
+class FuzzyRule_URN_As_IN(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
         if result.final in ['vn', 'vt']:
             result.final = result.final.replace('v', 'i')
@@ -746,7 +746,7 @@ class FuzzyRule_NG_As_UNG(FuzzyRule):
             result.final = 'ung'
 
 
-class FuzzyRule_NG_As_VNG(FuzzyRule):
+class FuzzyRule_NG_As_URNG(FuzzyRule):
     def _fuzzy(self, result: Pronunciation):
         if result.final == 'ng' and result.initial not in ['h', '0']:
             result.final = 'vng'

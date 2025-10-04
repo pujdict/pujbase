@@ -15,7 +15,7 @@ enum FuzzyRule {
   FR_OI_As_UE = 10;
   FR_OU_As_AU = 11;
   FR_UE_As_UEI = 12;
-  FR_VN_As_IN = 13;
+  FR_URN_As_IN = 13;
   FR_IN_As_EN = 14;
   FR_UENG_As_ENG = 15;
   FR_UEK_As_UAK = 16;
@@ -34,7 +34,7 @@ enum FuzzyRule {
   FR_M_As_NG = 29;
   FR_ENG_As_EN = 30;
   FR_NG_As_UNG = 31;
-  FR_NG_As_VNG = 32;
+  FR_NG_As_URNG = 32;
   FR_IONG_As_ONG = 33;
   FR_NGU_As_U = 34;
 }
