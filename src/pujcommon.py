@@ -550,6 +550,10 @@ class FuzzyRuleDescriptor(FuzzyRule):
     def get_rule_from_pb(cls, rule_id: pb.FuzzyRule):
         return cls.ALL_DESCRIPTORS_MAP.get(rule_id)
 
+    def _fuzzy(self, result: Pronunciation):
+        for action in self.actions:
+            action._fuzzy(result)
+
 
 class Accent(FuzzyRule):
     id: str

@@ -116,7 +116,7 @@ def main():
         actions = []
         for fuzzy_rule_action in fuzzy_rule_actions:
             action, pattern, replacement_dollar, _ = fuzzy_rule_action.split('/')
-            replacement_backslash = re.sub(r'\$(\d)', r'\\1', replacement_dollar)
+            replacement_backslash = re.sub(r'\$(\d)', r'\\\1', replacement_dollar)
             actions.append(FuzzyRuleAction(
                 action=action,
                 pattern=pattern,
