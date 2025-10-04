@@ -1,0 +1,69 @@
+UR_As_U:
+- final/^ur$/u/
+OR_As_O:
+- final/^or$/o/
+OR_As_E:
+- final/^or$/e/
+ORH_As_OH:
+- final/^orh$/oh/
+EU_As_IU:
+- final/^eu$/iu/
+OINN_As_AINN:
+- final/^oinn$/ainn/
+UOINN_As_UINN:
+- final/^uoinn$/uinn/
+UOINN_As_UAINN:
+- final/^uoinn$/uainn/
+OI_As_UE:
+- initial+final/^(p|ph|m|b)oi(nn|h|nnh)?$/$1ue$2/
+OU_As_AU:
+- final/^ou(nn|h|nnh)?$/au$1/
+UE_As_UEI:
+- final/^ue(nn|h|nnh)?$/uei$1/
+URN_As_IN:
+- final/^ur(n|t)$/i$1/
+IN_As_EN:
+- final/^i(n|t)$/e$1/
+UENG_As_ENG:
+- initial+final/^(k|kh|ng|g|h)ueng$/$1uang/
+- initial+final/^ueng$/eng/
+UEK_As_UAK:
+- final/^uek$/uak/
+IO_As_IE:
+- final/^io(nn|h|nnh)?$/ie$1/
+IAU_As_IEU:
+- final/^iau(nn|h|nnh)?$/ieu$1/
+IAU_As_IOU:
+- final/^iau(nn|h|nnh)?$/iou$1/
+IAN_As_IEN:
+- final/^ia(n|t)$/ie$1/
+UAN_As_UEN:
+- final/^ua(n|t)$/ue$1/
+IAM_As_IEM:
+- final/^ia(m|p)$/ie$1/
+N_As_L_ForMEnding:
+- initial+final/^n((a|o|ur|or|e|i|u)+)m$/l$1m/
+L_As_N_ForMEnding:
+- initial+final/^l((a|o|ur|or|e|i|u)+)m$/n$1m/
+MU_As_BU_ForNasalEnding:
+- initial+final/^mu(.+?)(n|ng)$/bu$1$2/
+BU_As_MU_ForNasalEnding:
+- initial+final/^bu(.+?)(n|ng)$/mu$1$2/
+N_As_NG:
+- final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
+- final/^((a|o|ur|or|e|i|u)+)t$/$1k/
+M_As_NG:
+- final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
+- final/^((a|o|ur|or|e|i|u)+)p$/$1k/
+ENG_As_EN:
+- final/^eng$/en/
+- final/^ek$/et/
+NG_As_UNG:
+- final/^ng$/ung/
+NG_As_URNG:
+- final/^ng$/urng/
+IONG_As_ONG:
+- initial+final/^(t|th|n|l|ts|tsh|s|j)iong$/$1ong/
+- initial+final/^(t|th|n|l|ts|tsh|s|j)iok$/$1ok/
+NGU_As_U:
+- initial+final/^ngu$/u/

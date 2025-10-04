@@ -46,6 +46,22 @@ enum ToneSpecial {
   TS_VARIABLE_3RD_2ND = 3;
 }
 
+message FuzzyRuleAction {
+  // 目前总共两类：initial；initial+final
+  string action = 1;
+  // 正则表达式匹配串
+  string pattern = 2;
+  // 替换表达式，包含 $1 $2 $3 用于 Javascript.
+  string replacement_dollar = 3;
+  // 替换表达式，包含 \1 \2 \3 用于 Python.
+  string replacement_backslash = 4;
+}
+
+message FuzzyRuleDescriptor {
+  FuzzyRule id = 1;
+  repeated FuzzyRuleAction actions = 2;
+}
+
 message Tones {
   repeated uint32 citation = 1;
   repeated uint32 sandhi = 2;
@@ -64,4 +80,5 @@ message Accent {
 
 message Accents {
   repeated Accent accents = 1;
+  repeated FuzzyRuleDescriptor fuzzy_rule_descriptors = 2;
 }

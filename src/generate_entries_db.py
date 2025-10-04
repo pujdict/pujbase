@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 from pathlib import Path
 
 import sys
@@ -106,11 +107,33 @@ def main():
         for entry in entries.entries
     }
 
+    fuzzy_rules_file = Path('../data/fuzzy_rules.yml')
+    assert fuzzy_rules_file.exists(), 'fuzzy_rules.yml not found'
+    with open(fuzzy_rules_file, 'r', encoding='utf-8') as f:
+        yaml_fuzzy_rules = yaml.load(f, yaml.Loader)
+    fuzzy_rule_descriptors = []
+    for fuzzy_rule_id, fuzzy_rule_actions in yaml_fuzzy_rules.items():
+        actions = []
+        for fuzzy_rule_action in fuzzy_rule_actions:
+            action, pattern, replacement_dollar, _ = fuzzy_rule_action.split('/')
+            replacement_backslash = re.sub(r'\$(\d)', r'\\1', replacement_dollar)
+            actions.append(FuzzyRuleAction(
+                action=action,
+                pattern=pattern,
+                replacement_dollar=replacement_dollar,
+                replacement_backslash=replacement_backslash,
+            ))
+        fuzzy_rule_descriptors.append(FuzzyRuleDescriptor(
+            id='FR_' + fuzzy_rule_id,
+            actions=actions,
+        ))
+
     accents_file = Path('../data/accents.yml')
     assert accents_file.exists(), 'accents.yml not found'
     with open(accents_file, 'r', encoding='utf-8') as f:
         yaml_entries = yaml.load(f, yaml.Loader)
     accents = Accents()
+    accents.fuzzy_rule_descriptors.extend(fuzzy_rule_descriptors)
     for k, v in yaml_entries.items():
         area = v['area']
         subarea = v['subarea']
