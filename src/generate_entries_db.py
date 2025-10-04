@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from pathlib import Path
+
+import sys
 import yaml
 from entries_pb2 import *
 from accents_pb2 import *
@@ -26,31 +28,61 @@ def _create_entries(yaml_entries) -> Entries:
     for yaml_ent in yaml_entries:
         chars, pronunciations = yaml_ent
         char, char_sim = chars.split(',')
-        for pronunciation, details in pronunciations.items():
-            initial, final, tone, sp_nasal, cat, freq, char_ref = pronunciation.split(',')
-            if initial == '0':
-                initial = ''
-            entry_details: list[EntryDetail] = []
-            if details:
-                for meaning, examples in details.items():
-                    detail = EntryDetail(meaning=meaning, examples=[])
-                    if examples:
-                        for teochew_puj_mandarin in examples:
-                            teochew, puj, mandarin = teochew_puj_mandarin
-                            detail.examples.append(EntryDetailExample(teochew=teochew, puj=puj, mandarin=mandarin))
-                    entry_details.append(detail)
-            pron = Pronunciation(initial=initial, final=final, tone=int(tone), sp_nasal=ESN.Name(int(sp_nasal)))
-            entries.entries.append(Entry(
-                index=index,
-                char=char,
-                char_sim=char_sim,
-                pron=pron,
-                cat=EC.Name(int(cat)),
-                freq=EF.Name(int(freq)),
-                char_ref=char_ref,
-                details=entry_details,
-            ))
-            index += 1
+        try:
+            for pronunciation, details in pronunciations.items():
+                initial, final, tone, sp_nasal, cat, freq, char_ref = pronunciation.split(',')
+                if initial == '0':
+                    initial = ''
+                entry_details: list[EntryDetail] = []
+                pron_aka: list[Entry.PronunciationAka] = []
+                accents_nasalized: list[str] = []
+                if details:
+                    for details_k, details_v in details.items():
+                        if details_k in ['aka', 'aka_replace']:
+                            aka_list = details_v
+                            for aka_accent_id, aka_accent_pron in aka_list.items():
+                                prons_aka = []
+                                for pron_raw in aka_accent_pron.split('/'):
+                                    pron_initial, pron_final, pron_tone = pron_raw.split(',')
+                                    if pron_initial == '0':
+                                        pron_initial = ''
+                                    prons_aka.append(Pronunciation(
+                                        initial=pron_initial,
+                                        final=pron_final,
+                                        tone=int(pron_tone),
+                                    ))
+                                pron_aka.append(Entry.PronunciationAka(
+                                    accent_id=aka_accent_id,
+                                    prons=prons_aka,
+                                    replace=details_k == 'aka_replace',
+                                ))
+                            continue
+                        if details_k == 'nasalize':
+                            accents_nasalized = details_v
+                            continue
+                        detail = EntryDetail(meaning=details_k, examples=[])
+                        if details_v:
+                            for teochew_puj_mandarin in details_v:
+                                teochew, puj, mandarin = teochew_puj_mandarin
+                                detail.examples.append(EntryDetailExample(teochew=teochew, puj=puj, mandarin=mandarin))
+                        entry_details.append(detail)
+                pron = Pronunciation(initial=initial, final=final, tone=int(tone), sp_nasal=ESN.Name(int(sp_nasal)))
+                entries.entries.append(Entry(
+                    index=index,
+                    char=char,
+                    char_sim=char_sim,
+                    pron=pron,
+                    cat=EC.Name(int(cat)),
+                    freq=EF.Name(int(freq)),
+                    char_ref=char_ref,
+                    details=entry_details,
+                    accents_nasalized=accents_nasalized,
+                    pron_aka=pron_aka,
+                ))
+                index += 1
+        except Exception as e:
+            print(f'Error {e} of char {char}', file=sys.stderr)
+            raise
     for entry in entries.entries:
         _verify_pronunciation(entry)
     return entries
@@ -91,23 +123,11 @@ def main():
         specials = tones.get('specials') or []
         specials = [ToneSpecial.Value(f"TS_{special_name}") for special_name in specials]
         tones = Tones(citation=citation, sandhi=sandhi, neutral=neutral, specials=specials)
-        exceptions = {}
-        exceptions_list = v['exceptions'] or {}
-        for k_original, v_expected in exceptions_list.items():
-            entry_index = entries_index_map[k_original]
-            ex_initial, ex_final, ex_tone = v_expected.split(',')
-            ex_pron = Pronunciation(
-                initial=ex_initial,
-                final=ex_final,
-                tone=int(ex_tone),
-            )
-            exceptions[entry_index] = ex_pron
         accents.accents.append(Accent(
             id=k,
             area=area,
             subarea=subarea,
             rules=rules,
-            exceptions=exceptions,
             tones=tones,
         ))
 

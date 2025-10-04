@@ -43,7 +43,7 @@ message Pronunciation {
   // 音调
   int32 tone = 3;
   // 阴声韵特殊鼻化标记
-  EntrySpecialNasalization sp_nasal = 4;
+  EntrySpecialNasalization sp_nasal = 4 [deprecated = true];
 }
 
 message Entry {
@@ -62,6 +62,17 @@ message Entry {
   optional string char_ref = 7;
   // 字音详细信息
   repeated EntryDetail details = 8;
+  // 可读鼻化的语音点
+  repeated string accents_nasalized = 9;
+
+  // 各口音点又音
+  message PronunciationAka {
+    string accent_id = 1;
+    repeated Pronunciation prons = 2;
+    // 是否替换原读音，默认为否，即又音，但又音与原读音并存，不挤兑原读音
+    bool replace = 3;
+  }
+  repeated PronunciationAka pron_aka = 10;
 }
 
 message Entries {

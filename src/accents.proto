@@ -60,7 +60,7 @@ message Accent {
   string area = 2;
   optional string subarea = 3;
   repeated FuzzyRule rules = 4;
-  map<uint32, Pronunciation> exceptions = 5;
+  map<uint32, Pronunciation> exceptions = 5 [deprecated = true];
   Tones tones = 6;
 }
 

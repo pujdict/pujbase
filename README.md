@@ -120,7 +120,7 @@ ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
 ```yml
 #  -------------------------- 示例 ------------------------
 - 我|ua2||r|人称:
-    informal: [瓦]  # 非正式的写法列表，对于社交平台上常用的，但不正式的写法予以收录。类型为 str 或 list[str]
+    informal: 瓦  # 非正式的写法列表，对于社交平台上常用的，但不正式的写法予以收录。多种写法以 / 分割
 # 例：字同而音义不同
 - 高丽|ko1-le6|包菜/卷心菜|n|蔬菜: # key 固定为单词的写法（无汉字者以*代替，外来语可不写汉字） + 发音 + 普通话对译词 + 词性 + 标签
 - 高丽|kau1-li5|高丽参/人参|n|:
@@ -139,10 +139,7 @@ ChaoZhou_FuCheng:  # 一个标记该口音规则的唯一 ID
 - 奶茶|nai2-te5/ni6-te5/ne6-te5||n|:
 - 疫情|mok8-tsheng5/ek8-tsheng5||n|:
 # 例：具体口音变体
-- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|:
-    accents:  # 具体两种口音的变读。这个 key 应该极少有机会使用。这里给出的必须是已经过口音规则转换后的准确读音（例如潮阳读 nainn5 而不是 noinn5）
-    - ChaoYang_MianCheng: [nainn5-ngau6, nainn5-nau6]
-    - ChaoAn_FengHuang: noinn5-ngau6
+- 莲藕|noinn5-kau6||n|:
 - 作田/作塍|tsoh4-tshan5|种田|vi|:
 - 荠葱/钱葱|tshinn5-tsang5|马蹄葱/马蹄/荸荠|n|:
 # 例：外来语，无汉字者以全角星号＊代替

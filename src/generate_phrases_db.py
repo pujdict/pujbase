@@ -118,7 +118,8 @@ def main():
             desc = v.get('desc')
             if desc and not is_punctuation_full_width(desc[-1]):
                 desc += '。'
-            informal = get_list_of_str(v.get('informal'))
+            informal = v.get('informal')
+            informal = informal.split('/') if informal else []
             phrase = Phrase(
                 index=i + 1,
                 teochew=teochew_list,

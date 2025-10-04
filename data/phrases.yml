@@ -9,6 +9,7 @@
 - 驴|lur5||n|动物:
 - 骡|lo5||n|动物:
 - 鹿|tek8||n|动物:
+- 长颈鹿|tshiang5-kenn3-tek8||n|动物:
 - 豺狼|tshai5-lang5||n|动物:
 - 狐狸|hu5-li5/hou5-lai5||n|动物:
 - 蛇|tsua5||n|动物:
@@ -38,6 +39,7 @@
 - 唪嗄|ong6-enn1|蝉|n|动物:
 - 蛄䖲|kou1-sun5|蝉|n|动物:
 - 叽䖲|ki5-sun5|蝉|n|动物:
+- 悲蝉|pi1-iam5|蝉|n|动物:
 - 草蜢|tshau2-menn2|蝗虫|n|动物:
 - 蜂|phang1||n|动物:
 - 水牛|tsui2-gu5||n|动物:
@@ -54,6 +56,7 @@
 - 鹅|go5||n|动物:
 - 猴|kau5||n|动物:
 - 老鼠|ngiau2-tshur2||n|动物:
+    informal: 猫鼠
 - 吱鼠|tsih4-tshur2|盲鼠|n|动物:
 - 蜈蚣|ge5-kang1||n|动物:
 - 水鸡|tsui2-koi1|田鸡|n|动物:
@@ -70,7 +73,7 @@
 - 土蝠|tou6-pit8|螳螂|n|动物:
 - 灶鸡|tsau3-koi1|蟋蟀|n|动物:
 - 蝠婆|pit8-po5|蝙蝠|n|动物:
-- 马长蚑/马龙骑|be2-tng5-khia5/be2-leng5-khia5|高脚蛛|n|动物:
+- 马长蚑/马龙骑|be2-tng5-khia5/be2-teng5-khia5/be2-leng5-khia5|高脚蛛|n|动物:
 - 𮔚蜈|la5-gia5/la5-ia5|高脚蛛|n|动物:
     desc: 高脚蛛，潮阳、惠来等地的叫法
 - 蜘蛛|ti1-tu1||n|动物:
@@ -257,7 +260,7 @@
 - 葱|tshang1||n|蔬菜:
 - 番葱|huan1-tshang1|洋葱|n|蔬菜:
 - 大菜|tua7-tshai3|芥菜|n|蔬菜:
-- 絮瓜/须瓜|tsheu3-kue1/tsheu1-kue1|丝瓜|n|蔬菜:
+- 絮瓜/须瓜/秋瓜|tsheu3-kue1/tsheu1-kue1|丝瓜|n|蔬菜:
 - 吊瓜|tiau3-kue1|黄瓜|n|蔬菜:
 - 冬瓜|tang1-kue1||n|蔬菜:
 - 角瓜|kak4-kue1||n|蔬菜:
@@ -266,7 +269,7 @@
 - 苋菜|hoinn7-tshai3||n|蔬菜:
 - 莶椒|hiam1-tsio1|辣椒|n|蔬菜:
 - 猴栗|kau5-lat8|板栗|n|蔬菜:
-    informal: [猴力, 猴六]
+    informal: 猴力/猴六
 - 榄|lam2|乌榄|n|蔬菜:
 - 地豆|ti7-tau7|花生|n|蔬菜:
 - 豆芽|tau7-ge5||n|蔬菜:
@@ -281,10 +284,7 @@
 - 芹菜|khurn5-tshai3||n|蔬菜:
 - 芫荽|uan5-sui1|香菜|n|蔬菜:
 - 芋|ou7|芋头|n|蔬菜:
-- 莲藕|noinn5-kau6/noinn5-ngau6/noinn5-nau6||n|蔬菜:
-    accents:
-    - ChaoYang_MianCheng: [ nainn5-ngau6, nainn5-nau6 ]
-    - ChaoAn_FengHuang: noinn5-ngau6
+- 莲藕|noinn5-kau6||n|蔬菜:
 - 奶瓜|ni1-kue1|木瓜|n|蔬菜:
 - 笋|sun2|竹笋|n|蔬菜:
 - 茼蒿|tang5-o1||n|蔬菜:
@@ -471,6 +471,7 @@
 - 鹅脚|go5-kha2||n|特产:
 - 鹅肠|go5-tng5||n|特产:
 - 鹅肝|go5-kuann1||n|特产:
+- 鹅腱|go5-kin6||n|特产:
 - 鹅翼|go5-sit8|鹅翅|n|特产:
 - 鸡翼|koi1-sit8|鸡翅|n|特产:
 - 鸡脚|koi1-kha1|鸡爪|n|特产:
@@ -479,8 +480,7 @@
 - 鸡卵|koi1-nng6|鸡蛋|n|特产:
 - 粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
 - 童子鸡|thong5-tsur2-koi1||n|特产:
-- 猪肚|tur1-tou6||n|特产:
-- 猪肚|tur1-tou2||n|特产:
+- 猪肚|tur1-tou6/tur1-tou2||n|特产:
 - 猪肝|tur1-kuann1||n|特产:
 - 猪肠|tur1-tng5||n|特产:
 - 猪血|tur1-hueh4||n|特产:
@@ -512,8 +512,8 @@
 - 芝麻酱|tsur1-mua5-tsionn3||n|特产:
 - 花生酱|hue1-senn1-tsionn3||n|特产:
 - 芥辣|kai3-luah8|芥末|n|特产:
-- 米糍|bi2-tsinn5||n|特产:
-- 落汤糍|loh8-thng1-tsinn5||n|特产:
+- 米糍/米钱|bi2-tsinn5||n|特产:
+- 落汤糍/落汤钱|loh8-thng1-tsinn5||n|特产:
 - 肠粉|tng5-hun2||n|特产:
 - 饺|kiau2|饺子|n|特产:
 - 笋饺|sun2-kiau2||n|特产:
@@ -533,15 +533,16 @@
 - 绿豆饼|lek8-tau7-piann2||n|特产:
 - 绿豆糕|lek8-tau7-ko1||n|特产:
 - 油麻糕|iu5-mua5-ko1||n|特产:
-- 鸡卵饼|koi1-nng6-piann2|鸡蛋饼|n|特产:
+- 鸡蛋饼/鸡卵饼|koi1-nng6-piann2|鸡蛋饼|n|特产:
 - 鸡面|koi1-minn7|方便面|n|特产:
 - 碗仔面|uann2-kiann2-minn7||n|特产:
 - 蟹皇面|hoi6-uang5-minn7||n|特产:
 - 蚝烙|o5-luah4||n|特产:
-- 絮瓜烙|tsheu3-kue1-luah4|丝瓜烙|n|特产:
-- 须瓜烙|tsheu1-kue1-luah4|丝瓜烙|n|特产:
+- 絮瓜烙/须瓜烙/秋瓜烙|tsheu3-kue1-luah4/tsheu1-kue1-luah4|丝瓜烙|n|特产:
 - 番瓜烙|huan1-kue1-luah4|南瓜烙|n|特产:
-- 菜头烙|huan1-kue1-luah4|萝卜烙|n|特产:
+- 菜头烙|tshai3-thau5-luah4|萝卜烙|n|特产:
+- 屐桃包|kiah8-tho5-pau1||n|特产:
+- 猪脚箍/猪脚圈|tur1-kha1-khou1||n|特产:
 - 猪脚饭|tur1-kha1-png7||n|特产:
 - 香饭|phang1-png7||n|特产:
     desc: 一切包含其他食材的炒饭、焖饭
@@ -615,14 +616,14 @@
 - 人/侬|nang5||n|人称:
 - 我|ua2||r|人称:
     informal: 瓦
-- 家己|ka1-ki7/ka1-ti7/ka1-li7|自己|n|人称:
+- 家己|ka1-ki7|自己|n|人称:
     informal: 胶己
-- 家己人|ka1-ki7-nang5/ka1-ti7-nang5/ka1-li7-nang5|自己人|n|人称:
+- 家己人|ka1-ki7-nang5|自己人|n|人称:
     informal: 胶己人
 - 大家|tai6-ke1||n|人称:
 - 大家人|tai6-ke1-nang5|大伙/大家|n|人称:
 - 你/汝|lur2|你|r|人称:
-    informal: [吕, 鲁]
+    informal: 吕/鲁
 - 阮/我人/我侬|uan2/ua2--nang5/un2|我们|r|人称:
     desc: 我们（不含听话人）
 - 咱/俺/你我人/汝我侬|nan2/lur2-ua2--nang5|我们|r|人称:
@@ -662,7 +663,7 @@
     desc: 他称
 - 𡚸|bou2|妻子/老婆|n|人称:
     desc: 他称
-    informal: [亩]
+    informal: 亩
 - 老|lau6|老公/老婆|n|人称:
     desc: 单读叫“老”指老公或老婆。
     examples:
@@ -884,17 +885,17 @@
 - 尿|jio7||n|人体:
 - 屎|sai2||n|人体:
 - 屁|phui3||n|人体:
-- 𡳞/卵/屌|lan6|屌|n|人体:
+- 𡳞/卵/屌|lan6|屌/男阴|n|人体:
     informal: 浪
     desc: 男阴的俗称
-- 𡳞鸟/卵鸟|lan6-tsiau2|屌|n|人体:
-    informal: [浪鸟, 懒觉]
+- 𡳞鸟/卵鸟|lan6-tsiau2|屌/阴茎|n|人体:
+    informal: 浪鸟/懒觉
     desc: 阴茎的俗称
-- 𡳞核/卵核|lan6-hut8|蛋|n|人体:
-    informal: [浪核, 浪佛]
+- 𡳞核/卵核|lan6-hut8|蛋/睾丸|n|人体:
+    informal: 浪核/浪佛
     desc: 睾丸的俗称
-- 𡳞脬/卵脬|lan6|蛋袋|n|人体:
-    informal: [浪趴, 懒趴]
+- 𡳞脬/卵脬|lan6|蛋袋/阴囊|n|人体:
+    informal: 浪趴/懒趴
     desc: 阴囊的俗称
 - 潲|siau5|精液|n|人体:
     desc: 精液的俗称，也用作许多粗俗语的后缀
@@ -902,7 +903,7 @@
     - [勿扱潲伊, mai3-tshap4-siau5--i1, 别理他丫的]
     - [你喝潲上勥, lur2 huah4-siau5 siang6-khiang3, 你真会吹牛逼]
     - [勿嘴潲, mai3-tshui3-siau5, 别吹牛逼]
-- 膣/腟/屄|tsi1|屄|n|人体:
+- 膣/腟/屄|tsi1|屄/女阴|n|人体:
     informal: 鸡
     desc: 女阴的俗称
 
@@ -964,6 +965,7 @@
 - 锣鼓介|lo5-kou2-kai3||n|音乐:
 - 科介|khue1-kai3||n|音乐:
 - 工尺谱|kang1-tshioh4-phou2/kong1-tshe2-phou2||n|音乐:
+- 二四谱|ji7-si3-phou2||n|音乐:
 - 合|ho5||n|音乐:
     desc: 工尺谱专用读音
 - 四|sur3||n|音乐:
@@ -1012,7 +1014,7 @@
     desc: 低声呢喃的样子
 - 滒滒溶|ko1-ko1-ionn5||o|拟声拟态/AAB:
     desc: 黏黏糊糊的样子
-- 哒哒滴|tat8-tat8-tih||o|拟声拟态/AAB:
+- 嗒嗒滴/哒哒滴|tap8-tap8-tih4/tat8-tat8-tih4||o|拟声拟态/AAB:
     desc: 水滴不停的样子
 - 叨叨念|to7-to7-niam7||o|拟声拟态/AAB:
     desc: 念念叨叨的样子
@@ -1182,7 +1184,7 @@
 - 保|po2|保护|v|动词:
 - 报|po3||v|动词:
 - ＊|poh4|教训|v|动词:
-- 拼＊|piann3-poh4||v|动词:
+- 拼＊|piann3-poh4|操心|v|动词:
 - 拔|poih8||v|动词:
 - 啵|pok8||v|动词:
     desc: 指接吻
@@ -1239,6 +1241,7 @@
 - ＊龙船|phe6-leng5-tsun5|划龙舟|v|动词:
 - 拼|pheng1||v|动词:
 - 聘|pheng3||v|动词:
+- ＊拍|phenn1-phah4|准备/收拾|v|动词:
 - 披|phi1||v|动词:
 - ＊|phi5|打盹|v|动词:
 - 骗|phian3||v|动词:
@@ -1246,11 +1249,12 @@
     desc: 甩，并使物体摊开
 - 嫖|phiau5||v|动词:
 - ＊|phih4|趴|v|动词:
+- ＊相|phinn3-sionn3|挖苦/嘲讽|v|动词:
 - 鼻|phinn7|闻|v|动词:
 - 匹|phit4|比/比量|v|动词:
     examples:
     - [匹看地条裤大, phit4-thoinn2-ti7-tiau5-khou3-tua7, 比比看那条裤子大]
-- 覆|phiu3||v|动词:
+- 覆|phiu3|脱手/失控|v|动词:
 - 𠜱|phoi1|削|v|动词:
     examples:
     - [𠜱苹果, phoi1-phin5-kue2, 削苹果]
@@ -1297,8 +1301,7 @@
 - 骂|me7||v|动词:
 - 脉|meh8|把脉|v|动词:
 - 眯|mi1||v|动词:
-- 免|mian2||v|动词:
-- 免|min2||v|动词:
+- 免|mian2/min2||v|动词:
 - 灭|mit8||v|动词:
 - 问|mng7||v|动词:
 - ＊|moh4|发呆|v|动词:
@@ -1309,7 +1312,7 @@
 - 打|ta2||v|动词:
 - 贴|tah4||v|动词:
 - 踏|tah8||v|动词:
-- 等|tan2||v|动词:
+- 等|tan2/theng6||v|动词:
 - 担|tann1||v|动词:
 - 呾|tann3|说|v|动词:
 - 掷|tann6||v|动词:
@@ -1320,7 +1323,7 @@
 - 颠倒倒|tin1-to2-tau2|颠倒|v|动词:
 - ＊|tau3|组装|v|动词:
 - 投|tau5|投掷|v|动词:
-- 投|tau5|状告|v|动词:
+- 投|tau5|状告/投诉|v|动词:
 - 笮|teh4|挤压|v|动词:
 - ＊|tek8|拉伸|v|动词:
 - 登|teng1||v|动词:
