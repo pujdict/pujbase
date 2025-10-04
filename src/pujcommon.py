@@ -33,8 +33,8 @@ class Pronunciation(AbstractPronunciation):
         __special_vowels['R'], __special_vowels['r'],
     ]
     __vowels = set(__vowel_order)
-    __regexp_word = re.compile(
-        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z|0)'?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiuvr]))?(?P<nucleus>a|e|o|i|u|v|r|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn'?|p|t|k|h)*))(?P<tone>\d)?$",
+    REGEXP_WORD = re.compile(
+        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z)?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiu]))?(?P<nucleus>a|e|o|i|u|ur|ir|ṳ|or|er|o̤|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn|p|t|k|h)*))(?P<tone>\d)?$",
         re.IGNORECASE)
     __puj_tone_marks = [
         "",  # 0
@@ -194,7 +194,7 @@ class Pronunciation(AbstractPronunciation):
         # 如果是入声韵并且前面没发现调符，就是 4 声。
         if written[-1] in 'ptkhPTKH':
             tone = 8 if tone else 4
-        match = cls.__regexp_word.match(written)
+        match = cls.REGEXP_WORD.match(written)
         if not match:
             return cls()
         initial = match.group('initial') or '0'
@@ -236,7 +236,7 @@ class Pronunciation(AbstractPronunciation):
 
     @classmethod
     def from_combination(cls, combination: str) -> 'Pronunciation':
-        match = cls.__regexp_word.match(combination)
+        match = cls.REGEXP_WORD.match(combination)
         if match:
             initial = match.group('initial') or '0'
             final = match.group('final')
@@ -480,15 +480,6 @@ class FuzzyRule:
         self._possible_pronunciations_map_reverse: dict[Pronunciation, list[Pronunciation]] = {}
         pass
 
-    @classmethod
-    def from_pb(cls, data: pb.FuzzyRule):
-        rule_name: str = pb.FuzzyRule.Name(data)
-        rule_class_name = rule_name.replace("FR_", "FuzzyRule_")
-        rule_class = globals()[rule_class_name]
-        if rule_class is None:
-            return cls()
-        return rule_class()
-
     def _fuzzy(self, result: Pronunciation):
         pass
 
@@ -510,266 +501,54 @@ class FuzzyRule:
                 pronunciation)
 
 
-class FuzzyRule_UR_As_U(FuzzyRule):
-    description = '单元音 ur 转为 u。潮阳、普宁、惠来、陆丰等地的口音。'
-    example_chars = ['书', '之', '居', '鱼']
+class FuzzyRuleAction(FuzzyRule):
+    action: str
+    pattern: re.Pattern
+    replacement: str
+
+    @classmethod
+    def from_pb(cls, data: pb.FuzzyRuleAction):
+        res = cls()
+        res.action = data.action
+        res.pattern = re.compile(data.pattern)
+        res.replacement = data.replacement_backslash
+        return res
 
     def _fuzzy(self, result: Pronunciation):
-        if result.final == 'v':
-            result.final = 'u'
-
-
-class FuzzyRule_OR_As_O(FuzzyRule):
-    description = '单元音 er 转为 o。潮汕大部分地区口音。'
-    example_chars = ['坐', '罪', '短', '退']
-
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'r':
-            result.final = 'o'
-
-
-class FuzzyRule_OR_As_E(FuzzyRule):
-    description = '单元音 er 转为 e。陆丰口音。'
-    example_chars = ['坐', '罪', '短', '退']
-
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'r':
-            result.final = 'e'
-
-
-class FuzzyRule_ORH_As_OH(FuzzyRule):
-    description = '单元音 erh 转为 oh。潮汕大部分地区口音。'
-    example_chars = ['夺', '绝', '鳕', '雪']
-
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'rh':
-            result.final = 'oh'
-
-
-class FuzzyRule_RM_As_IAM(FuzzyRule):
-    description = 'erm 转为 iam。庄组深摄部分字音。'
-    example_chars = ['森', '参', '簪']
-
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'rm':
-            result.final = 'iam'
-
-
-class FuzzyRule_EU_As_IU(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'eu':
-            result.final = 'iu'
-
-
-class FuzzyRule_OINN_As_AINN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'oinn':
-            result.final = 'ainn'
-
-
-class FuzzyRule_UOINN_As_UINN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'uoinn':
-            result.final = 'uinn'
-
-
-class FuzzyRule_UOINN_As_UAINN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'uoinn':
-            result.final = 'uainn'
-
-
-class FuzzyRule_OI_As_UE(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial in ['p', 'ph', 'm', 'b'] and result.final in ['oi', 'oinn', 'oih']:
-            result.final = result.final.replace('oi', 'ue')
-
-
-class FuzzyRule_OU_As_AU(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.startswith('ou'):
-            result.final = result.final.replace('ou', 'au')
-
-
-class FuzzyRule_UE_As_UEI(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final in ['ue', 'uenn', 'ueh']:
-            result.final = result.final.replace('ue', 'uei')
-
-
-class FuzzyRule_URN_As_IN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final in ['vn', 'vt']:
-            result.final = result.final.replace('v', 'i')
-
-
-class FuzzyRule_IN_As_EN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final in ['in', 'it']:
-            result.final = result.final.replace('i', 'e')
-
-
-class FuzzyRule_UENG_As_ENG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'ueng':
-            if result.initial == '0':
-                result.final = 'eng'
-            else:
-                result.final = 'uang'
-
-
-class FuzzyRule_UEK_As_UAK(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'uek':
-            result.final = 'uak'
-
-
-class FuzzyRule_IO_As_IE(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final in ['io', 'ionn', 'ioh']:
-            result.final = result.final.replace('io', 'ie')
-
-
-class FuzzyRule_IAU_As_IEU(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.startswith('iau'):
-            result.final = result.final.replace('iau', 'ieu')
-
-
-class FuzzyRule_IAU_As_IOU(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'iau':
-            result.final = result.final.replace('iau', 'iou')
-
-
-class FuzzyRule_IAN_As_IEN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'ian':
-            result.final = 'ien'
-        elif result.final == 'iat':
-            result.final = 'iet'
-
-
-class FuzzyRule_UAN_As_UEN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'uan':
-            result.final = 'uen'
-        elif result.final == 'uat':
-            result.final = 'uet'
-
-
-class FuzzyRule_IAM_As_IEM(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'iam':
-            result.final = 'iem'
-        elif result.final == 'iap':
-            result.final = 'iep'
-
-
-class FuzzyRule_N_As_L_ForMEnding(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.endswith('m') and result.initial == 'n':
-            result.initial = 'l'
-
-
-class FuzzyRule_N_As_L_ForNOrNGEnding(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'n' and (
-                (not result.final.endswith('nn') and result.final.endswith('n')) or
-                result.final.endswith('ng')
-        ):
-            result.initial = 'l'
-
-
-class FuzzyRule_L_As_N_ForMEnding(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.endswith('m') and result.initial == 'l':
-            result.initial = 'n'
-
-
-class FuzzyRule_MU_As_BU_ForNasalEnding(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'm' and result.final.startswith('u') and (
-                (not result.final.endswith('nn') and result.final.endswith('n')) or
-                result.final.endswith('ng')
-        ):
-            result.initial = 'b'
-
-
-class FuzzyRule_BU_As_MU_ForNasalEnding(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'b' and result.final.startswith('u') and (
-                (not result.final.endswith('nn') and result.final.endswith('n')) or
-                result.final.endswith('ng')
-        ):
-            result.initial = 'm'
-
-
-class FuzzyRule_Labiodentalized(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.startswith('u'):
-            if result.initial == 'h':
-                result.initial = 'f'
-            elif result.initial in ['p', 'ph']:
-                result.initial += 'f'
-            elif result.initial in ['m', 'b']:
-                result.initial += 'v'
-
-
-class FuzzyRule_N_As_NG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.endswith('n') and not result.final.endswith('nn'):
-            result.final = result.final.replace('n', 'ng')
-        elif result.final.endswith('t'):
-            result.final = result.final.replace('t', 'k')
-
-
-class FuzzyRule_M_As_NG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final.endswith('m'):
-            result.final = result.final.replace('m', 'ng')
-        elif result.final.endswith('p'):
-            result.final = result.final.replace('p', 'k')
-
-
-class FuzzyRule_ENG_As_EN(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'eng':
-            result.final = 'en'
-        elif result.final == 'ek':
-            result.final = 'et'
-
-
-class FuzzyRule_NG_As_UNG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial in ['p', 'ph', 'm', 'b'] and result.final == 'ng':
-            result.final = 'ung'
-
-
-class FuzzyRule_NG_As_URNG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.final == 'ng' and result.initial not in ['h', '0']:
-            result.final = 'vng'
-
-
-class FuzzyRule_IONG_As_ONG(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial in ['t', 'th', 'n', 'l', 'ts', 'tsh', 's', 'j'] and result.final == 'iong':
-            result.final = 'ong'
-        elif result.initial in ['t', 'n', 'l', 'ts', 'tsh', 's', 'j'] and result.final == 'iok':
-            result.final = 'ok'
-
-
-class FuzzyRule_NGU_As_U(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        if result.initial == 'ng' and result.final == 'u':
-            result.initial = '0'
-
-
-class FuzzyRule_RemoveApostrophe(FuzzyRule):
-    def _fuzzy(self, result: Pronunciation):
-        result.initial = result.initial.replace("'", '')
-        result.final = result.final.replace("'", '')
+        if self.action == 'final':
+            result.final = re.sub(self.pattern, self.replacement, result.final)
+        if self.action == 'initial+final':
+            initial_final = result.initial + result.final
+            new_initial_final = re.sub(self.pattern, self.replacement, initial_final)
+            match = Pronunciation.REGEXP_WORD.match(new_initial_final)
+            if not match:
+                raise Exception(f"New initial+final not matched: {new_initial_final} from {initial_final}")
+            result.initial = match.group('initial')
+            result.final = match.group('final')
+
+
+class FuzzyRuleDescriptor(FuzzyRule):
+    ALL_DESCRIPTORS_MAP = {}
+    descriptor_id = None
+    actions: list[FuzzyRule]
+
+    @classmethod
+    def init_from_pb(cls, data: list[pb.FuzzyRuleDescriptor]):
+        cls.ALL_DESCRIPTORS_MAP = {}
+        for desc in data:
+            descriptor = cls.from_pb(desc)
+            cls.ALL_DESCRIPTORS_MAP[descriptor.descriptor_id] = descriptor
+
+    @classmethod
+    def from_pb(cls, data: pb.FuzzyRuleDescriptor):
+        res = cls()
+        res.descriptor_id = data.id
+        res.actions = [FuzzyRuleAction.from_pb(a) for a in data.actions]
+        return res
+
+    @classmethod
+    def get_rule_from_pb(cls, rule_id: pb.FuzzyRule):
+        return cls.ALL_DESCRIPTORS_MAP.get(rule_id)
 
 
 class Accent(FuzzyRule):
@@ -794,11 +573,13 @@ class Accent(FuzzyRule):
 
     @classmethod
     def from_pb(cls, data: pb.Accent):
+        assert FuzzyRuleDescriptor.ALL_DESCRIPTORS_MAP
         result = Accent()
         result.id = data.id
         result.area = data.area
         result.subarea = data.subarea
-        result.rules = [FuzzyRule.from_pb(rule) for rule in data.rules]
+        result.rules_input = data.rules
+        result.rules = [FuzzyRuleDescriptor.get_rule_from_pb(rule) for rule in data.rules]
         result.citation_tones = [0] + list(data.tones.citation)
         result.sandhi_tones = [0] + list(data.tones.sandhi)
         result.neutral_tones = [0] + list(data.tones.neutral)

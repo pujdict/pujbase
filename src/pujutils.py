@@ -6,6 +6,7 @@ from pujcommon import (
     Accent as _Accent,
     Accent_Dummy as _Accent_Dummy,
     FuzzyRule as _FuzzyRule,
+    FuzzyRuleDescriptor as _FuzzyRuleDescriptor,
     Pronunciation as _Pronunciation,
 )
 
@@ -27,6 +28,7 @@ class PUJUtils:
         with open(accents_pb_path, 'rb') as f:
             self._accents_raw = pb.Accents()
             self._accents_raw.ParseFromString(f.read())
+        _FuzzyRuleDescriptor.init_from_pb(self._accents_raw.fuzzy_rule_descriptors)
         self._accents = {}
         for a in self._accents_raw.accents:
             accent = _Accent.from_pb(a)
@@ -101,7 +103,7 @@ class PUJUtils:
 
 
 def _test():
-    puj = PUJUtils('dist/accents.pb', 'dist/entries.pb')
+    puj = PUJUtils('../dist/accents.pb', '../dist/entries.pb')
     while True:
         try:
             chars = input('Enter Han characters: ')
