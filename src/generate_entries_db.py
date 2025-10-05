@@ -21,7 +21,6 @@ def _verify_pronunciation(entry: Entry):
 
 
 def _create_entries(yaml_entries) -> Entries:
-    ESN = EntrySpecialNasalization
     EF = EntryFrequency
     EC = EntryCategory
     entries = Entries()
@@ -31,7 +30,7 @@ def _create_entries(yaml_entries) -> Entries:
         char, char_sim = chars.split(',')
         try:
             for pronunciation, details in pronunciations.items():
-                initial, final, tone, sp_nasal, cat, freq, char_ref = pronunciation.split(',')
+                initial, final, tone, cat, freq, char_ref = pronunciation.split(',')
                 if initial == '0':
                     initial = ''
                 entry_details: list[EntryDetail] = []
@@ -67,7 +66,7 @@ def _create_entries(yaml_entries) -> Entries:
                                 teochew, puj, mandarin = teochew_puj_mandarin
                                 detail.examples.append(EntryDetailExample(teochew=teochew, puj=puj, mandarin=mandarin))
                         entry_details.append(detail)
-                pron = Pronunciation(initial=initial, final=final, tone=int(tone), sp_nasal=ESN.Name(int(sp_nasal)))
+                pron = Pronunciation(initial=initial, final=final, tone=int(tone))
                 entries.entries.append(Entry(
                     index=index,
                     char=char,

@@ -16,12 +16,6 @@ enum EntryFrequency {
   EF_VERY_RARE = 3;
 }
 
-enum EntrySpecialNasalization {
-  ESN_NONE = 0;
-  ESN_OPTIONAL = 1;
-  ESN_ALWAYS = 2;
-}
-
 message EntryDetailExample {
   string teochew = 1;
   optional string puj = 2;
@@ -42,8 +36,6 @@ message Pronunciation {
   string final = 2;
   // 音调
   int32 tone = 3;
-  // 阴声韵特殊鼻化标记
-  EntrySpecialNasalization sp_nasal = 4 [deprecated = true];
 }
 
 message Entry {
