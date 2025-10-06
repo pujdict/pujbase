@@ -59,6 +59,10 @@ def _create_entries(yaml_entries) -> Entries:
                                 ))
                             continue
                         if details_k == 'nasalize':
+                            if final.endswith('nn'):
+                                raise ValueError('Found nasalized with "nn" in final')
+                            if final.endswith('h'):
+                                raise ValueError('Optionally-nasalized final should not end with "h"')
                             if isinstance(details_v, str):
                                 if details_v == 'always':
                                     sp_nasal = ESN_ALWAYS

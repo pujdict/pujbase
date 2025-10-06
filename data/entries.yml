@@ -18035,7 +18035,7 @@
    ts,at,4,1,0,:
    ts,iat,4,2,3,:
 - 穉,穉:
-   ts,inn,2,0,0,:
+   ts,i,2,0,0,:
     nasalize: always
 - 贄,贽:
    ts,i,3,0,0,:
