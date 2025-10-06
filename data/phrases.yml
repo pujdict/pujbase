@@ -535,6 +535,7 @@
 - 𦛨饼|la5-piann2|猪油饼|n|特产:
 - 月饼|gueh8-piann2||n|特产:
 - 月糕|gueh8-ko1||n|特产:
+- 瓜册|kue1-tsheh4||n|特产:
 - 冬瓜册|tang1-kue1-tsheh4||n|特产:
 - 柿饼|sai6-piann2||n|特产:
 - 龙眼干|nek8-oinn2-kuann1||n|特产:
@@ -628,6 +629,12 @@
 - 雪糕|sorh4-ko1||n|特产:
 - 雪条|sorh4-tiau5|冰棒|n|特产:
 - 冰淇淋|piann1-khi5-lin5||n|特产:
+- 麦片|beh5-phian3||n|特产:
+- 啤酒|pi5-tsiu2||n|特产:
+- 涩啤|siap4-pi5|啤酒|n|特产:
+- 白酒|peh8-tsiu2||n|特产:
+- 洋酒|ionn5-tsiu2||n|特产:
+- 莶酒|hiam1-tsiu2|洋酒|n|特产:
 - 食桌|tsiah8-toh4|吃席|v|特产:
 
 # -------------------------- 人称 RELATIONSHIPS --------------------------
@@ -640,6 +647,7 @@
     informal: 胶己人
 - 大家|tai6-ke1||n|人称:
 - 大家人|tai6-ke1-nang5|大伙/大家|n|人称:
+- 底块伙|ti7-kor3-hue2|哪里人|n|人称:
 - 你/汝|lur2|你|r|人称:
     informal: 吕/鲁
 - 阮/我人/我侬|uan2/ua2--nang5/un2|我们|r|人称:
@@ -1110,7 +1118,7 @@
 - 亍亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/XX叫:
 - 彳亍叫|tshih4 tshoh4 kio3||o|拟声拟态/XX叫:
 - 彳亍＊叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/XX叫:
-- 一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫:
 - ＊下叫|sok4 e6-kio3||o|拟声拟态/XX叫:
 - ＊＊叫|sok4 sok4 kio3||o|拟声拟态/XX叫:
 - ＊＊叫|sih4 sok4 kio3||o|拟声拟态/XX叫:
@@ -1217,13 +1225,14 @@
     - [＊水, pu5-tsui2, 烧水]
 - 播|pua3||v|动词:
 - 跋|puah8|摔跤|v|动词:
+- 跋着|puah8--tioh4|摔倒/摔到了/摔了一跤|v|动词:
 - 博|puah8|赌|v|动词:
     desc: 因为赌博非法，该字现在用在“博木虱”等扑克牌游戏中，一般都没有赌钱的含义，但在这些词组中动词仍沿用“博”字，不会用“打”“拍”等字
     examples:
     - [博钱, puah8-tsinn5, 赌钱]
     - [博扑克, puah8-phok4-khiok4, 打扑克]
 - ＊|puan6|舞|v|动词:
-    desc: 指民间各种化装游行活动
+    desc: 指民间各种化装游行活动中舞狮、舞龙等各类动物
     examples:
     - [＊蜈蚣, puan6-ge5-kang1, 舞蜈蚣]
 - 搬|puann1||v|动词:
@@ -1242,7 +1251,7 @@
 - 分|pun1||v|动词:
 - 㖹|pun5|吹|v|动词:
 - 抔|put4|清扫|v|动词:
-    desc: 用扫帚将清扫垃圾
+    desc: 用扫帚清扫垃圾
     examples:
     - [抔掉撮垃圾, put4-tiau7-tshoh4-nah4-sap4, 把垃圾扫到一边]
 - 反|poinn2||v|动词:
@@ -1380,6 +1389,7 @@
 - ＊|tiu3|击打|v|动词:
 - 转|tng2|返回|v|动词:
 - 转内|tng2-lai6|回家|v|动词:
+- 转来内|tng2-lai1-lai6|回家/回家去|v|动词:
 - ＊|tng3|摔|v|动词:
 - 当|tng3||v|动词:
 - 断|tng6||v|动词:
@@ -1403,13 +1413,14 @@
 - 缀|tue3|跟|v|动词:
 - 对|tui3|校对|v|动词:
 - 对|tui3|向|v|动词:
-- 交对|ka1-tui3|向|v|动词:
+- 交对|ka1-tui3|向/往/朝|v|动词:
     examples:
     - [交对地块去？, ka1-tui3-ti7-kor3-khur3, 往哪里去]
 - 屯|tun1||v|动词:
 - 凸|tut8||v|动词:
 - 除|tur5||ur|动词:
 - 除|tur5|烦|v|动词:
+- 除人|tur5-nang5|烦人|v|动词:
 - ＊除|ti2-tur5|烦|v|动词:
 - 沉|thim5||v|动词:
 - 添|thinn1||v|动词:
