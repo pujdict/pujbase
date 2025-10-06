@@ -132,22 +132,21 @@ class Pronunciation(AbstractPronunciation):
         'p': 'p_}',
     }
 
-    def __init__(self, initial: str = None, final: str = None, tone: int = 0, sp_nasal: int = 0):
+    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         super().__init__('0' if initial == '' else initial, final, tone)
-        self.sp_nasal = sp_nasal
 
     def __copy__(self):
-        return Pronunciation(self.initial, self.final, self.tone, self.sp_nasal)
+        return Pronunciation(self.initial, self.final, self.tone)
 
     def __str__(self):
-        return f'{self.initial}{self.final}{self.tone} {self.sp_nasal}'
+        return f'{self.initial}{self.final}{self.tone}'
 
     def __bool__(self):
-        return self.initial or self.final or self.tone or self.sp_nasal
+        return self.initial or self.final or self.tone
 
     @classmethod
     def from_pb(cls, data: pb.Pronunciation):
-        return cls(data.initial, data.final, data.tone, data.sp_nasal)
+        return cls(data.initial, data.final, data.tone)
 
     def to_pb(self) -> pb.Pronunciation:
         """
@@ -157,7 +156,6 @@ class Pronunciation(AbstractPronunciation):
             initial=self.initial or '0',
             final=self.final,
             tone=self.tone,
-            sp_nasal=pb.EntrySpecialNasalization.Name(self.sp_nasal),
         )
 
     @classmethod
