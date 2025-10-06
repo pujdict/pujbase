@@ -46,7 +46,7 @@
    0,eh,4,0,0,:
 - 愛,爱:
    0,ai,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 𱐿,𱐿:
    m,ai,3,0,0,:
 - 噯,嗳:
@@ -159,7 +159,7 @@
    ng,au,6,0,0,:
 - 奧,奥:
    0,o,3,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    0,au,3,2,3,:
 - 隩,隩:
    0,o,3,1,0,:
@@ -173,7 +173,7 @@
    0,au,3,2,3,:
 - 懊,懊:
    0,o,3,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    0,au,3,2,0,:
 - 鏊,鏊:
    ng,au,5,0,0,:
@@ -278,7 +278,7 @@
    p,ai,7,0,0,:
 - 稗,稗:
    ph,oi,7,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    p,i,2,2,0,:
 - 扳,扳:
    p,an,2,0,0,:
@@ -585,7 +585,7 @@
    p,uat,8,0,0,:
 - 鼻,鼻:
    ph,i,7,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    p,i,6,2,3,:
 - 匕,匕:
    p,i,3,0,0,:
@@ -1065,22 +1065,22 @@
    tsh,ai,5,0,0,:
 - 采,采:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 採,采:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 彩,彩:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 睬,睬:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 綵,彩:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 踩,踩:
    tsh,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 菜,菜:
    tsh,ai,3,0,0,:
 - 蔡,蔡:
@@ -1461,7 +1461,7 @@
    tsh,iau,2,0,0,:
 - 潮,潮:
    t,io,5,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    tsh,iau,5,2,0,:
     "": [["思潮", "sur1-tshiau5", ""]]
 - 吵,吵:
@@ -1684,7 +1684,7 @@
    tsh,i,2,0,0,:
 - 恥,耻:
    tsh,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 豉,豉:
    s,i,7,0,0,:
     "": [["豉油", "si7-iu5", "酱油"]]
@@ -1810,7 +1810,7 @@
 - 臭,臭:
    tsh,au,3,1,0,:
    h,iu,3,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    tsh,iu,3,2,3,:
 - 出,出:
    tsh,ut,4,0,0,:
@@ -2638,7 +2638,7 @@
    t,ek,8,0,0,:
 - 第,第:
    t,oi,6,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    t,i,6,2,3,:
 - 釱,𰽘:
    t,ai,6,0,0,:
@@ -2771,7 +2771,7 @@
    t,iau,7,2,0,:
 - 釣,钓:
    t,io,3,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    t,iau,3,2,3,:
 - 銱,铞:
    t,iau,3,0,0,:
@@ -3192,7 +3192,7 @@
    t,o,6,2,3,:
 - 惰,惰:
    t,ua,6,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    t,o,6,2,3,:
 - 跺,跺:
    t,o,5,0,0,:
@@ -3303,7 +3303,7 @@
    j,ur,5,2,3,:
 - 耳,耳:
    h,i,6,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    j,ur,2,2,0,:
 - 洱,洱:
    j,ur,2,0,0,:
@@ -3514,22 +3514,22 @@
    h,ui,5,2,3,:
 - 匪,匪:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 悱,悱:
    h,ui,2,0,0,:
 - 棐,棐:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 斐,斐:
    h,ui,1,0,0,:
 - 榧,榧:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 翡,翡:
    h,ui,1,0,0,:
 - 誹,诽:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 芾,芾:
    h,ui,3,0,0,:
    h,ut,4,0,0,:
@@ -3656,10 +3656,10 @@
    h,ong,3,0,0,:
 - 缶,缶:
    h,ou,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 否,否:
    h,ou,2,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    ph,i,2,3,0,:
 - 夫,夫:
    h,u,1,2,0,:
@@ -3916,7 +3916,7 @@
    kh,ai,3,0,0,:
 - 蓋,盖:
    kh,oi,3,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    k,ai,3,2,0,:
    k,ua,3,1,2,:
    kh,am,3,1,0,:
@@ -4471,10 +4471,10 @@
    k,uat,4,0,0,:
 - 剮,剐:
    k,ua,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 寡,寡:
    k,ua,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 卦,卦:
    k,ue,3,1,0,:
    k,ua,3,2,0,:
@@ -4640,14 +4640,14 @@
    k,ui,3,0,0,:
 - 跪,跪:
    k,ui,6,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 劊,刽:
    k,uai,3,0,0,:
 - 瞶,瞆:
    kh,ui,6,0,0,:
 - 櫃,柜:
    k,ui,7,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 鱖,鳜:
    kh,iat,4,0,0,:
 - 衮,衮:
@@ -4695,7 +4695,7 @@
 - 果,果:
    k,ue,2,1,0,:
    k,ua,2,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    k,o,2,2,3,:
 - 菓,菓:
    k,ue,2,1,0,:
@@ -4878,7 +4878,7 @@
 - 好,好:
    h,o,2,1,0,:
    h,au,3,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    h,au,2,2,2,:
 - 郝,郝:
    h,ak,4,0,0,:
@@ -5208,7 +5208,7 @@
    h,u,5,0,0,:
 - 虎,虎:
    h,ou,2,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    h,u,2,2,3,:
    h,u,1,2,0,:
     "马虎":
@@ -5503,13 +5503,13 @@
     "": [["悔恨", "hui2-hurn6", ""]]
 - 毀,毁:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 燬,燬:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 譭,毁:
    h,ui,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 卉,卉:
    h,ui,2,0,0,:
 - 恚,恚:
@@ -5828,7 +5828,7 @@
    k,uat,4,0,0,:
 - 擠,挤:
    ts,i,3,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    kh,oih,4,1,1,:
 - 蟣,虮:
    k,i,1,0,0,:
@@ -6020,7 +6020,7 @@
     "不真":
    k,ia,2,2,0,:
     "假期":
-    nasalize: ["*"]
+    nasalize: always
 - 斝,斝:
    k,ia,2,0,0,:
 - 賈,贾:
@@ -6421,7 +6421,7 @@
    k,iau,6,2,3,:
 - 醮,醮:
    ts,io,3,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    ts,iau,3,2,3,:
 - 皭,皭:
    ts,iak,4,0,0,:
@@ -7438,7 +7438,7 @@
    kh,ue,3,1,2,:
    kh,ua,3,1,0,:
     "": [["快活", "", ""]]
-    nasalize: ["*"]
+    nasalize: always
 - 塊,块:
    k,or,3,1,0,处:
    kh,uai,3,2,3,:
@@ -10084,7 +10084,7 @@
    ph,a,3,2,3,:
 - 怕,怕:
    ph,a,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 拍,拍:
    ph,ah,4,1,0,:
    ph,ek,4,2,3,:
@@ -10407,7 +10407,7 @@
    ph,ek,4,0,0,:
 - 譬,譬:
    ph,i,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 闢,辟:
    ph,ek,4,0,0,:
 - 偏,偏:
@@ -10577,7 +10577,7 @@
    ph,ek,4,0,0,:
 - 頗,颇:
    ph,o,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 剖,剖:
    ph,ou,2,0,0,:
 - 抔,抔:
@@ -10716,7 +10716,7 @@
 - 歧,歧:
    k,i,1,1,0,:
    ts,i,1,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    kh,i,5,2,0,:
 - 祈,祈:
    kh,i,5,0,0,:
@@ -10763,7 +10763,7 @@
 - 齊,齐:
    tsh,i,5,2,0,:
    ts,oi,5,1,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 旗,旗:
    k,i,5,0,0,:
 - 騏,骐:
@@ -10775,7 +10775,7 @@
    kh,i,5,2,3,:
 - 臍,脐:
    ts,ai,5,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    tsh,i,5,2,3,:
 - 蘄,蕲:
    kh,i,5,0,0,:
@@ -11099,7 +11099,7 @@
    k,io,5,0,0,:
 - 且,且:
    tsh,ia,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 切,切:
    tsh,iat,4,2,0,:
    ts,ih,4,1,1,:
@@ -11307,7 +11307,7 @@
    0,iu,5,0,0,:
 - 裘,裘:
    h,iu,5,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    kh,iu,5,2,0,:
 - 賕,赇:
    kh,iu,5,0,0,:
@@ -12440,7 +12440,7 @@
    0,i,6,0,0,:
    ts,ur,1,0,0,:
    ts,i,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 示,示:
    s,i,7,0,0,:
 - 世,世:
@@ -12505,7 +12505,7 @@
    s,ek,4,0,0,:
 - 嗜,嗜:
    tsh,i,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 筮,筮:
    tsh,i,1,0,0,:
    s,i,7,0,0,:
@@ -14086,14 +14086,14 @@
     "地支之一":
 - 位,位:
    0,ui,7,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 味,味:
    b,i,7,2,0,:
    b,i,5,1,0,:
     "": [["趣味", "tshu3-bi5", ""]]
 - 畏,畏:
    0,ui,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 𱰸,𱰸:
    m,ui,3,0,0,:
 - 𱐼,𱐼:
@@ -14970,7 +14970,7 @@
    s,au,3,0,0,:
 - 些,些:
    s,e,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 揳,揳:
    kh,iat,4,0,0,:
 - 楔,楔:
@@ -15196,7 +15196,7 @@
    k,iong,2,2,0,:
 - 休,休:
    h,iu,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 咻,咻:
    h,iu,1,0,0,:
 - 修,修:
@@ -15217,7 +15217,7 @@
    s,iu,1,0,0,:
 - 朽,朽:
    h,iu,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 秀,秀:
    s,iu,3,0,0,:
 - 岫,岫:
@@ -15228,10 +15228,10 @@
    s,iu,3,0,0,:
 - 嗅,嗅:
    h,iu,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 溴,溴:
    h,iu,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 綉,绣:
    s,iu,3,0,0,:
 - 銹,锈:
@@ -16102,7 +16102,7 @@
    0,i,5,0,0,:
 - 飴,饴:
    0,i,5,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 疑,疑:
    g,i,5,0,0,:
 - 遺,遗:
@@ -16121,36 +16121,36 @@
    0,it,4,0,0,:
 - 已,已:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 以,以:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 苡,苡:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 矣,矣:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 苢,苢:
    0,i,2,0,0,:
 - 釔,钇:
    0,it,4,0,0,:
 - 倚,倚:
    0,i,2,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    0,ua,2,1,0,:
     "": [["倚在墙边", "ua2-to6-tshionn5-pinn1", ""], ["倚赖", "ua2-lua7", "诬赖"]]
 - 扆,扆:
    0,i,2,0,0,:
 - 椅,椅:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 旖,旖:
    0,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 蟻,蚁:
    h,ia,6,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    ng,i,2,2,3,:
 - 靉,叆:
    0,ainn,3,0,0,:
@@ -16596,11 +16596,11 @@
    0,iu,1,0,0,:
 - 幽,幽:
    h,iu,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
    0,iu,1,0,0,:
 - 悠,悠:
    h,iu,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
    0,iu,1,0,0,:
 - 麀,麀:
    h,iu,1,0,0,:
@@ -16670,7 +16670,7 @@
 - 幼,幼:
    0,iu,3,2,0,:
     "": [["幼儿", "iunn3-ji5", ""]]
-    nasalize: ["*"]
+    nasalize: always
    0,iunnh,4,3,0,:
     "“幼儿”一词中的特殊音变": [["幼儿", "iunnh4-ji5", ""]]
 - 佑,佑:
@@ -16903,7 +16903,7 @@
    0,ou,2,0,0,:
 - 慾,欲:
    0,ai,3,3,0,爱:
-    nasalize: ["*"]
+    nasalize: always
    0,iok,8,2,0,:
 - 豫,豫:
    0,ur,6,0,0,:
@@ -17204,13 +17204,13 @@
    k,iann,2,3,0,囝:
 - 宰,宰:
    ts,ai,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 崽,崽:
    ts,ai,2,0,0,:
 - 載,载:
    ts,ai,2,0,0,:
    ts,ai,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 再,再:
    ts,ai,3,0,0,:
 - 在,在:
@@ -17414,7 +17414,7 @@
    ts,a,1,0,0,:
 - 炸,炸:
    ts,a,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
    ts,ah,8,0,0,:
 - 痄,痄:
    ts,a,2,0,0,:
@@ -17422,15 +17422,15 @@
    ts,a,3,0,0,:
 - 詐,诈:
    ts,a,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 溠,溠:
    ts,a,1,0,0,:
 - 搾,搾:
    ts,a,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 榨,榨:
    ts,a,3,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 鮓,鲊:
    ts,a,3,0,0,:
 - 摘,摘:
@@ -17620,7 +17620,7 @@
    ts,au,6,0,0,:
 - 趙,赵:
    t,io,6,1,0,:
-    nasalize: ["*"]
+    nasalize: always
    ts,iau,6,2,3,:
 - 肇,肇:
    s,iau,6,0,0,:
@@ -17815,7 +17815,7 @@
    ts,ur,1,0,0,:
 - 支,支:
    ts,i,1,2,0,:
-    nasalize: ["*"]
+    nasalize: always
    k,i,1,1,0,:
 - 卮,卮:
    0,i,5,0,0,:
@@ -17842,7 +17842,7 @@
     "": [["知识", "", ""]]
 - 肢,肢:
    ts,i,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 胝,胝:
    t,i,2,0,0,:
 - 衹,衹:
@@ -17855,7 +17855,7 @@
    ts,ek,4,2,3,:
 - 脂,脂:
    ts,i,1,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 梔,栀:
    k,i,1,0,0,:
 - 禔,禔:
@@ -18002,7 +18002,7 @@
    t,i,6,0,0,:
 - 稚,稚:
    ts,i,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 製,制:
    ts,i,3,0,0,:
 - 誌,志:
@@ -18036,7 +18036,7 @@
    ts,iat,4,2,3,:
 - 穉,穉:
    ts,inn,2,0,0,:
-    nasalize: ["*"]
+    nasalize: always
 - 贄,贽:
    ts,i,3,0,0,:
 - 騭,骘:

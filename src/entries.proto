@@ -16,6 +16,18 @@ enum EntryFrequency {
   EF_VERY_RARE = 3;
 }
 
+enum EntrySpecialNasalization {
+  ESN_NONE = 0;
+  // 可鼻化可不鼻化，可能存在个人差异，或者地区差异。
+  // 近年来因为普通话的普及，原先倾向于读鼻化的也可能脱落，加之各地交流融合，地区差异已不是特别明显。
+  // 辞典数据会记录为阴声韵，但辞典网站上将这些处理为 (nn)，搜索时，加不加 nn 都能搜到。
+  ESN_OPTIONAL = 1;
+  // 全潮汕，各地所有人，都读鼻化。典型如“爱”“虎”等字。这些字口语常用，鼻化音也没有脱落的倾向。
+  // 此外还有“耳”“蚁”等，疑似源于鼻声母的脱落。但是为了减少记忆负担，辞典数据也统一记录为阴声韵。
+  // 在网站上显示时，统一加上不带括号的 nn。搜索时，同样加不加 nn 都能搜到。
+  ESN_ALWAYS = 2;
+}
+
 message EntryDetailExample {
   string teochew = 1;
   optional string puj = 2;
@@ -56,6 +68,8 @@ message Entry {
   repeated EntryDetail details = 8;
   // 可读鼻化的语音点
   repeated string accents_nasalized = 9;
+  // 鼻化形式
+  optional EntrySpecialNasalization sp_nasal = 10;
 
   // 各口音点又音
   message PronunciationAka {
@@ -64,7 +78,7 @@ message Entry {
     // 是否替换原读音，默认为否，即又音，但又音与原读音并存，不挤兑原读音
     bool replace = 3;
   }
-  repeated PronunciationAka pron_aka = 10;
+  repeated PronunciationAka pron_aka = 11;
 }
 
 message Entries {

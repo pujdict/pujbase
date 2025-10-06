@@ -36,6 +36,7 @@ def _create_entries(yaml_entries) -> Entries:
                 entry_details: list[EntryDetail] = []
                 pron_aka: list[Entry.PronunciationAka] = []
                 accents_nasalized: list[str] = []
+                sp_nasal = None
                 if details:
                     for details_k, details_v in details.items():
                         if details_k in ['aka', 'aka_replace']:
@@ -58,7 +59,12 @@ def _create_entries(yaml_entries) -> Entries:
                                 ))
                             continue
                         if details_k == 'nasalize':
-                            accents_nasalized = details_v
+                            if isinstance(details_v, str):
+                                if details_v == 'always':
+                                    sp_nasal = ESN_ALWAYS
+                            elif isinstance(details_v, list):
+                                accents_nasalized = details_v
+                                sp_nasal = ESN_OPTIONAL
                             continue
                         detail = EntryDetail(meaning=details_k, examples=[])
                         if details_v:
@@ -77,6 +83,7 @@ def _create_entries(yaml_entries) -> Entries:
                     char_ref=char_ref,
                     details=entry_details,
                     accents_nasalized=accents_nasalized,
+                    sp_nasal=sp_nasal,
                     pron_aka=pron_aka,
                 ))
                 index += 1
