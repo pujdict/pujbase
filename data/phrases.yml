@@ -365,7 +365,7 @@
 - 蔗|tsia3|甘蔗|n|水果:
 - 梅|bue5|梅子|n|水果:
 - 枣|tso2||n|水果:
-- 红枣|tso2||n|水果:
+- 红枣|ang5-tso2||n|水果:
 - 莲子|noinn5-tsi2||n|水果:
 - 莲雾|lian5-bu7||n|水果:
 - 香雾|hiang1-bu7|莲雾|n|水果:
@@ -383,7 +383,7 @@
 - 牛肉粿条|gu5-nek8-kue2-tiau5||n|特产:
 - 牛肉丸|gu5-nek8-inn5||n|特产:
 - 丸|inn5|肉丸|n|特产:
-- 肉丸|inn5||n|特产:
+- 肉丸|nek8-inn5||n|特产:
 - 鱼丸|hur5-inn5||n|特产:
 - 鲜鱼丸|tshinn1-hur5-inn5||n|特产:
 - 菜头丸|tshai3-thau5-inn5||n|特产:
@@ -394,7 +394,7 @@
 - 粿条汤|kue2-tiau5-thng1||n|特产:
 - 炒粿条|tsha2-kue2-tiau5||n|特产:
 - 粉签|hun2-tshiam1|粉丝|n|特产:
-- 粉签汤|hun2-tshiam1|粉丝汤|n|特产:
+- 粉签汤|hun2-tshiam1-thng1|粉丝汤|n|特产:
 - 粉签蛋|hun2-tshiam1-nng6|粉丝蛋汤|n|特产:
 - 炒粉签|tsha2-hun2-tshiam1|炒粉丝|n|特产:
 - 米粉|bi2-hun2||n|特产:
@@ -855,7 +855,7 @@
 - 心肝头|sim1-kuann1-thau5|胸口|n|人体:
 - 𩩍篱|phiann1-li5|肋骨|n|人体:
 - 肚|tou2|肚子|n|人体:
-- 肚肠|tou2|肠胃|n|人体:
+- 肚肠|tou2-tng5|肠胃|n|人体:
 - 屎肚|sai2-tou2|腹部|n|人体:
     desc: 俗称
 - 肚脐|tou2-tsai5|肚脐|n|人体:
@@ -920,7 +920,7 @@
 - 𡳞核/卵核|lan6-hut8|蛋/睾丸|n|人体:
     informal: 浪核/浪佛
     desc: 睾丸的俗称
-- 𡳞脬/卵脬|lan6|蛋袋/阴囊|n|人体:
+- 𡳞脬/卵脬|lan6-pha1|蛋袋/阴囊|n|人体:
     informal: 浪趴/懒趴
     desc: 阴囊的俗称
 - 潲|siau5|精液|n|人体:
@@ -1172,7 +1172,7 @@
 - 捌|pat4|曾经|v|动词:
 - 爬|pe5||v|动词:
 - 扒|pe5|挠|v|动词:
-- 扒痒|pe5|挠痒|v|动词:
+- 扒痒|pe5-tsio6|挠痒|v|动词:
 - 掰|peh4||v|动词:
 - 逼|pek4||v|动词:
 - 煏|pek4|蒸烤|v|动词:
