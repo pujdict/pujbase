@@ -27,3 +27,6 @@ keywords = ["潮州话", "潮汕方言", "潮汕话", "白话字", "辞典", "Te
 Repository = "https://github.com/pujdict/pujdict-base"
 
 [tool.setuptools_scm]
+
+[tool.setuptools]
+py-modules = ["libpuj"]

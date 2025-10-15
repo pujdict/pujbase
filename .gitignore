@@ -2,8 +2,8 @@
 .venv
 venv
 
-src/*_pb2.py
-src/*_pb2.pyi
+*_pb2.py
+*_pb2.pyi
 
 **/__pycache__
 
