@@ -1,12 +1,12 @@
 import unittest
-import pujutils
-from pujcommon import Accent, Pronunciation, IPAPronunciation
+import libpuj.pujutils
+from libpuj.pujcommon import Accent, Pronunciation, IPAPronunciation
 from pathlib import Path
 
 
 class ConversionTestCase(unittest.TestCase):
     def setUp(self):
-        self.pujutils = pujutils.PUJUtils(
+        self.pujutils = libpuj.pujutils.PUJUtils(
             (Path(__file__).parent / '..' / 'dist' / 'accents.pb').resolve(),
             (Path(__file__).parent / '..' / 'dist' / 'entries.pb').resolve(),
         )

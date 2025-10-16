@@ -35,7 +35,7 @@ jobs:
           bash build_dist.sh
       - name: Test data
         run: |
-          python -m unittest tests/*.py
+          python -m unittest
       - name: Upload databases
         uses: actions/upload-artifact@v4
         with:

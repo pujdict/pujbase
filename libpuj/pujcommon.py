@@ -1,5 +1,5 @@
 import dataclasses
-import pujpb as pb
+import libpuj.pujpb as pb
 import re
 import unicodedata
 

@@ -1,12 +1,12 @@
 import unittest
-import pujutils
-from pujcommon import Accent, Pronunciation, SandhiGroup, Entry
+import libpuj.pujutils
+from libpuj.pujcommon import Accent, Pronunciation, SandhiGroup, Entry
 from pathlib import Path
 
 
 class AccentTestCase(unittest.TestCase):
     def setUp(self):
-        self.pujutils = pujutils.PUJUtils(
+        self.pujutils = libpuj.pujutils.PUJUtils(
             (Path(__file__).parent / '..' / 'dist' / 'accents.pb').resolve(),
             (Path(__file__).parent / '..' / 'dist' / 'entries.pb').resolve(),
         )

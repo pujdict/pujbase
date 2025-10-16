@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import pathlib
-import pujpb as pb
-from pujcommon import (
+import libpuj.pujpb as pb
+from libpuj.pujcommon import (
     Accent as _Accent,
     Accent_Dummy as _Accent_Dummy,
     FuzzyRule as _FuzzyRule,
