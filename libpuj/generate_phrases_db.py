@@ -121,7 +121,7 @@ def main():
             informal = v.get('informal')
             informal = informal.split('/') if informal else []
             phrase = Phrase(
-                index=i + 1,
+                index=i,
                 teochew=teochew_list,
                 puj=puj_list,
                 cmn=cmn_list,
@@ -136,7 +136,7 @@ def main():
             )
             phrases.phrases.append(phrase)
         except Exception as e:
-            print(f'Error in phrase {i + 1} {k} {v}: {e}', file=sys.stderr)
+            print(f'Error in phrase {i} {k} {v}: {e}', file=sys.stderr)
             raise e
     phrases.phrase_tag_display.update({PhraseTag.Name(v): k for k, v in PHRASE_TAG_MAP.items()})
     Path('../dist').mkdir(exist_ok=True)

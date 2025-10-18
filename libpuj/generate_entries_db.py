@@ -24,7 +24,7 @@ def _create_entries(yaml_entries) -> Entries:
     EF = EntryFrequency
     EC = EntryCategory
     entries = Entries()
-    index = 1
+    index = 0
     for yaml_ent in yaml_entries:
         chars, pronunciations = yaml_ent
         char, char_sim = chars.split(',')
