@@ -1,4 +1,4 @@
-# pujdict-base
+# pujbase
 白话字辞典基础数据
 
 ## 字典数据与现状说明

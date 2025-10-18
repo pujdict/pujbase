@@ -24,7 +24,7 @@ license-files = ["LICENSE-AGPL"]
 keywords = ["潮州话", "潮汕方言", "潮汕话", "白话字", "辞典", "Teochew", "Swatow"]
 
 [project.urls]
-Repository = "https://github.com/pujdict/pujdict-base"
+Repository = "https://github.com/pujdict/pujbase"
 
 [tool.setuptools_scm]
 
