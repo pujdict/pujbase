@@ -39,6 +39,7 @@ XiQiang:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
+    - UENG_As_ENG_UANG
     - IO_As_IE
     - IAU_As_IOU
     - N_As_L_ForMEnding
@@ -125,8 +126,7 @@ ChengHai_ChengCheng:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - UENG_As_ENG
-    - UEK_As_UAK
+    - UENG_As_ENG_UANG
     - IO_As_IE
     - IAU_As_IOU
     - L_As_N_ForMEnding
@@ -149,11 +149,11 @@ ShanTou_ShiQu:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - UENG_As_ENG
-    - UEK_As_UAK
+    - UENG_As_ENG_UANG
     - IAU_As_IOU
     - MU_As_BU_ForNasalEnding
     - N_As_NG
+    - UAM_As_UANG
     - NG_As_UNG
     - NG_As_URNG
     - IONG_As_ONG

@@ -17,8 +17,8 @@ enum FuzzyRule {
   FR_UE_As_UEI = 12;
   FR_URN_As_IN = 13;
   FR_IN_As_EN = 14;
-  FR_UENG_As_ENG = 15;
-  FR_UEK_As_UAK = 16;
+  FR_UENG_As_ENG_UANG = 15;
+  FR_UEK_As_UAK = 16 [deprecated = true];
   FR_IO_As_IE = 17;
   FR_IAU_As_IEU = 18;
   FR_IAU_As_IOU = 19;
@@ -33,10 +33,20 @@ enum FuzzyRule {
   FR_N_As_NG = 28;
   FR_M_As_NG = 29;
   FR_ENG_As_EN = 30;
-  FR_NG_As_UNG = 31;
-  FR_NG_As_URNG = 32;
-  FR_IONG_As_ONG = 33;
-  FR_NGU_As_U = 34;
+  FR_IM_As_ING = 31;
+  FR_IN_As_ING = 32;
+  FR_URN_As_URNG = 33;
+  FR_UN_As_UNG = 34;
+  FR_AM_As_ANG = 35;
+  FR_AN_As_ANG = 36;
+  FR_IAM_As_IANG = 37;
+  FR_IAN_As_IANG = 38;
+  FR_UAM_As_UANG = 39;
+  FR_UAN_As_UANG = 40;
+  FR_NG_As_UNG = 41;
+  FR_NG_As_URNG = 42;
+  FR_IONG_As_ONG = 43;
+  FR_NGU_As_U = 44;
 }
 
 enum ToneSpecial {

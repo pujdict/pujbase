@@ -1,69 +1,128 @@
+# 余
 UR_As_U:
 - final/^ur$/u/
+# 短 块 袋
 OR_As_O:
 - final/^or$/o/
 OR_As_E:
 - final/^or$/e/
+# 夺 绝 雪
 ORH_As_OH:
 - final/^orh$/oh/
+# 初 梳 须
 EU_As_IU:
 - final/^eu$/iu/
+# 闲 间 莲
 OINN_As_AINN:
 - final/^oinn$/ainn/
+# 县 悬
 UOINN_As_UINN:
 - final/^uoinn$/uinn/
 UOINN_As_UAINN:
 - final/^uoinn$/uainn/
+# 仅唇齿音后：反 办 八
 OI_As_UE:
 - initial+final/^(p|ph|m|b)oi(nn|h|nnh)?$/$1ue$2/
+# 乌
 OU_As_AU:
 - final/^ou(nn|h|nnh)?$/au$1/
+# 花
 UE_As_UEI:
 - final/^ue(nn|h|nnh)?$/uei$1/
+# 跟 斤 欣
 URN_As_IN:
 - final/^ur(n|t)$/i$1/
+# 新
 IN_As_EN:
 - final/^i(n|t)$/e$1/
-UENG_As_ENG:
+# 荣 莹 盈
+UENG_As_ENG_UANG:
 - initial+final/^(k|kh|ng|g|h)ueng$/$1uang/
 - initial+final/^ueng$/eng/
-UEK_As_UAK:
+# 获
 - final/^uek$/uak/
+# 腰 羊 药
 IO_As_IE:
 - final/^io(nn|h|nnh)?$/ie$1/
+# 妖
 IAU_As_IEU:
 - final/^iau(nn|h|nnh)?$/ieu$1/
 IAU_As_IOU:
 - final/^iau(nn|h|nnh)?$/iou$1/
+# 燕
 IAN_As_IEN:
 - final/^ia(n|t)$/ie$1/
+# 关
 UAN_As_UEN:
 - final/^ua(n|t)$/ue$1/
+# 盐
 IAM_As_IEM:
 - final/^ia(m|p)$/ie$1/
+# 蓝
 N_As_L_ForMEnding:
 - initial+final/^n((a|o|ur|or|e|i|u)+)m$/l$1m/
+# 男
 L_As_N_ForMEnding:
 - initial+final/^l((a|o|ur|or|e|i|u)+)m$/n$1m/
+# 漫 闷 曼
 MU_As_BU_ForNasalEnding:
 - initial+final/^mu((a|o|ur|or|e|i|u)+)(n|ng)$/bu$1$3/
+# 万 亡 文
 BU_As_MU_ForNasalEnding:
 - initial+final/^bu((a|o|ur|or|e|i|u)+)(n|ng)$/mu$1$3/
+# 丢 n/t 韵尾
 N_As_NG:
 - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
 - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
+# 丢 m/p 韵尾
 M_As_NG:
 - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
 - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
 ENG_As_EN:
 - final/^eng$/en/
 - final/^ek$/et/
+# 丢 m/p, n/t 韵尾，逐个处理的版本。
+# 用于普宁等少数地方只保留 uan un 而丢其他 n 韵尾，汕头丢弃 uam 保留其他 m 韵尾等情况。
+IM_As_ING:
+- final/^im$/ing/
+- final/^ip$/ik/
+IN_As_ING:
+- final/^(i|e)n$/$1ng/
+- final/^(i|e)t$/$1k/
+URN_As_URNG:
+- final/^urn$/urng/
+- final/^urt$/urk/
+UN_As_UNG:
+- final/^un$/ung/
+- final/^ut$/uk/
+AM_As_ANG:
+- final/^am$/ang/
+- final/^ap$/ak/
+AN_As_ANG:
+- final/^an$/ang/
+- final/^at$/ak/
+IAM_As_IANG:
+- final/^i(a|e)m$/i$1ng/
+- final/^i(a|e)p$/i$1k/
+IAN_As_IANG:
+- final/^i(a|e)n$/i$1ng/
+- final/^i(a|e)t$/i$1k/
+UAM_As_UANG:
+- final/^u(a|e)m$/u$1ng/
+- final/^u(a|e)p$/u$1k/
+UAN_As_UANG:
+- final/^u(a|e)n$/u$1ng/
+- final/^u(a|e)t$/u$1k/
+# 唇音情况，本 饭 方
 NG_As_UNG:
-- final/^ng$/ung/
+- initial+final/^(p|ph|m)ng$/$1ung/
+# 非 hng ng 的其余情况
 NG_As_URNG:
-- final/^ng$/urng/
+- initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)ng$/$1urng/
+# 中 宠 属 辱
 IONG_As_ONG:
 - initial+final/^(t|th|n|l|ts|tsh|s|j)iong$/$1ong/
-- initial+final/^(t|th|n|l|ts|tsh|s|j)iok$/$1ok/
+- initial+final/^(t|n|l|ts|tsh|s|j)iok$/$1ok/
+# 五 娱
 NGU_As_U:
 - initial+final/^ngu$/u/
