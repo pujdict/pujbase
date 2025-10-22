@@ -66,6 +66,29 @@ ChaoAn_FengHuang:
     - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
+ChaoAn_WenCi:
+  area: 潮安
+  subarea: 文祠
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+    specials:
+      - SMOOTH_2ND_3RD_4TH
+      - SMOOTH_NEUTRAL
+  rules:
+    - OR_As_O
+    - ORH_As_OH
+    - EU_As_IU
+    - UOINN_As_UINN
+    - IO_As_IE
+    - IAU_As_IEU
+    - IAN_As_IEN
+    - IAM_As_IEM
+    - MU_As_BU_ForNasalEnding
+    - NG_As_URNG
+    - IONG_As_ONG
+    - NGU_As_U
 FengShun_LiuHuang:
   area: 丰顺
   subarea: 𨻧隍
@@ -106,6 +129,24 @@ RaoPing_SanRao:
     - OI_As_UE
     - N_As_L_ForMEnding
     - BU_As_MU_ForNasalEnding
+    - N_As_NG
+    - NG_As_URNG
+    - IONG_As_ONG
+    - NGU_As_U
+RaoPing_HuangGang:
+  area: 饶平
+  subarea: 黄冈
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 33, 25, 55, 5, 22, 21, 21, 2 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+  rules:
+    - OR_As_O
+    - ORH_As_OH
+    - EU_As_IU
+    - UOINN_As_UINN
+    - UENG_As_ENG_UANG
+    - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
     - IONG_As_ONG
