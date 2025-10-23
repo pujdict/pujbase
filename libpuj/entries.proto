@@ -14,6 +14,7 @@ enum EntryFrequency {
   EF_LESS_COMMON = 1;
   EF_RARE = 2;
   EF_VERY_RARE = 3;
+  EF_DEPENDS = -1;
 }
 
 enum EntrySpecialNasalization {
