@@ -248,6 +248,7 @@ PuNing_LiuSha:
     sandhi: [ 33, 212, 55, 54, 31, 33, 33, 3 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
+    - UR_As_U
     - OR_As_O
     - ORH_As_OH
     - EU_As_IU
