@@ -48,7 +48,8 @@ PHRASE_TAG_MAP = {
     '拟声拟态': PT_ONOMATOPOEIA,
     'AAB': PT_ONOMATOPOEIA_AAB,
     'XX叫': PT_ONOMATOPOEIA_KIO,
-    '姓氏': PT_SURNAME,
+    '姓氏': PT_SURNAMES,
+    '地名': PT_PLACES,
     '动词': PT_VERBS,
 }
 
