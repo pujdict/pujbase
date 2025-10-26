@@ -30,7 +30,7 @@ def get_word_class(item):
     if not item:
         return ''
     if isinstance(item, str):
-        if item.isalpha():
+        if item.isalnum():
             return item
         raise ValueError(f'Unknown word class: {item}')
     return ''
