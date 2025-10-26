@@ -36,7 +36,8 @@ enum PhraseTag {
   PT_ONOMATOPOEIA =  9; // 拟声拟态词
   PT_ONOMATOPOEIA_AAB = 10; // 拟声拟态词 AAB 式
   PT_ONOMATOPOEIA_KIO = 11; // 拟声拟态 XX叫 式
-  PT_VERBS = 12; // 动词
+  PT_SURNAME = 12; // 姓氏
+  PT_VERBS = 13; // 动词
 }
 
 message Phrase {
