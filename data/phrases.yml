@@ -205,7 +205,7 @@
 - 蚬|hoinn2||n|水产:
 - 青贻|tshenn1-si5|翡翠贻贝|n|水产:
 - 干贝|kan1-pue6||n|水产:
-- 干鱼柱|kan1-hur5-tsu6|干贝|n|水产:
+- 干瑶柱|kan1-io5-tsu6|干贝|n|水产:
 - 薄壳|poh8-khak4|寻氏肌蛤|n|水产:
 - 薄壳米|poh8-khak4-bi2||n|水产:
 - 红肉|ang5-nek8|红肉河蓝蛤|n|水产:
@@ -1014,24 +1014,49 @@
 - 乙|i2||n|音乐:
     desc: 工尺谱专用读音
 - 多|toh4||n|音乐:
+    desc: 锣鼓经专用读音
 - 隆|long7||n|音乐:
+    desc: 锣鼓经专用读音
 - 冬|tong7||n|音乐:
+    desc: 锣鼓经专用读音
 - 告|kauh4||n|音乐:
+    desc: 锣鼓经专用读音
 - 主|tsuh4||n|音乐:
+    desc: 锣鼓经专用读音
 - 冲|tshong7||n|音乐:
+    desc: 锣鼓经专用读音
 - 壮|tshann7||n|音乐:
+    desc: 锣鼓经专用读音
 - 仄|tsheh4||n|音乐:
+    desc: 锣鼓经专用读音
 - 乙|ih4||n|音乐:
+    desc: 锣鼓经专用读音
+- 查|tshe7||n|音乐:
+    desc: 锣鼓经专用读音
+- 充|tshong5||n|音乐:
+    desc: 锣鼓经专用读音
+- 乓|pong7||n|音乐:
+    desc: 锣鼓经专用读音
 - 仓|tshang7||n|音乐:
+    desc: 锣鼓经专用读音
 - 焦|tsiauh4||n|音乐:
+    desc: 锣鼓经专用读音
 - 空|khong7||n|音乐:
+    desc: 锣鼓经专用读音
 - 哲|tiat4||n|音乐:
+    desc: 锣鼓经专用读音
 - 力|lat4||n|音乐:
+    desc: 锣鼓经专用读音
 - 达|tat4||n|音乐:
+    desc: 锣鼓经专用读音
 - 青|tshin5||n|音乐:
+    desc: 锣鼓经专用读音
 - 册|tshe7||n|音乐:
+    desc: 锣鼓经专用读音
 - 村|tshng5||n|音乐:
+    desc: 锣鼓经专用读音
 - 乔|kiau7||n|音乐:
+    desc: 锣鼓经专用读音
 
 # -------------------------- 拟声拟态词 ONOMATOPOEIA --------------------------
 # -------------------------- 拟声拟态词 AAB 式 --------------------------
@@ -1683,7 +1708,7 @@
 - 砖亭|tsng1-teng5||ns|地名:
 - 涸溪|kho2-khoi1||ns|地名:
 - 社光|sia6-kng1||ns|地名:
-- 卧石|bua5-tsioh8||ns|地名:
+- 卧石|bua7-tsioh8||ns|地名:
 - 春光|tshun1-kuang1||ns|地名:
 - 厦寺|e6-ji7||ns|地名:
 - 上埠|tsionn6-pou1||ns|地名:
