@@ -89,6 +89,30 @@ ChaoAn_WenCi:
     - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
+ChaoAn_JinShi:
+  area: 潮安
+  subarea: 金石
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+    specials:
+    - SMOOTH_2ND_3RD_4TH
+    - SMOOTH_NEUTRAL
+  rules:
+  - EU_As_IU
+  - UOINN_As_UINN
+  - OI_As_UE
+  - UENG_As_ENG_UANG
+  - MU_As_BU_ForNasalEnding
+  - URN_As_IN
+  - IN_As_EN
+  - N_As_NG
+  - M_As_NG
+  - NG_As_UNG
+  - NG_As_URNG
+  - IONG_As_ONG
+  - NGU_As_U
 FengShun_LiuHuang:
   area: 丰顺
   subarea: 𨻧隍
