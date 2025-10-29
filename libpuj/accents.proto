@@ -25,8 +25,8 @@ enum FuzzyRule {
   FR_IAN_As_IEN = 20;
   FR_UAN_As_UEN = 21;
   FR_IAM_As_IEM = 22;
-  FR_N_As_L_ForMEnding = 23;
-  FR_N_As_L_ForNOrNGEnding = 24 [deprecated = true];
+  FR_UAM_As_UEM = 23;
+  FR_N_As_L_ForMEnding = 24;
   FR_L_As_N_ForMEnding = 25;
   FR_MU_As_BU_ForNasalEnding = 26;
   FR_BU_As_MU_ForNasalEnding = 27;
@@ -70,6 +70,8 @@ message FuzzyRuleAction {
 message FuzzyRuleDescriptor {
   FuzzyRule id = 1;
   repeated FuzzyRuleAction actions = 2;
+  string desc = 3;
+  repeated string examples = 4;
 }
 
 message Tones {

@@ -122,8 +122,11 @@ def main():
     with open(fuzzy_rules_file, 'r', encoding='utf-8') as f:
         yaml_fuzzy_rules = yaml.load(f, yaml.Loader)
     fuzzy_rule_descriptors = []
-    for fuzzy_rule_id, fuzzy_rule_actions in yaml_fuzzy_rules.items():
+    for fuzzy_rule_id, fuzzy_rule_details in yaml_fuzzy_rules.items():
         actions = []
+        fuzzy_rule_eg = fuzzy_rule_details['eg']
+        fuzzy_rule_desc = fuzzy_rule_details['desc']
+        fuzzy_rule_actions = fuzzy_rule_details['act']
         for fuzzy_rule_action in fuzzy_rule_actions:
             action, pattern, replacement_dollar, _ = fuzzy_rule_action.split('/')
             replacement_backslash = re.sub(r'\$(\d)', r'\\\1', replacement_dollar)
@@ -136,6 +139,8 @@ def main():
         fuzzy_rule_descriptors.append(FuzzyRuleDescriptor(
             id='FR_' + fuzzy_rule_id,
             actions=actions,
+            desc=fuzzy_rule_desc,
+            examples=fuzzy_rule_eg,
         ))
 
     accents_file = Path('../data/accents.yml')
