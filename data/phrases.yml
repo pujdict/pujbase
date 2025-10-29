@@ -2,7 +2,7 @@
 - 动物|tong6-mueh8||n|动物:
 - 牲牲|tseng1-senn1|牲畜/畜牲|n|动物:
 - 狮|sai1|狮子|n|动物:
-- 虎|hounn2|老虎|n|动物:
+- 虎|hounn'2|老虎|n|动物:
 - 象|tshionn6|大象|n|动物:
 - 犀牛|sai1-gu5||n|动物:
 - 奶牛|nai2-gu5||n|动物:
@@ -86,15 +86,17 @@
     desc: 指难以被察觉的小蚊子
 - 蚊|bun1|蠓虫|n|动物:
 - 虫|thang5||n|动物:
-- 蚁|hiann6|蚂蚁|n|动物:
-- 蚼蚁|kau1-hiann6|蚂蚁|n|动物:
-- 蚂蚁|ma2-hiann6||n|动物:
+- 蚁|hiann'6|蚂蚁|n|动物:
+- 蚼蚁|kau1-hiann'6|蚂蚁|n|动物:
+- 蚂蚁|ma2-hiann'6||n|动物:
 - 木虱|bak8-sat4||n|动物:
 - 猫头鹘|ngiau1-thau5-kuh8|猫头鹰|n|动物:
 - 兔|thou3||n|动物:
 - 狼|lang5||n|动物:
 - 豹|pa3||n|动物:
 - 龟|ku1||n|动物:
+- 雄|heng5|公|n/k|动物:
+    desc: 指雄性动物
 - 牯|kou2|公|n/k|动物:
     desc: 指雄性动物
     examples:
@@ -164,7 +166,7 @@
 - 秀才鱼|siu3-tsai5-hur5|短鳍红娘鱼|n|水产:
 - 鸡腿鱼|koi1-thui2-hur5|马掌丁鱼|n|水产:
 - 非洲鲫|hui1-tsiu1-tsit4||n|水产:
-- 钓鲤|tionn3-li2|金线鱼|n|水产:
+- 钓鲤|tionn'3-li2|金线鱼|n|水产:
 - 红杉鱼|ang5-sann1-hur5|金线鱼|n|水产:
 - 鲤蛄|li2-kou1|鲤鱼|n|水产:
 - 金鲤|kim1-li2|金鱼|n|水产:
@@ -185,8 +187,8 @@
 - 虾米|he5-bi2||n|水产:
 - 虾蛄/虾姑|he5-kou1|皮皮虾|n|水产:
 - 鱿鱼|jiu5-hur5||n|水产:
-- 染|ninn2||n|水产:
-- 猴染|kau5-ninn2||n|水产:
+- 染/饵|ninn2/ni2||n|水产:
+- 猴染|kau5-ninn2/kau5-ni2||n|水产:
 - 墨斗|bak8-tau2|乌贼|n|水产:
 - 鱼子|hur5-tsi2||n|水产:
 - 鱼春|hur5-tshun1||n|水产:
@@ -237,7 +239,7 @@
 - 番葛叶|huan1-kuah4-hioh8|红薯叶|n|蔬菜:
 - 麦|beh8|小麦|n|蔬菜:
 - 薏米|i3-bi2|玉米|n|蔬菜:
-- 幼米|iunn3-bi2|玉米|n|蔬菜:
+- 幼米|iunn'3-bi2|玉米|n|蔬菜:
 - 金黍米|kim1-seu2-bi2|玉米|n|蔬菜:
 - 硕莪米|sia5-ngo5-bi2|玉米|n|蔬菜:
     desc: 原意西米，讹为玉米
@@ -266,7 +268,7 @@
 - 冬瓜|tang1-kue1||n|蔬菜:
 - 角瓜|kak4-kue1||n|蔬菜:
 - 刺瓜|tshi3-kue1||n|蔬菜:
-- 荠葱/钱葱|tshinn5-tshang1|马蹄葱/马蹄/荸荠|n|蔬菜:
+- 荠葱/钱葱|tshinn'5-tshang1/tsinn5-tshang1|马蹄葱/马蹄/荸荠|n|蔬菜:
 - 苋菜|hoinn7-tshai3||n|蔬菜:
 - 莶椒|hiam1-tsio1|辣椒|n|蔬菜:
 - 猴栗|kau5-lat8|板栗|n|蔬菜:
@@ -517,7 +519,7 @@
 - 芝麻酱|tsur1-mua5-tsionn3||n|特产:
 - 花生酱|hue1-senn1-tsionn3||n|特产:
 - 芥辣|kai3-luah8|芥末|n|特产:
-- 米糍/米钱|bi2-tsinn5||n|特产:
+- 米糍/米钱|bi2-tsinn'5/bi2-tsinn5||n|特产:
 - 落汤糍/落汤钱|loh8-thng1-tsinn5||n|特产:
 - 肠粉|tng5-hun2||n|特产:
 - 饺|kiau2|饺子|n|特产:
@@ -618,6 +620,8 @@
 - 菜脯卵|tshai3-pou2-nng6|萝卜干炒蛋|n|特产:
 - 菜头槁|tshai3-thau5-khau2|干腌萝卜条|n|特产:
 - 莲花峰茶|noinn5-hue1-hong1-te5||n|特产:
+- 行军散|kiann5-kun1-suann2||n|特产:
+- 暑散|su2-suann2||n|特产:
 - 魔术油|mo5-sut8-iu5||n|特产:
 - 活络油|uah8-lok8-iu5||n|特产:
 - 风油精|huang1-iu5-tseng1||n|特产:
@@ -829,11 +833,11 @@
 - 目箭|mak8-tsinn3|眼色|n|人体:
     examples:
     - [射目箭, suh8-mak8-tsinn3, 使眼色]
-- 鼻|phinn7|鼻子|n|人体:
-- 鼻空/鼻腔|phinn7-khang1|鼻孔|n|人体:
-- 鼻屎|phinn7-sai2||n|人体:
-- 鼻头|phinn7-thau5|鼻尖|n|人体:
-- 鼻水|phinn7-tsui2|鼻涕|n|人体:
+- 鼻|phinn'7|鼻子|n|人体:
+- 鼻空/鼻腔|phinn'7-khang1|鼻孔|n|人体:
+- 鼻屎|phinn'7-sai2||n|人体:
+- 鼻头|phinn'7-thau5|鼻尖|n|人体:
+- 鼻水|phinn'7-tsui2|鼻涕|n|人体:
 - 嘴/喙|tshui3|嘴|n|人体:
 - 嘴面皮|tshui3-min7-phue5|嘴唇|n|人体:
 - 嘴唇|tshui3-tun5||n|人体:
@@ -847,9 +851,9 @@
 - 酒盅窟|tsiu2-tseng1-uh4|酒窝|n|人体:
 - 额头|hiah4-thau5||n|人体:
 - 草眼|tshau2-ngan2|太阳穴|n|人体:
-- 耳|hinn6|耳朵|n|人体:
-- 耳屎|hinn6-sai2||n|人体:
-- 耳塞屎|hinn6 sak4-sai2|没长耳朵|i|人体:
+- 耳|hinn'6|耳朵|n|人体:
+- 耳屎|hinn'6-sai2||n|人体:
+- 耳塞屎|hinn'6 sak4-sai2|没长耳朵|i|人体:
     desc: 用于骂人
 - 耳空/耳腔|hinn6-khang1|耳孔|n|人体:
 - 颔|am6|脖子|n|人体:
@@ -962,7 +966,7 @@
 - 钹|buah8||n|音乐:
 - 小钹|siau2-buah8||n|音乐:
 - 大钹|tua7-buah8||n|音乐:
-- 啲咊/的禾|ti1-tann5|唢呐|n|音乐:
+- 啲咊/的禾|ti1-tann'5|唢呐|n|音乐:
     desc: 唢呐发出的声音，用于代指唢呐。另外，因为葬礼中常吹唢呐，该词也用于形容人去世。
     examples:
     - [㖹啲咊, pun5-ti1-tann5, 吹唢呐]
@@ -1060,9 +1064,9 @@
 
 # -------------------------- 拟声拟态词 ONOMATOPOEIA --------------------------
 # -------------------------- 拟声拟态词 AAB 式 --------------------------
-- 嗷嗷𰇼|ngau7-ngau7-tsham1||o|拟声拟态/AAB:
+- 嗷嗷呻|ngau7-ngau7-tshan1||o|拟声拟态/AAB:
     desc: 低声呢喃的样子
-- 嗐嗐𰇼|hainn7-hainn7-tsham1||o|拟声拟态/AAB:
+- 嗐嗐呻|hainn7-hainn7-tshan1||o|拟声拟态/AAB:
     desc: 低声呢喃的样子
 - 滒滒溶|ko1-ko1-ionn5||o|拟声拟态/AAB:
     desc: 黏黏糊糊的样子
@@ -1179,6 +1183,16 @@
 - ＊＊叫|hainnh4 hainnh4 kio3||o|拟声拟态/XX叫:
 - ＊＊叫|hinnh4 hainnh4 kio3||o|拟声拟态/XX叫:
 - ＊＊＊叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/XX叫:
+- 呼一叫|hu7 tsek8-kio3||o|拟声拟态/XX叫:
+- 呼下叫|hu7 e6-kio3||o|拟声拟态/XX叫:
+- 呼呼叫|hu7 hu7 kio3||o|拟声拟态/XX叫:
+- 唏呼叫|hi7 hu7 kio3||o|拟声拟态/XX叫:
+- 唏呼噜叫|hi7 hu7 lu7 kio3||o|拟声拟态/XX叫:
+- ＊一叫|pauh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|pauh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pauh4 pauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pih4 pauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 pauh4 lauh4 kio3||o|拟声拟态/XX叫:
   
 # -------------------------- 姓氏 SURNAMES --------------------------
 # 百家姓序，其余特殊读音在最后补充。非常用姓氏如果字表的常用字音已能覆盖，这里就不额外写出了。
@@ -1188,7 +1202,7 @@
 - 李|li2||nr1|姓氏:
 - 周|tsiu1||nr1|姓氏:
 - 吴|gou5||nr1|姓氏:
-- 郑|tenn6||nr1|姓氏:
+- 郑|tenn6/tenn7||nr1|姓氏:
 - 王|heng5||nr1|姓氏:
 - 冯|pang5||nr1|姓氏:
 - 陈|tan5||nr1|姓氏:
@@ -1423,7 +1437,7 @@
 #- 伊|||nr1|姓氏:
 #- 宫|||nr1|姓氏:
 #- 甯|||nr1|姓氏:
-- 仇|khiu5||nr1|姓氏:
+- 仇|khiu5/tshiu5||nr1|姓氏:
 #- 栾|||nr1|姓氏:
 #- 暴|||nr1|姓氏:
 #- 甘|||nr1|姓氏:
