@@ -37,31 +37,18 @@ def get_word_class(item):
 
 
 PHRASE_TAG_MAP = {
-    '动物': PT_ANIMALS,
-    '水产': PT_SEAFOOD,
-    '蔬菜': PT_VEGETABLES,
-    '水果': PT_FRUITS,
-    '特产': PT_SPECIALTIES,
-    '人称': PT_RELATIONSHIPS,
-    '人体': PT_HUMAN_BODY,
-    '音乐': PT_MUSICAL,
-    '拟声拟态': PT_ONOMATOPOEIA,
-    'AAB': PT_ONOMATOPOEIA_AAB,
-    'XX叫': PT_ONOMATOPOEIA_KIO,
-    '姓氏': PT_SURNAMES,
-    '地名': PT_PLACES,
-    '动词': PT_VERBS,
+    '': 0,
 }
 
 
-def get_phrase_tag(item):
+def get_phrase_tag(item) -> int:
     if not item:
-        return PT_NONE
+        return 0
     if isinstance(item, str):
-        if item in PHRASE_TAG_MAP:
-            return PHRASE_TAG_MAP[item]
-        raise ValueError(f'Unknown phrase tag: {item}')
-    return PT_NONE
+        if item not in PHRASE_TAG_MAP:
+            PHRASE_TAG_MAP[item] = len(PHRASE_TAG_MAP)
+        return PHRASE_TAG_MAP[item]
+    return 0
 
 
 def get_list_of_str(item):
@@ -140,7 +127,10 @@ def main():
         except Exception as e:
             print(f'Error in phrase {i} {k} {v}: {e}', file=sys.stderr)
             raise e
-    phrases.phrase_tag_display.update({PhraseTag.Name(v): k for k, v in PHRASE_TAG_MAP.items()})
+    # post_process_multiple_acceptable_written(phrases)
+    phrases.phrase_tag_display.extend([''] * len(PHRASE_TAG_MAP))
+    for k, v in PHRASE_TAG_MAP.items():
+        phrases.phrase_tag_display[v] = k
     Path('../dist').mkdir(exist_ok=True)
     with open('../dist/phrases.pb', 'wb') as f:
         f.write(phrases.SerializeToString())

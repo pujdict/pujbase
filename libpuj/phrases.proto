@@ -23,24 +23,6 @@ enum PhraseLoanDonorLanguage {
   PLDL_THAI = 6; // 泰语
 }
 
-enum PhraseTag {
-  PT_NONE = 0; // 无
-  PT_ANIMALS = 1; // 动物
-  PT_SEAFOOD = 2; // 水产
-  PT_VEGETABLES = 3; // 蔬菜
-  PT_FRUITS = 4; // 水果
-  PT_SPECIALTIES = 5; // 特产
-  PT_RELATIONSHIPS = 6; // 人称
-  PT_HUMAN_BODY = 7; // 人体
-  PT_MUSICAL = 8; // 音乐
-  PT_ONOMATOPOEIA =  9; // 拟声拟态词
-  PT_ONOMATOPOEIA_AAB = 10; // 拟声拟态词 AAB 式
-  PT_ONOMATOPOEIA_KIO = 11; // 拟声拟态 XX叫 式
-  PT_SURNAMES = 12; // 姓氏
-  PT_PLACES = 13; // 地名
-  PT_VERBS = 14; // 动词
-}
-
 message Phrase {
   uint32 index = 1;
   // 潮州话写法
@@ -52,7 +34,7 @@ message Phrase {
   // 词性
   repeated string word_class = 5;
   // 主要标签
-  repeated PhraseTag tag = 6;
+  repeated uint32 tag = 6;
   // 中文释义/说明
   optional string desc = 7;
   // 变读口音
@@ -69,5 +51,5 @@ message Phrase {
 
 message Phrases {
   repeated Phrase phrases = 1;
-  map<string, string> phrase_tag_display = 2;
+  repeated string phrase_tag_display = 2;
 }
