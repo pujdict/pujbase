@@ -478,14 +478,15 @@
 - 鹅脚|go5-kha2||n|特产:
 - 鹅肠|go5-tng5||n|特产:
 - 鹅肝|go5-kuann1||n|特产:
-- 鹅腱|go5-kin6||n|特产:
+- 鹅腱/鹅胗|go5-kin6||n|特产:
 - 鹅翼|go5-sit8|鹅翅|n|特产:
+- 鸡肉|koi1-nek8||n|特产:
 - 鸡翼|koi1-sit8|鸡翅|n|特产:
 - 鸡脚|koi1-kha1|鸡爪|n|特产:
-- 鸡肌|koi1-kui1|鸡嗉囊/气球|n|特产:
+- 鸡肌/鸡胿|koi1-kui1|鸡嗉囊/气球|n|特产:
     desc: 因形状相像，也指气球。
-- 鸡卵|koi1-nng6|鸡蛋|n|特产:
-- 粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
+- 鸡蛋/鸡卵|koi1-nng6|鸡蛋|n|特产:
+- 粉鸟蛋/粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
 - 童子鸡|thong5-tsur2-koi1||n|特产:
 - 猪肚|tur1-tou6/tur1-tou2||n|特产:
 - 猪肝|tur1-kuann1||n|特产:
@@ -641,6 +642,8 @@
 - 洋酒|ionn5-tsiu2||n|特产:
 - 莶酒|hiam1-tsiu2|洋酒|n|特产:
 - 食桌|tsiah8-toh4|吃席|v|特产:
+- 麦当劳|beh8-tang1-lau5||n|特产:
+- 肯德基|keng2-tek4-ki1||n|特产:
 
 # -------------------------- 人称 RELATIONSHIPS --------------------------
 - 人/侬|nang5||n|人称:
@@ -937,6 +940,114 @@
 - 膣/腟/屄|tsi1|屄/女阴|n|人体:
     informal: 鸡
     desc: 女阴的俗称
+
+
+# -------------------------- 时节 DATETIME --------------------------
+- 前年|tsoinn5-ninn5||t|时节:
+- 旧年|ku7-ninn5|去年|t|时节:
+- 今年|kim1-ninn5/kinn1-ninn5||t|时节:
+- 明年|menn5-ninn5||t|时节:
+- 后年|au6-ninn5||t|时节:
+- 年头|ninn5-thau5|年初|t|时节:
+- 年尾|ninn5-bue2|年末|t|时节:
+- 今日|kim1-jit8|今日/今天|t|时节:
+- 今日|kiann2-jit8|今日/今天|t|时节:
+- 昨日|tsa1-jit8|昨日/昨天|t|时节:
+- 前日|tsoinn5--jit8/tsoinn5-jit8-|昨日/昨天|t|时节:
+- 大前日|tua7--tsoinn5-jit8/tua7-tsoinn5-jit8-|大前天|t|时节:
+- 明日|mann2-jit8|明日/明天|t|时节:
+- 明起|mann2-khi2|明日/明天|t|时节:
+- 后日|au6--jit8/au6-jit8-|后天|t|时节:
+- 大后日|tua7--au6-jit8/tua7-au6-jit8-|大后天|t|时节:
+- 别日|pat8-jit8|改天|t|时节:
+- 过日|kue3-jit8|隔天/过日子|t|时节:
+- 隔日|keh4-jit8|隔天/翌日|t|时节:
+- 成日|tsiann5-jit8|接近一天|t|时节:
+- 天光|thinn1-kng1/thinn1--kng1|天亮|v/n|时节:
+- 天未光|thinn1-bue7-kng1|天没亮|t|时节:
+- 一日|tsek8-jit8|一天/整天/白天|t|时节:
+- 日|jit8|白天|t|时节:
+- 一夜/一暝|tsek8-menn5|一夜/一晚/整完/晚上|t|时节:
+- 夜/暝|menn5|晚上|t|时节:
+- 早|tsa2||t|时节:
+- 晏|uann3|晚|t|时节:
+- 暝起|mng5-khi2|早上|t|时节:
+- 暝起早|mng5-khi2-tsa2|早上|t|时节:
+- 猛早|menn2-tsa2|早上|t|时节:
+- 日出|jit8 tshut4||v/n|时节:
+- 日落|jit8 loh8||v/n|时节:
+- 日昼|jit8-tau3|中午|t|时节:
+- 日昼头|jit8-tau3-thau5|正午/大中午|t|时节:
+- 日昼旰|jit8-tau3-kua3|正午/大中午|t|时节:
+- 下旰|e6-kua3|下午|t|时节:
+- 日＊|jit8 hann2|黄昏|t|时节:
+- 夜暗/暝暗/猛暗|menn2-am3/menn5--am3|晚上|t|时节:
+- 夜昏/暝昏/猛昏|menn2-hng1/menn5-hng1|晚上|t|时节:
+- 半夜/半暝|puann3-menn5|半夜|t|时节:
+- 三更半夜/三更半暝|sann1-kenn1-puann3-menn5|三更半夜|t|时节:
+- 半夜三更/半暝三更|puann3-menn5-sann1-kenn1|半夜三更|t|时节:
+- 暝旰|menn5--kua3|半夜|t|时节:
+- 透堂白日|thau3-tng5-peh8-jit8|光天化日|i|时节:
+- 古时候|kou2--si5-hau7||t|时节:
+- 古天时|kou2--thian1-si5|古时候|t|时节:
+- 时阵|si5-tsun7|时候|t|时节:
+- 即时|tsiat8-si5|立即/马上|t|时节:
+- 这阵|tsi2-tsun5|现在|t|时节:
+- 许阵|hur2-tsun5/hi2/tsun5|现在|t|时节:
+- 许天时|hur2-thian1-si5/hur2--thian1-si5|以前/曾经|t|时节:
+- 许天时先|hur2-thian1-si5-soinn1|很久以前/曾经|t|时节:
+- 时间|si5-kan1||n|时节:
+- 时间|si5 kan1|随时间|n|时节:
+- 当|tann1|那|y|时节:
+- 当才|tann1-tsia3-|刚刚才/刚才|t|时节:
+- 起头|khi2-thau5|开头|t|时节:
+- 这摆|tsi2-pai2|最近|t|时节:
+- 后摆|au6-pai2|以后|t|时节:
+- 尾手|mai2-tshiu2|后来|t|时节:
+- 国历|kok8-leh8|公历/阳历|n|时节:
+- 老历|lau6-leh8|农历/阴历|n|时节:
+- 正月|tsiann1--gueh8/tsiann1-gueh8-||t|时节:
+- 一月|it4--gueh8/it4-gueh8-||t|时节:
+- 二月|ji6--gueh8/ji7-gueh8-||t|时节:
+- 三月|sann1--gueh8/sann1-gueh8-||t|时节:
+- 四月|si3--gueh8/si3-gueh8-||t|时节:
+- 五月|ngou6--gueh8/ngou6-gueh8-||t|时节:
+- 六月|lak8--gueh8/lak8-gueh8-||t|时节:
+- 七月|tshit4--gueh8/tshit4-gueh8-||t|时节:
+- 八月|poih4--gueh8/poih4-gueh8-||t|时节:
+- 九月|kau2--gueh8/kau2-gueh8-||t|时节:
+- 十月|tsap8--gueh8/tsap8-gueh8-||t|时节:
+- 十一月|tsap8-it4--gueh8/tsap8-it4-gueh8-||t|时节:
+- 十二月|tsap8-ji6--gueh8/tsap8-ji7-gueh8-||t|时节:
+- 对联|tui3-lin5/tui3-lian5||n|时节:
+- 天公生|thian1-kong1-senn1||n|时节:
+- 老爷生|lau6-ia5-senn1||n|时节:
+- 十五夜/十五暝|tsap8-ngou6-menn5||n|时节:
+- 节气|tsoih4-khui3||n|时节/节气:
+- 立春|lip8-tshun1||n|时节/节气:
+- 雨水|u2-sui2||n|时节/节气:
+- 惊蛰|keng1-tek8||n|时节/节气:
+- 春分|tshun1-hun1||n|时节/节气:
+- 清明|tsheng1-meng5||n|时节/节气:
+- 谷雨|kok4-u2||n|时节/节气:
+- 立夏|lip8-he7||n|时节/节气:
+- 小满|sio2-muann2/siau2-muann2||n|时节/节气:
+- 芒种|mang5-tsiong2||n|时节/节气:
+- 夏至|he7-tsi3||n|时节/节气:
+- 小暑|sio2-su2/siau2-su2||n|时节/节气:
+- 大暑|tai6-su2||n|时节/节气:
+- 立秋|lip8-tshiu1||n|时节/节气:
+- 处暑|tshu3-su2||n|时节/节气:
+- 白露|peh8-lou7||n|时节/节气:
+- 秋分|tshiu1-hun1||n|时节/节气:
+- 寒露|han5-lou7/kuann5-lou7||n|时节/节气:
+- 霜降|sang1-kang3/siang1-kang3||n|时节/节气:
+- 立冬|lip8-tang1||n|时节/节气:
+- 小雪|siau2-sorh4||n|时节/节气:
+- 大雪|tai6-sorh4||n|时节/节气:
+- 冬至|tang1-tsi3||n|时节/节气:
+- 小寒|siau2-han5||n|时节/节气:
+- 大寒|tai6-han5||n|时节/节气:
 
 # -------------------------- 音乐 MUSICAL --------------------------
 - 音乐|im1-gauh8/im1-ngauh8||n|音乐:
