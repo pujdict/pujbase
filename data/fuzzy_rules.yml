@@ -1,10 +1,8 @@
-# 余
 UR_As_U:
   desc: "{ur} → {u}"
   eg: [余,猪,书]
   act:
   - final/^ur$/u/
-# 短 块 袋
 OR_As_O:
   desc: "{or} → {o}"
   eg: [短,块,袋]
@@ -15,25 +13,21 @@ OR_As_E:
   eg: [短,块,袋]
   act:
   - final/^or$/e/
-# 夺 绝 雪
 ORH_As_OH:
   desc: "{orh} → {oh}"
   eg: [夺,绝,雪]
   act:
   - final/^orh$/oh/
-# 初 梳 须
 EU_As_IU:
   desc: "{eu} → {iu}"
   eg: [初,梳,须]
   act:
   - final/^eu$/iu/
-# 闲 间 莲
 OINN_As_AINN:
   desc: "{oinn} → {ainn}"
   eg: [闲,间,莲]
   act:
   - final/^oinn$/ainn/
-# 县 悬
 UOINN_As_UINN:
   desc: "{uoinn} → {uinn}"
   eg: [县,悬,惯]
@@ -44,52 +38,43 @@ UOINN_As_UAINN:
   eg: [县,悬,惯]
   act:
   - final/^uoinn$/uainn/
-# 仅唇齿音后：反 办 八
 OI_As_UE:
   desc: "(唇音后) {oi} → {ue}; {oinn} → {uenn}; {oih} → {ueh}"
   eg: [买,办,八]
   act:
   - initial+final/^(p|ph|m|b)oi(nn|h|nnh)?$/$1ue$2/
-# 乌
 OU_As_AU:
   desc: "{ou} → {au}; {ounn} → {aunn}; {ouh} → {auh}"
   eg: [乌,雨,虎]
   act:
   - final/^ou(nn|h|nnh)?$/au$1/
-# 花
 UE_As_UEI:
   desc: "{ue} → {uei}"
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
-# 跟 斤 欣
 URN_As_IN:
   desc: "{urn} → {in}; {urt} → {it}"
   eg: [仅,斤,勤]
   act:
   - final/^ur(n|t)$/i$1/
-# 新
 IN_As_EN:
   desc: "{in} → {en}; {it} → {et}"
   eg: [新,一,七]
   act:
   - final/^i(n|t)$/e$1/
-# 荣 莹 盈
 UENG_As_ENG_UANG:
   desc: "零声母 {ueng} → {eng}, 其他声母 {ueng} → {uang}; {uek} → {uak}"
   eg: [莹,顷,获]
   act:
   - initial+final/^(k|kh|ng|g|h)ueng$/$1uang/
   - initial+final/^ueng$/eng/
-  # 获
   - final/^uek$/uak/
-# 腰 羊 药
 IO_As_IE:
   desc: "{io} → {ie}; {ionn} → {ienn}; {ioh} → {ieh}"
   eg: [腰,羊,药]
   act:
   - final/^io(nn|h|nnh)?$/ie$1/
-# 妖
 IAU_As_IEU:
   desc: "{iau} → {ieu}"
   eg: [妖,晓,跃]
@@ -100,49 +85,61 @@ IAU_As_IOU:
   eg: [妖,晓,跃]
   act:
   - final/^iau(nn|h|nnh)?$/iou$1/
-# 燕
+IURN_As_IN:
+  desc: "{iurn} → {in}; {iurt} → {it}"
+  eg: [彬,镇,毕]
+  act:
+  - final/^iur(n|t)$/i$1/
+IURN_As_IAN:
+  desc: "{iurn} → {ian}; {iurt} → {iat}"
+  eg: [彬,镇,毕]
+  act:
+  - final/^iur(n|t)$/ia$1/
+IUONG_As_UENG:
+  desc: "{iuong} → {ueng}; {iuok} → {uek}"
+  eg: [永,荣,域]
+  act:
+  - final/^iuo(ng|k)$/ue$1/
+IUONG_As_IONG:
+  desc: "{iuong} → {iong}; {iuok} → {iok}"
+  eg: [永,荣,域]
+  act:
+  - final/^iuo(ng|k)$/io$1/
 IAN_As_IEN:
   desc: "{ian} → {ien}; {iat} → {iet}"
   eg: [炎,仙,设]
   act:
   - final/^ia(n|t)$/ie$1/
-# 关
 UAN_As_UEN:
   desc: "{uan} → {uen}; {uat} → {uet}"
   eg: [关,选,决]
   act:
   - final/^ua(n|t)$/ue$1/
-# 盐
 IAM_As_IEM:
   desc: "{iam} → {iem}; {iap} → {iep}"
   eg: [盐,甜,压]
   act:
   - final/^ia(m|p)$/ie$1/
-# 盐
 UAM_As_UEM:
   desc: "{uam} → {uem}; {uap} → {uep}"
   eg: [凡,范,法]
   act:
   - final/^ua(m|p)$/ue$1/
-# 蓝
 N_As_L_ForMEnding:
   desc: "m 尾阳声韵前声母 {n} → {l}"
   eg: [男,南,念]
   act:
   - initial+final/^n((a|o|ur|or|e|i|u)+)m$/l$1m/
-# 男
 L_As_N_ForMEnding:
   desc: "m 尾阳声韵前声母 {l} → {n}"
   eg: [蓝,林,帘]
   act:
   - initial+final/^l((a|o|ur|or|e|i|u)+)m$/n$1m/
-# 漫 闷 曼
 MU_As_BU_ForNasalEnding:
   desc: "阳声韵前声母 {mu} → {bu}"
   eg: [漫,闷,曼]
   act:
   - initial+final/^mu((a|o|ur|or|e|i|u)+)(n|ng)$/bu$1$3/
-# 万 亡 文
 BU_As_MU_ForNasalEnding:
   desc: "阳声韵前声母 {bu} → {mu}"
   eg: [万,亡,文]
@@ -230,26 +227,22 @@ UAN_As_UANG:
   act:
   - final/^u(a|e)n$/u$1ng/
   - final/^u(a|e)t$/u$1k/
-# 唇音情况，本 饭 方
 NG_As_UNG:
   desc: "唇音声母后 {ng} → {ung}"
   eg: [本,饭,问]
   act:
   - initial+final/^(p|ph|m)ng$/$1ung/
-# 非 hng ng 的其余情况
 NG_As_URNG:
   desc: "非 hng ng 声母的声化韵 {ng} → {urng}"
   eg: [汤,酸,郎]
   act:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)ng$/$1urng/
-# 中 宠 属 辱
 IONG_As_ONG:
   desc: "齿音声母后 {iong} → {ong}"
   eg: [中,从,续]
   act:
   - initial+final/^(t|th|n|l|ts|tsh|s|j)iong$/$1ong/
   - initial+final/^(t|n|l|ts|tsh|s|j)iok$/$1ok/
-# 五 娱
 NGU_As_U:
   desc: "音节 {ngu} → {u}"
   eg: [娱,五,吴]
