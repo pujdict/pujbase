@@ -53,6 +53,26 @@ UE_As_UEI:
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
+HURN_As_HNG:
+  desc: "音节 {hurn} → {hng}"
+  eg: [欣,勋,昕]
+  act:
+  - initial+final/^hurn$/hng/
+ORN_As_URN:
+  desc: "{orn} → {urn}"
+  eg: [根,很,恩]
+  act:
+  - final/^orn$/urn/
+#IURN_As_IN:
+#  desc: "{iurn} → {in}; {iurt} → {it}"
+#  eg: [彬,镇,毕]
+#  act:
+#  - final/^iur(n|t)$/i$1/
+#IURN_As_IAN:
+#  desc: "{iurn} → {ian}; {iurt} → {iat}"
+#  eg: [彬,镇,毕]
+#  act:
+#  - final/^iur(n|t)$/ia$1/
 URN_As_IN:
   desc: "{urn} → {in}; {urt} → {it}"
   eg: [仅,斤,勤]
@@ -85,16 +105,6 @@ IAU_As_IOU:
   eg: [妖,晓,跃]
   act:
   - final/^iau(nn|h|nnh)?$/iou$1/
-IURN_As_IN:
-  desc: "{iurn} → {in}; {iurt} → {it}"
-  eg: [彬,镇,毕]
-  act:
-  - final/^iur(n|t)$/i$1/
-IURN_As_IAN:
-  desc: "{iurn} → {ian}; {iurt} → {iat}"
-  eg: [彬,镇,毕]
-  act:
-  - final/^iur(n|t)$/ia$1/
 IUONG_As_UENG:
   desc: "{iuong} → {ueng}; {iuok} → {uek}"
   eg: [永,荣,域]
@@ -243,6 +253,12 @@ IONG_As_ONG:
   act:
   - initial+final/^(t|th|n|l|ts|tsh|s|j)iong$/$1ong/
   - initial+final/^(t|n|l|ts|tsh|s|j)iok$/$1ok/
+IAM_As_IONG:
+  desc: "{iam} → {iong}; {iap} → {iok}"
+  eg: [严,森,粒]
+  act:
+  - final/^iam$/iong/
+  - final/^iap$/iok/
 NGU_As_U:
   desc: "音节 {ngu} → {u}"
   eg: [娱,五,吴]
