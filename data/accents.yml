@@ -161,7 +161,9 @@ RaoPing_SanRao:
     - ORN_As_URN
     - N_As_L_ForMEnding
     - BU_As_MU_ForNasalEnding
-    - N_As_NG
+    - URN_As_URNG
+    - AN_As_ANG
+    - IAN_As_IANG
     - NG_As_URNG
     - IONG_As_ONG
     - NGU_As_U
