@@ -122,6 +122,7 @@ def main():
     with open(fuzzy_rules_file, 'r', encoding='utf-8') as f:
         yaml_fuzzy_rules = yaml.load(f, yaml.Loader)
     fuzzy_rule_descriptors = []
+    fuzzy_rule_indices: dict[str, int] = {}
     for fuzzy_rule_id, fuzzy_rule_details in yaml_fuzzy_rules.items():
         actions = []
         fuzzy_rule_eg = fuzzy_rule_details['eg']
@@ -136,8 +137,11 @@ def main():
                 replacement_dollar=replacement_dollar,
                 replacement_backslash=replacement_backslash,
             ))
+        index = len(fuzzy_rule_descriptors)
+        fuzzy_rule_indices[fuzzy_rule_id] = index
         fuzzy_rule_descriptors.append(FuzzyRuleDescriptor(
-            id='FR_' + fuzzy_rule_id,
+            index=index,
+            id=fuzzy_rule_id,
             actions=actions,
             desc=fuzzy_rule_desc,
             examples=fuzzy_rule_eg,
@@ -153,7 +157,7 @@ def main():
         area = v['area']
         subarea = v['subarea']
         rules = v['rules']
-        rules = [f'FR_{rule}' for rule in rules]
+        rules = [fuzzy_rule_indices[rule] for rule in rules]
         tones = v['tones']
         citation = tones['citation']
         sandhi = tones['sandhi']

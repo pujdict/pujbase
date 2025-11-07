@@ -526,16 +526,16 @@ class FuzzyRuleAction(FuzzyRule):
 
 
 class FuzzyRuleDescriptor(FuzzyRule):
-    ALL_DESCRIPTORS_MAP = {}
+    ALL_DESCRIPTORS_MAP = []
     descriptor_id = None
     actions: list[FuzzyRule]
 
     @classmethod
     def init_from_pb(cls, data: list[pb.FuzzyRuleDescriptor]):
-        cls.ALL_DESCRIPTORS_MAP = {}
+        cls.ALL_DESCRIPTORS_MAP = []
         for desc in data:
             descriptor = cls.from_pb(desc)
-            cls.ALL_DESCRIPTORS_MAP[descriptor.descriptor_id] = descriptor
+            cls.ALL_DESCRIPTORS_MAP.append(descriptor)
 
     @classmethod
     def from_pb(cls, data: pb.FuzzyRuleDescriptor):
@@ -545,8 +545,8 @@ class FuzzyRuleDescriptor(FuzzyRule):
         return res
 
     @classmethod
-    def get_rule_from_pb(cls, rule_id: pb.FuzzyRule):
-        return cls.ALL_DESCRIPTORS_MAP.get(rule_id)
+    def get_rule_from_pb(cls, rule_id: int):
+        return cls.ALL_DESCRIPTORS_MAP[rule_id]
 
     def _fuzzy(self, result: Pronunciation):
         for action in self.actions:
