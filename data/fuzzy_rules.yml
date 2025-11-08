@@ -105,21 +105,26 @@ IAU_As_IOU:
   eg: [妖,晓,跃]
   act:
   - final/^iau(nn|h|nnh)?$/iou$1/
-IUONG_As_UENG:
-  desc: "{iuong} → {ueng}; {iuok} → {uek}"
-  eg: [永,荣,域]
-  act:
-  - final/^iuo(ng|k)$/ue$1/
-IUONG_As_IONG:
-  desc: "{iuong} → {iong}; {iuok} → {iok}"
-  eg: [永,荣,域]
-  act:
-  - final/^iuo(ng|k)$/io$1/
+#IUONG_As_UENG:
+#  desc: "{iuong} → {ueng}; {iuok} → {uek}"
+#  eg: [永,荣,域]
+#  act:
+#  - final/^iuo(ng|k)$/ue$1/
+#IUONG_As_IONG:
+#  desc: "{iuong} → {iong}; {iuok} → {iok}"
+#  eg: [永,荣,域]
+#  act:
+#  - final/^iuo(ng|k)$/io$1/
 IAN_As_IEN:
   desc: "{ian} → {ien}; {iat} → {iet}"
   eg: [炎,仙,设]
   act:
   - final/^ia(n|t)$/ie$1/
+IEN_As_EN:
+  desc: "{ien} → {en}; {iet} → {et}"
+  eg: [炎,仙,设]
+  act:
+  - final/^ie(n|t)$/e$1/
 UAN_As_UEN:
   desc: "{uan} → {uen}; {uat} → {uet}"
   eg: [关,选,决]
