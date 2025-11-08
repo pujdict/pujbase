@@ -39,7 +39,7 @@ UOINN_As_UAINN:
   act:
   - final/^uoinn$/uainn/
 OI_As_UE:
-  desc: "(唇音后) {oi} → {ue}; {oinn} → {uenn}; {oih} → {ueh}"
+  desc: "唇音后 {oi} → {ue}; {oinn} → {uenn}; {oih} → {ueh}"
   eg: [买,办,八]
   act:
   - initial+final/^(p|ph|m|b)oi(nn|h|nnh)?$/$1ue$2/
@@ -49,7 +49,7 @@ OU_As_AU:
   act:
   - final/^ou(nn|h|nnh)?$/au$1/
 UE_As_UEI:
-  desc: "{ue} → {uei}"
+  desc: "{ue} → {uei}; {uenn} → {ueinn}; {ueh} → {ueih}"
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
@@ -189,7 +189,7 @@ IM_As_ING:
   - final/^im$/ing/
   - final/^ip$/ik/
 IN_As_ING:
-  desc: "{in} → {ing}; {it} → {ik}"
+  desc: "{in} → {ing}, {en} → {eng}; {it} → {ik}, {et} → {ek}"
   eg: [新,因,七]
   act:
   - final/^(i|e)n$/$1ng/
@@ -248,7 +248,7 @@ NG_As_UNG:
   act:
   - initial+final/^(p|ph|m)ng$/$1ung/
 NG_As_URNG:
-  desc: "非 hng ng 声母的声化韵 {ng} → {urng}"
+  desc: "非 hng ng 音节 {ng} → {urng}"
   eg: [汤,酸,郎]
   act:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)ng$/$1urng/
