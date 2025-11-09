@@ -162,14 +162,14 @@ BU_As_MU_ForNasalEnding:
   - initial+final/^bu((a|o|ur|or|e|i|u)+)(n|ng)$/mu$1$3/
 # 丢 n/t 韵尾
 N_As_NG:
-  desc: "韵尾 {n} → {ng}; {t} → {k}"
+  desc: "所有舌尖韵尾并入舌根韵尾"
   eg: [仙,新,杰]
   act:
   - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
   - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
 # 丢 m/p 韵尾
 M_As_NG:
-  desc: "韵尾 {m} → {ng}; {p} → {k}"
+  desc: "所有闭口韵尾并入舌根韵尾"
   eg: [心,针,十]
   act:
   - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
