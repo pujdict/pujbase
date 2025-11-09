@@ -49,7 +49,12 @@ OU_As_AU:
   act:
   - final/^ou(nn|h|nnh)?$/au$1/
 UE_As_UEI:
-  desc: "{ue} → {uei}; {uenn} → {ueinn}; {ueh} → {ueih}"
+  desc: "{ue} → {uei}; {uenn} → {ueinn}; {uek} → {ueik}; {ueh} → {ueih}"
+  eg: [花,划,横]
+  act:
+  - final/^ue(k|nn|h|nnh)?$/uei$1/
+UE_As_OI:
+  desc: "{ue} → {oi}; {uenn} → {oinn}; {ueh} → {oih}"
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
@@ -174,6 +179,11 @@ M_As_NG:
   act:
   - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
   - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
+P_T_K_As_H:
+  desc: "所有入声韵尾并入喉塞韵尾"
+  eg: [恶,盒,值]
+  act:
+  - final/^(.+)[ptk]$/$1h/
 ENG_As_EN:
   desc: "{eng} → {en}; {ek} → {et}"
   eg: [清,升,色]
@@ -258,6 +268,12 @@ IONG_As_ONG:
   act:
   - initial+final/^(t|th|n|l|ts|tsh|s|j)iong$/$1ong/
   - initial+final/^(t|n|l|ts|tsh|s|j)iok$/$1ok/
+IAM_As_IORNG:
+  desc: "{iam} → {iorng}; {iap} → {iork}"
+  eg: [严,森,粒]
+  act:
+  - final/^iam$/iorng/
+  - final/^iap$/iork/
 IAM_As_IONG:
   desc: "{iam} → {iong}; {iap} → {iok}"
   eg: [严,森,粒]
