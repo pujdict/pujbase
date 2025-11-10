@@ -165,25 +165,6 @@ BU_As_MU_ForNasalEnding:
   eg: [万,亡,文]
   act:
   - initial+final/^bu((a|o|ur|or|e|i|u)+)(n|ng)$/mu$1$3/
-# 丢 n/t 韵尾
-N_As_NG:
-  desc: "所有舌尖韵尾并入舌根韵尾"
-  eg: [仙,新,杰]
-  act:
-  - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
-  - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
-# 丢 m/p 韵尾
-M_As_NG:
-  desc: "所有闭口韵尾并入舌根韵尾"
-  eg: [心,针,十]
-  act:
-  - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
-  - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
-P_T_K_As_H:
-  desc: "所有入声韵尾并入喉塞韵尾"
-  eg: [恶,盒,值]
-  act:
-  - final/^(.+)[ptk]$/$1h/
 ENG_As_EN:
   desc: "{eng} → {en}; {ek} → {et}"
   eg: [清,升,色]
@@ -252,6 +233,25 @@ UAN_As_UANG:
   act:
   - final/^u(a|e)n$/u$1ng/
   - final/^u(a|e)t$/u$1k/
+# 丢 n/t 韵尾
+N_As_NG:
+  desc: "所有舌尖韵尾并入舌根韵尾"
+  eg: [仙,新,杰]
+  act:
+  - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
+  - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
+# 丢 m/p 韵尾
+M_As_NG:
+  desc: "所有闭口韵尾并入舌根韵尾"
+  eg: [心,针,十]
+  act:
+  - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
+  - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
+K_As_H:
+  desc: "舌根入声韵尾并入喉塞韵尾"
+  eg: [恶,角,博]
+  act:
+  - final/^(.+)k$/$1h/
 NG_As_UNG:
   desc: "唇音声母后 {ng} → {ung}"
   eg: [本,饭,问]
