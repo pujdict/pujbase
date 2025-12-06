@@ -177,7 +177,7 @@
 - 鲑鱼|kuai1-hur5|河豚|n|水产:
 - 金鼓|kim1-kou2|金钱鱼|n|水产:
 - 秋刀|tshiu1-to1||n|水产:
-- 赤岭|tshiah4-niann2||n|水产:
+- 赤岭|tshiah4-liann2||n|水产:
 - 鲮箭|leng5-tsinn3|鲮鱼|n|水产:
 - 码头鱼|be2-thau5-hur5||n|水产:
 - 脚鱼|kha1-hur5|鳖|n|水产:
@@ -251,8 +251,8 @@
 - 菜头|tshai3-thau5|萝卜|n|蔬菜:
 - 白菜头|peh8-tshai3-thau5|白萝卜|n|蔬菜:
 - 红菜头|ang5-tshai3-thau5|红萝卜|n|蔬菜:
-- 芥蓝|khah4-nann5||n|蔬菜:
-- 芥蓝花|khah4-nann5-hue1|芥蓝|n|蔬菜:
+- 芥蓝|khah4-lann5||n|蔬菜:
+- 芥蓝花|khah4-lann5-hue1|芥蓝|n|蔬菜:
 - 番茄|huan1-kio5||n|蔬菜:
 - 西红柿|sai1-ang5-sai6||n|蔬菜:
 - 菠菱|pue1-leng5|菠菜|n|蔬菜:
@@ -287,7 +287,7 @@
 - 芹菜|khurn5-tshai3||n|蔬菜:
 - 芫荽|uan5-sui1|香菜|n|蔬菜:
 - 芋|ou7|芋头|n|蔬菜:
-- 莲藕|noinn5-kau6||n|蔬菜:
+- 莲藕|loinn5-kau6||n|蔬菜:
 - 奶瓜|ni1-kue1|木瓜|n|蔬菜:
 - 笋|sun2|竹笋|n|蔬菜:
 - 茼蒿|tang5-o1||n|蔬菜:
@@ -358,17 +358,17 @@
 - 葡萄|phu5-tho5||n|水果:
 - 无花果|bo5-hue1-kue2||n|水果:
 - 山竹|suann1-tek4||n|水果:
-- 橄榄|kann1-nann2||n|水果:
+- 橄榄|kann1-lann2||n|水果:
 - 油柑|iu5-kann1||n|水果:
 - 山楂|suann1-tsa1||n|水果:
 - 龙眼|nek8-oinn2||n|水果:
 - 荔果|noi7-kue2|荔枝|n|水果:
-- 莲角|noinn5-kak4|菱角|n|水果:
+- 莲角|loinn5-kak4|菱角|n|水果:
 - 蔗|tsia3|甘蔗|n|水果:
 - 梅|bue5|梅子|n|水果:
 - 枣|tso2||n|水果:
 - 红枣|ang5-tso2||n|水果:
-- 莲子|noinn5-tsi2||n|水果:
+- 莲子|loinn5-tsi2||n|水果:
 - 莲雾|lian5-bu7||n|水果:
 - 香雾|hiang1-bu7|莲雾|n|水果:
 - 苹果|phin5-kue2||n|水果:
@@ -409,7 +409,7 @@
 - 面薄|minn7-poh8|扁面|n|特产:
 - 尖米圆|tsiam1-bi2-inn5||n|特产:
 - 薯粉|tsur5-hun2||n|特产:
-- 杂粮|tsap8-nionn5||n|特产:
+- 杂粮|tsap8-lionn5||n|特产:
 - 粿|kue2||n|特产:
     desc: 潮汕本地各类小吃称呼的后缀，也作为统称。
 - 粿汁|kue2-tsap4||n|特产:
@@ -574,8 +574,8 @@
 - 姜薯酥|kionn1-tsur5-sou1||n|特产:
 - 地豆方|ti7-tau7-pang1||n|特产:
 - 麻豆薄|mua5-tau7-poh8||n|特产:
-- 橄榄|kann1-nann2||n|特产:
-- 甘草橄榄|kam1-tshau2-kann1-nann2||n|特产:
+- 橄榄|kann1-lann2||n|特产:
+- 甘草橄榄|kam1-tshau2-kann1-lann2||n|特产:
 - 咸煎饼|ham5-tsin5 peng6||n|特产:
     loan: 粤语/咸煎饼
 - 清凉糖|tsheng1-liang5-thng5||n|特产:
@@ -613,14 +613,14 @@
 - 咸菜|kiam5-tshai3||n|特产:
 - 贡菜|kong3-tshai3||n|特产:
 - 冬菜|tang2-tshai3||n|特产:
-- 橄榄菜|kann1-nann2-tshai3|梅菜|n|特产:
+- 橄榄菜|kann1-lann2-tshai3|梅菜|n|特产:
 - 贡腐|kong3-hu7|腌豆腐|n|特产:
 - 菜脯|tshai3-pou2|腌萝卜干|n|特产:
 - 菜脯麸|tshai3-pou2-hu1|碎腌萝卜干|n|特产:
 - 菜脯丝|tshai3-pou2-si1|腌萝卜丝|n|特产:
 - 菜脯卵|tshai3-pou2-nng6|萝卜干炒蛋|n|特产:
 - 菜头槁|tshai3-thau5-khau2|干腌萝卜条|n|特产:
-- 莲花峰茶|noinn5-hue1-hong1-te5||n|特产:
+- 莲花峰茶|loinn5-hue1-hong1-te5||n|特产:
 - 行军散|kiann5-kun1-suann2||n|特产:
 - 暑散|su2-suann2||n|特产:
 - 魔术油|mo5-sut8-iu5||n|特产:
@@ -665,7 +665,7 @@
 - 我们|ua2-mng5||r|人称:
     desc: 书面语
 - 恁/您/你人/汝侬|nurn2/lur2--nang5|你们|r|人称:
-- 恁阿/您阿/令|nurn2-a1-/niann1-/niann2--|你的|n|人称:
+- 恁阿/您阿/令|nurn2-a1-/nia1-/nia2--|你的|n|人称:
     informal: 领
 - 你们|lur2-mng5||r|人称:
     desc: 书面语
@@ -690,7 +690,7 @@
     desc: 人称前缀。称呼时通常都添加这个前缀。
     examples:
     - [伊阿父, i1-a1-pe6/ia1-pe6, 他父亲]
-    - [恁阿父, nurn2-a1-pe6/niann1-pe6, 你爸]
+    - [恁阿父, nurn2-a1-pe6/nia1-pe6, 你爸]
     - [恁父, nurn2-pe6, 你爸（不同于“恁阿父”，不出现“阿”时多用于自称）]
     - [阮阿叔, uan2-a1-tsek4, 我叔]
 - 翁|ang1|丈夫/老公|n|人称:
@@ -744,10 +744,10 @@
     desc: 旧称。年轻一代已经非常少用，多用“妈”。“姨”受普通话影响现多用于指称姨妈，称呼母亲的情况现多只存于詈语。
     examples:
     - [阿姨, a1-i5, 妈妈]
-    - [令姨块膣, niann1-i5 kor3-tsi1, 你妈逼的]
+    - [令姨块膣, nia1-i5 kor3-tsi1, 你妈逼的]
 - 嫒/姨/𡟓|ai5|母亲|n|人称:
     desc: 旧称
-- 姈|nenn1|母亲|n|人称:
+- 姈|ne1|母亲|n|人称:
     desc: 不是特别礼貌的俗称
 - 父嫒/父姨/父𡟓|pe6-ai5|母亲|n|人称:
 - 奴|nou5|孩子|n|人称:
@@ -1405,10 +1405,10 @@
 - 项|hang6||nr1|姓氏:
 - 祝|tsiok4||nr1|姓氏:
 - 董|tang2||nr1|姓氏:
-- 梁|nionn5||nr1|姓氏:
+- 梁|lionn5||nr1|姓氏:
 - 杜|tou6||nr1|姓氏:
 - 阮|nguan2||nr1|姓氏:
-- 蓝|nann5||nr1|姓氏:
+- 蓝|lann5||nr1|姓氏:
 - 闵|mian2||nr1|姓氏:
 - 席|tshioh8||nr1|姓氏:
 - 季|ki3||nr1|姓氏:
@@ -1821,7 +1821,7 @@
 - 上埠|tsionn6-pou1||ns|地名:
 - 上埔|tsionn6-pou1||ns|地名:
 - 古美|kou2-bue2||ns|地名:
-- 莲云|noinn5-hun5||ns|地名:
+- 莲云|loinn5-hun5||ns|地名:
 - 云里|hun5-li2||ns|地名:
 - 陈桥|tan5-kio5||ns|地名:
 - 高厝塘|ko1-tshu3-tng5||ns|地名:
@@ -1852,8 +1852,8 @@
 - 登塘|teng1-tng5||ns|地名:
 - 扬美|ionn5-bue2||ns|地名:
 - 郑岗|tenn6-kng1||ns|地名:
-- 下林|e6-nann5||ns|地名:
-- 平林|penn5-nann5||ns|地名:
+- 下林|e6-lann5||ns|地名:
+- 平林|penn5-lann5||ns|地名:
 - 伍全|ngou6-tshuan5||ns|地名:
 - 小葫芦|soi3-hou5-lou5||ns|地名:
 - 大葫芦|tua7-hou5-lou5||ns|地名:
@@ -1861,11 +1861,11 @@
 - 浮岗|phu5-kng1||ns|地名:
 - 凤岗|hong6-kng1||ns|地名:
 - 双岗|sang1-kng1||ns|地名:
-- 吉林|kit4-nann5||ns|地名:
+- 吉林|kit4-lann5||ns|地名:
 - 湖美|ou5-bue2||ns|地名:
 - 粦畔|lin5-poinn5||ns|地名:
 - 凤里|hong6-lai6||ns|地名:
-- 林兜|nann5-tau1||ns|地名:
+- 林兜|lann5-tau1||ns|地名:
 - 书图|tsur1-thu5||ns|地名:
 - 洪巷|ang5-hang7||ns|地名:
 - 浮洋|phu5-ionn5||ns|地名:
@@ -1877,7 +1877,7 @@
 - 颜厝|hiann5-tshu3||ns|地名:
 - 新安|sin1-uann1||ns|地名:
 - 高义|kau1-ngi6||ns|地名:
-- 林泉|nann5-tsuann5||ns|地名:
+- 林泉|lann5-tsuann5||ns|地名:
 - 鹳一|kuah4-it4||ns|地名:
 - 鹳二|kuah4-ji7||ns|地名:
 - 鹳三|kuah4-sann1||ns|地名:
@@ -1885,8 +1885,8 @@
 - 金石|kim-tsioh8||ns|地名:
 - 远光|ian2-kuang1||ns|地名:
 - 仙都|suann1-tau1||ns|地名:
-- 上西林|tsionn6-sai1-nann5||ns|地名:
-- 下西林|e6-sai1-nann5||ns|地名:
+- 上西林|tsionn6-sai1-lann5||ns|地名:
+- 下西林|e6-sai1-lann5||ns|地名:
 - 高厦|kau1-e6||ns|地名:
 - 贾里|ku2-li2||ns|地名:
 - 刘畔|lau5-poinn5||ns|地名:
@@ -1894,7 +1894,7 @@
 - 水美|tsui2-bue2||ns|地名:
 - 仙乐|suann1-lak8||ns|地名:
 - 仙安|suann1-an1||ns|地名:
-- 龙吉美|nann5-kenn3-bue2||ns|地名:
+- 龙吉美|lann5-kenn3-bue2||ns|地名:
 - 南方|nam5-hng1||ns|地名:
 - 东里|tang1-li2||ns|地名:
 - 华美|e6-bue2||ns|地名:
@@ -1923,7 +1923,7 @@
 - 塘埔|tng5-pou1||ns|地名:
 - 砚田|inn7-tshan5||ns|地名:
 - 克安|khiok4-uann1||ns|地名:
-- 西林|sai1-nann5||ns|地名:
+- 西林|sai1-lann5||ns|地名:
 - 白藤坑|peh8-tin5-khenn1||ns|地名:
 - 文祠|bun5-sur5||ns|地名:
 - 李工坑|li2-kong1-khenn1||ns|地名:
@@ -1949,11 +1949,11 @@
 - 澄城|theng5-siann5||ns|地名:
 - 莱芜|lai5-bu5||ns|地名:
 - 坝头|pa3-thau5||ns|地名:
-- 莲阳|noinn5-iang5||ns|地名:
-- 莲上|noinn5-tsionn7||ns|地名:
-- 莲下|noinn5-e6||ns|地名:
+- 莲阳|loinn5-iang5||ns|地名:
+- 莲上|loinn5-tsionn7||ns|地名:
+- 莲下|loinn5-e6||ns|地名:
 - 上巷|tsionn7-hang7||ns|地名:
-- 竹林|tek4-nann5||ns|地名:
+- 竹林|tek4-lann5||ns|地名:
 - 管陇|kuann2-leng2||ns|地名:
 - 隆都|liong5-tou1||ns|地名:
 - 冠美|kuann3-bue2||ns|地名:
@@ -1968,7 +1968,7 @@
 - 湾头|uan1--thau5/uan1-thau5-||ns|地名:
 - 龙美|leng5-bue2||ns|地名:
 - 华富|e6-pou3||ns|地名:
-- 程洋岗|thiann5-iang5-kang1/tua7-nionn5-kng1||ns|地名:
+- 程洋岗|thiann5-iang5-kang1/tua7-lionn5-kng1||ns|地名:
 - 仙美|suann1-bue2||ns|地名:
 # 饶平 参考文献 https://zhuanlan.zhihu.com/p/491745662
 - 黄冈|ng5-kng1||ns|地名:
@@ -1993,10 +1993,10 @@
 - 在城|tsai6-siann5||ns|地名:
 - 马岗|be2-kng1||ns|地名:
 - 溪美|khoi1-bue2||ns|地名:
-- 柘林|tsiah4-nann5||ns|地名:
+- 柘林|tsiah4-lann5||ns|地名:
 - 五祉|ngou2-tsi2||ns|地名:
 - 大榕|tua7-seng5||ns|地名:
-- 荔林|noinn7-lim5||ns|地名:
+- 荔林|loinn7-lim5||ns|地名:
 - 方饶|pang1-jiau5||ns|地名:
 - 长教|tionn5-ka3||ns|地名:
 - 新圩|sin1-hur1||ns|地名:
@@ -2074,20 +2074,20 @@
 - 东星|tang1-tshenn1||ns|地名:
 - 岐山|kia6-suann1||ns|地名:
 - 下岐|e6-kia6||ns|地名:
-- 𬶍莲/鮀莲|tho5-noinn5||ns|地名:
-- 莲美|noinn5-mui2||ns|地名:
+- 𬶍莲/鮀莲|tho5-loinn5||ns|地名:
+- 莲美|loinn5-mui2||ns|地名:
 - 两丰|liang2-hong1||ns|地名:
 - 新隆|sin1-liong5||ns|地名:
 - 胜隆|seng3-liong5||ns|地名:
-- 莲荣|noinn5-iong5||ns|地名:
-- 莲风|noinn5-hong1||ns|地名:
+- 莲荣|loinn5-iong5||ns|地名:
+- 莲风|loinn5-hong1||ns|地名:
 - 𬶍江/鮀江|tho5-kang1||ns|地名:
 - 𬶍都/鮀都|tho5-tou1||ns|地名:
 - 𬶍浦/鮀浦|tho5-phou2||ns|地名:
 - 港美|kang2-bue2||ns|地名:
 - 小公园|sio2-kong1-hng5||ns|地名:
 - 永同|iong2-tang5||ns|地名:
-- 厦岭|he7-niann2||ns|地名:
+- 厦岭|he7-liann2||ns|地名:
 - 二马|ji7-be2||ns|地名:
 - 崎碌|kia6-lak8||ns|地名:
 - 𬒈石/礐石|kak4-tsioh8||ns|地名:
@@ -2197,7 +2197,7 @@
 - 避|pi7||v|动词:
 - ＊|pian1|打耳光|v|动词:
     examples:
-    - [＊你两下灵精, pian1-lur2-nonn6-e7-leng5-tseng1, 打你两下]
+    - [＊你两下灵精, pian1-lur2-lonn6-e7-leng5-tseng1, 打你两下]
 - 变|pian3||v|动词:
 - 无办/无变|bo5-pian3|没办法/没法|v|动词:
 - 无办忍/无变忍|bo5-pian3-lun2|没法忍受/受不了|v|动词:

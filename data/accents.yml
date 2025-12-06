@@ -21,6 +21,7 @@ ChaoZhou_FuCheng:
     - UAN_As_UEN
     - IAM_As_IEM
     - N_As_L_ForMEnding
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_UNG
@@ -46,6 +47,7 @@ XiQiang:
     - IO_As_IE
     - IAU_As_IOU
     - N_As_L_ForMEnding
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
@@ -66,6 +68,7 @@ ChaoAn_FengHuang:
     - ORN_As_URN
     - IAN_As_IEN
     - N_As_L_ForMEnding
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - NG_As_URNG
     - IONG_As_ONG
@@ -90,6 +93,7 @@ ChaoAn_WenCi:
     - IAU_As_IEU
     - IAN_As_IEN
     - IAM_As_IEM
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - NG_As_URNG
     - IONG_As_ONG
@@ -110,6 +114,7 @@ ChaoAn_JinShi:
   - OI_As_UE
   - ORN_As_URN
   - UENG_As_ENG_UANG
+  - L_As_N_For_NN_NG
   - MU_As_BU_ForNasalEnding
   - URN_As_IN
   - IN_As_EN
@@ -141,6 +146,7 @@ FengShun_LiuHuang:
     - UAN_As_UEN
     - IAM_As_IEM
     - N_As_L_ForMEnding
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - ENG_As_EN
     - NG_As_URNG
@@ -160,6 +166,7 @@ RaoPing_SanRao:
     - OI_As_UE
     - ORN_As_URN
     - N_As_L_ForMEnding
+    - L_As_N_For_NN_NG
     - BU_As_MU_ForNasalEnding
     - URN_As_URNG
     - AN_As_ANG
@@ -181,6 +188,7 @@ RaoPing_HuangGang:
     - UOINN_As_UINN
     - ORN_As_URN
     - UENG_As_ENG_UANG
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
@@ -207,6 +215,7 @@ ChengHai_ChengCheng:
     - IO_As_IE
     - IAU_As_IOU
     - L_As_N_ForMEnding
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - M_As_NG
@@ -229,6 +238,7 @@ ShanTou_ShiQu:
     - ORN_As_URN
     - UENG_As_ENG_UANG
     - IAU_As_IOU
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - UAM_As_UANG
@@ -253,6 +263,7 @@ JieYang_RongCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - URN_As_IN
     - IN_As_EN
@@ -275,6 +286,7 @@ ChaoYang_MianCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - URN_As_IN
     - N_As_NG
@@ -294,6 +306,7 @@ PuNing_LiuSha:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - L_As_N_For_NN_NG
     - URN_As_IN
     - N_As_NG
     - NG_As_URNG
@@ -313,6 +326,7 @@ HuiLai_HuiCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - URN_As_IN
     - N_As_NG
@@ -333,6 +347,7 @@ LuFeng_SanJia:
     - UOINN_As_UAINN
     - ORN_As_URN
     - OU_As_AU
+    - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - UE_As_UEI
     - N_As_NG

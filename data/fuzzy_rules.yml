@@ -155,6 +155,11 @@ L_As_N_ForMEnding:
   eg: [蓝,林,帘]
   act:
   - initial+final/^l((a|o|ur|or|e|i|u)+)m$/n$1m/
+L_As_N_For_NN_NG:
+  desc: "鼻化韵、声化韵前声母 {l} → {n}"
+  eg: [领,篮,郎]
+  act:
+  - initial+final/^l((a|o|ur|or|e|i|u)+nn'?|ng)$/n$1/
 MU_As_BU_ForNasalEnding:
   desc: "阳声韵前声母 {mu} → {bu}"
   eg: [漫,闷,曼]
