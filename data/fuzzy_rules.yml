@@ -59,10 +59,10 @@ UE_As_OI:
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
 HURN_As_HNG:
-  desc: "音节 {hurn} → {hng}"
-  eg: [欣,勋,昕]
+  desc: "音节 {hurn} → {hng}; {urn} → {ng}"
+  eg: [欣,勋,尹]
   act:
-  - initial+final/^hurn$/hng/
+  - initial+final/^(h?)urn$/$1ng/
 ORN_As_URN:
   desc: "{orn} → {urn}"
   eg: [根,很,恩]
