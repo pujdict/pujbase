@@ -347,8 +347,9 @@ LuFeng_SanJia:
     - UOINN_As_UAINN
     - ORN_As_URN
     - OU_As_AU
+    - UE_As_UEI
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
-    - UE_As_UEI
+    - URN_As_IN
     - N_As_NG
     - NG_As_URNG
