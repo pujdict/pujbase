@@ -161,10 +161,11 @@ def main():
         tones = v['tones']
         citation = tones['citation']
         sandhi = tones['sandhi']
+        group = tones.get('group') or {}
         neutral = tones['neutral']
         specials = tones.get('specials') or []
         specials = [ToneSpecial.Value(f"TS_{special_name}") for special_name in specials]
-        tones = Tones(citation=citation, sandhi=sandhi, neutral=neutral, specials=specials)
+        tones = Tones(citation=citation, sandhi=sandhi, group=group, neutral=neutral, specials=specials)
         accents.accents.append(Accent(
             id=k,
             area=area,

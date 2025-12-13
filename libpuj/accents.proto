@@ -32,7 +32,8 @@ message Tones {
   repeated uint32 citation = 1;
   repeated uint32 sandhi = 2;
   repeated uint32 neutral = 3;
-  repeated ToneSpecial specials = 4;
+  map<string, string> group = 4;
+  repeated ToneSpecial specials = 5;
 }
 
 message Accent {
