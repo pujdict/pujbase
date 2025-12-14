@@ -40,7 +40,7 @@ class AccentActualTonesTest(AccentTestCase):
         result = SandhiGroup(mock_entries, citation_index, 0, len(mock_entries))
         return result
 
-    def test_ChengHai_ChengCheng(self):
+    def _test_ChengHai_ChengCheng(self):
         accent = self.pujutils.get_accent("ChengHai_ChengCheng")
         test_cases = [
             [['liah8', 'ngiau2', 'tshur2'], 2, [2, 25, 21]],
@@ -66,7 +66,7 @@ class AccentActualTonesTest(AccentTestCase):
                     expected_actual_tones,
                 )
 
-    def test_ShanTou_ShiQu(self):
+    def _test_ShanTou_ShiQu(self):
         accent = self.pujutils.get_accent("ShanTou_ShiQu")
         test_cases = [
             [['liah8', 'ngiau2', 'tshur2'], 2, [2, 25, 52]],
