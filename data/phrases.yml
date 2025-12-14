@@ -122,6 +122,10 @@
 - 蚯蚓|kau6-un2||n|动物:
 - 蛄蝇|kou1-sin5|蚜虫|n|动物:
 - 蛆|tshur1|蛆虫|n|动物:
+- 乌＊|ou1-kua1|霉菌|n|动物:
+    desc: 指衣物上因潮湿长出的黑色霉菌
+    examples:
+    - [ 上乌＊, tshionn6-ou1-kua1, 衣服长霉菌 ]
 
 # -------------------------- 水产 SEAFOOD --------------------------
 - 海鲜|hai2-tshinn1||n|水产:
@@ -328,9 +332,12 @@
 
 # -------------------------- 水果 FRUITS --------------------------
 - 青果|tshenn1-kue2|水果|n|水果:
-- 柑|kann1|蜜柑|n|水果:
+- 水果|tsui2-kue2||n|水果:
+- 柑|kann1|蜜柑/橘子|n|水果:
 - 橘|kit4|橘子|n|水果:
 - 桔|kit4|桔子|n|水果:
+- 大桔|tai6-kit4|大桔子|n|水果:
+    desc: 特指过年时，亲朋好友之间互换的大橘子（桔子），与“大吉”同音。
 - 橙|tsheng5|橙子|n|水果:
 - 弓蕉|keng1-tsio1|香蕉|n|水果:
 - 肉蕉|bah4-tsio1|香蕉|n|水果:
@@ -383,9 +390,7 @@
 - 椰子|ia5-tsi2||n|水果:
 
 # -------------------------- 特产 SPECIALTIES --------------------------
-- 牛肉粿条|gu5-nek8-kue2-tiau5||n|特产:
 - 牛肉丸|gu5-nek8-inn5||n|特产:
-- 丸|inn5|肉丸|n|特产:
 - 肉丸|nek8-inn5||n|特产:
 - 鱼丸|hur5-inn5||n|特产:
 - 鲜鱼丸|tshinn1-hur5-inn5||n|特产:
@@ -393,6 +398,8 @@
 - 猪肉丸|tur5-nek8-inn5||n|特产:
 - 墨斗丸|bak8-tau2-inn5||n|特产:
 - 胡椒丸|hou5-tsio1-inn5||n|特产:
+- 丸|inn5|肉丸|n|特产:
+- 牛肉粿条|gu5-nek8-kue2-tiau5||n|特产:
 - 粿条|kue2-tiau5||n|特产:
 - 粿条汤|kue2-tiau5-thng1||n|特产:
 - 炒粿条|tsha2-kue2-tiau5||n|特产:
@@ -408,10 +415,12 @@
 - 面汤|minn7-thng1||n|特产:
 - 面薄|minn7-poh8|扁面|n|特产:
 - 尖米圆|tsiam1-bi2-inn5||n|特产:
+- 火锅|hue2-ue1||n|特产:
+- 牛肉火锅|gu5-nek8-hue2-ue1||n|特产:
 - 薯粉|tsur5-hun2||n|特产:
 - 杂粮|tsap8-lionn5||n|特产:
-- 粿|kue2||n|特产:
-    desc: 潮汕本地各类小吃称呼的后缀，也作为统称。
+- 粿|kue2|粿/糕|n|特产:
+    desc: 潮汕本地各种糕点类小吃称呼的后缀，也作为统称。
 - 粿汁|kue2-tsap4||n|特产:
 - 麦粿汁|beh8-kue2-tsap4||n|特产:
 - 红粿桃|ang5-kue2-tho5||n|特产:
@@ -465,6 +474,7 @@
 - 绿豆沙|lek8-tau7-sa1||n|特产:
 - 红豆沙|ang5-tau7-sa1||n|特产:
 - 乌豆沙|ou1-tau7-sa1|黑豆沙|n|特产:
+- 绿豆爽|lek8-tau7-suang2||n|特产:
 - 狮头鹅|sai1-thau5-go5||n|特产:
 - 卤鹅|lou2-go5||n|特产:
 - 卤狮头鹅|lou6-sai1-thau5-go5||n|特产:
@@ -478,7 +488,7 @@
 - 鹅脚|go5-kha2||n|特产:
 - 鹅肠|go5-tng5||n|特产:
 - 鹅肝|go5-kuann1||n|特产:
-- 鹅腱/鹅胗|go5-kin6||n|特产:
+- 鹅腱/鹅胗|go5-kin6|鹅胗|n|特产:
 - 鹅翼|go5-sit8|鹅翅|n|特产:
 - 鸡肉|koi1-nek8||n|特产:
 - 鸡翼|koi1-sit8|鸡翅|n|特产:
@@ -486,7 +496,9 @@
 - 鸡肌/鸡胿|koi1-kui1|鸡嗉囊/气球|n|特产:
     desc: 因形状相像，也指气球。
 - 鸡蛋/鸡卵|koi1-nng6|鸡蛋|n|特产:
+- 鸡腱/鸡胗|koi1-kin6|鸡胗|n|特产:
 - 粉鸟蛋/粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
+- 蛋/卵|nng6|蛋|n|特产:
 - 童子鸡|thong5-tsur2-koi1||n|特产:
 - 猪肚|tur1-tou6/tur1-tou2||n|特产:
 - 猪肝|tur1-kuann1||n|特产:
@@ -496,7 +508,8 @@
 - 猪脚|tur1-kha1||n|特产:
 - 肾子|sian6-tsi2|肾脏|n|特产:
 - 糯米猪肠|tsut8-bi2-tur1-tng5||n|特产:
-- 味素|bi7-sou3|味精|n|特产:
+- 叉烧|tsha1-sio1||n|特产:
+- 味素|bi7-sou3|味精/味道|n|特产:
 - 味精|bi7-tseng1||n|特产:
 - 醋|tshou3||n|特产:
 - 盐|iam5||n|特产:
@@ -567,8 +580,15 @@
 - 工夫茶|kang1-hu1-te5||n|特产:
 - 金含|kim1-kam5|糖果|n|特产:
 - 物食|mueh8-tsiah8|零食|n|特产:
+- 糖|thng5||n|特产:
+- 黑糖/乌糖|ou1-thng5|黑糖/红糖|n|特产:
+- 白糖|peh8-thng5||n|特产:
+- 姜糖|kionn1-thng5||n|特产:
+- 瑞士糖|sui6-sur6-thng5||n|特产:
+- 利是糖|li6-sur6-thng5||n|特产:
 - 食食|tsiah8-sit8|伙食|n|特产:
 - 伙食|hue2-sit8|伙食|n|特产:
+- 瓜子|kue1-tsi2||n|特产:
 - 糕仔|ko1-kiann2||n|特产:
 - 糖葱薄饼|thng5-tshang1-poh8-piann2||n|特产:
 - 姜薯酥|kionn1-tsur5-sou1||n|特产:
@@ -812,8 +832,13 @@
 - 阿妹|a1-mue7/a1-mue6|妹妹|n|人称:
 - 妹妹|mue6-mue6/mue7-mue7||n|人称:
 - 兄弟姐妹|hiann1-ti7 tse2-mue7/hiann1-ti6-tse2-mue6||n|人称:
+- 契父|khoi3-pe6|义父|n|人称:
+- 后父|au6-pe6|后爸|n|人称:
+- 后嫒/后姨|au6-ai5|后妈|n|人称:
 - 堂|thang5||h|人称:
 - 表|pio2||h|人称:
+- 契|khoi3||h|人称:
+- 后|au6||h|人称:
 - 双生|sang1-senn1|双胞胎|n|人称:
 
 
@@ -1902,11 +1927,13 @@
 - 市区|tshi6-khu1||ns|地名:
 - 区|khu1||ns|地名:
 - 镇|tin3/tian3||ns|地名:
+- 街道|koi1-tau6||ns|地名:
 - 村|tshng1||ns|地名:
 - 乡里|hionn1-li2||ns|地名:
 - 老人组|lau6-nang5-tsu1||ns|地名:
 - 城内/城里|siann5-lai6|城里|ns|地名:
 - 老厝|lau6-tsu3||ns|地名:
+- 居委会|kur1-ui2-hue6||ns|地名:
 # 潮汕地名 历史区划
 - 潮汕|tio5-suann1||ns|地名:
 - 潮州|tio5-tsiu1||ns|地名:
