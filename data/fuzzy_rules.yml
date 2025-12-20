@@ -122,12 +122,12 @@ IAU_As_IOU:
 #  - final/^iuo(ng|k)$/io$1/
 IAN_As_IEN:
   desc: "{ian} → {ien}; {iat} → {iet}"
-  eg: [炎,仙,设]
+  eg: [坚,仙,设]
   act:
   - final/^ia(n|t)$/ie$1/
 IEN_As_EN:
   desc: "{ien} → {en}; {iet} → {et}"
-  eg: [炎,仙,设]
+  eg: [坚,仙,设]
   act:
   - final/^ie(n|t)$/e$1/
 UAN_As_UEN:
