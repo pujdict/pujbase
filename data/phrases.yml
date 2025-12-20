@@ -533,8 +533,8 @@
 - 芝麻酱|tsur1-mua5-tsionn3||n|特产:
 - 花生酱|hue1-senn1-tsionn3||n|特产:
 - 芥辣|kai3-luah8|芥末|n|特产:
-- 米糍/米钱|bi2-tsinn'5/bi2-tsinn5||n|特产:
-- 落汤糍/落汤钱|loh8-thng1-tsinn5||n|特产:
+- 米糍/米𬖞/米钱|bi2-tsinn'5||n|特产:
+- 落汤糍/落汤𬖞/落汤钱|loh8-thng1-tsinn'5||n|特产:
 - 肠粉|tng5-hun2||n|特产:
 - 饺|kiau2|饺子|n|特产:
 - 笋饺|sun2-kiau2||n|特产:
@@ -586,6 +586,7 @@
 - 姜糖|kionn1-thng5||n|特产:
 - 瑞士糖|sui6-sur6-thng5||n|特产:
 - 利是糖|li6-sur6-thng5||n|特产:
+- 陈皮|tshin5-phue5||n|特产:
 - 食食|tsiah8-sit8|伙食|n|特产:
 - 伙食|hue2-sit8|伙食|n|特产:
 - 瓜子|kue1-tsi2||n|特产:
@@ -636,7 +637,7 @@
 - 橄榄菜|kann1-lann2-tshai3|梅菜|n|特产:
 - 贡腐|kong3-hu7|腌豆腐|n|特产:
 - 菜脯|tshai3-pou2|腌萝卜干|n|特产:
-- 菜脯麸|tshai3-pou2-hu1|碎腌萝卜干|n|特产:
+- 菜脯灰/菜脯麸|tshai3-pou2-hu1|碎腌萝卜干|n|特产:
 - 菜脯丝|tshai3-pou2-si1|腌萝卜丝|n|特产:
 - 菜脯卵|tshai3-pou2-nng6|萝卜干炒蛋|n|特产:
 - 菜头槁|tshai3-thau5-khau2|干腌萝卜条|n|特产:
@@ -1713,7 +1714,7 @@
 #- 公|||nr1|姓氏:
 - 万俟|mok8-khi5||nr1|姓氏:
 - 司马|si1-be2||nr1|姓氏:
-- 上官|tsionn6-kuann1||nr1|姓氏:
+- 上官|siang6-kuann1||nr1|姓氏:
 - 欧阳|au1-iang5||nr1|姓氏:
 - 夏侯|he7-hou5||nr1|姓氏:
 - 诸葛|tsu1-kuah4||nr1|姓氏:
@@ -1797,6 +1798,7 @@
 - 区|au1||nr1|姓氏:
 - 繁|po5||nr1|姓氏:
 - 岱|tor7||nr1|姓氏:
+- 召|siau6||nr1|姓氏:
 
 # -------------------------- 人名 NAMES --------------------------
 # 党和国家领导人、近现代重要历史人物
@@ -1852,9 +1854,9 @@
 # 历史人物，以及神话传说等虚构人物
 - 后羿|au6-ngi5||nr|人名:
 - 精卫|tseng1-ue6||nr|人名:
-- 嫦娥|siang5-ngo5||nr|人名:
+- 嫦娥|siang5-ngo5/tshiang5-ngo5||nr|人名:
 - 女娲|nng2-o1||nr|人名:
-- 夸父|khua1-hu6||nr|人名:
+- 夸父|khua1-hu6/khua1-hu2||nr|人名:
 - 盘古|phuan5-kou2||nr|人名:
 - 妈祖|ma2-tsou2||nr|人名:
 - 老爷|lau6-ia5||nr|人名:
@@ -1862,15 +1864,23 @@
 - 地主爷|ti7-tsu2-ia5||nr|人名:
 - 月娘|gueh8-nionn5||nr|人名:
 - 秦始皇|tshin5-si2-uang5||nr|人名:
+- 董卓|tang2-toh4||nr|人名:
+- 吕布|lur6-pou3||nr|人名:
 - 刘备|lau5-pi6||nr|人名:
 - 关羽|kuan1-u2||nr|人名:
-- 张飞|tio1-hui1||nr|人名:
+- 张飞|tionn1-hui1||nr|人名:
 - 关云长|kuan1-hun5-tshiang5||nr|人名:
 - 诸葛亮|tsu1-kuah4-liang6||nr|人名:
 - 曹操|tshau5-tshau3||nr|人名:
+- 曹植|tshau5-sit8||nr|人名:
+- 曹丕|tshau5-phi2||nr|人名:
+- 孙权|sng1-khuan1||nr|人名:
+- 黄盖|ng5-kai3||nr|人名:
 - 赵云|tionn'6-hun5||nr|人名:
-- 马超|be2-thiau3||nr|人名:
-- 司马懿|si1-be2-i6||nr|人名:
+- 马超|be2-thiau1/be2-thiau3||nr|人名:
+- 阿斗|a1-tau2||nr|人名:
+- 刘禅|lau5-sian5||nr|人名:
+- 司马懿|si1-be2-i6/si1-be2-i3||nr|人名:
 - 梁山伯|lionn5-suan1-peh4||nr|人名:
 - 祝英台|tsiok4-eng1-thai5||nr|人名:
 - 李白|li2-peh8||nr|人名:
@@ -2281,7 +2291,7 @@
 - 东莞|tang1-uan2||ns|地名:
 - 福建|hok4-kian3||ns|地名:
 - 泉州|tsuann5-tsiu1/tshuan5-tsiu1||ns|地名:
-- 漳州|tsionn1-tsiu1/tsiang1-tsiu1||ns|地名:
+- 漳州|tsiang1-tsiu1||ns|地名:
 - 鼓浪屿|kou2-lang6-sur6||ns|地名:
 - 厦门|e6-mng5||ns|地名:
 - 金门|kim5-mng5||ns|地名:
