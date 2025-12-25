@@ -77,8 +77,8 @@ ChaoAn_FengHuang:
   area: 潮安
   subarea: 凤凰
   tones:
-    citation: [ 334, 52, 212, 2, 55, 25, 22, 5 ]
-    sandhi: [ 33, 212, 442, 5, 21, 21, 21, 2 ]
+    citation: [ 334, 52, 212, 21, 55, 25, 22, 43 ]
+    sandhi: [ 33, 212, 442, 43, 21, 21, 21, 21 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
     - OR_As_O
@@ -206,8 +206,8 @@ RaoPing_SanRao:
   area: 饶平
   subarea: 三饶
   tones:
-    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
-    sandhi: [ 33, 25, 55, 5, 22, 21, 21, 2 ]
+    citation: [ 224, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 33, 25, 55, 5, 21, 21, 21, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
     - OR_As_O
@@ -228,8 +228,8 @@ RaoPing_HuangGang:
   area: 饶平
   subarea: 黄冈
   tones:
-    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
-    sandhi: [ 33, 25, 55, 5, 22, 21, 21, 2 ]
+    citation: [ 33, 52, 212, 32, 55, 25, 22, 54 ]
+    sandhi: [ 33, 25, 55, 54, 31, 31, 31, 32 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
     - OR_As_O
@@ -349,8 +349,8 @@ ChaoYang_MianCheng:
   area: 潮阳
   subarea: 棉城
   tones:
-    citation: [ 21, 45, 41, 2, 33, 52, 332, 5 ]
-    sandhi: [ 21, 52, 33, 5, 332, 32, 21, 3 ]
+    citation: [ 21, 45, 41, 2, 33, 52, 32, 5 ]
+    sandhi: [ 21, 52, 32, 5, 332, 32, 21, 3 ]
     neutral: [ 332, 32, 332, 2, 332, 332, 332, 2 ]
   rules:
     - UR_As_U
@@ -389,7 +389,7 @@ HuiLai_HuiCheng:
   area: 惠来
   subarea: 惠城
   tones:
-    citation: [ 24, 552, 31, 21, 44, 213, 31, 43 ]
+    citation: [ 24, 552, 31, 32, 44, 213, 31, 54 ]
     sandhi: [ 33, 213, 44, 43, 31, 33, 33, 21 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
@@ -409,8 +409,8 @@ LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
   tones:
-    citation: [ 334, 552, 212, 3, 55, 24, 41, 5 ]
-    sandhi: [ 33, 24, 55, 5, 31, 33, 33, 3 ]
+    citation: [ 334, 552, 22, 3, 55, 24, 41, 54 ]
+    sandhi: [ 33, 24, 55, 54, 32, 33, 33, 3 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
     - UR_As_U
