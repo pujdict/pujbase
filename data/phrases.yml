@@ -315,6 +315,8 @@
 - 蒜头|sng3-thau5||n|蔬菜:
 - 木耳|bak8-jur2||n|蔬菜:
 - 香菇|hionn1-kou1||n|蔬菜:
+- 白果|peh8-kue2|白果/银杏|n|蔬菜:
+- 莲子|noinn5-tsi2||n|蔬菜:
 - 淮山|huai5-suann1|山药|n|蔬菜:
 - 枸杞|kau2-khi2||n|蔬菜:
 - 党参|tang2-siam1||n|蔬菜:
@@ -597,7 +599,7 @@
 - 麻豆薄|mua5-tau7-poh8||n|特产:
 - 橄榄|kann1-lann2||n|特产:
 - 甘草橄榄|kam1-tshau2-kann1-lann2||n|特产:
-- 咸煎饼|ham5-tsin5 peng6||n|特产:
+- 咸煎饼|ham5-tsin5 -peng6||n|特产:
     loan: 粤语/咸煎饼
 - 清凉糖|tsheng1-liang5-thng5||n|特产:
 - 薄荷糖|po6-ho3-thng5||n|特产:
@@ -729,7 +731,7 @@
     - [老公, lau6-kong1, 曾祖父]
 - 翁姐|ang1-tsia2|夫妻|n|人称:
 - 亲情|tshin1-tsiann5|亲戚|n|人称:
-- 四亲二情|si3-tshin1 ji7-tsiann5|亲戚朋友|i|人称:
+- 四亲二情|si3-tshin1 -ji7-tsiann5|亲戚朋友|i|人称:
 - 祖公|tsou2-kong1|先祖|n|人称:
 - 公|kong1|爷爷|n|人称:
 - 阿公|a1-kong1|爷爷|n|人称:
@@ -809,7 +811,7 @@
 - ＊＊|an5--thi7|姨妈|n|人称:
     loan: 英语/aunt
 - 姑娘|kou1-nionn5|姑姑|n|人称:
-- 姑娘|ku5 niang6|姑姑|n|人称:
+- 姑娘|ku5 -niang6|姑姑|n|人称:
     loan: 普通话/姑娘
 - 阿姑|a1-kou1|姑姑|n|人称:
 - 阿娘|a1-nionn5|姑姑|n|人称:
@@ -832,7 +834,7 @@
 - 姐姐|tse2-tse2||n|人称:
 - 阿妹|a1-mue7/a1-mue6|妹妹|n|人称:
 - 妹妹|mue6-mue6/mue7-mue7||n|人称:
-- 兄弟姐妹|hiann1-ti7 tse2-mue7/hiann1-ti6-tse2-mue6||n|人称:
+- 兄弟姐妹|hiann1-ti7 -tse2-mue7/hiann1-ti6-tse2-mue6||n|人称:
 - 契父|khoi3-pe6|义父|n|人称:
 - 后父|au6-pe6|后爸|n|人称:
 - 后嫒/后姨|au6-ai5|后妈|n|人称:
@@ -873,7 +875,7 @@
 - 嘴残|tshui3-tsuann5|口水|n|人体:
     desc: 指沾上的口水
     examples:
-    - [个杯有你的嘴残, kai5-pue1 u6-lur2-kai5-tshui3-tsuann5, 这个杯子沾了你的口水]
+    - [个杯有你的嘴残, kai5-pue1 u6- lur2-kai5- tshui3-tsuann5, 这个杯子沾了你的口水]
 - 胡须|hou5-tsheu1||n|人体:
 - 下颏|e6-hai5|下巴|n|人体:
 - 颊沟|kih4-kau1/kih4-kuai1|脸颊|n|人体:
@@ -882,7 +884,7 @@
 - 草眼|tshau2-ngan2|太阳穴|n|人体:
 - 耳|hinn'6|耳朵|n|人体:
 - 耳屎|hinn'6-sai2||n|人体:
-- 耳塞屎|hinn'6 sak4-sai2|没长耳朵|i|人体:
+- 耳塞屎|hinn'6 sak4- sai2|没长耳朵|i|人体:
     desc: 用于骂人
 - 耳空/耳腔|hinn6-khang1|耳孔|n|人体:
 - 颔|am6|脖子|n|人体:
@@ -1000,13 +1002,13 @@
 - 暝起|mng5-khi2|早上|t|时节:
 - 暝起早|mng5-khi2-tsa2|早上|t|时节:
 - 猛早|menn2-tsa2|早上|t|时节:
-- 日出|jit8 tshut4||v/n|时节:
-- 日落|jit8 loh8||v/n|时节:
+- 日出|jit8 -tshut4||v/n|时节:
+- 日落|jit8 -loh8||v/n|时节:
 - 日昼|jit8-tau3|中午|t|时节:
 - 日昼头|jit8-tau3-thau5|正午/大中午|t|时节:
 - 日昼旰|jit8-tau3-kua3|正午/大中午|t|时节:
 - 下旰|e6-kua3|下午|t|时节:
-- 日＊|jit8 hann2|黄昏|t|时节:
+- 日＊|jit8 -hann2|黄昏|t|时节:
 - 夜暗/暝暗/猛暗|menn2-am3/menn5--am3|晚上|t|时节:
 - 夜昏/暝昏/猛昏|menn2-hng1/menn5-hng1|晚上|t|时节:
 - 半夜/半暝|puann3-menn5|半夜|t|时节:
@@ -1023,7 +1025,7 @@
 - 许天时|hur2-thian1-si5/hur2--thian1-si5|以前/曾经|t|时节:
 - 许天时先|hur2-thian1-si5-soinn1|很久以前/曾经|t|时节:
 - 时间|si5-kan1||n|时节:
-- 时间|si5 kan1|随时间|n|时节:
+- 时间|si5 -kan1|随时间|n|时节:
 - 当|tann1|那|y|时节:
 - 当才|tann1-tsia3-|刚刚才/刚才|t|时节:
 - 起头|khi2-thau5|开头|t|时节:
@@ -1080,7 +1082,7 @@
 
 # -------------------------- 音乐 MUSICAL --------------------------
 - 音乐|im1-gauh8/im1-ngauh8||n|音乐:
-- 潮州音乐|tio5-tsiu1 im1-gauh8||n|音乐:
+- 潮州音乐|tio5-tsiu1 -im1-gauh8||n|音乐:
 - 潮剧|tio5-kiah8||n|音乐:
 - 弦诗|hinn5-si1||n|音乐:
 - 笛套|tek8-thau3||n|音乐:
@@ -1093,7 +1095,7 @@
 - 丛声|tsang5-siann1||n|音乐:
 - 锣鼓|lo5-kou2||n|音乐:
 - 大锣鼓|tua7-lo5-kou2||n|音乐:
-- 潮州大锣鼓|tio5-tsiu1 tua7-lo5-kou2||n|音乐:
+- 潮州大锣鼓|tio5-tsiu1 -tua7-lo5-kou2||n|音乐:
 - 文爿|bun5-poinn5|管弦乐部分|n|音乐:
 - 武爿|bu2-poinn5|打击乐部分|n|音乐:
 - 司鼓|si1-kou2||n|音乐:
@@ -1110,7 +1112,7 @@
     desc: 唢呐发出的声音，用于代指唢呐。另外，因为葬礼中常吹唢呐，该词也用于形容人去世。
     examples:
     - [㖹啲咊, pun5-ti1-tann5, 吹唢呐]
-    - [伊昨日啲咊去, i1 tsa2-jit8 ti1-tann5--khur3, 他去世了]
+    - [伊昨日啲咊去, i1 tsa2-jit8 ti1-tann5-- khur3, 他去世了]
 - 笛|tek8||n|音乐:
 - 笛仔|tek8-kiann2||n|音乐:
 - 洞箫|thong5-siau1||n|音乐:
@@ -2373,7 +2375,7 @@
 - 漂|pio3||v|动词:
 - ＊|pit4|裂开|v|动词:
     examples:
-    - [片墙＊去, phinn3-tshionn5 pit4--khur3, 墙裂开了]
+    - [片墙＊去, phinn3-tshionn5 pit4-- khur3, 墙裂开了]
 - 保|po2|保护|v|动词:
 - 报|po3||v|动词:
 - ＊|poh4|教训|v|动词:
@@ -2409,7 +2411,7 @@
 - 㧳|pue2|掀开|v|动词:
     desc: 分开、掀开、张开，并使掩藏着的东西露出来
     examples:
-    - [个衫㧳起来, kai5-sann1 pue2--khi2-lai5, 把衣服掀起来]
+    - [个衫㧳起来, kai5-sann1 pue2-- khi2-lai5, 把衣服掀起来]
 - 背|pue3|背诵|v|动词:
 - 陪|pue5||v|动词:
 - 赔|pue5||v|动词:
@@ -2549,7 +2551,7 @@
 - 中|tiong3||v|动词:
 - 张/装|tionn1|假装|v|动词:
 - 张神张鬼/装神装鬼|tionn1-sin5-tionn1-kui2|装神弄鬼|i|动词:
-- 张样做相/装样做相|tionn1-ionn7 tso3-sionn3|装模作样|i|动词:
+- 张样做相/装样做相|tionn1-ionn7 -tso3-sionn3|装模作样|i|动词:
 - 钓|tionn3||v|动词:
 - 得|tit4||v|动词:
 - 丢|tiu1||v|动词:
