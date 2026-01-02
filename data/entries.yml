@@ -763,6 +763,9 @@
    p,ian,1,0,0,:
 - 籩,笾:
    p,ian,1,0,0,:
+- 煸,煸:
+   p,eng,1,1,0,:
+   p,ian,1,2,0,:
 - 扁,扁:
    p,ian,2,2,0,:
    p,inn,2,1,0,:
@@ -2677,7 +2680,7 @@
    t,i,1,0,0,:
    t,ek,8,2,0,:
     "目的":
-    "英语 taxi": [["的士", "tek8 si6", ""], ["打的", "phah4-tek8", ""]]
+    "英语 taxi": [["的士", "tek8 -si6", ""], ["打的", "phah4-tek8", ""]]
 - 啲,啲:
    t,i,1,3,0,:
 - 哋,哋:
@@ -2796,8 +2799,13 @@
    t,i,6,0,0,:
 - 睇,睇:
    th,oinn,2,3,0,:
-    aka:
-     PuNing_LiuSha: kh,oinn,2
+    # 这是练江腔唯一一个 oinn 韵不变 ainn 的字，比较难特殊处理，目前先给这几个口音点全部写死
+    aka_replace:
+     PuNing: th,oinn,2/kh,oinn,2
+     JieYang: th,oinn,2
+     ChaoYang: th,oinn,2/kh,oinn,2
+     HuiLai: th,oinn,2
+     LuFeng: th,oinn,2
    th,i,3,2,3,:
 - 遞,递:
    t,i,5,3,0,:
@@ -5029,7 +5037,7 @@
 - 汗,汗:
    k,uann,7,1,0,:
    h,an,3,2,0,:
-    "": [["成吉思汗", "seng5-kit4 sur1-han3", ""], ["汗血宝马", "han3-hueh4 po2-be2", ""]]
+    "": [["成吉思汗", "seng5-kit4-sur1-han3", ""], ["汗血宝马", "han3-hueh4-po2-be2", ""]]
    h,an,5,2,0,:
     "可汗":
 - 旱,旱:
@@ -7527,8 +7535,13 @@
 - 看,看:
    kh,uann,3,1,0,:
    th,oinn,2,3,0,睇:
-    aka:
-     PuNing_LiuSha: kh,oinn,2
+     # 这是练江腔唯一一个 oinn 韵不变 ainn 的字，比较难特殊处理，目前先给这几个口音点全部写死
+    aka_replace:
+     PuNing: th,oinn,2/kh,oinn,2
+     JieYang: th,oinn,2
+     ChaoYang: th,oinn,2/kh,oinn,2
+     HuiLai: th,oinn,2
+     LuFeng: th,oinn,2
    kh,an,3,2,3,:
    # 潮正
    kh,an,5,2,3,:
@@ -12274,7 +12287,7 @@
    j,u,5,2,0,:
    j,u,2,2,0,:
    # 刀兵偈：饮血茹毛，可能是讹读，推导普通话为撮口的 yu2。
-   # 0,i,5,2,3,:
+   0,i,5,2,3,:
 - 𫼰,𫼰:
    l,ur,5,0,0,:
 - 挐,挐:
@@ -15684,10 +15697,10 @@
    s,iau,3,2,2,:
     "": [["见笑", "kian3-siau3", ""]]
    # 高德/潮正
-   tsh,iau,3,2,2,:
+   tsh,iau,3,2,3,:
 - 咲,咲:
    tsh,io,3,1,0,:
-   tsh,iau,3,1,0,:
+   tsh,iau,3,2,0,:
 - 效,效:
    h,au,7,0,0,:
 - 嘯,啸:
@@ -16564,7 +16577,7 @@
    0,iang,5,0,0,:
 - 洋,洋:
    0,iang,5,2,1,:
-    "": [["喜气洋洋", "hi2-khi3 iang5-iang5", ""], ["洋溢", "iang5-ek8", ""]]
+    "": [["喜气洋洋", "hi2-khi3 -iang5-iang5", ""], ["洋溢", "iang5-ek8", ""]]
    0,ionn,5,1,0,:
 - 烊,烊:
    0,ionn,5,1,0,:
