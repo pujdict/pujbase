@@ -87,6 +87,11 @@ ChaoAn_FengHuang:
     - UOINN_As_UINN
     - OI_As_UE
     - ORN_As_URN
+    # TODO:
+    # 凤凰音根据汉字音典的同音字表显示，非零声母的情况下，“耿”“顷”“衡”等字也都只录 eng 韵（“获”录 uak）。
+    # 这些字在有 uang/eng 两读的其他各点，如潮州、潮安、饶平、澄海、汕头等，显然 eng 是更晚近的文读层，并且口语基本不用。
+    # 凤凰这些字需要确认口语是不是只读 eng，如果是，也不太应该理解为吸收更晚近的文读 eng（凤凰地理位置上更偏，这种可能性不大），而应该理解为新的规则 *ueng → eng 的作用。——待调查。
+    - UENG_As_ENG_UANG
     - IAN_As_IEN
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
@@ -120,6 +125,7 @@ ChaoAn_WenCi:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - UENG_As_ENG_UANG
     - IO_As_IE
     - IAU_As_IEU
     - IAN_As_IEN
@@ -191,6 +197,7 @@ FengShun_LiuHuang:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - UENG_As_ENG_UANG
     - IO_As_IE
     - IAU_As_IEU
     - IAN_As_IEN
@@ -216,6 +223,7 @@ RaoPing_SanRao:
     - UOINN_As_UINN
     - OI_As_UE
     - ORN_As_URN
+    - UENG_As_ENG_UANG
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
     - BU_As_MU_ForNasalEnding
