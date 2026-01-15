@@ -88,6 +88,11 @@ IN_As_EN:
   eg: [新,一,七]
   act:
   - final/^i(n|t)$/e$1/
+UENG_As_ENG:
+  desc: "所有 {ueng} → {eng}"
+  eg: [莹,顷,耿]
+  act:
+  - final/^ueng/eng/
 UENG_As_ENG_UANG:
   desc: "零声母 {ueng} → {eng}, 其他声母 {ueng} → {uang}; {uek} → {uak}"
   eg: [莹,顷,获]
