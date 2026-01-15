@@ -25,7 +25,9 @@ ChaoZhou_FuCheng:
     - UOINN_As_UINN
     - HURN_As_HNG
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
     - IAN_As_IEN
@@ -64,7 +66,9 @@ XiQiang:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IOU
     - N_As_L_ForMEnding
@@ -87,12 +91,14 @@ ChaoAn_FengHuang:
     - UOINN_As_UINN
     - OI_As_UE
     - ORN_As_URN
+    - IURN_As_IN
     # TODO:
     # 凤凰音根据汉字音典的同音字表显示，非零声母的情况下，“耿”“顷”“衡”等字也都只录 eng 韵（“获”录 uak）。
     # 这些字在有 uang/eng 两读的其他各点，如潮州、潮安、饶平、澄海、汕头等，显然 eng 是更晚近的文读层，并且口语基本不用。
     # 凤凰这些字需要确认口语是不是只读 eng，如果是，也不太应该理解为吸收更晚近的文读 eng（凤凰地理位置上更偏，这种可能性不大），而应该理解为新的规则 *ueng → eng 的作用。——待调查。
     - UENG_As_ENG
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IAN_As_IEN
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
@@ -126,7 +132,9 @@ ChaoAn_WenCi:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
     - IAN_As_IEN
@@ -161,7 +169,9 @@ ChaoAn_JinShi:
   - UOINN_As_UINN
   - OI_As_UE
   - ORN_As_URN
+  - IURN_As_IN
   - UENG_As_ENG_UANG
+  - IUONG_As_IONG
   - L_As_N_For_NN_NG
   - MU_As_BU_ForNasalEnding
   - URN_As_IN
@@ -198,7 +208,9 @@ FengShun_LiuHuang:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
     - IAN_As_IEN
@@ -224,7 +236,9 @@ RaoPing_SanRao:
     - UOINN_As_UINN
     - OI_As_UE
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
     - BU_As_MU_ForNasalEnding
@@ -247,7 +261,9 @@ RaoPing_HuangGang:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
@@ -281,7 +297,9 @@ ChengHai_ChengCheng:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IOU
     - L_As_N_ForMEnding
@@ -310,7 +328,9 @@ ShanTou_ShiQu:
     - EU_As_IU
     - UOINN_As_UINN
     - ORN_As_URN
+    - IURN_As_IN
     - UENG_As_ENG_UANG
+    - IUONG_As_IONG
     - IAU_As_IOU
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -347,9 +367,11 @@ JieYang_RongCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - URN_As_IN
+    - IURN_As_IAN
+    - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
-    - URN_As_IN
     - IN_As_EN
     - N_As_NG
     - NG_As_URNG
@@ -370,9 +392,11 @@ ChaoYang_MianCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - URN_As_IN
+    - IURN_As_IAN
+    - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
-    - URN_As_IN
     - N_As_NG
     - NG_As_URNG
 PuNing_LiuSha:
@@ -390,8 +414,10 @@ PuNing_LiuSha:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
-    - L_As_N_For_NN_NG
     - URN_As_IN
+    - IURN_As_IAN
+    - IUONG_As_UENG
+    - L_As_N_For_NN_NG
     - N_As_NG
     - NG_As_URNG
     - NGU_As_U
@@ -410,9 +436,11 @@ HuiLai_HuiCheng:
     - OINN_As_AINN
     - UOINN_As_UAINN
     - ORN_As_URN
+    - URN_As_IN
+    - IURN_As_IAN
+    - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
-    - URN_As_IN
     - N_As_NG
     - NG_As_URNG
 LuFeng_SanJia:
@@ -432,8 +460,10 @@ LuFeng_SanJia:
     - ORN_As_URN
     - OU_As_AU
     - UE_As_UEI
+    - URN_As_IN
+    - IURN_As_IAN
+    - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
-    - URN_As_IN
     - N_As_NG
     - NG_As_URNG
