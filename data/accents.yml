@@ -40,6 +40,7 @@ ChaoZhou_FuCheng:
     - NG_As_UNG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 XiQiang:
   area: 戏腔
@@ -77,6 +78,7 @@ XiQiang:
     - N_As_NG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 ChaoAn_FengHuang:
   area: 潮安
@@ -105,6 +107,7 @@ ChaoAn_FengHuang:
     - MU_As_BU_ForNasalEnding
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 ChaoAn_WenCi:
   area: 潮安
@@ -143,6 +146,7 @@ ChaoAn_WenCi:
     - MU_As_BU_ForNasalEnding
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 ChaoAn_JinShi:
   area: 潮安
@@ -181,6 +185,7 @@ ChaoAn_JinShi:
   - NG_As_UNG
   - NG_As_URNG
   - IONG_As_ONG
+  - JIONG_As_JONG
   - NGU_As_U
 FengShun_LiuHuang:
   area: 丰顺
@@ -222,6 +227,7 @@ FengShun_LiuHuang:
     - ENG_As_EN
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 RaoPing_SanRao:
   area: 饶平
@@ -247,6 +253,7 @@ RaoPing_SanRao:
     - IAN_As_IANG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 RaoPing_HuangGang:
   area: 饶平
@@ -269,6 +276,7 @@ RaoPing_HuangGang:
     - N_As_NG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 ChengHai_ChengCheng:
   area: 澄海
@@ -310,6 +318,7 @@ ChengHai_ChengCheng:
     - NG_As_UNG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 ShanTou_ShiQu:
   area: 汕头
@@ -339,6 +348,7 @@ ShanTou_ShiQu:
     - NG_As_UNG
     - NG_As_URNG
     - IONG_As_ONG
+    - JIONG_As_JONG
     - NGU_As_U
 JieYang_RongCheng:
   area: 揭阳
