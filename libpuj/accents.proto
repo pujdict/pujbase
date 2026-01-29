@@ -26,6 +26,8 @@ message FuzzyRuleDescriptor {
   repeated FuzzyRuleAction actions = 3;
   string desc = 4;
   repeated string examples = 5;
+  string title = 6;
+  string note = 7;
 }
 
 message Tones {

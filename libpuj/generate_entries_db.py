@@ -128,6 +128,8 @@ def main():
         fuzzy_rule_eg = fuzzy_rule_details['eg']
         fuzzy_rule_desc = fuzzy_rule_details['desc']
         fuzzy_rule_actions = fuzzy_rule_details['act']
+        fuzzy_rule_title = fuzzy_rule_details['title']
+        fuzzy_rule_note = fuzzy_rule_details.get('note', '')
         for fuzzy_rule_action in fuzzy_rule_actions:
             action, pattern, replacement_dollar, _ = fuzzy_rule_action.split('/')
             replacement_backslash = re.sub(r'\$(\d)', r'\\\1', replacement_dollar)
@@ -145,6 +147,8 @@ def main():
             actions=actions,
             desc=fuzzy_rule_desc,
             examples=fuzzy_rule_eg,
+            title=fuzzy_rule_title,
+            note=fuzzy_rule_note,
         ))
 
     accents_file = Path('../data/accents.yml')
