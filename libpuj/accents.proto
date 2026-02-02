@@ -45,6 +45,7 @@ message Accent {
   repeated uint32 rules = 4;
   reserved 5;
   Tones tones = 6;
+  repeated string cat = 7;
 }
 
 message Accents {

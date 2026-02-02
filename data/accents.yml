@@ -1,6 +1,7 @@
 ChaoZhou_FuCheng:
   area: 潮州
   subarea: 府城
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 21, 2 ]
@@ -45,6 +46,7 @@ ChaoZhou_FuCheng:
 XiQiang:
   area: 戏腔
   subarea: ""
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 33, 23, 32, 3, 22, 21, 21, 2 ]
@@ -83,6 +85,7 @@ XiQiang:
 ChaoAn_FengHuang:
   area: 潮安
   subarea: 凤凰
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 334, 52, 212, 21, 55, 25, 22, 43 ]
     sandhi: [ 33, 212, 442, 43, 21, 21, 21, 21 ]
@@ -112,6 +115,7 @@ ChaoAn_FengHuang:
 ChaoAn_WenCi:
   area: 潮安
   subarea: 文祠
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 212, 2 ]
@@ -151,6 +155,7 @@ ChaoAn_WenCi:
 ChaoAn_JinShi:
   area: 潮安
   subarea: 金石
+  cat: [ChaoShan, RongJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 212, 2 ]
@@ -190,6 +195,7 @@ ChaoAn_JinShi:
 FengShun_LiuHuang:
   area: 丰顺
   subarea: 𨻧隍
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 212, 2 ]
@@ -232,6 +238,7 @@ FengShun_LiuHuang:
 RaoPing_SanRao:
   area: 饶平
   subarea: 三饶
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 224, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 33, 25, 55, 5, 21, 21, 21, 2 ]
@@ -258,6 +265,7 @@ RaoPing_SanRao:
 RaoPing_HuangGang:
   area: 饶平
   subarea: 黄冈
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 32, 55, 25, 22, 54 ]
     sandhi: [ 33, 25, 55, 54, 31, 31, 31, 32 ]
@@ -281,6 +289,7 @@ RaoPing_HuangGang:
 ChengHai_ChengCheng:
   area: 澄海
   subarea: 澄城
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 212, 2 ]
@@ -289,7 +298,7 @@ ChengHai_ChengCheng:
       2-2: 25-21
       2-5: 25-55
       2-8: 25-5
-      3-2: 52-21
+      3-2: 25-21
       3-5: 52-55
       3-8: 52-5
       4-2: 5-21
@@ -323,6 +332,7 @@ ChengHai_ChengCheng:
 ShanTou_ShiQu:
   area: 汕头
   subarea: 市区
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 33, 23, 55, 5, 22, 21, 21, 2 ]
@@ -353,6 +363,7 @@ ShanTou_ShiQu:
 JieYang_RongCheng:
   area: 揭阳
   subarea: 榕城
+  cat: [ChaoShan, RongJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 33, 23, 32, 3, 212, 21, 212, 2 ]
@@ -390,6 +401,7 @@ JieYang_RongCheng:
 ChaoYang_MianCheng:
   area: 潮阳
   subarea: 棉城
+  cat: [ChaoPu, LianJiang]
   tones:
     citation: [ 21, 45, 41, 2, 33, 52, 32, 5 ]
     sandhi: [ 21, 52, 32, 5, 332, 32, 21, 3 ]
@@ -412,6 +424,7 @@ ChaoYang_MianCheng:
 PuNing_LiuSha:
   area: 普宁
   subarea: 流沙
+  cat: [ChaoPu, LianJiang]
   tones:
     citation: [ 335, 52, 212, 32, 44, 25, 31, 54 ]
     sandhi: [ 33, 212, 55, 54, 31, 33, 33, 3 ]
@@ -434,6 +447,7 @@ PuNing_LiuSha:
 HuiLai_HuiCheng:
   area: 惠来
   subarea: 惠城
+  cat: [ChaoPu, LianJiang]
   tones:
     citation: [ 24, 552, 31, 32, 44, 213, 31, 54 ]
     sandhi: [ 33, 213, 44, 43, 31, 33, 33, 21 ]
@@ -456,6 +470,7 @@ HuiLai_HuiCheng:
 LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
+  cat: [ChaoPu, LianJiang]
   tones:
     citation: [ 334, 552, 22, 3, 55, 24, 41, 54 ]
     sandhi: [ 33, 24, 55, 54, 32, 33, 33, 3 ]

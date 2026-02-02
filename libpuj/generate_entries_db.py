@@ -167,6 +167,7 @@ def main():
         sandhi = tones['sandhi']
         group = tones.get('group') or {}
         neutral = tones['neutral']
+        cat = v['cat']
         specials = tones.get('specials') or []
         specials = [ToneSpecial.Value(f"TS_{special_name}") for special_name in specials]
         tones = Tones(citation=citation, sandhi=sandhi, group=group, neutral=neutral, specials=specials)
@@ -176,6 +177,7 @@ def main():
             subarea=subarea,
             rules=rules,
             tones=tones,
+            cat=cat,
         ))
 
     Path('../dist').mkdir(exist_ok=True)
