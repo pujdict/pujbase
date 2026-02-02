@@ -33,9 +33,10 @@ message FuzzyRuleDescriptor {
 message Tones {
   repeated uint32 citation = 1;
   repeated uint32 sandhi = 2;
-  repeated uint32 neutral = 3;
-  map<string, string> group = 4;
-  repeated ToneSpecial specials = 5;
+  repeated uint32 sandhi_em = 3;
+  repeated uint32 neutral = 4;
+  map<string, string> group = 5;
+  repeated ToneSpecial specials = 6;
 }
 
 message Accent {
