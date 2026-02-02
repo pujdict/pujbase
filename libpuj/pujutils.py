@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import pathlib
+import re
+import unicodedata
+
 import libpuj.pujpb as pb
 from libpuj.pujcommon import (
     Accent as _Accent,
@@ -9,6 +12,8 @@ from libpuj.pujcommon import (
     FuzzyRuleDescriptor as _FuzzyRuleDescriptor,
     Pronunciation as _Pronunciation,
 )
+
+from libpuj.pujcommon import Pronunciation
 
 
 class PUJUtils:
@@ -100,6 +105,84 @@ class PUJUtils:
                     0x3000 <= o <= 0x303F
             )
         return False
+
+    @staticmethod
+    def for_each_word_in_sentence(sentence: str, func_word = None, func_non_word = None):
+        sentence = unicodedata.normalize('NFD', sentence)
+        regexp = re.compile(f"[a-zA-Z0-9']")
+        next_hyphen_count = 0
+        i = 0
+        while i < len(sentence):
+            cur = ''
+            if regexp.match(sentence[i]):
+                while i < len(sentence) and regexp.match(sentence[i]):
+                    cur += sentence[i]
+                    i += 1
+                next_hyphen_count = 0
+                if i < len(sentence) and sentence[i] == '-':
+                    next_hyphen_count += 1
+                    if i + 1 < len(sentence) and sentence[i + 1] == '-':
+                        next_hyphen_count += 1
+                if func_word:
+                    func_word(cur, next_hyphen_count)
+            else:
+                while i < len(sentence) and not regexp.match(sentence[i]):
+                    cur += sentence[i]
+                    i += 1
+                if func_non_word:
+                    func_non_word(cur)
+
+    @staticmethod
+    def add_puj_tone_mark_word(word: str, tone: int | None = None) -> str:
+        """
+        为单个字添加音调符号
+
+        Args:
+            word: 拼音单词，可能包含数字声调
+            tone: 指定的声调数字，如果不提供则从单词中提取
+
+        Returns:
+            添加了声调标记的单词
+        """
+        # 如果声调是 0、1 或 4，不需要添加标记
+        if tone == 0 or tone == 1 or tone == 4:
+            return word
+
+        # 如果没有提供声调，从单词中提取
+        if tone is None:
+            tone = 0
+            # 从后往前查找数字声调
+            for i in range(len(word) - 1, -1, -1):
+                if '1' <= word[i] <= '8':
+                    tone = int(word[i])
+                    # 移除声调数字
+                    word = word[:i] + word[i + 1:]
+                    break
+
+        # 匹配单词结构
+        match = Pronunciation.REGEXP_WORD.match(word)
+        if match:
+            groups = match.groupdict()
+            initial = groups.get('initial') or ''
+            medial = groups.get('medial') or ''
+            nucleus = groups.get('nucleus') or ''
+            coda = groups.get('coda') or ''
+
+            if nucleus:
+                # 在韵腹上添加声调标记
+                tone_mark = Pronunciation.PUJ_TONE_MARKS_MAP[tone]
+                if len(nucleus) == 1:
+                    nucleus += tone_mark
+                elif len(nucleus) == 2:
+                    nucleus = nucleus[0] + tone_mark + nucleus[1]
+                else:
+                    nucleus = nucleus[0] + tone_mark + nucleus[1:]
+
+            return initial + medial + nucleus + coda
+        else:
+            # 如果不匹配正则，直接返回原词
+            print(f"Not a full word: {word} {tone}")
+            return word
 
 
 def _test():

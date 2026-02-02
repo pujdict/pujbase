@@ -16,8 +16,8 @@ class ConversionTestCase(unittest.TestCase):
         expect = lambda initial, final, tone, s: self.assertEqual(Pronunciation(initial, final, tone).to_written(), s)
 
         # 特殊韵母
-        expect('l', 'v', 2, 'lṳ́')
-        expect('l', 'r', 5, 'lô̤')
+        expect('l', 'ur', 2, 'lṳ́')
+        expect('l', 'or', 5, 'lô̤')
         expect('0', 'ng', 5, 'n̂g')
         expect('h', 'ng', 5, 'hn̂g')
         expect('0', 'ngh', 8, 'ńgh')
@@ -40,7 +40,7 @@ class ConversionTestCase(unittest.TestCase):
         expect('h', 'ua', 5, 'huâ')
         expect('k', 'ok', 4, 'kok')
 
-        expect('l', 'v', 2, 'lṳ́')
+        expect('l', 'ur', 2, 'lṳ́')
         expect('t', 'i', 1, 'ti')
         expect('0', 'iam', 5, 'iâm')
         expect('0', 'ua', 2, 'uá')

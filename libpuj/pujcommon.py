@@ -23,8 +23,10 @@ class Pronunciation(AbstractPronunciation):
     """
     __special_vowels = {
         "v": "ṳ",
+        "ur": "ṳ",
         "V": "Ṳ",
         "r": "o̤",
+        "er": "o̤",
         "R": "O̤",
     }
     __vowel_order = [
@@ -34,9 +36,9 @@ class Pronunciation(AbstractPronunciation):
     ]
     __vowels = set(__vowel_order)
     REGEXP_WORD = re.compile(
-        r"^(?P<initial>(p|ph|m|b|pf|pfh|mv(?=u)|bv(?=u)|f|t|th|n|l|k|kh|ng|g|h|ts|c|ch|tsh|chh|s|j|z)?)?(?P<final>(?P<medial>(y|yi|i|u)(?=[aeoiu]))?(?P<nucleus>a|e|o|i|u|ur|ir|ṳ|or|er|o̤|ng|m)(?P<coda>(y|yi|i|u)?(m|n|ng|nn|p|t|k|h)*))(?P<tone>\d)?$",
+        r"^(?P<word>(?P<initial>(pfh|pf|phf|ph|p|mv(?=u)|bv(?=u)|f|m|b|th|t|l|kh|k|ng|n|g|h|tsh|ts|chh|ch|c|s|j|z|0))?(?P<final>(?P<medial>(y|yi|i|u|iu)(?=[aeoiu]))?(?P<nucleus>or|er|ur|ir|a|e|o|i|ṳ|u|o̤|ng|m)(?P<coda>(y|yi|i|u)?(m|ng|nn'?h|nn'?|n|p|t|k|h)?))(?P<tone>\d)?)$",
         re.IGNORECASE)
-    __puj_tone_marks = [
+    PUJ_TONE_MARKS_MAP = [
         "",  # 0
         "",  # 1
         "\u0301",  # 2 锐音符 ́
@@ -47,6 +49,7 @@ class Pronunciation(AbstractPronunciation):
         "\u0304",  # 7 长音符 ̄
         "\u0301",  # 8 锐音符 ́
     ]
+    POSSIBLE_TONE_MARKS = {mark for mark in PUJ_TONE_MARKS_MAP if mark}
     __puj_possible_tone_marks = [
         [],  # 0
         [],  # 1
@@ -133,7 +136,7 @@ class Pronunciation(AbstractPronunciation):
     }
 
     def __init__(self, initial: str = None, final: str = None, tone: int = 0):
-        super().__init__('0' if initial == '' else initial, final, tone)
+        super().__init__(initial, final, tone)
 
     def __copy__(self):
         return Pronunciation(self.initial, self.final, self.tone)
@@ -146,7 +149,7 @@ class Pronunciation(AbstractPronunciation):
 
     @classmethod
     def from_pb(cls, data: pb.Pronunciation):
-        return cls(data.initial, data.final, data.tone)
+        return cls(data.initial or '', data.final, data.tone)
 
     def to_pb(self) -> pb.Pronunciation:
         """
@@ -207,18 +210,16 @@ class Pronunciation(AbstractPronunciation):
         final = self.final
         if not final:
             return ''
+        final = final.replace('ur', self.__special_vowels['ur'])
+        final = final.replace('or', self.__special_vowels['er'])
         coda_index = self.__get_coda_index(final)
         if coda_index == -1:
             return ''
         tone = self.tone
         if not (0 <= tone <= 8):
             return ''
-        tone_mark = self.__puj_tone_marks[tone]
+        tone_mark = self.PUJ_TONE_MARKS_MAP[tone]
         final = f"{final[:coda_index + 1]}{tone_mark}{final[coda_index + 1:]}"
-        final = final.replace('v', self.__special_vowels['v'])
-        final = final.replace('V', self.__special_vowels['V'])
-        final = final.replace('r', self.__special_vowels['r'])
-        final = final.replace('R', self.__special_vowels['R'])
         return f"{initial}{final}"
 
     @classmethod
@@ -229,6 +230,10 @@ class Pronunciation(AbstractPronunciation):
         if final:
             if final[0].lower() in 'iu' and len(final) > 1 and final[1] in cls.__vowels:
                 return 1
+            if final.startswith(cls.__special_vowels['ur']):
+                return len(cls.__special_vowels['ur']) - 1
+            if final.startswith(cls.__special_vowels['er']):
+                return len(cls.__special_vowels['er']) - 1
             return 0
         return -1
 
@@ -236,7 +241,7 @@ class Pronunciation(AbstractPronunciation):
     def from_combination(cls, combination: str) -> 'Pronunciation':
         match = cls.REGEXP_WORD.match(combination)
         if match:
-            initial = match.group('initial') or '0'
+            initial = match.group('initial') or ''
             final = match.group('final')
             tone = match.group('tone')
             return cls(initial, final, int(tone))
@@ -520,8 +525,9 @@ class FuzzyRuleAction(FuzzyRule):
             new_initial_final = re.sub(self.pattern, self.replacement, initial_final)
             match = Pronunciation.REGEXP_WORD.match(new_initial_final)
             if not match:
+                Pronunciation.REGEXP_WORD.match(new_initial_final)
                 raise Exception(f"New initial+final not matched: {new_initial_final} from {initial_final}")
-            result.initial = match.group('initial')
+            result.initial = match.group('initial') or ''
             result.final = match.group('final')
 
 
