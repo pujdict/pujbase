@@ -25,7 +25,8 @@ class MyTestCase(unittest.TestCase):
         for row in csv_content[1:]:
             for i in range(length):
                 if i == 0:
-                    cur_accent = self.pujutils.get_accent(row[i])
+                    _, accent_id = row[i].split('/')
+                    cur_accent = self.pujutils.get_accent(accent_id)
                     self.assertIsNotNone(cur_accent)
                 else:
                     char, std_pron_str = header[i].split('/')
