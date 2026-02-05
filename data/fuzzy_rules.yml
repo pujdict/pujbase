@@ -82,20 +82,20 @@ UE_As_OI:
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
-HURN_As_HNG:
+HN_As_HNG:
   title: “欣”“尹”韵声化
   note: 潮州府城音。
-  desc: "音节 {hurn} → {hng}; {urn} → {ng}"
+  desc: "音节 {hn} → {hng}; {n} → {ng}"
   eg: [欣,勋,尹]
   act:
-  - initial+final/^(h?)urn$/$1ng/
-ORN_As_URN:
+  - initial+final/^(h?)n$/$1ng/
+N_As_URN:
   title: “恩”“隐”同韵
-  note: “恩”韵与此规则配合使用，仅为区分潮州府音“很”“欣”韵母的不同而设。
-  desc: "{orn} → {urn}"
+  note: “隐”韵与此规则配合使用，仅为区分潮州府音“很”“欣”韵母的不同而设。
+  desc: "{n} → {urn}"
   eg: [根,很,恩]
   act:
-  - final/^orn$/urn/
+  - final/^n$/urn/
 URN_As_IN:
   title: “隐”韵转“因”（赅入声）
   note: 练江腔语音。
@@ -244,7 +244,7 @@ BU_As_MU_ForNasalEnding:
   desc: "阳声韵前声母 {bu} → {mu}"
   eg: [万,亡,文]
   act:
-  - initial+final/^bu((a|o|ur|or|e|i|u)+)(n|ng)$/mu$1$3/
+  - initial+final/^bu((a|o|ur|or|e|i|u)?)(n|ng)$/mu$1$3/
 ENG_As_EN:
   title: “英”韵韵尾变抵腭（赅入声）
   note: 丰顺𨻧隍特色语音。

@@ -25,8 +25,8 @@ ChaoZhou_FuCheng:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - HURN_As_HNG
-    - ORN_As_URN
+    - HN_As_HNG
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -70,7 +70,7 @@ XiQiang:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -97,7 +97,7 @@ ChaoAn_FengHuang:
     - ORH_As_OH
     - UOINN_As_UINN
     - OI_As_UE
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     # TODO:
     # 凤凰音根据汉字音典的同音字表显示，非零声母的情况下，“耿”“顷”“衡”等字也都只录 eng 韵（“获”录 uak）。
@@ -141,7 +141,7 @@ ChaoAn_WenCi:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -181,7 +181,7 @@ ChaoAn_JinShi:
   - EU_As_IU
   - UOINN_As_UINN
   - OI_As_UE
-  - ORN_As_URN
+  - N_As_URN
   - IURN_As_IN
   - UENG_As_ENG_UANG
   - IUONG_As_IONG
@@ -223,7 +223,7 @@ FengShun_LiuHuang:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -253,7 +253,7 @@ RaoPing_SanRao:
     - ORH_As_OH
     - UOINN_As_UINN
     - OI_As_UE
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -280,7 +280,7 @@ RaoPing_HuangGang:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -319,7 +319,7 @@ ChengHai_ChengCheng:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -353,7 +353,7 @@ ShanTou_ShiQu:
     - ORH_As_OH
     - EU_As_IU
     - UOINN_As_UINN
-    - ORN_As_URN
+    - N_As_URN
     - IURN_As_IN
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
@@ -395,7 +395,7 @@ JieYang_RongCheng:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - ORN_As_URN
+    - N_As_URN
     - URN_As_IN
     - IURN_As_IAN
     - IUONG_As_UENG
@@ -421,7 +421,7 @@ ChaoYang_MianCheng:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - ORN_As_URN
+    - N_As_URN
     - URN_As_IN
     - IURN_As_IAN
     - IUONG_As_UENG
@@ -444,7 +444,7 @@ PuNing_LiuSha:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - ORN_As_URN
+    - N_As_URN
     - URN_As_IN
     - IURN_As_IAN
     - IUONG_As_UENG
@@ -467,7 +467,7 @@ HuiLai_HuiCheng:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - ORN_As_URN
+    - N_As_URN
     - URN_As_IN
     - IURN_As_IAN
     - IUONG_As_UENG
@@ -490,7 +490,7 @@ LuFeng_SanJia:
     - EU_As_IU
     - OINN_As_AINN
     - UOINN_As_UAINN
-    - ORN_As_URN
+    - N_As_URN
     - OU_As_AU
     - UE_As_UEI
     - URN_As_IN

@@ -36,7 +36,7 @@ class Pronunciation(AbstractPronunciation):
     ]
     __vowels = set(__vowel_order)
     REGEXP_WORD = re.compile(
-        r"^(?P<word>(?P<initial>(pfh|pf|phf|ph|p|mv(?=u)|bv(?=u)|f|m|b|th|t|l|kh|k|ng|n|g|h|tsh|ts|chh|ch|c|s|j|z|0))?(?P<final>(?P<medial>(y|yi|i|u|iu)(?=[aeoiu]))?(?P<nucleus>or|er|ur|ir|a|e|o|i|ṳ|u|o̤|ng|m)(?P<coda>(y|yi|i|u)?(m|ng|nn'?h|nn'?|n|p|t|k|h)?))(?P<tone>\d)?)$",
+        r"^(?P<word>(?P<initial>(pfh|pf|phf|ph|p|mv(?=u)|bv(?=u)|f|m|b|th|t|l|kh|k|ng|n|g|h|tsh|ts|chh|ch|c|s|j|z|0))?(?P<final>(?P<medial>(y|yi|i|u|iu)(?=[aeoiu]))?(?P<nucleus>or|er|ur|ir|a|e|o|i|ṳ|u|o̤|ng|n|m)(?P<coda>(y|yi|i|u)?(m|ng|nn'?h|nn'?|n|p|t|k|h)?))(?P<tone>\d)?)$",
         re.IGNORECASE)
     PUJ_TONE_MARKS_MAP = [
         "",  # 0

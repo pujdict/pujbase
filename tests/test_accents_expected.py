@@ -25,7 +25,7 @@ class MyTestCase(unittest.TestCase):
         for row in csv_content[1:]:
             for i in range(length):
                 if i == 0:
-                    _, accent_id = row[i].split('/')
+                    accent_name, accent_id = row[i].split('/')
                     cur_accent = self.pujutils.get_accent(accent_id)
                     self.assertIsNotNone(cur_accent)
                 else:
@@ -34,6 +34,7 @@ class MyTestCase(unittest.TestCase):
                     accent_pron_fuzzy = cur_accent.fuzzy_result(libpuj.pujcommon.Pronunciation.from_combination(std_pron_str))
                     self.assertEqual(accent_pron_str_expect,
                                      accent_pron_fuzzy.to_combination(),
+                                     f"ACCENT: {accent_name} "
                                      f"{char} "
                                      f"STD: {std_pron_str} "
                                      f"EXPECT IN TABLE: {accent_pron_str_expect} "
