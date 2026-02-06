@@ -281,6 +281,24 @@ ENG_As_EN:
   act:
   - final/^eng$/en/
   - final/^ek$/et/
+# 丢 n/t 韵尾
+N_As_NG:
+  title: 丢失所有抵腭韵（所有舌尖韵尾并入舌根韵尾）
+  note: 以潮州、汕头为中心的一大片区域内的口音。目前仅余外围少部分地区不同程度保留抵腭韵。（如需逐韵母调整保留情况，请用各抵腭韵的转换规则）
+  desc: "所有舌尖韵尾并入舌根韵尾"
+  eg: [仙,新,杰]
+  act:
+  - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
+  - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
+# 丢 m/p 韵尾
+M_As_NG:
+  title: 丢失所有闭口韵（所有闭口韵尾并入舌根韵尾）
+  note: 以潮州、澄海为中心的一小片区域内的口音。澄海基本已经完全丢失闭口韵，潮州年轻一代也在逐渐丢失。
+  desc: "所有闭口韵尾并入舌根韵尾"
+  eg: [心,针,十]
+  act:
+  - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
+  - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
 # 丢 m/p, n/t 韵尾，逐个处理的版本。
 # 用于普宁等少数地方只保留 uan un 而丢其他 n 韵尾，汕头丢弃 uam 保留其他 m 韵尾等情况。
 IM_As_ING:
@@ -353,22 +371,6 @@ UAN_As_UANG:
   act:
   - final/^u(a|e)n$/u$1ng/
   - final/^u(a|e)t$/u$1k/
-# 丢 n/t 韵尾
-N_As_NG:
-  title: 丢失所有抵腭韵（所有舌尖韵尾并入舌根韵尾）
-  desc: "所有舌尖韵尾并入舌根韵尾"
-  eg: [仙,新,杰]
-  act:
-  - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
-  - final/^((a|o|ur|or|e|i|u)+)t$/$1k/
-# 丢 m/p 韵尾
-M_As_NG:
-  title: 丢失所有闭口韵（所有闭口韵尾并入舌根韵尾）
-  desc: "所有闭口韵尾并入舌根韵尾"
-  eg: [心,针,十]
-  act:
-  - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
-  - final/^((a|o|ur|or|e|i|u)+)p$/$1k/
 K_As_H:
   title: 舌根入声韵尾并入喉塞韵尾
   note: 陆丰三甲新派音。
@@ -378,16 +380,25 @@ K_As_H:
   - final/^(.+)k$/$1h/
 NG_As_UNG:
   title: 唇音声母后“秧”增生圆唇元音
+  note: 潮州、澄海、汕头等地语音。
   desc: "唇音声母后 {ng} → {ung}"
   eg: [本,饭,问]
   act:
   - initial+final/^(p|ph|m)ng$/$1ung/
 NG_As_URNG:
-  title: 唇音声母后“秧”增生不圆唇元音
+  title: 非“何”声母、非零声母“秧”增生不圆唇元音
+  note: 潮州、澄海、汕头等地，一般该韵中有一个比较明显的元音，并且与“恩”韵丢抵腭后的韵母合并。而部分地区此韵母元音可能极短，但元音长短在潮汕地区并不构成对立。为方便起见，辞典统一采用此规则转换各地口音。
   desc: "非 hng ng 音节 {ng} → {urng}"
   eg: [汤,酸,郎]
   act:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)ng$/$1urng/
+URNG_As_NG:
+  title: 非“何”声母、非零声母“恩”“秧”声化
+  note: 备用。为方便起见，辞典中的各地口音采用统一添上元音的写法。
+  desc: "非 hurng urng 音节 {urng} → {ng}"
+  eg: [汤,酸,郎]
+  act:
+  - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)urng$/$1ng/
 IONG_As_ONG:
   title: 齿音声母后“雍”韵丢失介音（“而”声母、“畜”声旁除外，赅入声）
   note: 韩江、榕江腔语音，练江腔此韵亦受影响变得不稳定，潮阳等地新派倾向于丢失介音。
