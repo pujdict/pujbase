@@ -343,6 +343,34 @@ ChengHai_ChengCheng:
     - IONG_As_ONG
     - JIONG_As_JONG
     - NGU_As_U
+ChengHai_WaiSha:
+  area: 澄海
+  subarea: 外砂
+  cat: [ChaoShan, HanJiang]
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 33, 25, 55, 5, 22, 42, 42, 2 ]
+    neutral: [ 22, 212, 21, 2, 21, 21, 22, 2 ]
+  rules:
+    - OR_As_O
+    - ORH_As_OH
+    - EU_As_IU
+    - UOINN_As_UINN
+    - HN_As_HURN
+    - IURN_As_IN
+    - IURM_As_IAM
+    - UENG_As_ENG_UANG
+    - IUONG_As_IONG
+    - IAU_As_IOU
+    - L_As_N_For_NN_NG
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - M_As_NG
+    - NG_As_UNG
+    - NG_As_URNG
+    - IONG_As_ONG
+    - JIONG_As_JONG
+    - NGU_As_U
 ShanTou_ShiQu:
   area: 汕头
   subarea: 市区
@@ -435,6 +463,30 @@ ChaoYang_MianCheng:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_IM
+    - IUONG_As_UENG
+    - L_As_N_For_NN_NG
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - NG_As_URNG
+ChaoYang_DaHao:
+  # 今天行政区划归汕头，但历史上长期归潮阳，并且其口音也是潮阳典型口音的一个变种。所以暂时记为潮阳。
+  area: 潮阳
+  subarea: 达濠
+  cat: [ChaoPu, LianJiang]
+  tones:
+    citation: [ 21, 24, 52, 3, 33, 52, 31, 45 ]
+    sandhi: [ 21, 52, 33, 45, 33, 21, 21, 3 ]
+    neutral: [ 332, 32, 332, 2, 332, 332, 332, 2 ]
+  rules:
+    - UR_As_U
+    - OR_As_O
+    - ORH_As_OH
+    - EU_As_IU
+    - UOINN_As_UAINN
+    - HN_As_HURN
+    - URN_As_IN
+    - IURN_As_IAN
+    - IURM_As_ONN
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
