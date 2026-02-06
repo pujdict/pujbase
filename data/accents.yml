@@ -27,6 +27,7 @@ ChaoZhou_FuCheng:
     - UOINN_As_UINN
     - HN_As_HNG
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IO_As_IE
@@ -71,6 +72,7 @@ XiQiang:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IO_As_IE
@@ -98,6 +100,7 @@ ChaoAn_FengHuang:
     - OI_As_UE
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_OM
     # TODO:
     # 凤凰音根据汉字音典的同音字表显示，非零声母的情况下，“耿”“顷”“衡”等字也都只录 eng 韵（“获”录 uak）。
     # 这些字在有 uang/eng 两读的其他各点，如潮州、潮安、饶平、澄海、汕头等，显然 eng 是更晚近的文读层，并且口语基本不用。
@@ -142,6 +145,7 @@ ChaoAn_WenCi:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IO_As_IE
@@ -182,6 +186,7 @@ ChaoAn_JinShi:
   - OI_As_UE
   - HN_As_HURN
   - IURN_As_IN
+  - IURM_As_IM
   - UENG_As_ENG_UANG
   - IUONG_As_IONG
   - L_As_N_For_NN_NG
@@ -224,6 +229,7 @@ FengShun_LiuHuang:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IO_As_IE
@@ -254,6 +260,7 @@ RaoPing_SanRao:
     - OI_As_UE
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_OM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - N_As_L_ForMEnding
@@ -281,6 +288,7 @@ RaoPing_HuangGang:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_OM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - L_As_N_For_NN_NG
@@ -320,6 +328,7 @@ ChengHai_ChengCheng:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IO_As_IE
@@ -354,6 +363,7 @@ ShanTou_ShiQu:
     - UOINN_As_UINN
     - HN_As_HURN
     - IURN_As_IN
+    - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
     - IAU_As_IOU
@@ -397,6 +407,7 @@ JieYang_RongCheng:
     - HN_As_HURN
     - URN_As_IN
     - IURN_As_IAN
+    - IURM_As_IM
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -423,6 +434,7 @@ ChaoYang_MianCheng:
     - HN_As_HURN
     - URN_As_IN
     - IURN_As_IAN
+    - IURM_As_IM
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -446,6 +458,7 @@ PuNing_LiuSha:
     - HN_As_HURN
     - URN_As_IN
     - IURN_As_IAN
+    - IURM_As_IM
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - N_As_NG
@@ -469,6 +482,7 @@ HuiLai_HuiCheng:
     - HN_As_HURN
     - URN_As_IN
     - IURN_As_IAN
+    - IURM_As_IM
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -494,6 +508,7 @@ LuFeng_SanJia:
     - UE_As_UEI
     - URN_As_IN
     - IURN_As_IAN
+    - IURM_As_OM
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding

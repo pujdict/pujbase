@@ -117,6 +117,34 @@ IURN_As_IAN:
   eg: [彬,镇,吉]
   act:
   - final/^iur(n|t)$/ia$1/
+IURM_As_IAM:
+  title: “森”韵转“奄”
+  note: 潮州、汕头、澄海等地的主流音。
+  desc: "{iurm} → {iam}"
+  eg: [森,参,簪]
+  act:
+  - final/^iurm$/iam/
+IURM_As_OM:
+  title: “森”韵圆唇
+  note: 饶平和潮安北部等地语音。
+  desc: "{iurm} → {om}"
+  eg: [森,参,簪]
+  act:
+  - final/^iurm$/om/
+IURM_As_ONN:
+  title: “森”韵圆唇并鼻化
+  note: 达濠等地语音。
+  desc: "{iurm} → {onn}"
+  eg: [森,参,簪]
+  act:
+  - final/^iurm$/onn/
+IURM_As_IM:
+  title: “森”韵丢失主元音，转“音”
+  note: 榕江腔、练江腔语音。
+  desc: "{iurm} → {im}"
+  eg: [森,参,簪]
+  act:
+  - final/^iurm$/im/
 IN_As_EN:
   title: “因”韵低化（赅入声）
   note: 揭阳标志性语音。
