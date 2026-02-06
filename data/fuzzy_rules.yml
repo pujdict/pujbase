@@ -89,11 +89,11 @@ HN_As_HNG:
   eg: [欣,勋,尹]
   act:
   - initial+final/^(h?)n$/$1ng/
-N_As_URN:
-  title: “恩”“隐”同韵
-  note: “隐”韵与此规则配合使用，仅为区分潮州府音“很”“欣”韵母的不同而设。
+HN_As_HURN:
+  title: “隐”“尹”同韵
+  note: 仅为区分潮州府音“很”“欣”、“隐”“尹”韵母的不同而设。
   desc: "{n} → {urn}"
-  eg: [根,很,恩]
+  eg: [欣,勋,尹]
   act:
   - final/^n$/urn/
 URN_As_IN:
@@ -104,21 +104,21 @@ URN_As_IN:
   act:
   - final/^ur(n|t)$/i$1/
 IURN_As_IN:
-  title: “彬”韵取文读层
+  title: “彬”韵取文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取文读层读音。
   desc: "{iurn} → {in}; {iurt} → {it}"
   eg: [彬,镇,吉]
   act:
   - final/^iur(n|t)$/i$1/
 IURN_As_IAN:
-  title: “彬”韵取白读层
+  title: “彬”韵取白读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取白读层读音。
   desc: "{iurn} → {ian}; {iurt} → {iat}"
   eg: [彬,镇,吉]
   act:
   - final/^iur(n|t)$/ia$1/
 IN_As_EN:
-  title: “因”韵低化
+  title: “因”韵低化（赅入声）
   note: 揭阳标志性语音。
   desc: "{in} → {en}; {it} → {et}"
   eg: [新,一,七]
@@ -132,7 +132,7 @@ UENG_As_ENG:
   act:
   - final/^ueng/eng/
 UENG_As_ENG_UANG:
-  title: “荣”韵低化，转“汪”（但零声母舒声时转“英”）
+  title: “荣”韵低化，转“汪”（赅入声，但零声母舒声时转“英”）
   note: 韩江腔的语音。
   desc: "零声母 {ueng} → {eng}, 其他声母 {ueng} → {uang}; {uek} → {uak}"
   eg: [莹,顷,获]
@@ -141,14 +141,14 @@ UENG_As_ENG_UANG:
   - initial+final/^ueng$/eng/
   - final/^uek$/uak/
 IUONG_As_UENG:
-  title: “荣”韵取旧文读层
+  title: “荣”韵取旧文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。
   desc: "{iuong} → {ueng}; {iuok} → {uek}"
   eg: [永,荣,域]
   act:
   - final/^iuo(ng|k)$/ue$1/
 IUONG_As_IONG:
-  title: “荣”韵取新文读层
+  title: “荣”韵取新文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取新文读层读音。
   desc: "{iuong} → {iong}; {iuok} → {iok}"
   eg: [永,荣,域]
