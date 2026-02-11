@@ -90,7 +90,7 @@ HN_As_HNG:
   act:
   - initial+final/^(h?)n$/$1ng/
 HN_As_HURN:
-  title: “隐”“尹”同韵
+  title: “很”“欣”同韵
   note: 仅为区分潮州府音“很”“欣”、“隐”“尹”韵母的不同而设。
   desc: "{n} → {urn}"
   eg: [欣,勋,尹]
@@ -98,11 +98,11 @@ HN_As_HURN:
   - final/^n$/urn/
 URN_As_IN:
   title: “隐”韵转“因”（赅入声）
-  note: 练江腔语音。
+  note: 练江腔语音。注：读喉塞的“乞”也归此规则。
   desc: "{urn} → {in}; {urt} → {it}"
   eg: [仅,斤,勤]
   act:
-  - final/^ur(n|t)$/i$1/
+  - final/^ur(n|t|h)$/i$1/
 IURN_As_IN:
   title: “彬”韵取文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取文读层读音。
