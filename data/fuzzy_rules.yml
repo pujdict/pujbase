@@ -1,6 +1,7 @@
 UR_As_U:
   title: “余”韵圆唇，转“污”
   note: 练江腔标志性语音。
+  ipa: "*-ɯ > -u"
   desc: "{ur} → {u}"
   eg: [余,猪,书]
   act:
@@ -9,6 +10,7 @@ OR_As_O:
   title: “短”韵圆唇，转“窝”
   note: 潮汕大部分语音点的发音，今天仅剩潮安金石、沙溪等极少数语音点该韵母不圆唇。
   desc: "{or} → {o}"
+  ipa: "*-ə > -o"
   eg: [短,块,袋]
   act:
   - final/^or$/o/
@@ -16,6 +18,7 @@ OR_As_E:
   title: “短”韵前化，转“哑”
   note: 陆丰三甲等地语音。
   desc: "{or} → {e}"
+  ipa: "*-ə > -e"
   eg: [短,块,袋]
   act:
   - final/^or$/e/
@@ -23,6 +26,7 @@ ORH_As_OH:
   title: “雪”韵圆唇
   note: 潮汕大部分语音点的发音。
   desc: "{orh} → {oh}"
+  ipa: "*-əʔ > -oʔ"
   eg: [夺,绝,雪]
   act:
   - final/^orh$/oh/
@@ -30,6 +34,7 @@ EU_As_IU:
   title: “梳”韵高化，转“忧”
   note: 这是潮汕大部分语音点的语音，今天仅剩潮安北部、饶平北部少数语音点保留该韵母。
   desc: "{eu} → {iu}"
+  ipa: "*-eu > -iu"
   eg: [初,梳,须]
   act:
   - final/^eu$/iu/
@@ -37,6 +42,7 @@ OINN_As_AINN:
   title: “闲”韵不圆唇
   note: 韵读同“爱”。榕江、练江腔语音。
   desc: "{oinn} → {ainn}"
+  ipa: "*-õĩ > -ãĩ"
   eg: [闲,间,莲]
   act:
   - final/^oinn$/ainn/
@@ -44,6 +50,7 @@ UOINN_As_UINN:
   title: “县”韵去主元音
   note: 韩江腔语音。
   desc: "{uoinn} → {uinn}"
+  ipa: "*-ũõĩ > -ũĩ"
   eg: [县,悬,惯]
   act:
   - final/^uoinn$/uinn/
@@ -51,6 +58,7 @@ UOINN_As_UAINN:
   title: “县”韵前化
   note: 榕江、练江腔语音。
   desc: "{uoinn} → {uainn}"
+  ipa: "*-ũõĩ > -ũãĩ"
   eg: [县,悬,惯]
   act:
   - final/^uoinn$/uainn/
@@ -58,6 +66,7 @@ OI_As_UE:
   title: “挨”韵转“锅”（唇声母后，赅鼻化、喉塞）
   note: 潮安北部、饶平北部等少数语音点发生的变化。
   desc: "唇音后 {oi} → {ue}; {oinn} → {uenn}; {oih} → {ueh}"
+  ipa: "*-oi > -ue; *-õĩ > -ũẽ; *-oiʔ > -ueʔ"
   eg: [买,办,八]
   act:
   - initial+final/^(p|ph|m|b)oi(nn|h|nnh)?$/$1ue$2/
@@ -65,6 +74,7 @@ OU_As_AU:
   title: “乌”韵转“欧”（赅鼻化、喉塞）
   note: 陆丰三甲等地的语音。
   desc: "{ou} → {au}; {ounn} → {aunn}; {ouh} → {auh}"
+  ipa: "*-ou > -au; -õũ > -ãũ; -ouʔ > -auʔ"
   eg: [乌,雨,虎]
   act:
   - final/^ou(nn|h|nnh)?$/au$1/
@@ -72,6 +82,7 @@ UE_As_UEI:
   title: “锅”韵增生 [i] 尾（赅鼻化、入声）
   note: 陆丰三甲等地的语音。
   desc: "{ue} → {uei}; {uenn} → {ueinn}; {uek} → {ueik}; {ueh} → {ueih}"
+  ipa: "*-ue > -uei; *-ũẽ > -ũẽĩ; *-uek̚  > -ueik̚ ; *-ueʔ > -ueiʔ"
   eg: [花,划,横]
   act:
   - final/^ue(k|nn|h|nnh)?$/uei$1/
@@ -79,6 +90,7 @@ UE_As_OI:
   title: “锅”韵转“挨”（赅鼻化、喉塞）
   note: 陆丰三甲新派音。
   desc: "{ue} → {oi}; {uenn} → {oinn}; {ueh} → {oih}"
+  ipa: "*-ue > -oi; *-ũẽ > -õĩ; *-ueʔ > -oiʔ"
   eg: [花,划,横]
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
@@ -86,6 +98,7 @@ HN_As_HNG:
   title: “欣”“尹”韵声化
   note: 潮州府城音。
   desc: "音节 {hn} → {hng}; {n} → {ng}"
+  ipa: "*hn̍ > ŋ̊ŋ̍; *n̍ > ŋ̍"
   eg: [欣,勋,尹]
   act:
   - initial+final/^(h?)n$/$1ng/
@@ -93,6 +106,7 @@ HN_As_HURN:
   title: “很”“欣”同韵
   note: 仅为区分潮州府音“很”“欣”、“隐”“尹”韵母的不同而设。
   desc: "{n} → {urn}"
+  ipa: "*-n̍ > ɯn"
   eg: [欣,勋,尹]
   act:
   - final/^n$/urn/
@@ -100,6 +114,7 @@ URN_As_IN:
   title: “隐”韵转“因”（赅入声）
   note: 练江腔语音。注：读喉塞的“乞”也归此规则。
   desc: "{urn} → {in}; {urt} → {it}"
+  ipa: "*-ɯn > -in; *-ɯt̚  > -it̚ "
   eg: [仅,斤,勤]
   act:
   - final/^ur(n|t|h)$/i$1/
@@ -107,6 +122,7 @@ IURN_As_IN:
   title: “彬”韵取文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取文读层读音。
   desc: "{iurn} → {in}; {iurt} → {it}"
+  ipa: "*-iɯn > -in; *-iɯt̚  > -it̚ "
   eg: [彬,镇,吉]
   act:
   - final/^iur(n|t)$/i$1/
@@ -114,6 +130,7 @@ IURN_As_IAN:
   title: “彬”韵取白读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取白读层读音。
   desc: "{iurn} → {ian}; {iurt} → {iat}"
+  ipa: "*-iɯn > -ian; *-iɯt̚  > -iat̚ "
   eg: [彬,镇,吉]
   act:
   - final/^iur(n|t)$/ia$1/
@@ -121,6 +138,7 @@ IURM_As_IAM:
   title: “森”韵转“奄”
   note: 潮州、汕头、澄海等地的主流音。
   desc: "{iurm} → {iam}"
+  ipa: "*-iɯm > -iam"
   eg: [森,参,簪]
   act:
   - final/^iurm$/iam/
@@ -128,6 +146,7 @@ IURM_As_OM:
   title: “森”韵圆唇
   note: 饶平和潮安北部等地语音。
   desc: "{iurm} → {om}"
+  ipa: "*-iɯm > -om"
   eg: [森,参,簪]
   act:
   - final/^iurm$/om/
@@ -135,6 +154,7 @@ IURM_As_ONN:
   title: “森”韵圆唇并鼻化
   note: 达濠等地语音。
   desc: "{iurm} → {onn}"
+  ipa: "*-iɯm > -õ"
   eg: [森,参,簪]
   act:
   - final/^iurm$/onn/
@@ -142,6 +162,7 @@ IURM_As_IM:
   title: “森”韵丢失主元音，转“音”
   note: 榕江腔、练江腔语音。
   desc: "{iurm} → {im}"
+  ipa: "*-iɯm > -im"
   eg: [森,参,簪]
   act:
   - final/^iurm$/im/
@@ -149,6 +170,7 @@ IN_As_EN:
   title: “因”韵低化（赅入声）
   note: 揭阳标志性语音。
   desc: "{in} → {en}; {it} → {et}"
+  ipa: "*-in > -en; *-it̚  > -et̚ "
   eg: [新,一,七]
   act:
   - final/^i(n|t)$/e$1/
@@ -156,6 +178,7 @@ UENG_As_ENG:
   title: “荣”韵丢失介音，转“英”（所有情况）
   note: 潮安凤凰语音。
   desc: "所有 {ueng} → {eng}"
+  ipa: "*-ueŋ > -eŋ"
   eg: [莹,顷,耿]
   act:
   - final/^ueng/eng/
@@ -163,6 +186,7 @@ UENG_As_ENG_UANG:
   title: “荣”韵低化，转“汪”（赅入声，但零声母舒声时转“英”）
   note: 韩江腔的语音。
   desc: "零声母 {ueng} → {eng}, 其他声母 {ueng} → {uang}; {uek} → {uak}"
+  ipa: "*-ueŋ > -eŋ; *-ueŋ > -uaŋ; *-uek̚  > -uak̚"
   eg: [莹,顷,获]
   act:
   - initial+final/^(k|kh|ng|g|h)ueng$/$1uang/
@@ -172,6 +196,7 @@ IUONG_As_UENG:
   title: “荣”韵取旧文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。
   desc: "{iuong} → {ueng}; {iuok} → {uek}"
+  ipa: "*-yoŋ > -ueŋ; *-yok̚ > -uek̚"
   eg: [永,荣,域]
   act:
   - final/^iuo(ng|k)$/ue$1/
@@ -179,6 +204,7 @@ IUONG_As_IONG:
   title: “荣”韵取新文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取新文读层读音。
   desc: "{iuong} → {iong}; {iuok} → {iok}"
+  ipa: "*-yoŋ > -ioŋ; *-yok̚ > -iok̚"
   eg: [永,荣,域]
   act:
   - final/^iuo(ng|k)$/io$1/
@@ -186,20 +212,23 @@ IO_As_IE:
   title: “腰”韵前化（赅鼻化、喉塞）
   note: 潮州、澄海等地语音。
   desc: "{io} → {ie}; {ionn} → {ienn}; {ioh} → {ieh}"
+  ipa: "*-io > -ie; *-ĩõ > -ĩẽ; *-ioʔ > -ieʔ"
   eg: [腰,羊,药]
   act:
   - final/^io(nn|h|nnh)?$/ie$1/
 IAU_As_IEU:
   title: “妖”韵高化（赅鼻化、喉塞）
   note: 府城特色语音。
-  desc: "{iau} → {ieu}"
+  desc: "{iau} → {ieu}; {iaunn} → {ieunn}; {iauh} → {ieuh}; {iaunnh} → {ieunnh}"
+  ipa: "*-iau > -ieu; *-ĩãũ > -ĩẽũ; *-iauʔ > -ieuʔ; *-ĩãũʔ > -ĩẽũʔ"
   eg: [妖,晓,跃]
   act:
   - final/^iau(nn|h|nnh)?$/ieu$1/
 IAU_As_IOU:
   title: “妖”韵圆唇（赅鼻化、喉塞）
   note: 澄海、汕头等地语音。
-  desc: "{iau} → {iou}"
+  desc: "{iau} → {iou}; {iaunn} → {iounn}; {iauh} → {iouh}; {iaunnh} → {iounnh}"
+  ipa: "*-iau > -iou; *-ĩãũ > -ĩõũ; *-iauʔ > -iouʔ; *-ĩãũʔ > -ĩõũʔ"
   eg: [妖,晓,跃]
   act:
   - final/^iau(nn|h|nnh)?$/iou$1/
@@ -207,6 +236,7 @@ IAN_As_IEN:
   title: “嫣”韵前化（赅入声）
   note: 府城特色语音。
   desc: "{ian} → {ien}; {iat} → {iet}"
+  ipa: "*-ian > -ien; *-iat̚  > -iet̚"
   eg: [坚,仙,设]
   act:
   - final/^ia(n|t)$/ie$1/
@@ -214,6 +244,7 @@ IEN_As_EN:
   title: “嫣”韵前化后介音丢失（赅入声）
   note: 潮安凤凰新派语音。
   desc: "{ien} → {en}; {iet} → {et}"
+  ipa: "*-ien > -en; *-iet̚  > -et̚"
   eg: [坚,仙,设]
   act:
   - final/^ie(n|t)$/e$1/
@@ -221,6 +252,7 @@ UAN_As_UEN:
   title: “冤”韵高化（赅入声）
   note: 府城特色语音。
   desc: "{uan} → {uen}; {uat} → {uet}"
+  ipa: "*-uan > -uen; *-uat̚  > -uet̚"
   eg: [关,选,决]
   act:
   - final/^ua(n|t)$/ue$1/
@@ -228,6 +260,7 @@ IAM_As_IEM:
   title: “奄”韵高化（赅入声）
   note: 府城特色语音。
   desc: "{iam} → {iem}; {iap} → {iep}"
+  ipa: "*-iam > -iem; *-iap̚  > -iep̚ "
   eg: [盐,甜,压]
   act:
   - final/^ia(m|p)$/ie$1/
@@ -235,6 +268,7 @@ UAM_As_UEM:
   title: “凡”韵高化（赅入声）
   note: 备用。目前阳声韵存在高化现象的各地（以潮州为典型），此韵听感没有特别高。
   desc: "{uam} → {uem}; {uap} → {uep}"
+  ipa: "*-uam > -uem; *-uap̚  > -uep̚ "
   eg: [凡,范,法]
   act:
   - final/^ua(m|p)$/ue$1/
@@ -242,6 +276,7 @@ N_As_L_ForMEnding:
   title: 闭口阳声韵前声母“娜”转“罗”
   note: 府城老派特色音，潮剧严格遵从此规则。
   desc: "m 尾阳声韵前声母 {n} → {l}"
+  ipa: "*n- > *l-"
   eg: [男,南,念]
   act:
   - initial+final/^n((a|o|ur|or|e|i|u)+)m$/l$1m/
@@ -249,6 +284,7 @@ L_As_N_ForMEnding:
   title: 闭口阳声韵前声母“罗”转“娜”
   note: 澄海特色语音，且这条规则还会叠加丢失闭口阳声韵的规则。
   desc: "m 尾阳声韵前声母 {l} → {n}"
+  ipa: "*l- > n-"
   eg: [蓝,林,帘]
   act:
   - initial+final/^l((a|o|ur|or|e|i|u)+)m$/n$1m/
@@ -256,6 +292,7 @@ L_As_N_For_NN_NG:
   title: 鼻化韵、声化韵前声母“罗”转“娜”
   note: 潮汕大部分地区语音，海外有保留不变的（例如柬埔寨金边等地）。
   desc: "鼻化韵、声化韵前声母 {l} → {n}"
+  ipa: "*l- > n-"
   eg: [领,篮,郎]
   act:
   - initial+final/^l((a|o|ur|or|e|i|u)+nn'?|ng)$/n$1/
@@ -263,6 +300,7 @@ MU_As_BU_ForNasalEnding:
   title: 合口呼阳声韵前声母“毛”去鼻化
   note: 韩江腔老派音，年轻一代受普通话影响，可能又会恢复鼻声母。
   desc: "阳声韵前声母 {mu} → {bu}"
+  ipa: "*mu- > bu-"
   eg: [漫,闷,曼]
   act:
   - initial+final/^mu((a|o|ur|or|e|i|u)+)(n|ng)$/bu$1$3/
@@ -270,6 +308,7 @@ BU_As_MU_ForNasalEnding:
   title: 合口呼阳声韵前声母“无”鼻化
   note: 饶平等地语音。
   desc: "阳声韵前声母 {bu} → {mu}"
+  ipa: "*bu- > mu-"
   eg: [万,亡,文]
   act:
   - initial+final/^bu((a|o|ur|or|e|i|u)?)(n|ng)$/mu$1$3/
@@ -277,6 +316,7 @@ ENG_As_EN:
   title: “英”韵韵尾变抵腭（赅入声）
   note: 丰顺𨻧隍特色语音。
   desc: "{eng} → {en}; {ek} → {et}"
+  ipa: "*-eŋ > -en; *-ẽk̚  > -et̚"
   eg: [清,升,色]
   act:
   - final/^eng$/en/
@@ -286,6 +326,7 @@ N_As_NG:
   title: 丢失所有抵腭韵（所有舌尖韵尾并入舌根韵尾）
   note: 以潮州、汕头为中心的一大片区域内的口音。目前仅余外围少部分地区不同程度保留抵腭韵。（如需逐韵母调整保留情况，请用各抵腭韵的转换规则）
   desc: "所有舌尖韵尾并入舌根韵尾"
+  ipa: "*-n > -ŋ; *-t̚  > -k̚"
   eg: [仙,新,杰]
   act:
   - final/^((a|o|ur|or|e|i|u)+)n$/$1ng/
@@ -295,6 +336,7 @@ M_As_NG:
   title: 丢失所有闭口韵（所有闭口韵尾并入舌根韵尾）
   note: 以潮州、澄海为中心的一小片区域内的口音。澄海基本已经完全丢失闭口韵，潮州年轻一代也在逐渐丢失。
   desc: "所有闭口韵尾并入舌根韵尾"
+  ipa: "*-m > -ŋ; *-p̚  > -k̚"
   eg: [心,针,十]
   act:
   - final/^((a|o|ur|or|e|i|u)+)m$/$1ng/
@@ -304,6 +346,7 @@ M_As_NG:
 IM_As_ING:
   title: “音”韵韵尾丢闭口（赅入声）
   desc: "{im} → {ing}; {ip} → {ik}"
+  ipa: "*-im > -iŋ; *-ip̚  > -ik̚"
   eg: [心,金,级]
   act:
   - final/^im$/ing/
@@ -311,6 +354,7 @@ IM_As_ING:
 IN_As_ING:
   title: “因”韵韵尾丢抵腭（赅入声）
   desc: "{in} → {ing}, {en} → {eng}; {it} → {ik}, {et} → {ek}"
+  ipa: "*-in > -iŋ; *-en > -eŋ; *-it̚  > -ik̚; *-et̚  > -ek̚"
   eg: [新,因,七]
   act:
   - final/^(i|e)n$/$1ng/
@@ -318,6 +362,7 @@ IN_As_ING:
 URN_As_URNG:
   title: “隐”韵韵尾丢抵腭（赅入声）
   desc: "{urn} → {urng}; {urt} → {urk}"
+  ipa: "*-ɯn > -ɯŋ; *-ɯt̚  > -ɯk̚"
   eg: [根,勤,乞]
   act:
   - final/^urn$/urng/
@@ -325,6 +370,7 @@ URN_As_URNG:
 UN_As_UNG:
   title: “温”韵韵尾丢抵腭（赅入声）
   desc: "{un} → {ung}; {ut} → {uk}"
+  ipa: "*-un > -uŋ; *-ut̚  > -uk̚"
   eg: [存,尊,骨]
   act:
   - final/^un$/ung/
@@ -332,6 +378,7 @@ UN_As_UNG:
 AM_As_ANG:
   title: “庵”韵韵尾丢闭口（赅入声）
   desc: "{am} → {ang}; {ap} → {ak}"
+  ipa: "*-am > -aŋ; *-ap̚  > -ak̚"
   eg: [甘,惨,十]
   act:
   - final/^am$/ang/
@@ -339,6 +386,7 @@ AM_As_ANG:
 AN_As_ANG:
   title: “安”韵韵尾丢抵腭（赅入声）
   desc: "{an} → {ang}; {at} → {ak}"
+  ipa: "*-an > -aŋ; *-at̚  > -ak̚"
   eg: [牵,班,达]
   act:
   - final/^an$/ang/
@@ -346,6 +394,7 @@ AN_As_ANG:
 IAM_As_IANG:
   title: “奄”韵韵尾丢闭口（赅入声）
   desc: "{iam} → {iang}, {iem} → {ieng}; {iap} → {iak}, {iep} → {iek}"
+  ipa: "*-iam > -iaŋ; *-iem > -ieŋ; *-iap̚  > -iak̚; *-iep̚  > -iek̚"
   eg: [咸,甜,涩]
   act:
   - final/^i(a|e)m$/i$1ng/
@@ -353,6 +402,7 @@ IAM_As_IANG:
 IAN_As_IANG:
   title: “嫣”韵韵尾丢抵腭（赅入声）
   desc: "{ian} → {iang}, {ien} → {ieng}; {iat} → {iak}, {iet} → {iek}"
+  ipa: "*-ian > -iaŋ; *-ien > -ieŋ; *-iat̚  > -iak̚; *-iet̚  > -iek̚"
   eg: [仙,电,设]
   act:
   - final/^i(a|e)n$/i$1ng/
@@ -360,6 +410,7 @@ IAN_As_IANG:
 UAM_As_UANG:
   title: “凡”韵韵尾丢闭口（赅入声）
   desc: "{uam} → {uang}; {uap} → {uak}"
+  ipa: "*-uam > -uaŋ; *-uap̚  > -uak̚"
   eg: [凡,范,法]
   act:
   - final/^u(a|e)m$/u$1ng/
@@ -367,6 +418,7 @@ UAM_As_UANG:
 UAN_As_UANG:
   title: “冤”韵韵尾丢抵腭（赅入声）
   desc: "{uan} → {uang}, {uen} → {ueng}; {uat} → {uak}, {uet} → {uek}"
+  ipa: "*-uan > -uaŋ; *-uen > -ueŋ; *-uat̚  > -uak̚; *-uet̚  > -uek̚"
   eg: [弯,管,阅]
   act:
   - final/^u(a|e)n$/u$1ng/
@@ -375,6 +427,7 @@ K_As_H:
   title: 舌根入声韵尾并入喉塞韵尾
   note: 陆丰三甲新派音。
   desc: "舌根入声韵尾并入喉塞韵尾"
+  ipa: "*-k̚  > -h̚"
   eg: [恶,角,博]
   act:
   - final/^(.+)k$/$1h/
@@ -382,6 +435,7 @@ NG_As_UNG:
   title: 唇音声母后“秧”增生圆唇元音
   note: 潮州、澄海、汕头等地语音。
   desc: "唇音声母后 {ng} → {ung}"
+  ipa: "*-ŋ > -uŋ"
   eg: [本,饭,问]
   act:
   - initial+final/^(p|ph|m)ng$/$1ung/
@@ -389,6 +443,7 @@ NG_As_URNG:
   title: 非“何”声母、非零声母“秧”增生不圆唇元音
   note: 潮州、澄海、汕头等地，一般该韵中有一个比较明显的元音，并且与“恩”韵丢抵腭后的韵母合并。而部分地区此韵母元音可能极短，但元音长短在潮汕地区并不构成对立。为方便起见，辞典统一采用此规则转换各地口音。
   desc: "非 hng ng 音节 {ng} → {urng}"
+  ipa: "*-ŋ > -ɯŋ"
   eg: [汤,酸,郎]
   act:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)ng$/$1urng/
@@ -396,6 +451,7 @@ URNG_As_NG:
   title: 非“何”声母、非零声母“恩”“秧”声化
   note: 备用。为方便起见，辞典中的各地口音采用统一添上元音的写法。
   desc: "非 hurng urng 音节 {urng} → {ng}"
+  ipa: "*-ɯŋ > -ŋ"
   eg: [汤,酸,郎]
   act:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)urng$/$1ng/
@@ -403,6 +459,7 @@ IONG_As_ONG:
   title: 齿音声母后“雍”韵丢失介音（“而”声母、“畜”声旁除外，赅入声）
   note: 韩江、榕江腔语音，练江腔此韵亦受影响变得不稳定，潮阳等地新派倾向于丢失介音。
   desc: "“而”声母、“畜”声旁除外，齿音声母后 {iong} → {ong}"
+  ipa: "*-ioŋ > -oŋ; *-iok̚  > -ok̚ "
   eg: [中,从,续]
   act:
   - initial+final/^(t|th|n|l|ts|tsh|s)iong$/$1ong/
@@ -411,6 +468,7 @@ JIONG_As_JONG:
   title: “而”声母后“雍”韵丢失介音（赅入声）
   note: 韩江腔语音。
   desc: "“而”声母后 {iong} → {ong}"
+  ipa: "*dzioŋ > dzoŋ; *dziok̚  > dzok̚"
   eg: [绒,茸,褥]
   act:
   - initial+final/^jio(ng|k)$/jo$1/
@@ -418,6 +476,7 @@ IAM_As_IORNG:
   title: “奄”韵韵尾丢闭口且主元音央化（赅入声）
   note: 潮州府城、澄海盐鸿等地新派音。
   desc: "{iam} → {iorng}; {iap} → {iork}"
+  ipa: "*-iam > -iəŋ; *-iap̚  > -iək̚"
   eg: [严,森,粒]
   act:
   - final/^iam$/iorng/
@@ -426,6 +485,7 @@ IAM_As_IONG:
   title: “奄”韵韵尾丢闭口且主元音圆唇化（赅入声）
   note: 潮州府城、澄海盐鸿等地新派音。
   desc: "{iam} → {iong}; {iap} → {iok}"
+  ipa: "*-iam > -ioŋ; *-iap̚  > -iok̚"
   eg: [严,森,粒]
   act:
   - final/^iam$/iong/
@@ -434,6 +494,7 @@ NGU_As_U:
   title: “娱”音节丢失声母
   note: 韩江、榕江腔主流语音。
   desc: "音节 {ngu} → {u}"
+  ipa: "*ŋu > u"
   eg: [娱,五,吴]
   act:
   - initial+final/^ngu$/u/

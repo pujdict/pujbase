@@ -28,6 +28,7 @@ message FuzzyRuleDescriptor {
   repeated string examples = 5;
   string title = 6;
   string note = 7;
+  string ipa = 8;
 }
 
 message Tones {
