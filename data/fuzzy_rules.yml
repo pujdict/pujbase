@@ -106,7 +106,7 @@ HN_As_HURN:
   title: “很”“欣”同韵
   note: 仅为区分潮州府音“很”“欣”、“隐”“尹”韵母的不同而设。
   desc: "{n} → {urn}"
-  ipa: "*-n̍ > ɯn"
+  ipa: "*-n̍ > -ɯn"
   eg: [欣,勋,尹]
   act:
   - final/^n$/urn/
@@ -316,7 +316,7 @@ ENG_As_EN:
   title: “英”韵韵尾变抵腭（赅入声）
   note: 丰顺𨻧隍特色语音。
   desc: "{eng} → {en}; {ek} → {et}"
-  ipa: "*-eŋ > -en; *-ẽk̚  > -et̚"
+  ipa: "*-eŋ > -en; *-ek̚  > -et̚"
   eg: [清,升,色]
   act:
   - final/^eng$/en/
