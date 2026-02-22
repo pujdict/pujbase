@@ -95,21 +95,29 @@ UE_As_OI:
   act:
   - final/^ue(nn|h|nnh)?$/uei$1/
 HN_As_HNG:
-  title: “欣”“尹”韵声化
+  title: “欣”韵声化
   note: 潮州府城音。
-  desc: "音节 {hn} → {hng}; {n} → {ng}"
+  desc: "音节 {hn} → {hng}"
   ipa: "*hn̍ > ŋ̊ŋ̍; *n̍ > ŋ̍"
   eg: [欣,勋,尹]
   act:
   - initial+final/^(h?)n$/$1ng/
 HN_As_HURN:
   title: “很”“欣”同韵
-  note: 仅为区分潮州府音“很”“欣”、“隐”“尹”韵母的不同而设。
-  desc: "{n} → {urn}"
-  ipa: "*-n̍ > -ɯn"
+  note: 仅为区分潮州府音“很”“欣”韵母的不同而设。
+  desc: "音节 {hn} → {hurn}"
+  ipa: "*hn̍ > hɯn"
   eg: [欣,勋,尹]
   act:
   - final/^n$/urn/
+URN_As_NG:
+  title: “恩”韵转“秧”（仅零声母）
+  note: 潮州市区周边部分地区（府城以外）的语音。
+  desc: "{urn} → {ng}"
+  ipa: "*n̍ > ŋ̍"
+  eg: [恩,尹,隐]
+  act:
+  - initial+final/^urn$/ng/
 URN_As_IN:
   title: “隐”韵转“因”（赅入声）
   note: 练江腔语音。注：读喉塞的“乞”也归此规则。
