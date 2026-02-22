@@ -48,7 +48,7 @@ OINN_As_AINN:
   - final/^oinn$/ainn/
 UOINN_As_UINN:
   title: “县”韵去主元音
-  note: 韩江腔语音。
+  note: 韩江、榕江腔语音。
   desc: "{uoinn} → {uinn}"
   ipa: "*-ũõĩ > -ũĩ"
   eg: [县,悬,惯]
@@ -56,7 +56,7 @@ UOINN_As_UINN:
   - final/^uoinn$/uinn/
 UOINN_As_UAINN:
   title: “县”韵前化
-  note: 榕江、练江腔语音。
+  note: 练江腔语音。
   desc: "{uoinn} → {uainn}"
   ipa: "*-ũõĩ > -ũãĩ"
   eg: [县,悬,惯]
