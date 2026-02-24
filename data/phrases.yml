@@ -1403,6 +1403,7 @@
 - 拍蕊|phah4-lui2|长出蓓蕾||竹木花卉:
 
 
+# ################ 原创词库 ################
 # -------------------------- 动物 ANIMALS --------------------------
 - 动物|tong6-mueh8||n|动物:
 - 牲牲|tseng1-senn1|牲畜/畜牲|n|动物:
@@ -1596,8 +1597,10 @@
 - 虾米|he5-bi2||n|水产:
 - 虾蛄/虾姑|he5-kou1|皮皮虾|n|水产:
 - 鱿鱼|jiu5-hur5||n|水产:
-- 染/饵|ninn2/ni2||n|水产:
-- 猴染|kau5-ninn2/kau5-ni2||n|水产:
+- 染/饵|ninn2/ni2|鱿鱼|n|水产:
+- 猴染|kau5-ninn2/kau5-ni2|鱿鱼|n|水产:
+- 猪母伯|tur1-bo2-peh4|章鱼|n|水产:
+- 猴水|kau5-tsui2|章鱼|n|水产:
 - 墨斗|bak8-tau2|乌贼|n|水产:
 - 鱼子|hur5-tsi2||n|水产:
 - 鱼春|hur5-tshun1||n|水产:
@@ -1621,6 +1624,7 @@
 - 薄壳米|poh8-khak4-bi2||n|水产:
 - 红肉|ang5-nek8|红肉河蓝蛤|n|水产:
 - 红肉米|ang5-nek8-bi2||n|水产:
+- 大头|tua7-thau5|大头蛏|n|水产:
 - 紫菜|tsi2-tshai3||n|水产:
 - 龙须菜|leng5-tsheu1-tshai3||n|水产:
 - 海带|hai2-tua3||n|水产:
@@ -1654,6 +1658,7 @@
     desc: 原意西米，讹为玉米
 - 荷兰豆|ho5-lan1-tau7|豌豆|n|蔬菜:
 - 青豆|tshenn1-tau7|豌豆|n|蔬菜:
+- 稚豆|tsinn'2-tau7|豌豆|n|蔬菜:
 - 白菜|peh8-tshai3||n|蔬菜:
 - 西兰花|sai1-lan5-hue1||n|蔬菜:
 - 菜花|tshai3-hue1|花菜|n|蔬菜:
@@ -1661,12 +1666,14 @@
 - 白菜头|peh8-tshai3-thau5|白萝卜|n|蔬菜:
 - 红菜头|ang5-tshai3-thau5|红萝卜|n|蔬菜:
 - 芥蓝|khah4-lann5||n|蔬菜:
+- 芥蓝笋|khah4-lann5-sun2||n|蔬菜:
 - 芥蓝花|khah4-lann5-hue1|芥蓝|n|蔬菜:
 - 番茄|huan1-kio5||n|蔬菜:
 - 西红柿|sai1-ang5-sai6||n|蔬菜:
 - 菠菱|pue1-leng5|菠菜|n|蔬菜:
 - 蕹菜|eng3-tshai3|空心菜|n|蔬菜:
 - 韭菜|ku1-tshai3||n|蔬菜:
+- 韭菜花|ku1-tshai3-hue1||n|蔬菜:
 - 高丽|ko1-le6|包菜|n|蔬菜:
 - 高丽蕾|ko1-le6-lui5|包菜|n|蔬菜:
 - 葱|tshang1||n|蔬菜:
@@ -1736,6 +1743,7 @@
 - 高丽|kau1-li5|高丽参/人参|n|蔬菜:
 - 人参|jin5-siurm1||n|蔬菜:
 - 洋参|ionn5-siurm1||n|蔬菜:
+- 田七|tshan5-tshit4||n|蔬菜:
 
 # -------------------------- 水果 FRUITS --------------------------
 - 青果|tshenn1-kue2|水果|n|水果:
@@ -1805,6 +1813,7 @@
 - 猪肉丸|tur5-nek8-inn5||n|特产:
 - 墨斗丸|bak8-tau2-inn5||n|特产:
 - 胡椒丸|hou5-tsio1-inn5||n|特产:
+- 猪肚丸|tur1-tou6-inn5||n|特产:
 - 丸|inn5|肉丸|n|特产:
 - 牛肉粿条|gu5-nek8-kue2-tiau5||n|特产:
 - 粿条|kue2-tiau5||n|特产:
@@ -1819,12 +1828,25 @@
 - 炒米粉|tsha2-bi2-hun2||n|特产:
 - 面|minn7|面/面条|n|特产:
 - 炒面|tsha2-minn7||n|特产:
+- 干面|ta1-minn7||n|特产:
+- 干粿|ta1-kue2|干粿条|n|特产:
 - 面汤|minn7-thng1||n|特产:
 - 面薄|minn7-poh8|扁面|n|特产:
 - 尖米圆|tsiam1-bi2-inn5||n|特产:
 - 火锅|hue2-ue1||n|特产:
 - 牛肉火锅|gu5-nek8-hue2-ue1||n|特产:
-- 薯粉|tsur5-hun2||n|特产:
+- 牛肉|gu5-nek8||n|特产:
+- 吊龙|tiau3-leng5||n|特产:
+- 脚趾|kha1-tsi2||n|特产:
+- 肥胼|pui5-phiann1||n|特产:
+- 雪花|sorh4-hue1||n|特产:
+- 五花趾|ngou2-hue1-tsi1||n|特产:
+- 三花趾|sann1-hue1-tsi1||n|特产:
+- 牛腩|gu5-nam5||n|特产:
+- 牛舌|gu5-tsih8||n|特产:
+- 牛鞭|gu5-pian1||n|特产:
+- 胸口𦛨|heng1-khau2-la5||n|特产:
+- 薯粉|tsur5-hun2|淀粉|n|特产:
 - 杂粮|tsap8-lionn5||n|特产:
 - 粿|kue2|粿/糕|n|特产:
     desc: 潮汕本地各种糕点类小吃称呼的后缀，也作为统称。
@@ -1858,6 +1880,7 @@
 - 包笋|pau1-sun2|笋馅|n|特产:
 - 包菜|pau1-tshai3|蔬菜馅|n|特产:
 - 包韭菜|pau1-ku1-tshai3|韭菜馅|n|特产:
+- 豆花|tau7-hue1||n|特产:
 - 草粿|tshau2-kue2|烧仙草|n|特产:
 - 甜粿|tiam5-kue2||n|特产:
 - 发粿|huat4-kue2||n|特产:
@@ -1920,6 +1943,9 @@
 - 味精|bi7-tseng1||n|特产:
 - 醋|tshou3||n|特产:
 - 盐|iam5||n|特产:
+- 油|iu5||n|特产:
+- 米|bi2||n|特产:
+- 小米|siau2-bi2||n|特产:
 - 鸡精|koi1-tseng1||n|特产:
 - 蒜泥醋|sng3-ni5-tshou3||n|特产:
 - 浙醋|tsit4-tshou3||n|特产:
@@ -1930,7 +1956,8 @@
 - 臊汤|tsho1-thng1|鱼露|n|特产:
 - 沙茶|sa1-te5||n|特产:
 - 红莶|ang5-hiam1|红辣酱|n|特产:
-- 三渗酱|sann1-siam1-tsionn3/sann1-tsham1-tsionn3||n|特产:
+- 乌莶|ou1-hiam1|沙茶/沙茶酱|n|特产:
+- 三渗酱|sann1-siurm1-tsionn3/sann1-tsham1-tsionn3||n|特产:
 - 蒜头𦛨|sng3-thau5-la5|蒜头油|n|特产:
 - 葱珠𦛨|tshang1-tsu1-la5|葱花油|n|特产:
 - 豆酱|tau7-tsionn3||n|特产:
@@ -1943,6 +1970,8 @@
 - 米糍/米𬖞/米钱|bi2-tsinn'5||n|特产:
 - 落汤糍/落汤𬖞/落汤钱|loh8-thng1-tsinn'5||n|特产:
 - 肠粉|tng5-hun2||n|特产:
+- 小米|sio2-bi2|烧麦|n|饮食起居:
+    desc: 潮式烧麦，不同于北方米馅的烧麦，馅料一般是鱼虾、蔬菜。
 - 饺|kiau2|饺子|n|特产:
 - 笋饺|sun2-kiau2||n|特产:
 - 春卷|tshun1-kng2||n|特产:
@@ -1987,6 +2016,8 @@
 - 工夫茶|kang1-hu1-te5||n|特产:
 - 金含|kim1-kam5|糖果|n|特产:
 - 物食|mueh8-tsiah8|零食|n|特产:
+- 点心|tiam2-sim1||v/n|特产:
+- 啖糁|tam6-sam2|点心|v/n|特产:
 - 糖|thng5||n|特产:
 - 黑糖/乌糖|ou1-thng5|黑糖/红糖|n|特产:
 - 白糖|peh8-thng5||n|特产:
@@ -2027,6 +2058,7 @@
 - 单枞|tuann1-tsang5||n|特产:
 - 铁观音|thih4-kuan1-im1||n|特产:
 - 腐枝|hu7-ki1|腐竹|n|特产:
+- 肉皮|nek8-phue5||n|特产:
 - 豆干|tau7-kuann1||n|特产:
 - 烰豆干|phu5-tau7-kuann1|油炸豆干|n|特产:
 - 香腐|hiang1-hu7|腌豆干|n|特产:
@@ -2054,6 +2086,8 @@
 - 魔术油|mo5-sut8-iu5||n|特产:
 - 活络油|uah8-lok8-iu5||n|特产:
 - 风油精|huang1-iu5-tseng1||n|特产:
+- 双飞人|sang1-pue1-nang5||n|特产:
+- 平安膏|pheng5-an1-ko1||n|特产:
 - 王老吉|heng5-lau6-kit4||n|特产:
 - 杏仁露|heng6-jin5-lou3||n|特产:
 - 椰子汁|ia5-tsi2-tsap4||n|特产:
@@ -2614,6 +2648,11 @@
 - ＊＊＊|hur7-hur7-khiu7||o|拟声拟态/AAB:
     desc: 瑟瑟发抖的样子
 
+# -------------------------- 拟声拟态词 ABAB 式 --------------------------
+- ＊＊＊＊|ni3-tiu1-ni3-tiu1|笑眯眯|o|拟声拟态/ABAB:
+- ＊＊＊＊|la5-lun5-la5-lun5|(形容水温不冰凉、稍有温度)|o|拟声拟态/ABAB:
+- ＊＊＊＊|kah4-pang7-kah4-pang7|(温度、尺寸大小等)刚刚好|o|拟声拟态/ABAB:
+
 # -------------------------- 拟声拟态词 XX叫 式 --------------------------
 - ＊一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫:
 - ＊下叫|piang7 e6-kio3||o|拟声拟态/XX叫:
@@ -3085,7 +3124,7 @@
 #- 巩|||nr1|姓氏:
 #- 库|||nr1|姓氏:
 #- 聂|||nr1|姓氏:
-#- 晁|||nr1|姓氏:
+- 晁|tshau5||nr1|姓氏:
 #- 勾|||nr1|姓氏:
 #- 敖|||nr1|姓氏:
 - 融|iong5||nr1|姓氏:
@@ -3131,7 +3170,7 @@
 - 东方|tang1-huang1||nr1|姓氏:
 - 赫连|hek4-lian5||nr1|姓氏:
 - 皇甫|uang5-pou2||nr1|姓氏:
-- 尉迟|ut4-tshi5||nr1|姓氏:
+- 尉迟|ut4-tshi5/ue3-tshi5||nr1|姓氏:
 - 公羊|kong1-ionn5||nr1|姓氏:
 #- 澹台|||nr1|姓氏:
 #- 公冶|||nr1|姓氏:
@@ -3208,6 +3247,7 @@
 - 繁|po5||nr1|姓氏:
 - 岱|tor7||nr1|姓氏:
 - 召|siau6||nr1|姓氏:
+- 蚁|hiann'6||nr1|姓氏:
 
 # -------------------------- 人名 NAMES --------------------------
 # 党和国家领导人、近现代重要历史人物
@@ -3245,6 +3285,8 @@
 - 萨达姆|sat4-tat8-m2||nr|人名:
 - 叶利钦|iap8-li6-khin1/hiap8-li6-khin1||nr|人名:
 # 潮汕本地较有名的人名，包括艺名，民间传说中的人名
+- 林百欣|lim5-peh4-hurn1||nr|人名:
+- 李嘉诚|li2-kia1-seng5||nr|人名:
 - 陈四文|tan5-si3-bun5||nr|人名:
 - 许友文|khou2-iu2-bun5||nr|人名:
 - 方展荣|png1-tian2-iong5||nr|人名:
@@ -3260,6 +3302,7 @@
 - 李老三|li2-lau6-sam1||nr|人名:
     desc: 民间传说及改编潮剧《柴房会》中的男主人公
 - 水鸡兄|tsui2-koi1-hiann1||nr|人名:
+- 阿明|a1-meng5||nr|人名:
 # 历史人物，以及神话传说等虚构人物
 - 后羿|au6-ngi5/au6-ngi6||nr|人名:
 - 精卫|tseng1-ue6||nr|人名:
@@ -3319,6 +3362,7 @@
 - 哪吒|na5-tsa1/la5-tsa1||nr|人名:
 - 林冲|lim5-tshiong1||nr|人名:
 - 宋江|song3-kang1||nr|人名:
+- 晁盖|tshau5-kai3||nr|人名:
 - 武松|bu2-siong5||nr|人名:
 - 李逵|li2-khui5||nr|人名:
 - 史进|sai2-tsin3||nr|人名:
@@ -3411,7 +3455,7 @@
 - 桂林|kui3-lim5||ns|地名:
 - 溪美寨|khoi1-bue2-tse7||ns|地名:
 - 尚书|siang6-tsur1||ns|地名:
-- 意溪|oi3-khoi1||ns|地名:
+- 意溪|oih4-khoi1||ns|地名:
 # 潮安 参考文献 https://zhuanlan.zhihu.com/p/483780246
 - 崎头|kia6-thau5||ns|地名:
 - 孚中|pou1-tang1||ns|地名:
