@@ -1,5 +1,7 @@
 set -e
 
+pip install -e .
+
 bash generate_protobuf.sh
 pushd libpuj
   python3 generate_db.py
