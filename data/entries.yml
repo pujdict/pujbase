@@ -2802,11 +2802,12 @@
    th,oinn,2,3,0,:
     # 这是练江腔唯一一个 oinn 韵不变 ainn 的字，比较难特殊处理，目前先给这几个口音点全部写死
     aka_replace:
-     PuNing: th,oinn,2/kh,oinn,2
-     JieYang: th,oinn,2
-     ChaoYang: th,oinn,2/kh,oinn,2
-     HuiLai: th,oinn,2
-     LuFeng: th,oinn,2
+     PuNing_LiuSha: th,oinn,2/kh,oinn,2
+     JieYang_RongCheng: th,oinn,2
+     ChaoYang_DaHao: th,oinn,2
+     ChaoYang_MianCheng: th,oinn,2/kh,oinn,2
+     HuiLai_HuiCheng: th,oinn,2
+     LuFeng_SanJia: th,oinn,2
    th,i,3,2,3,:
 - 遞,递:
    t,i,5,3,0,:
@@ -7540,11 +7541,12 @@
    th,oinn,2,3,0,睇:
      # 这是练江腔唯一一个 oinn 韵不变 ainn 的字，比较难特殊处理，目前先给这几个口音点全部写死
     aka_replace:
-     PuNing: th,oinn,2/kh,oinn,2
-     JieYang: th,oinn,2
-     ChaoYang: th,oinn,2/kh,oinn,2
-     HuiLai: th,oinn,2
-     LuFeng: th,oinn,2
+     PuNing_LiuSha: th,oinn,2/kh,oinn,2
+     JieYang_RongCheng: th,oinn,2
+     ChaoYang_DaHao: th,oinn,2
+     ChaoYang_MianCheng: th,oinn,2/kh,oinn,2
+     HuiLai_HuiCheng: th,oinn,2
+     LuFeng_SanJia: th,oinn,2
    kh,an,3,2,3,:
    # 潮正
    kh,an,5,2,3,:
@@ -8403,6 +8405,8 @@
    l,i,6,2,0,:
    l,oinn',7,1,1,:
     "": [["荔果", "loinn'7-kue2", "荔枝"]]
+    aka_replace:
+     ChaoYang_MianCheng: n,ai,7/n,ainn,7/l,ai,7
 - 砅,砅:
    l,i,6,0,0,:
 - 俐,俐:
@@ -12485,7 +12489,7 @@
    s,iang,1,1,1,:
     "": [["桑垂", "siang1-sui5", "桑葚"]]
     aka_replace:
-     HuiLai: s,iong,1
+     HuiLai_HuiCheng: s,iong,1
 - 喪,丧:
    s,ang,3,2,0,:
    s,ang,1,2,3,:
@@ -13471,6 +13475,7 @@
    s,i,3,1,0,:
     aka:
      ChaoYang_MianCheng: s,ur,3
+     ChaoYang_DaHao: s,ur,3
    s,ur,3,2,3,:
 - 寺,寺:
    j,i,7,1,-1,:
