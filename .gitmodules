@@ -1,3 +1,3 @@
-[submodule "data/phrases/nonstd"]
-	path = data/phrases/nonstd
-	url = ../pujcorpora-nonstd
+[submodule "data/pujcorpora"]
+	path = data/pujcorpora
+	url = ../pujcorpora

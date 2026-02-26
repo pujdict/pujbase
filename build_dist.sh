@@ -1,5 +1,10 @@
 set -e
 
+# Pull the submodule in data/pujcorpora
+pushd data/pujcorpora
+  git submodule update --init .
+popd
+
 pip install -e .
 
 bash generate_protobuf.sh
