@@ -394,7 +394,6 @@ ShanTou_ShiQu:
     - IURM_As_IAM
     - UENG_As_ENG_UANG
     - IUONG_As_IONG
-    - IAU_As_IOU
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
     - N_As_NG
@@ -482,6 +481,7 @@ ChaoYang_DaHao:
     - OR_As_O
     - ORH_As_OH
     - EU_As_IU
+    - OINN_As_AINN
     - UOINN_As_UAINN
     - HN_As_HURN
     - URN_As_IN
