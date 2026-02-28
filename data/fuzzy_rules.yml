@@ -35,7 +35,7 @@ EU_As_IU:
   note: 这是潮汕大部分语音点的语音，今天仅剩潮安北部、饶平北部少数语音点保留该韵母。
   desc: "{eu} → {iu}"
   ipa: "*-eu > -iu"
-  eg: [初,梳,须]
+  eg: [初,梳,絮]
   act:
   - final/^eu$/iu/
 OINN_As_AINN:
