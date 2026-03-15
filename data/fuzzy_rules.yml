@@ -107,14 +107,14 @@ HN_As_HURN:
   note: 仅为区分潮州府音“很”“欣”韵母的不同而设。
   desc: "音节 {hn} → {hurn}"
   ipa: "*hn̍ > hɯn"
-  eg: [欣,勋,尹]
+  eg: [欣,勋,昕]
   act:
   - final/^n$/urn/
 URN_As_NG:
   title: “恩”韵转“秧”（仅零声母）
   note: 潮州市区周边部分地区（府城以外）的语音。
   desc: "{urn} → {ng}"
-  ipa: "*n̍ > ŋ̍"
+  ipa: "*ɯn > ŋ̍"
   eg: [恩,尹,隐]
   act:
   - initial+final/^urn$/ng/
@@ -417,8 +417,8 @@ IAN_As_IANG:
   - final/^i(a|e)t$/i$1k/
 UAM_As_UANG:
   title: “凡”韵韵尾丢闭口（赅入声）
-  desc: "{uam} → {uang}; {uap} → {uak}"
-  ipa: "*-uam > -uaŋ; *-uap̚  > -uak̚"
+  desc: "{uam} → {uang}; {uap} → {uak}; {uem} → {ueng}; {uep} → {uek}"
+  ipa: "*-uam > -uaŋ; *-uap̚  > -uak̚; *-uem > -ueŋ; *-uep̚  > -uek̚"
   eg: [凡,范,法]
   act:
   - final/^u(a|e)m$/u$1ng/
@@ -435,7 +435,7 @@ K_As_H:
   title: 舌根入声韵尾并入喉塞韵尾
   note: 陆丰三甲新派音。
   desc: "舌根入声韵尾并入喉塞韵尾"
-  ipa: "*-k̚  > -h̚"
+  ipa: "*-k̚  > -ʔ"
   eg: [恶,角,博]
   act:
   - final/^(.+)k$/$1h/
