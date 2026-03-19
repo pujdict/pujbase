@@ -1210,43 +1210,35 @@
 
 # -------------------------- 拟声拟态词 ONOMATOPOEIA --------------------------
 # -------------------------- 拟声拟态词 AAB 式 --------------------------
-- 嗷嗷呻|ngau7-ngau7-tshan1||o|拟声拟态/AAB:
-    desc: 低声呢喃的样子
-- 嗐嗐呻|hainn7-hainn7-tshan1||o|拟声拟态/AAB:
-    desc: 低声呢喃的样子
-- 滒滒溶|ko1-ko1-ionn5||o|拟声拟态/AAB:
-    desc: 黏黏糊糊的样子
-- 嗒嗒滴/哒哒滴|tap8-tap8-tih4/tat8-tat8-tih4||o|拟声拟态/AAB:
-    desc: 水滴不停的样子
-- 叨叨念|to7-to7-niam7||o|拟声拟态/AAB:
-    desc: 念念叨叨的样子
-- 烨烨烁|iap8-iap8-sih4||o|拟声拟态/AAB:
-    desc: 灯火忽明忽暗地闪烁的样子
-- 䀰䀰金|kok4-kok4-kim1||o|拟声拟态/AAB:
-    desc: 眼睛瞪大、炯炯有神的样子
-- ＊＊＊|tong6-tong6-hinn3||o|拟声拟态/AAB:
-    desc: 不停甩动的样子
-- ＊＊＊|niauh8-niauh8-nng3||o|拟声拟态/AAB:
-    desc: 蠕动的样子
-- ＊＊＊|huainnh8-huainnh8-soh4||o|拟声拟态/AAB:
-    desc: 心神不宁地动来动去的样子
-- ＊＊＊|lah8-lah8-so1||o|拟声拟态/AAB:
-    desc: 闲庭信步的样子
-- ＊＊＊|long6-long6-so6||o|拟声拟态/AAB:
-    desc: 游手好闲的样子
-- ＊＊＊|pha1-pha1-phin5||o|拟声拟态/AAB:
-    desc: 身体失去平衡的样子
-- ＊＊＊|phih8-phih8-puah8||o|拟声拟态/AAB:
-    desc: 摇摇欲坠的样子
-- ＊＊＊|lok4-lok4-khuann3||o|拟声拟态/AAB:
-    desc: 散装在容器中的物品相互撞击的样子
-- ＊＊＊|hur7-hur7-khiu7||o|拟声拟态/AAB:
-    desc: 瑟瑟发抖的样子
+- 嗷嗷呻|ngau7-ngau7-tshan1|嘀嘀咕咕(的样子)|o|拟声拟态/AAB:
+- 嗐嗐呻|hainn7-hainn7-tshan1|嘀嘀咕咕(的样子)|o|拟声拟态/AAB:
+- 滒滒溶|ko1-ko1-ionn5|湿湿黏黏(的样子)|o|拟声拟态/AAB:
+- 嗒嗒滴/哒哒滴|tap8-tap8-tih4/tat8-tat8-tih4|滴滴答答(水滴不停的样子)|o|拟声拟态/AAB:
+- 叨叨念|to7-to7-niam7|念念叨叨(的样子)|o|拟声拟态/AAB:
+- 烨烨烁|iap8-iap8-sih4|忽明忽暗(灯火地闪烁的样子)|o|拟声拟态/AAB:
+- 䀰䀰金|kok4-kok4-kim1|炯炯有神(眼睛瞪大的样子)|o|拟声拟态/AAB:
+- 卟卟溢|pok8-pok8-ek8|(盛水的容器在搬运时水晃动的声音)|o|拟声拟态/AAB:
+- ＊＊＊|tong6-tong6-hinn3|甩来甩去(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|niauh8-niauh8-nng3|钻来钻去(蠕动的样子)|o|拟声拟态/AAB:
+- ＊＊＊|huainnh8-huainnh8-soh4|动来动去(心神不宁的样子)|o|拟声拟态/AAB:
+- ＊＊＊|lah8-lah8-so1|闲庭信步(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|long6-long6-so6|游手好闲(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|pha1-pha1-phin5|(身体)失去平衡(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|phih8-phih8-puah8|(身体)摇摇欲坠(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|lok4-lok4-khuann3|哐哐当当(容器中的物品相互撞击的样子)|o|拟声拟态/AAB:
+- ＊＊＊|hur7-hur7-khiu7|瑟瑟发抖(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|hiau5-hiau5-leng1|神经兮兮(的样子)|o|拟声拟态/AAB:
+- ＊＊＊|pong6-pong6-tseng1|扑通扑通(心跳加速的样子)|o|拟声拟态/AAB:
 
 # -------------------------- 拟声拟态词 ABAB 式 --------------------------
 - ＊＊＊＊|ni3-tiu1-ni3-tiu1|笑眯眯|o|拟声拟态/ABAB:
+- 笑＊笑＊|tshio3-ni3-tshio3-ni3|笑嘻嘻|o|拟声拟态/ABAB:
 - ＊＊＊＊|la5-lun5-la5-lun5|(形容水温不冰凉、稍有温度)|o|拟声拟态/ABAB:
 - ＊＊＊＊|kah4-pang7-kah4-pang7|(温度、尺寸大小等)刚刚好|o|拟声拟态/ABAB:
+- 怪𡳞怪𡳞/怪浪怪浪|kuai3-lan6-kuai3-lan6|稀奇古怪(的样子)|o|拟声拟态/ABAB:
+- ＊＊＊＊|nap4-je6-nap4-je6|湿湿黏黏(的样子)|o|拟声拟态/ABAB:
+- ＊＊＊＊|kong5-long1-kong5-long1|晕晕乎乎(的样子)|o|拟声拟态/ABAB:
+- 斜＊＊斜＊＊|sia1-pho1-lo1-sia1-pho1-lo1|歪歪斜斜(的样子)|o|拟声拟态/ABAB:
 
 # -------------------------- 拟声拟态词 XX叫 式 --------------------------
 - ＊一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫:
@@ -1289,6 +1281,11 @@
 - 咕咕叫|ku6 ku6 kio3/ku7 ku7 kio3||o|拟声拟态/XX叫:
 - 叽咕叫|ki6 ku6 kio3/ki7 ku7 kio3||o|拟声拟态/XX叫:
 - 叽咕噜叫|ki6 ku6 lu6 kio3/ki7 ku7 lu8 kio3||o|拟声拟态/XX叫:
+- ＊一叫|pok4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|pok4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pok4 pok4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|pih4 pok4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 pok4 lok4 kio3||o|拟声拟态/XX叫:
 - 轰一叫|hong7 tsek8-kio3||o|拟声拟态/XX叫:
 - 轰下叫|hong7 e6-kio3||o|拟声拟态/XX叫:
 - 轰轰叫|hong7 hong7 kio3||o|拟声拟态/XX叫:
@@ -1344,6 +1341,16 @@
 - ＊＊叫|pauh4 pauh4 kio3||o|拟声拟态/XX叫:
 - ＊＊叫|pih4 pauh4 kio3||o|拟声拟态/XX叫:
 - ＊＊＊叫|pih4 pauh4 lauh4 kio3||o|拟声拟态/XX叫:
+- ＊一叫|he2 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|he2 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|he2 he2 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|hi2 he2 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|hi2 he2 le2 kio3||o|拟声拟态/XX叫:
+- ＊一叫|tiauh4 tsek8-kio3||o|拟声拟态/XX叫:
+- ＊下叫|tiauh4 e6-kio3||o|拟声拟态/XX叫:
+- ＊＊叫|tiauh4 tiauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊叫|tih4 tiauh4 kio3||o|拟声拟态/XX叫:
+- ＊＊＊叫|tih4 tiauh4 liauh4 kio3||o|拟声拟态/XX叫:
   
 # -------------------------- 姓氏 SURNAMES --------------------------
 # 百家姓序，其余特殊读音在最后补充。非常用姓氏如果字表的常用字音已能覆盖，这里就不额外写出了。
