@@ -44,6 +44,7 @@
 - 悲蝉|pi1-iam5|蝉|n|动物:
 - 草蜢|tshau2-menn2|蝗虫|n|动物:
 - 蜂|phang1||n|动物:
+- 蜜蜂|bit8-phang1||n|动物:
 - 水牛|tsui2-gu5||n|动物:
 - 羊|ionn5||n|动物:
 - 牛|gu5||n|动物:
@@ -221,7 +222,7 @@
 - 红肉米|ang5-nek8-bi2||n|水产:
 - 大头|tua7-thau5|大头蛏|n|水产:
 - 紫菜|tsi2-tshai3||n|水产:
-- 龙须菜|leng5-tsheu1-tshai3||n|水产:
+- 龙须菜|leng5-tshiu1-tshai3||n|水产:
 - 海带|hai2-tua3||n|水产:
 - 鲎|hau7||n|水产:
 - 蠘|tshih8|梭子蟹|n|水产:
@@ -243,7 +244,7 @@
 - 干筒/干茼|kan1-tang5|土豆/马铃薯|n|蔬菜:
     loan: 马来语/kentang
 - 番薯|huan1-tsur5||n|蔬菜:
-- 番葛|huan1-kuah4|红薯|n|蔬菜:
+- 番葛|huan1-kuah4/han1-kuah4|红薯|n|蔬菜:
 - 番葛叶|huan1-kuah4-hioh8|红薯叶|n|蔬菜:
 - 麦|beh8|小麦|n|蔬菜:
 - 薏米|i3-bi2|玉米|n|蔬菜:
@@ -251,7 +252,7 @@
 - 金黍米|kim1-seu2-bi2|玉米|n|蔬菜:
 - 硕莪米|sia5-ngo5-bi2|玉米|n|蔬菜:
     desc: 原意西米，讹为玉米
-- 荷兰豆|ho5-lan1-tau7|豌豆|n|蔬菜:
+- 荷兰豆|ho5-lan1-tau7/ho1-lian1-tau7|豌豆|n|蔬菜:
 - 青豆|tshenn1-tau7|豌豆|n|蔬菜:
 - 稚豆|tsinn'2-tau7|豌豆|n|蔬菜:
 - 白菜|peh8-tshai3||n|蔬菜:
@@ -688,6 +689,7 @@
 - 椰子汁|ia5-tsi2-tsap4||n|特产:
 - 燕窝|ian3-o1||n|特产:
 - 牛奶|gu5-ni6||n|特产:
+- 蜂蜜|phang1-bit8||n|特产:
 - 酸奶|sng1-ni6||n|特产:
 - 雪糕|sorh4-ko1||n|特产:
 - 雪条|sorh4-tiau5|冰棒|n|特产:
@@ -1925,10 +1927,6 @@
 - 徐向前|tshur5-hiang3-tsoinn5||nr|人名:
 - 聂荣臻|niap4-iong5-tsin1||nr|人名:
 - 叶剑英|iap8-kiam3-eng1/hiap8-kiam3-eng1||nr|人名:
-# 近现代国内知名人物
-- 鲁迅|lu2-sin3||nr|人名:
-- 袁世凯|uan5-si3-khai2||nr|人名:
-- 蒋介石|tsionn2-kai3-tsioh8||nr|人名:
 # 外国知名人物
 - 马克思|be2-khiok4-sur1||nr|人名:
 - 列宁|liat4-neng5||nr|人名:
@@ -1941,9 +1939,16 @@
 - 布什|pu3-tsap8||nr|人名:
 - 萨达姆|sat4-tat8-m2||nr|人名:
 - 叶利钦|iap8-li6-khin1/hiap8-li6-khin1||nr|人名:
+# 近现代国内知名人物
+- 鲁迅|lu2-sin3||nr|人名:
+- 袁世凯|uan5-si3-khai2||nr|人名:
+- 蒋介石|tsionn2-kai3-tsioh8||nr|人名:
 # 潮汕本地较有名的人名，包括艺名，民间传说中的人名
 - 林百欣|lim5-peh4-hurn1||nr|人名:
 - 李嘉诚|li2-kia1-seng5||nr|人名:
+- 秦牧|tshin5-mok8||nr|人名:
+- 饶宗颐|jiau5-tsong1-hi1||nr|人名:
+- 姚璇秋|io5-suan5-tshiu1||nr|人名:
 - 陈四文|tan5-si3-bun5||nr|人名:
 - 许友文|khou2-iu2-bun5||nr|人名:
 - 方展荣|png1-tian2-iong5||nr|人名:
@@ -1960,6 +1965,10 @@
     desc: 民间传说及改编潮剧《柴房会》中的男主人公
 - 水鸡兄|tsui2-koi1-hiann1||nr|人名:
 - 阿明|a1-meng5||nr|人名:
+- 三六九|sann1-lak8-kau2||nr|人名:
+    desc: 《七十二家房客》中一名编号为 369 的警察
+- 个银二粒|kai5-ngurn5-lonn6-liap8||nr|人名:
+    desc: 小品《个银二粒》中的主角
 # 历史人物，以及神话传说等虚构人物
 - 后羿|au6-ngi5/au6-ngi6||nr|人名:
 - 精卫|tseng1-ue6||nr|人名:
@@ -1972,9 +1981,14 @@
 - 天公|thian1-kong1||nr|人名:
 - 地主爷|ti7-tsu2-ia5||nr|人名:
 - 月娘|gueh8-nionn5||nr|人名:
+- 孔子|khong2-tsur2||nr|人名:
+- 老子|lau2-tsur2||nr|人名:
+- 庄子|tsng1-tsur2||nr|人名:
+- 西施|sai1-si1||nr|人名:
 - 秦始皇|tshin5-si2-uang5||nr|人名:
 - 董卓|tang2-toh4||nr|人名:
 - 吕布|lur6-pou3||nr|人名:
+- 貂蝉|tiau1-sian5||nr|人名:
 - 刘备|lau5-pi6||nr|人名:
 - 关羽|kuan1-u2||nr|人名:
 - 张飞|tionn1-hui1||nr|人名:
@@ -1983,6 +1997,7 @@
 - 曹操|tshau5-tshau3||nr|人名:
 - 曹植|tshau5-sit8||nr|人名:
 - 曹丕|tshau5-phi2||nr|人名:
+- 曹冲|tshau5-tshiong1||nr|人名:
 - 孙权|sng1-khuan1||nr|人名:
 - 黄盖|ng5-kai3||nr|人名:
 - 赵云|tionn'6-hun5||nr|人名:
@@ -1994,17 +2009,17 @@
 - 祝英台|tsiok4-eng1-tai5/tsiok4-eng1-thai5||nr|人名:
 - 李白|li2-peh8||nr|人名:
 - 杜甫|tou6-phou2||nr|人名:
+- 韩愈|han5-ju2||nr|人名:
+- 上官婉儿|siang6-kuann1 uan2-ji5||nr|人名:
 - 李世民|li2-si3-min5||nr|人名:
 - 武则天|bu2-tsek4-thian1||nr|人名:
-- 老猴|lau6-kau5||nr|人名:
-    desc: 指孙悟空
-- 老猪|lau6-tur1||nr|人名:
-    desc: 指猪八戒
+- 老猴|lau6-kau5|孙悟空(俗名)|nr|人名:
+- 老猪|lau6-tur1|猪八戒(俗名)|nr|人名:
 - 唐僧|thang5-tseng1||nr|人名:
 - 唐三藏|thang5-sam1-tsang6||nr|人名:
 - 沙僧|sua1-tseng1||nr|人名:
-- 悟空|ngo5-khong1||nr|人名:
-- 孙悟空|sng1-ngo5-khong1||nr|人名:
+- 悟空|ngo7-khong1||nr|人名:
+- 孙悟空|sng1-ngo7-khong1||nr|人名:
 - 八戒|poih4-kai3||nr|人名:
 - 猪八戒|tur1-poih4-kai3||nr|人名:
 - 佛祖|hut8-tsou2||nr|人名:
@@ -2017,6 +2032,7 @@
 - 菩萨|phu5-sat4||nr|人名:
 - 阎罗王|ngiam5-lo5-uang5||nr|人名:
 - 哪吒|na5-tsa1/la5-tsa1||nr|人名:
+- 玉皇大帝|gek8-uang5-tai6-ti3||nr|人名:
 - 林冲|lim5-tshiong1||nr|人名:
 - 宋江|song3-kang1||nr|人名:
 - 晁盖|tshau5-kai3||nr|人名:
@@ -2024,6 +2040,9 @@
 - 李逵|li2-khui5||nr|人名:
 - 史进|sai2-tsin3||nr|人名:
 - 鲁智深|lu2-ti3-tshim1||nr|人名:
+- 西门庆|sai1-mng5-kheng3||nr|人名:
+- 潘金莲|phuann1-kim1-loinn5||nr|人名:
+- 武大郎|bu2-tua7-lng5||nr|人名:
 - 岳飞|ngak8-hui1||nr|人名:
 - 秦桧|tshin5-kuai3||nr|人名:
 - 文天祥|bun5-thian1-siang5||nr|人名:
@@ -2382,7 +2401,9 @@
 # 惠来
 - 惠城|hui6-siann5||ns|地名:
 - 隆江|leng5-kang1||ns|地名:
-# 海陆丰
+# 海陆丰/汕尾
+- 汕尾|suann3-bue2||ns|地名:
+- 海丰|hai2-hong1||ns|地名:
 - 海陆丰|hai2-liok8-hong1||ns|地名:
 - 甲子|kah4-tsi2||ns|地名:
 - 三甲|sann1-kah4||ns|地名:
@@ -2398,7 +2419,6 @@
 - 广州|kng2-tsiu1||ns|地名:
 - 深圳|tshim1-tsun3||ns|地名:
 - 番禺|phuann1-ngo5||ns|地名:
-- 汕尾|suann3-bue2||ns|地名:
 - 东莞|tang1-uan2||ns|地名:
 - 福建|hok4-kian3||ns|地名:
 - 泉州|tsuann5-tsiu1/tshuan5-tsiu1||ns|地名:
@@ -2421,6 +2441,8 @@
 # 国外地名
 - 暹罗|siam5-lo5|泰国|ns|地名:
 - 泰国|thai3-kok4||ns|地名:
+- 缅甸|mian2-tian6||ns|地名:
+- 文莱|bun5-lai5||ns|地名:
 - 柬埔寨|kan2-phou2-tse7||ns|地名:
 - 越南|uat8-nam5||ns|地名:
 - 马来西亚|be2-lai5-sai1-a1||ns|地名:
@@ -2430,6 +2452,9 @@
 - 日本|jit8-png2||ns|地名:
 - 菲律宾|hui1-lut8-pin1||ns|地名:
 - 印尼|in3-ni5||ns|地名:
+- 俄罗斯|ngo5-lo5-sur1||ns|地名:
+- 埃及|ai1-kip8||ns|地名:
+- 澳大利亚|o3-tai6-li6-a1||ns|地名:
 
 # -------------------------- 动词汇总，按读音排序 --------------------------
 
