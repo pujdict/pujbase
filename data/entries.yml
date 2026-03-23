@@ -7709,6 +7709,13 @@
    kh,eng,2,0,0,:
 - 墾,垦:
    kh,urn,2,0,0,:
+    aka_replace:
+     PuNing_LiuSha: kh,iang,2
+     JieYang_RongCheng: kh,iang,2
+     ChaoYang_DaHao: kh,iang,2
+     ChaoYang_MianCheng: kh,iang,2
+     HuiLai_HuiCheng: kh,iang,2
+     LuFeng_SanJia: kh,iang,2
 - 懇,恳:
    kh,urn,2,0,0,:
 - 掯,掯:
