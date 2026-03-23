@@ -10,7 +10,7 @@ from pathlib import Path
 
 DATA_DIR_PATH = Path(__file__).parent.parent / 'data'
 PHRASES_STD_DIR_PATH = DATA_DIR_PATH / 'pujcorpora' / 'std'
-PHRASES_YML_FILES = list(PHRASES_STD_DIR_PATH.glob('**/*.std.yml')) + [
+PHRASES_YML_FILES = sorted(PHRASES_STD_DIR_PATH.glob('**/*.std.yml')) + [
     DATA_DIR_PATH / 'phrases.yml'
 ]
 DONOR_LANG_MAP = {
