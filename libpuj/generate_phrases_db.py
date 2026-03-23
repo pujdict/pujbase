@@ -103,6 +103,32 @@ def verify_puj(puj_phrase: str):
     pujutils.PUJUtils.for_each_word_in_sentence(puj_phrase, assert_puj_word)
 
 
+def get_cmn_no_paren_if_needed(cmn_list: list[str]):
+    for cmn in cmn_list:
+        if '(' in cmn:
+            break
+    else:
+        return []
+    cmn_no_paren_list = []
+    paren_stack = []
+    for cmn in cmn_list:
+        list_cmn = list(cmn)
+        tmp = ''
+        for i, c in enumerate(list_cmn):
+            if c == '(':
+                paren_stack.append(i)
+            elif c == ')':
+                if not paren_stack:
+                    raise ValueError(f'Unmatched parenthesis in {cmn}')
+                paren_stack.pop()
+            elif not paren_stack:
+                tmp += c
+        if paren_stack:
+            raise ValueError(f'Unmatched parenthesis in {cmn}')
+        cmn_no_paren_list.append(tmp)
+    return cmn_no_paren_list
+
+
 def add_phrase(phrases: Phrases, yaml_phrases):
     i = len(phrases.phrases)
     for yaml_phrase in yaml_phrases:
@@ -114,7 +140,14 @@ def add_phrase(phrases: Phrases, yaml_phrases):
             puj_list = puj_list.split('/')
             for puj in puj_list:
                 verify_puj(puj)
-            cmn_list = cmn_list.split('/')
+            cmn_may_have_paren_list = cmn_list.split('/')
+            cmn_no_paren_list = get_cmn_no_paren_if_needed(cmn_may_have_paren_list)
+            if cmn_no_paren_list:
+                cmn_list = cmn_no_paren_list
+                cmn_paren_list = cmn_may_have_paren_list
+            else:
+                cmn_list = cmn_may_have_paren_list
+                cmn_paren_list = []
             word_class_list = [get_word_class(x) for x in word_class_list.split('/')] if word_class_list else []
             tag_list = [get_phrase_tag(x) for x in tag_list.split('/')] if tag_list else []
             accents = []
@@ -160,6 +193,7 @@ def add_phrase(phrases: Phrases, yaml_phrases):
                 loan_word=loan_word,
                 examples=examples,
                 informal=informal,
+                cmn_paren=cmn_paren_list,
             )
             phrases.phrases.append(phrase)
         except Exception as e:

@@ -29,7 +29,7 @@ message Phrase {
   repeated string teochew = 2;
   // 潮州话读音
   repeated string puj = 3;
-  // 普通话对译
+  // 普通话对译（需为严格对译词，不含有括号注释，用于普通话反查方言词）
   repeated string cmn = 4;
   // 词性
   repeated string word_class = 5;
@@ -47,6 +47,10 @@ message Phrase {
   repeated PhraseExample examples = 11;
   // 非正式写法
   repeated string informal = 12;
+  // 含有括号注释的普通话，用于释义显示。
+  // 当列表中任意一个对译词含有括号时，该列表将存储（包括无括号的）所有对译词。
+  // 如果没有一个词有括号，表示直接用 cmn 即可
+  repeated string cmn_paren = 13;
 }
 
 message Phrases {
