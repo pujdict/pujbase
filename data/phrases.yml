@@ -322,9 +322,11 @@
 - 蒜白|sng3-peh8|蒜黄|n|蔬菜:
 - 蒜头|sng3-thau5||n|蔬菜:
 - 木耳|bak8-jur2||n|蔬菜:
+- 白木耳|peh8-bak8-jur2|银耳|n|蔬菜:
+- 乌木耳/黑木耳|ou1-bak8-jur2||n|蔬菜:
 - 香菇|hionn1-kou1||n|蔬菜:
 - 白果|peh8-kue2|白果/银杏|n|蔬菜:
-- 莲子|noinn5-tsi2||n|蔬菜:
+- 莲子|loinn5-tsi2||n|蔬菜:
 - 淮山|huai5-suann1|山药|n|蔬菜:
 - 枸杞|kau2-khi2||n|蔬菜:
 - 党参|tang2-siurm1||n|蔬菜:
@@ -386,7 +388,6 @@
 - 梅|bue5|梅子|n|水果:
 - 枣|tso2||n|水果:
 - 红枣|ang5-tso2||n|水果:
-- 莲子|loinn5-tsi2||n|水果:
 - 莲雾|lian5-bu7||n|水果:
 - 香雾|hiang1-bu7|莲雾|n|水果:
 - 苹果|phin5-kue2||n|水果:
@@ -417,7 +418,7 @@
 - 炒粿条|tsha2-kue2-tiau5||n|特产:
 - 粉签|hun2-tshiam1|粉丝|n|特产:
 - 粉签汤|hun2-tshiam1-thng1|粉丝汤|n|特产:
-- 粉签蛋|hun2-tshiam1-nng6|粉丝蛋汤|n|特产:
+- 粉签蛋|hun2-tshiam1-lng6|粉丝蛋汤|n|特产:
 - 炒粉签|tsha2-hun2-tshiam1|炒粉丝|n|特产:
 - 米粉|bi2-hun2||n|特产:
 - 米粉汤|bi2-hun2-thng1||n|特产:
@@ -441,7 +442,7 @@
 - 牛腩|gu5-nam5||n|特产:
 - 牛舌|gu5-tsih8||n|特产:
 - 牛鞭|gu5-pian1||n|特产:
-- 胸口𦛨|heng1-khau2-la5||n|特产:
+- 胸口𦛨|heng1-khau2-la5|胸口油|n|特产:
 - 薯粉|tsur5-hun2|淀粉|n|特产:
 - 杂粮|tsap8-lionn5||n|特产:
 - 粿|kue2|粿/糕|n|特产:
@@ -458,9 +459,9 @@
 - 面包|minn7-pau1|面包|n|特产:
 - 臭酸包|tshau3-sng1-pau1|面包|n|特产:
     desc: 专指西式面包
-- 蛋粿|nng6-kue2||n|特产:
+- 蛋粿|lng6-kue2||n|特产:
     desc: 本地小吃，也用于指称西式糕点。
-- 蛋粿|nng6-kue2|蛋糕/糕点|n|特产:
+- 蛋粿|lng6-kue2|蛋糕/糕点|n|特产:
     desc: 西式糕点。
 - 包|pau1|馅|h|特产:
     desc: 名词前缀，包~，指~馅。
@@ -483,6 +484,7 @@
 - 朴子粿|phok4-tsi2-kue2||n|特产:
 - 猪𦛨粿|tur1-la5-kue2||n|特产:
 - 咸水粿|kiam5-tsui2-kue2||n|特产:
+- 水粿|tsui2-kue2||n|特产:
 - 米豆粿|bi2-tau7-kue2||n|特产:
 - 乒乓粿|pin1-pong5-kue2||n|特产:
 - 菜头粿|tshai3-thau5-kue2||n|特产:
@@ -521,10 +523,10 @@
 - 鸡脚|koi1-kha1|鸡爪|n|特产:
 - 鸡肌/鸡胿|koi1-kui1|鸡嗉囊/气球|n|特产:
     desc: 因形状相像，也指气球。
-- 鸡蛋/鸡卵|koi1-nng6|鸡蛋|n|特产:
+- 鸡蛋/鸡卵|koi1-lng6|鸡蛋|n|特产:
 - 鸡腱/鸡胗|koi1-kin6|鸡胗|n|特产:
-- 粉鸟蛋/粉鸟卵|hun2-tsiau2-nng6|鸽子蛋|n|特产:
-- 蛋/卵|nng6|蛋|n|特产:
+- 粉鸟蛋/粉鸟卵|hun2-tsiau2-lng6|鸽子蛋|n|特产:
+- 蛋/卵|lng6|蛋|n|特产:
 - 童子鸡|thong5-tsur2-koi1||n|特产:
 - 猪肚|tur1-tou6/tur1-tou2||n|特产:
 - 猪肝|tur1-kuann1||n|特产:
@@ -592,7 +594,7 @@
 - 绿豆饼|lek8-tau7-piann2||n|特产:
 - 绿豆糕|lek8-tau7-ko1||n|特产:
 - 油麻糕|iu5-mua5-ko1||n|特产:
-- 鸡蛋饼/鸡卵饼|koi1-nng6-piann2|鸡蛋饼|n|特产:
+- 鸡蛋饼/鸡卵饼|koi1-lng6-piann2|鸡蛋饼|n|特产:
 - 鸡面|koi1-minn7|方便面|n|特产:
 - 碗仔面|uann2-kiann2-minn7||n|特产:
 - 蟹皇面|hoi6-uang5-minn7||n|特产:
@@ -648,8 +650,8 @@
 - 鱼脯|hur5-pou2||n|特产:
 - 鱼饭|hur5-png7||n|特产:
 - 咸鱼|kiam5-hur5||n|特产:
-- 咸蛋/咸卵|kiam5-nng6|咸鸭蛋|n|特产:
-- 咸鸭蛋/咸鸭卵|kiam5-ah4-nng6|咸鸭蛋|n|特产:
+- 咸蛋/咸卵|kiam5-lng6|咸鸭蛋|n|特产:
+- 咸鸭蛋/咸鸭卵|kiam5-ah4-lng6|咸鸭蛋|n|特产:
 - 凤凰茶|hong6-uang5-te5||n|特产:
 - 单枞|tuann1-tsang5||n|特产:
 - 铁观音|thih4-kuan1-im1||n|特产:
@@ -674,7 +676,7 @@
 - 菜脯|tshai3-pou2|腌萝卜干|n|特产:
 - 菜脯灰/菜脯麸|tshai3-pou2-hu1|碎腌萝卜干|n|特产:
 - 菜脯丝|tshai3-pou2-si1|腌萝卜丝|n|特产:
-- 菜脯卵|tshai3-pou2-nng6|萝卜干炒蛋|n|特产:
+- 菜脯卵|tshai3-pou2-lng6|萝卜干炒蛋|n|特产:
 - 菜头槁|tshai3-thau5-khau2|干腌萝卜条|n|特产:
 - 莲花峰茶|loinn5-hue1-hong1-te5||n|特产:
 - 行军散|kiann5-kun1-suann2||n|特产:
@@ -715,7 +717,7 @@
 - 大家|tai6-ke1||n|人称:
 - 大家人|tai6-ke1-nang5|大伙/大家|n|人称:
 - 底块伙|ti7-kor3-hue2|哪里人|n|人称:
-- 你/汝|lur2|你|r|人称:
+- 你/汝|lur2/nur2|你|r|人称:
     informal: 吕/鲁
 - 阮/我人/我侬|uan2/ua2--nang5/un2|我们|r|人称:
     desc: 我们（不含听话人）
@@ -886,7 +888,7 @@
 - 毛|mo5|毛发|n|人体:
 - 头毛|thau5-mo5|头发|n|人体:
 - 辫|pinn1|辫子|n|人体:
-- 圆头卵|inn5-thau5-nng6|光头|n|人体:
+- 圆头卵|inn5-thau5-lng6|光头|n|人体:
 - 毛𩮴|mo5-sui1|刘海|n|人体:
 - 面|min7|脸|n|人体:
 - 目|mak8|眼睛|n|人体:
@@ -976,7 +978,7 @@
 - 胆|tann2||n|人体:
 - 筋|kurn1||n|人体:
 - 骨|kut4||n|人体:
-- 𦛨|la5|肥/油|n|人体:
+- 𦛨|la5|肥/(动物)油|n|人体:
 - 肉|nek8||n|人体:
 - 血|hueh4||n|人体:
 - 力|lat8||n|人体:
@@ -2410,7 +2412,7 @@
 - 甲子|kah4-tsi2||ns|地名:
 - 三甲|sann1-kah4||ns|地名:
 - 陆河|lek8-ho5||ns|地名:
-- 遮浪|tsia1-nng7||ns|地名:
+- 遮浪|tsia1-lng7||ns|地名:
 # 国内地名
 - 中国|tiong1-kok4||ns|地名:
 - 中华|tiong1-hua5||ns|地名:
@@ -2437,6 +2439,7 @@
 - 九龙|kiu2-leng5||ns|地名:
 - 澳门|o3-mng5||ns|地名:
 - 上海|siang6-hai2||ns|地名:
+- 天津|thian1-tsin1||ns|地名:
 - 西藏|sai1-tsang6||ns|地名:
 - 浙江|tsit4-kang1/tsiat4-kang1||ns|地名:
 - 重庆|tiong6-kheng3/tshiong5-kheng3||ns|地名:
