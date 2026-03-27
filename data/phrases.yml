@@ -611,6 +611,11 @@
 - 砂锅糜|sua1-ue1-mue5|砂锅粥|n|特产:
 - 番葛糜|huan1-kuah4-mue5|红薯粥|n|特产:
 - 猪骨糜|tur1-kut4-mue5|猪骨粥|n|特产:
+- 香糜/香粥|phang1-mue5||n|特产:
+    desc: 与其他食材一起煮的粥
+- 饮|am2|米汤|n|特产:
+- 糜饮|mue5-am2|米汤|n|特产:
+- 饮糜|am2-mue5|稀粥|n|特产:
 - 工夫茶|kang1-hu1-te5||n|特产:
 - 金含|kim1-kam5|糖果|n|特产:
 - 物食|mueh8-tsiah8|零食|n|特产:
@@ -686,6 +691,8 @@
 - 风油精|huang1-iu5-tseng1||n|特产:
 - 双飞人|sang1-pue1-nang5||n|特产:
 - 平安膏|pheng5-an1-ko1||n|特产:
+- 凉水|liang5-tsui2|凉茶/中药|n|特产:
+- 老药桔|liang5-tsui2||n|特产:
 - 王老吉|heng5-lau6-kit4||n|特产:
 - 杏仁露|heng6-jin5-lou3||n|特产:
 - 椰子汁|ia5-tsi2-tsap4||n|特产:
@@ -1005,6 +1012,7 @@
     - [勿扱潲伊, mai3-tshap4-siau5--i1, 别理他丫的]
     - [你喝潲上勥, lur2 huah4-siau5 siang6-khiang3, 你真会吹牛逼]
     - [勿嘴潲, mai3-tshui3-siau5, 别吹牛逼]
+- ＊|sui1|(男婴的)屌/阴茎|n|人体:
 - 膣/腟/屄|tsi1|屄/女阴|n|人体:
     informal: 鸡
     desc: 女阴的俗称
@@ -1275,6 +1283,7 @@
 - ＊＊＊＊|kong5-long1-kong5-long1|晕晕乎乎(的样子)|o/a|拟声拟态/ABAB:
 - ＊＊＊＊|ji3-ja3-ji3-ja3|呆呆傻傻(的样子)|o/a|拟声拟态/ABAB:
 - ＊＊＊＊|khih4-nih4-khih4-nih4|小小的|o/a|拟声拟态/ABAB:
+- ＊＊＊＊|oih8-soih4-oih8-soih4|狭窄的|o/a|拟声拟态/ABAB:
 - 佝偻佝偻|ku1-lu1-ku1-lu1|驼背(的样子)|o/a|拟声拟态/ABAB:
 - 佝偻＊佝偻＊|ku1-lu1-su5-ku1-lu1-su5|驼背(的样子)|o/a|拟声拟态/ABAB:
 - 斜＊＊斜＊＊|sia1-pho1-lo1-sia1-pho1-lo1|歪歪斜斜(的样子)|o/a|拟声拟态/ABAB:
@@ -1282,137 +1291,208 @@
 - 爽鼻空爽鼻空|suang2-phinn7-khang1-suang2-phinn7-khang1|冲鼻(形容香味、辣味很冲的感觉)|o/a|拟声拟态/ABAB:
 
 # -------------------------- 拟声拟态词 XX叫 式 --------------------------
-- ＊一叫|piang7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|piang7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|piang7 piang7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pi7 piang7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|pi7 piang7 liang7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|phiang7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|phiang7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phiang7 phiang7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phi7 phiang7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|phi7 phiang7 liang7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|pong7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|pong7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pong7 pong7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pi7 pong7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|pi7 pong7 long7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|phong7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|phong7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phong7 phong7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phi7 phong7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|phi7 phong7 long7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|phiak4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|phiak4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phiak4 phiak4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|phih4 phiak4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|phih4 phiak4 liak4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|piak4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|piak4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|piak4 piak4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pih4 piak4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|pih4 piak4 liak4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|tong6 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|tong6 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tong6 tong6 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|ti6 tong6 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|ti6 tong6 long6 kio3||o|拟声拟态/XX叫:
-- 咕一叫|ku6 tsek8-kio3||o|拟声拟态/XX叫:
-- 咕下叫|ku6 e6-kio3||o|拟声拟态/XX叫:
-- 咕咕叫|ku6 ku6 kio3/ku7 ku7 kio3||o|拟声拟态/XX叫:
-- 叽咕叫|ki6 ku6 kio3/ki7 ku7 kio3||o|拟声拟态/XX叫:
-- 叽咕噜叫|ki6 ku6 lu6 kio3/ki7 ku7 lu8 kio3||o|拟声拟态/XX叫:
-- ＊一叫|pok4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|pok4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pok4 pok4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pih4 pok4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|pih4 pok4 lok4 kio3||o|拟声拟态/XX叫:
-- 轰一叫|hong7 tsek8-kio3||o|拟声拟态/XX叫:
-- 轰下叫|hong7 e6-kio3||o|拟声拟态/XX叫:
-- 轰轰叫|hong7 hong7 kio3||o|拟声拟态/XX叫:
-- ＊轰叫|hi7 hong7 kio3||o|拟声拟态/XX叫:
-- ＊轰隆叫|hi7 hong7 long7 kio3||o|拟声拟态/XX叫:
-- 亍一叫|tshoh4 tsek8-kio3||o|拟声拟态/XX叫:
-- 亍下叫|tshoh4 e6-kio3||o|拟声拟态/XX叫:
-- 亍亍叫|tshoh4 tshoh4 kio3||o|拟声拟态/XX叫:
-- 彳亍叫|tshih4 tshoh4 kio3||o|拟声拟态/XX叫:
-- 彳亍＊叫|tshih4 tshoh4 loh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|sok4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|sok4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|sok4 sok4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|sih4 sok4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|sih4 sok4 lok4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|siauh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|siauh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|siauh4 siauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|sih4 siauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|sih4 siauh4 liauh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|tsiauh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|tsiauh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tsiauh4 tsiauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tsih4 tsiauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|tsih4 tsiauh4 liauh4 kio3||o|拟声拟态/XX叫:
-- 噗一叫|phuh4 tsek8-kio3||o|拟声拟态/XX叫:
-- 噗下叫|phuh4 e6-kio3||o|拟声拟态/XX叫:
-- 噗噗叫|phuh4 phuh4 kio3||o|拟声拟态/XX叫:
-- ＊噗叫|phih4 phuh4 kio3||o|拟声拟态/XX叫:
-- ＊噗＊叫|phih4 phuh4 luh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|khok4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|khok4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|khok4 khok4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|khih4 khok4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|khih4 khok4 lok4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|thuh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|thuh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|thuh4 thuh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|thih4 thuh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|thih4 thuh4 luh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|hainnh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|hainnh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|hainnh4 hainnh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|hinnh4 hainnh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|hinnh4 hainnh4 laih4 kio3||o|拟声拟态/XX叫:
-- 呼一叫|hu7 tsek8-kio3||o|拟声拟态/XX叫:
-- 呼下叫|hu7 e6-kio3||o|拟声拟态/XX叫:
-- 呼呼叫|hu7 hu7 kio3||o|拟声拟态/XX叫:
-- 唏呼叫|hi7 hu7 kio3||o|拟声拟态/XX叫:
-- 唏呼噜叫|hi7 hu7 lu7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|ha7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|ha7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|ha7 ha7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|hi7 ha7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|hi7 ha7 la7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|pauh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|pauh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pauh4 pauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|pih4 pauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|pih4 pauh4 lauh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|he2 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|he2 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|he2 he2 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|hi2 he2 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|hi2 he2 le2 kio3||o|拟声拟态/XX叫:
-- ＊一叫|tiauh4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|tiauh4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tiauh4 tiauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tih4 tiauh4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|tih4 tiauh4 liauh4 kio3||o|拟声拟态/XX叫:
-- ＊一叫|tsa7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|tsa7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tsa7 tsa7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|tsi7 tsa7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|tsi7 tsa7 la7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|sa7 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|sa7 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|sa7 sa7 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|si7 sa7 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|si7 sa7 la7 kio3||o|拟声拟态/XX叫:
-- ＊一叫|uak4 tsek8-kio3||o|拟声拟态/XX叫:
-- ＊下叫|uak4 e6-kio3||o|拟声拟态/XX叫:
-- ＊＊叫|uak4 uak4 kio3||o|拟声拟态/XX叫:
-- ＊＊叫|ih4 uak4 kio3||o|拟声拟态/XX叫:
-- ＊＊＊叫|ih4 uak4 luak4 kio3||o|拟声拟态/XX叫:
-  
+# 此类拟声拟态词遵从以下构词模式：
+# 1. X一叫，模拟瞬时声音或形态
+# 2. X下叫，模拟瞬时声音或形态，但因为“一”是入声，“下”是舒声（“下”可以认为是“一”拖长），因而前者时长最短，后者稍长
+# 3. XX叫，同一个音反复，模拟持续一段时间的声音或形态
+# 4. YX 叫，Y 与 X 的声母、声调相同，但韵母变为 i（舒声）或 ih（入声），模拟持续一段时间的声音或形态，但又在此基础上有所变化
+# 5. YXZ 叫，其中 Y 和上一种模式相同，Z 与 X 韵母、声调相同，但声母变为 l，模拟长时间、反复持续的声音或形态
+# 五种构词模式从上到下，所持续的时间从短到长。拟声拟态词会构造出许多种口音的音系中，原本不存在的音。
+# 其中的某一些词，通过声母送气/不送气的对立，形成对不同强度的模拟。例如，pi7 piang7 叫，强度弱于 phi7 phiang7 叫
+# 注意，4 5 两种模式能存在的前提是 X 本身不是 i/ih 韵母或 l 声母
+- ＊一叫|piang7 tsek8-kio3|砰的一声(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊下叫|piang7 e6-kio3|砰的一声(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊叫|piang7 piang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊叫|pi7 piang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|pi7 piang7 liang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊一叫|phiang7 tsek8-kio3|砰的一声(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊下叫|phiang7 e6-kio3|砰的一声(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊叫|phiang7 phiang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊叫|phi7 phiang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|phi7 phiang7 liang7 kio3|砰砰响(模拟物体冲击的巨响声)|o|拟声拟态/XX叫:
+- ＊一叫|pong7 tsek8-kio3|砰的一声(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊下叫|pong7 e6-kio3|砰的一声(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|pong7 pong7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|pi7 pong7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|pi7 pong7 long7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊一叫|phong7 tsek8-kio3|砰的一声(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊下叫|phong7 e6-kio3|砰的一声(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|phong7 phong7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|phi7 phong7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|phi7 phong7 long7 kio3|砰砰响(模拟物体撞击或倒下的响声)|o|拟声拟态/XX叫:
+- ＊一叫|phiak4 tsek8-kio3|吧嗒一声(模拟物体打击的清脆声音)|o|拟声拟态/XX叫:
+- ＊下叫|phiak4 e6-kio3|吧嗒一声(模拟物体打击的清脆声音)|o|拟声拟态/XX叫:
+- ＊＊叫|phiak4 phiak4 kio3|啪啪响(模拟物体打击的清脆声音)|o|拟声拟态/XX叫:
+- ＊＊叫|phih4 phiak4 kio3|啪啪响(模拟物体打击的清脆声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|phih4 phiak4 liak4 kio3|啪啪响(模拟物体打击的清脆声音)|o|拟声拟态/XX叫:
+- ＊一叫|piak4 tsek8-kio3|吧嗒一声(模拟物体打击的闷音)|o|拟声拟态/XX叫:
+- ＊下叫|piak4 e6-kio3|吧嗒一声(模拟物体打击的闷音)|o|拟声拟态/XX叫:
+- ＊＊叫|piak4 piak4 kio3|啪啪响(模拟物体打击的闷音)|o|拟声拟态/XX叫:
+- ＊＊叫|pih4 piak4 kio3|啪啪响(模拟物体打击的闷音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 piak4 liak4 kio3|啪啪响(模拟物体打击的闷音)|o|拟声拟态/XX叫:
+- ＊一叫|tong6 tsek8-kio3|咕咚一声(模拟物体掉入深水中的声音)|o|拟声拟态/XX叫:
+- ＊下叫|tong6 e6-kio3|咕咚一声(模拟物体掉入深水中的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|tong6 tong6 kio3|咚咚响(模拟物体掉入深水中的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|ti6 tong6 kio3|咚咚响(模拟物体掉入深水中的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|ti6 tong6 long6 kio3|咚咚响(模拟物体掉入深水中的声音)|o|拟声拟态/XX叫:
+- 咕一叫|ku6 tsek8-kio3/ku7 tsek8-kio3|咕的一声(模拟肚子饿时的肠鸣音)|o|拟声拟态/XX叫:
+- 咕下叫|ku6 e6-kio3/ku7 e6-kio3|咕的一声(模拟肚子饿时的肠鸣音)|o|拟声拟态/XX叫:
+- 咕咕叫|ku6 ku6 kio3/ku7 ku7 kio3|咕咕叫(模拟肚子饿时的肠鸣音)|o|拟声拟态/XX叫:
+- 叽咕叫|ki6 ku6 kio3/ki7 ku7 kio3|咕咕叫(模拟肚子饿时的肠鸣音)|o|拟声拟态/XX叫:
+- 叽咕噜叫|ki6 ku6 lu6 kio3/ki7 ku7 lu8 kio3|咕咕叫(模拟肚子饿时的肠鸣音)|o|拟声拟态/XX叫:
+- ＊一叫|pok4 tsek8-kio3|(模拟小物体撞击的闷音)|o|拟声拟态/XX叫:
+- ＊下叫|pok4 e6-kio3|(模拟小物体撞击的闷音)|o|拟声拟态/XX叫:
+- ＊＊叫|pok4 pok4 kio3|(模拟小物体撞击的闷音)|o|拟声拟态/XX叫:
+- ＊＊叫|pih4 pok4 kio3|(模拟小物体撞击的闷音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 pok4 lok4 kio3|(模拟小物体撞击的闷音)|o|拟声拟态/XX叫:
+- 轰一叫|hong7 tsek8-kio3|轰隆隆/轰轰响(模拟响雷、爆炸声等闷音)|o|拟声拟态/XX叫:
+- 轰下叫|hong7 e6-kio3|轰隆隆/轰轰响(模拟响雷、爆炸声等闷音)|o|拟声拟态/XX叫:
+- 轰轰叫|hong7 hong7 kio3|轰隆隆/轰轰响(模拟响雷、爆炸声等闷音)|o|拟声拟态/XX叫:
+- ＊轰叫|hi7 hong7 kio3|轰隆隆/轰轰响(模拟响雷、爆炸声等闷音)|o|拟声拟态/XX叫:
+- ＊轰隆叫|hi7 hong7 long7 kio3|轰隆隆/轰轰响(模拟响雷、爆炸声等闷音)|o|拟声拟态/XX叫:
+- 亍一叫|tshoh4 tsek8-kio3|吓一跳(模拟受到惊吓的样子)|o|拟声拟态/XX叫:
+- 亍下叫|tshoh4 e6-kio3|吓了一跳(模拟受到惊吓的样子)|o|拟声拟态/XX叫:
+- 亍亍叫|tshoh4 tshoh4 kio3|慌忙/惊慌失措/手忙脚乱(模拟慌忙、心神不定的样子)|o|拟声拟态/XX叫:
+- 彳亍叫|tshih4 tshoh4 kio3|慌忙/惊慌失措/手忙脚乱(模拟慌忙、心神不定的样子)|o|拟声拟态/XX叫:
+- 彳亍＊叫|tshih4 tshoh4 loh4 kio3|慌忙/惊慌失措/手忙脚乱/手足无措(模拟慌忙、心神不定的样子)|o|拟声拟态/XX叫:
+- 速一叫|sok4 tsek8-kio3|(形容手脚很快)|o|拟声拟态/XX叫:
+- 速下叫|sok4 e6-kio3|(形容手脚很快)|o|拟声拟态/XX叫:
+- 速速叫|sok4 sok4 kio3|(形容手脚很快)|o|拟声拟态/XX叫:
+- ＊速叫|sih4 sok4 kio3|(形容手脚很快)|o|拟声拟态/XX叫:
+- ＊速＊叫|sih4 sok4 lok4 kio3|(形容手脚很快)|o|拟声拟态/XX叫:
+- ＊一叫|siauh4 tsek8-kio3|(形容速度很快)|o|拟声拟态/XX叫:
+- ＊下叫|siauh4 e6-kio3|(形容速度很快)|o|拟声拟态/XX叫:
+- ＊＊叫|siauh4 siauh4 kio3|(形容速度很快)|o|拟声拟态/XX叫:
+- ＊＊叫|sih4 siauh4 kio3|(形容速度很快)|o|拟声拟态/XX叫:
+- ＊＊＊叫|sih4 siauh4 liauh4 kio3|(形容速度很快)|o|拟声拟态/XX叫:
+- ＊一叫|tsiauh4 tsek8-kio3|(模拟鸟叫或窃窃私语)|o|拟声拟态/XX叫:
+- ＊下叫|tsiauh4 e6-kio3|(模拟鸟叫或窃窃私语)|o|拟声拟态/XX叫:
+- ＊＊叫|tsiauh4 tsiauh4 kio3|(模拟鸟叫或窃窃私语)|o|拟声拟态/XX叫:
+- ＊＊叫|tsih4 tsiauh4 kio3|(模拟鸟叫或窃窃私语)|o|拟声拟态/XX叫:
+- ＊＊＊叫|tsih4 tsiauh4 liauh4 kio3|(模拟鸟叫或窃窃私语)|o|拟声拟态/XX叫:
+- 噗一叫|phuh4 tsek8-kio3|(模拟气体喷出的声音)|o|拟声拟态/XX叫:
+- 噗下叫|phuh4 e6-kio3|(模拟气体喷出的声音)|o|拟声拟态/XX叫:
+- 噗噗叫|phuh4 phuh4 kio3|(模拟气体喷出的声音)|o|拟声拟态/XX叫:
+- ＊噗叫|phih4 phuh4 kio3|(模拟气体喷出的声音)|o|拟声拟态/XX叫:
+- ＊噗＊叫|phih4 phuh4 luh4 kio3|(模拟气体喷出的声音)|o|拟声拟态/XX叫:
+- ＊一叫|khok4 tsek8-kio3|(模拟重物落地或撞击的响声)|o|拟声拟态/XX叫:
+- ＊下叫|khok4 e6-kio3|(模拟重物落地或撞击的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|khok4 khok4 kio3|(模拟重物落地或撞击的响声)|o|拟声拟态/XX叫:
+- ＊＊叫|khih4 khok4 kio3|(模拟重物落地或撞击的响声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|khih4 khok4 lok4 kio3|(模拟重物落地或撞击的响声)|o|拟声拟态/XX叫:
+- ＊一叫|thuh4 tsek8-kio3|(模拟汽车尾气或熬汤时的滚水的声音)|o|拟声拟态/XX叫:
+- ＊下叫|thuh4 e6-kio3|(模拟汽车尾气或熬汤时的滚水的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|thuh4 thuh4 kio3|(模拟汽车尾气或熬汤时的滚水的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|thih4 thuh4 kio3|(模拟汽车尾气或熬汤时的滚水的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|thih4 thuh4 luh4 kio3|(模拟汽车尾气或熬汤时的滚水的声音)|o|拟声拟态/XX叫:
+- ＊一叫|hainn7 tsek8-kio3|(模拟低声呢喃、呻吟的声音)|o|拟声拟态/XX叫:
+- ＊下叫|hainn7 e6-kio3|(模拟低声呢喃、呻吟的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|hainn7 hainn7 kio3|(模拟低声呢喃、呻吟的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|hinn7 hainn7 kio3|(模拟低声呢喃、呻吟的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|hinn7 hainn7 lai7 kio3|(模拟低声呢喃、呻吟的声音)|o|拟声拟态/XX叫:
+- 呼一叫|hu7 tsek8-kio3|(模拟风声)|o|拟声拟态/XX叫:
+- 呼下叫|hu7 e6-kio3|(模拟风声)|o|拟声拟态/XX叫:
+- 呼呼叫|hu7 hu7 kio3|(模拟风声)|o|拟声拟态/XX叫:
+- 唏呼叫|hi7 hu7 kio3|(模拟风声)|o|拟声拟态/XX叫:
+- 唏呼噜叫|hi7 hu7 lu7 kio3|(模拟风声)|o|拟声拟态/XX叫:
+- ＊一叫|ha7 tsek8-kio3|(模拟大风声)|o|拟声拟态/XX叫:
+- ＊下叫|ha7 e6-kio3|(模拟大风声)|o|拟声拟态/XX叫:
+- ＊＊叫|ha7 ha7 kio3|(模拟大风声)|o|拟声拟态/XX叫:
+- ＊＊叫|hi7 ha7 kio3|(模拟大风声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|hi7 ha7 la7 kio3|(模拟大风声)|o|拟声拟态/XX叫:
+- ＊一叫|pauh4 tsek8-kio3|(模拟热油炙烤食物的声音)|o|拟声拟态/XX叫:
+- ＊下叫|pauh4 e6-kio3|(模拟热油炙烤食物的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|pauh4 pauh4 kio3|(模拟热油炙烤食物的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|pih4 pauh4 kio3|(模拟热油炙烤食物的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|pih4 pauh4 lauh4 kio3|(模拟热油炙烤食物的声音)|o|拟声拟态/XX叫:
+- ＊一叫|he2 tsek8-kio3|(模拟大声叫喊的声音)|o|拟声拟态/XX叫:
+- ＊下叫|he2 e6-kio3|(模拟大声叫喊的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|he2 he2 kio3|(模拟大声叫喊的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|hi2 he2 kio3|(模拟大声叫喊的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|hi2 he2 le2 kio3|(模拟大声叫喊的声音)|o|拟声拟态/XX叫:
+- ＊一叫|tiauh4 tsek8-kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
+- ＊下叫|tiauh4 e6-kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
+- ＊＊叫|tiauh4 tiauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
+- ＊＊叫|tih4 tiauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
+- ＊＊＊叫|tih4 tiauh4 liauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
+- ＊一叫|tsa7 tsek8-kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊下叫|tsa7 e6-kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|tsa7 tsa7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|tsi7 tsa7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|tsi7 tsa7 la7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊一叫|sa7 tsek8-kio3|(模拟风沙的声音)|o|拟声拟态/XX叫:
+- ＊下叫|sa7 e6-kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|sa7 sa7 kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|si7 sa7 kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|si7 sa7 la7 kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
+- ＊一叫|uak4 tsek8-kio3|(模拟火焰喷出时的空气声)|o|拟声拟态/XX叫:
+- ＊下叫|uak4 e6-kio3|(模拟火焰喷出时的空气声)|o|拟声拟态/XX叫:
+- ＊＊叫|uak4 uak4 kio3|(模拟火焰喷出时的空气声)|o|拟声拟态/XX叫:
+- ＊＊叫|ih4 uak4 kio3|(模拟火焰喷出时的空气声)|o|拟声拟态/XX叫:
+- ＊＊＊叫|ih4 uak4 luak4 kio3|(模拟火焰喷出时的空气声)|o|拟声拟态/XX叫:
+- ＊一叫|hauh4 tsek8-kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+- ＊下叫|hauh4 e6-kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|hauh4 hauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|hi4 hauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|hih4 hauh4 lauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+
+# -------------------------- 固定短语 形容词+“过”+名动词 THAN --------------------------
+- 硗过梦龙|khiau1-kue3-mang7-leng5||i|过:
+    desc: “梦龙”人物出自潮剧《春香传》，“硗”即贫穷
+- 直过箭|tit8-kue3-tsinn7||i|过:
+- 长过竹竿/长过竹篙|tng5-kue3-tek4-ko1||i|过:
+- 高过竹竿/悬过竹篙|kuoinn5-kue3-tek4-ko1||i|过:
+- 派过火＊|phai3-kue3-hue2-suh8||i|过:
+- 荋过会乡|jur5-kue3-hue6-hionn1||i|过:
+- 荋过粞箶|jur5-kue3-tshoi4-ou5||i|过:
+- 荋过炒面|jur5-kue3-tsha2-minn7||i|过:
+- 荋过狗巢|jur5-kue3-kau2-tau3||i|过:
+- ＊过破布|jun7-kue3-phua3-pou3||i|过:
+- ＊过破布|jiau5-kue3-phua3-pou3||i|过:
+- 熟过老豆酱|sek8-kue3-lau6-tau7-tsionn3||i|过:
+- 饱过蜘蛛|pa2-kue3-ti1-tu1||i|过:
+- 易过食碗水|koi7-kue3-tsiah8-uann2-tsui2||i|过:
+- 易过食滚水|koi7-kue3-tsiah8-kun2-tsui2||i|过:
+- 易过食水|koi7-kue3-tsiah8-tsui2||i|过:
+- 易过拍蠓|koi7-kue3-phah4-mang2||i|过:
+- ＊过猪屎|au3-kue3-tur1-sai2||i|过:
+- 𠕇过铁钉|toinn7-kue3-thih4-teng1||i|过:
+- 甜过初恋|tiam5-kue3-tsho1-luan3||i|过:
+- 戆过鸭咪|kong5-kue3-ah4-bi6||i|过:
+- 戆过只鸭|kong5-kue3-tsiah4-ah4||i|过:
+- 𩏼过土/𩏼过涂|nap4-kue3-thou5||i|过:
+- 闲过仙|oinn5-kue3-sian1||i|过:
+- 凶过贼|hiong1-kue3-tshat8||i|过:
+- 愊过火/煏过火/逼过火|pek4-kue3-hue2||i|过:
+- 乌过墨|ou1-kue3-bak8||i|过:
+
+
+# -------------------------- 固定短语 名词+形容词叠词 NAA 式 --------------------------
+- 目眯眯|mak8 mi1-mi1||i|ABB:
+- 目金金|mak8 kim1-kim1||i|ABB:
+- 嘴阔阔|tshui3 khuah4-khuah4||i|ABB:
+- 须胡胡|tshiu1 hou5-hou5||i|ABB:
+- 面乌乌|min7 ou1-ou1||i|ABB:
+- 颔长长|am6 tng5-tng5||i|ABB:
+- 眉皱皱|bai5 niau3-niau3||i|ABB:
+- 毛翘翘|mo5 khiau3-khiau3||i|ABB:
+- 腰佝佝|io1 ku1-ku1||i|ABB:
+- 肚大大|tou2 tua7-tua7||i|ABB:
+- 喉干干/喉灱灱|au5 ta1-ta1||i|ABB:
+- 涎流流|nua6 lau5-lau5||i|ABB:
+- ＊冲冲|kong2 tsheng3-tsheng3||i|ABB:
+- 风哩哩|huang1 li1-li1||i|ABB:
+- 天乌乌|thinn1 ou1-ou1||i|ABB:
+- 天光光|thinn1 kng1-kng1||i|ABB:
+- 雨霙霙|hou6 eng5-eng5||i|ABB:
+- 日＊＊|jit8 iann1-iann1||i|ABB:
+- 日＊＊|jit8 hann2-hann2||i|ABB:
+- 日金金|jit8 kim1-kim1||i|ABB:
+- 日斜斜|jit8 sia5-sia5||i|ABB:
+- 土地莶莶|thou5-ti7 hiam1-hiam1||i|ABB:
+- 土地＊＊|thou5-ti7 ho1-ho1||i|ABB:
+
+
 # -------------------------- 姓氏 SURNAMES --------------------------
 # 百家姓序，其余特殊读音在最后补充。非常用姓氏如果字表的常用字音已能覆盖，这里就不额外写出了。
 - 赵|tionn'6||nr1|姓氏:
