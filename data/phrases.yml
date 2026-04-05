@@ -32,6 +32,7 @@
     - [ 蝠婆, pit8-po5, 蝙蝠 ]
 - 鹰婆|eng1-po5|鹰/老鹰|n|动物:
 - 鹤|hoh8||n|动物:
+- 丹顶鹤|tan1-teng2-hoh8||n|动物:
 - 麻雀|mua5-tsiah4||n|动物:
 - 粉鸟|hun2-tsiau2|鸽子|n|动物:
 - 美翼|bue2-iah8|蝴蝶|n|动物:
@@ -47,8 +48,11 @@
 - 蜜蜂|bit8-phang1||n|动物:
 - 水牛|tsui2-gu5||n|动物:
 - 羊|ionn5||n|动物:
+- 羚羊|leng5-ionn5|羚羊|n|动物:
+- 羚羊|leng5-iang5|羚羊角(中药)|n|动物:
 - 牛|gu5||n|动物:
 - 马|be2||n|动物:
+- 斑马|pan1-be2||n|动物:
 - 猪|tur1||n|动物:
 - 狗|kau2||n|动物:
 - 猫|ngiau1||n|动物:
@@ -128,6 +132,7 @@
     desc: 指衣物上因潮湿长出的黑色霉菌
     examples:
     - [ 上乌柯, tshionn6-ou1-kua1, 衣服长霉菌 ]
+- 刺猬|tshi2-ui2||n|动物:
 
 # -------------------------- 水产 SEAFOOD --------------------------
 - 海鲜|hai2-tshinn1||n|水产:
@@ -481,7 +486,7 @@
 - 草粿|tshau2-kue2|烧仙草|n|特产:
 - 甜粿|tiam5-kue2||n|特产:
 - 发粿|huat4-kue2||n|特产:
-- 朴子粿|phok4-tsi2-kue2||n|特产:
+- 朴子粿|phoh4-tsi2-kue2||n|特产:
 - 猪𦛨粿|tur1-la5-kue2||n|特产:
 - 咸水粿|kiam5-tsui2-kue2||n|特产:
 - 水粿|tsui2-kue2||n|特产:
@@ -544,6 +549,9 @@
 - 油|iu5||n|特产:
 - 米|bi2||n|特产:
 - 小米|siau2-bi2||n|特产:
+- 粞|tshoi3|(大米磨成的)米粉/粘米粉/粉末|n|特产:
+- 米粞|bi2-tshoi3|(大米磨成的)米粉/粘米粉|n|特产:
+- 圆粞|inn5-tshoi3|(用于搓汤圆的)糯米粉|n|特产:
 - 鸡精|koi1-tseng1||n|特产:
 - 蒜泥醋|sng3-ni5-tshou3||n|特产:
 - 浙醋|tsit4-tshou3||n|特产:
@@ -1074,6 +1082,8 @@
 - 许天时先|hur2-thian1-si5-soinn1|很久以前/曾经|t|时节:
 - 时间|si5-kan1||n|时节:
 - 时间|si5 -kan1|随时间|n|时节:
+    examples:
+    - ["个伊呾清楚，勿时间误会", "kai5-i1 tann3-tsheng1-tsho2, mai3- si5 -kan1 gou7-hue6", "跟他说清楚，不要之后产生误会"]
 - 当|tann1|那|y|时节:
 - 当才|tann1-tsia3-|刚刚才/刚才|t|时节:
 - 起头|khi2-thau5|开头|t|时节:
@@ -1096,12 +1106,39 @@
 - 十一月|tsap8-it4--gueh8/tsap8-it4-gueh8-||t|时节:
 - 十二月|tsap8-ji6--gueh8/tsap8-ji7-gueh8-||t|时节:
 - 对联|tui3-lin5/tui3-lian5||n|时节:
+- 时年八节|si5-ninn5-poih4-tsoih4||i|时节:
+- 元旦|nguan5-tan3||t|时节:
+- 年脚|ninn5-kha1|年前|t|时节:
+- 春节|tshun1-tsoih4||t|时节:
+- 春节脚|tshun1-tsoih4-kha1|春节前|t|时节:
+- 春节过|tshun1-tsoih4-kue3|春节后|t|时节:
+- 过年|kue3-ninn5|过年/新年|t|时节:
+- 过年过|kue3-ninn5-kue3|年后|t|时节:
 - 天公生|thian1-kong1-senn1||n|时节:
 - 老爷生|lau6-ia5-senn1||n|时节:
-- 十五夜/十五暝|tsap8-ngou6-menn5||n|时节:
-- 时年八节|si5-ninn5-poih4-tsoih4||i|时节:
-- 冬节|tang1-tsoih4|冬至|i|时节:
-- 重阳|teng5-iang5|冬至|i|时节:
+- 元宵|nguan5-siau1||t|时节:
+- 十五夜/十五暝|tsap8-ngou6-menn5|元宵/元宵节|t|时节:
+- 十五夜过/十五暝过|tsap8-ngou6-menn5-kue3|元宵节后|t|时节:
+- 端午|tuan1-ngou2||t|时节:
+- 中秋|tiong1-tshiu1||t|时节:
+- 重阳|teng5-iang5||t|时节:
+- 冬节|tang1-tsoih4|冬至|t|时节:
+- 食圆|tsiah8-inn5|吃汤圆|v/n|时节:
+- 拜祖公|pai3-tsou2-kong1|拜先祖|v/n|时节:
+- 拜老爷|pai3-lau6-ia5||v/n|时节:
+- 拜月娘|pai3-gueh8-nionn5||v/n|时节:
+- 营老爷/迎老爷|iann5-lau6-ia5||v/n|时节:
+- 营花灯|iann5-hue1-teng1||v/n|时节:
+- 营标|iann5-pio1||v/n|时节:
+- 做戏|tsor3-hi3||v/n|时节:
+- 唱曲|tshionn3-khek4|唱戏|v/n|时节:
+- 锯弦|kur3-hinn5|拉琴/吹水/聊天|v/n|时节:
+- 食茶|tsiah8-te5|喝茶|v/n|时节:
+- 𬣦奅|a3-phann3|聊天/闲聊/吹水|v/n|时节:
+- 做纸影|tsor3-tsua2-iann2||v/n|时节:
+- 闹热|lau6-jiat8|热闹|a|时节:
+- 嘀嘀嘀/滴滴滴|ti7-ti1-ti5||n|时节:
+    desc: 中秋夜拜月娘用的一种循环播放《十五的月亮》的电子香
 - 节气|tsoih4-khui3||n|时节/节气:
 - 立春|lip8-tshun1||n|时节/节气:
 - 雨水|u2-sui2||n|时节/节气:
@@ -1203,10 +1240,10 @@
 - 告|kauh4||n|音乐/锣鼓经:
 - 主|tsuh4||n|音乐/锣鼓经:
 - 冲|tshong7||n|音乐/锣鼓经:
-- 壮|tshann7||n|音乐/锣鼓经:
+- 壮|tshann7/tsann7/tsenn7||n|音乐/锣鼓经:
 - 仄|tsheh4||n|音乐/锣鼓经:
 - 乙|ih4||n|音乐/锣鼓经:
-- 查|tshe7||n|音乐/锣鼓经:
+- 查|tsha6/tshann6||n|音乐/锣鼓经:
 - 充|tshong5||n|音乐/锣鼓经:
 - 乓|pong7||n|音乐/锣鼓经:
 - 仓|tshang7||n|音乐/锣鼓经:
@@ -1447,6 +1484,7 @@
 - 荋过粞箶|jur5-kue3-tshoi4-ou5||i|过:
 - 荋过炒面|jur5-kue3-tsha2-minn7||i|过:
 - 荋过狗巢|jur5-kue3-kau2-tau3||i|过:
+- 荋过𡳞毛|jur5-kue3-lan6-mo5||i|过:
 - ＊过破布|jun7-kue3-phua3-pou3||i|过:
 - ＊过破布|jiau5-kue3-phua3-pou3||i|过:
 - 熟过老豆酱|sek8-kue3-lau6-tau7-tsionn3||i|过:
@@ -1455,9 +1493,19 @@
 - 易过食滚水|koi7-kue3-tsiah8-kun2-tsui2||i|过:
 - 易过食水|koi7-kue3-tsiah8-tsui2||i|过:
 - 易过拍蠓|koi7-kue3-phah4-mang2||i|过:
-- ＊过猪屎|au3-kue3-tur1-sai2||i|过:
+- 沤过猪屎|au3-kue3-tur1-sai2||i|过:
+- 沤过屎|au3-kue3-sai2||i|过:
+- 沤过𡳞屎|au3-kue3-lan6-sai2||i|过:
+- 漉过屎|lok4-kue3-sai2||i|过:
 - 𠕇过铁钉|toinn7-kue3-thih4-teng1||i|过:
+- 𠕇过铁|toinn7-kue3-thih4||i|过:
+- 硬过铁钉|ngenn6-kue3-thih4-teng1||i|过:
+- 硬过铁|ngenn6-kue3-thih4||i|过:
+- 硬过铁锤|ngenn6-kue3-thih4-thui5||i|过:
+- 硬过拳头母|ngenn6-kue3-khun5-thau5-bo2||i|过:
 - 甜过初恋|tiam5-kue3-tsho1-luan3||i|过:
+- 甜过芋泥|tiam5-kue3-ou7-ni5||i|过:
+- 咸过药|kiam5-kue3-ioh8||i|过:
 - 戆过鸭咪|kong5-kue3-ah4-bi6||i|过:
 - 戆过只鸭|kong5-kue3-tsiah4-ah4||i|过:
 - 𩏼过土/𩏼过涂|nap4-kue3-thou5||i|过:
@@ -1465,6 +1513,10 @@
 - 凶过贼|hiong1-kue3-tshat8||i|过:
 - 愊过火/煏过火/逼过火|pek4-kue3-hue2||i|过:
 - 乌过墨|ou1-kue3-bak8||i|过:
+- 响过雷|hiang2-kue3-lui5||i|过:
+- 响过拍碰鳔|hiang2-kue3-phah4-phong3-phio6||i|过:
+- 准过半仙|tsun2-kue3-puann3-sian1||i|过:
+- 准过拍鸟|tsun2-kue3-phah4-tsiau2||i|过:
 
 
 # -------------------------- 固定短语 名词+形容词叠词 NAA 式 --------------------------
@@ -1920,7 +1972,7 @@
 #- 宗政|||nr1|姓氏:
 #- 濮阳|||nr1|姓氏:
 #- 淳于|||nr1|姓氏:
-- 单于|sian5-ur5/sian5-i5||nr1|姓氏:
+- 单于|sian5-u1/sian5-ur5/sian5-i5||nr1|姓氏:
 #- 太叔|||nr1|姓氏:
 #- 申屠|||nr1|姓氏:
 - 公孙|kong1-sun1||nr1|姓氏:
@@ -1989,8 +2041,10 @@
 - 区|au1||nr1|姓氏:
 - 繁|po5||nr1|姓氏:
 - 岱|tor7||nr1|姓氏:
+- 代|tor7||nr1|姓氏:
 - 召|siau6||nr1|姓氏:
 - 蚁|hiann'6||nr1|姓氏:
+- 秃|thek4||nr1|姓氏:
 
 # -------------------------- 人名 NAMES --------------------------
 # 党和国家领导人、近现代重要历史人物
@@ -2082,7 +2136,7 @@
 - 曹植|tshau5-sit8||nr|人名:
 - 曹丕|tshau5-phi2||nr|人名:
 - 曹冲|tshau5-tshiong1||nr|人名:
-- 孙权|sng1-khuan1||nr|人名:
+- 孙权|sng1-khuan5||nr|人名:
 - 黄盖|ng5-kai3||nr|人名:
 - 赵云|tionn'6-hun5||nr|人名:
 - 马超|be2-thiau1/be2-thiau3||nr|人名:
@@ -2155,6 +2209,8 @@
 - 村|tshng1||ns|地名:
 - 乡里|hionn1-li2||ns|地名:
 - 老人组|lau6-nang5-tsu1||ns|地名:
+- 老爷宫|lau6-ia5-keng1||ns|地名:
+- 祠堂|sur5-tng5||ns|地名:
 - 城内/城里|siann5-lai6|城里|ns|地名:
 - 老厝|lau6-tshu3||ns|地名:
 - 居委会|kur1-ui2-hue6||ns|地名:
@@ -2540,6 +2596,9 @@
 - 俄罗斯|ngo5-lo5-sur1||ns|地名:
 - 埃及|ai1-kip8||ns|地名:
 - 澳大利亚|o3-tai6-li6-a1||ns|地名:
+- 丹麦|tan1-beh8||ns|地名:
+- 瑞士|sui6-sur6||ns|地名:
+- 瑞典|sui6-tian2||ns|地名:
 
 # -------------------------- 动词汇总，按读音排序 --------------------------
 
@@ -2813,3 +2872,9 @@
 - 添|thinn1||v|动词:
 - 绽|thinn7|缝补|v|动词:
 - ＊|thinn6|补充|v|动词:
+
+
+# -------------------------- 俗谚，难以归类的固定句 --------------------------
+# 这部分暂且注释，长句是否要放在词汇总表，待研究
+#- 老肥铁锤，橄榄芫荽，食饱无事爬楼梯|lau6-pui5 thih4-thui5, kann1-lann2 uan5-sui1, tsiah8-pa2 bo5-sur7 pe5-lau5-thui1||i|俗谚:
+#- 春香当当当，梦龙咚咚咚|tshun1-hiang1 tang1 tang1 tang1, mang7-leng5 tong1 tong1 tong1||i|俗谚:
