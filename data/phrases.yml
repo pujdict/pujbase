@@ -59,7 +59,7 @@
 - 鸡|koi1||n|动物:
 - 鸭|ah4||n|动物:
 - 鸭仔|ah4-kiann2|小鸭子|n|动物:
-- 鸭咪|ah4-bi6|小鸭子|n|动物:
+- 鸭咪/鸭㖐|ah4-bi6|小鸭子|n|动物:
 - 鹅|go5||n|动物:
 - 猴|kau5||n|动物:
 - 老鼠|ngiau2-tshur2||n|动物:
@@ -315,6 +315,7 @@
 - 东洋菜|tang1-ionn5-tshai3|西洋菜|n|蔬菜:
     desc: 同“东洋草”
 - 芦笋|lou5-sun2||n|蔬菜:
+- 香菜骨/芳菜骨|phang1-tshai3-kut4|芦笋|n|蔬菜:
 - 百合|peh4-hah8||n|蔬菜:
 - 芡实|khiam6-sit8||n|蔬菜:
 - 苦瓜|khou2-kue1||n|蔬菜:
@@ -339,7 +340,6 @@
 - 沙参|sua1-siurm1||n|蔬菜:
 - 玉竹|gek8-tek4||n|蔬菜:
 - 麦冬|beh8-tong1||n|蔬菜:
-- 桑垂|sng1-sui5/siang1-sui5|桑葚|n|蔬菜:
 - 灯芯草|teng1-sim1-tshau2||n|蔬菜:
 - 无花果|bo5-hue1-kue2||n|蔬菜:
 - 霍斛|khak4-hok8|石斛|n|蔬菜:
@@ -387,7 +387,7 @@
 - 油柑|iu5-kann1||n|水果:
 - 山楂|suann1-tsa1||n|水果:
 - 龙眼|nek8-oinn2||n|水果:
-- 荔果|noi7-kue2|荔枝|n|水果:
+- 荔果|loinn'7-kue2|荔枝|n|水果:
 - 莲角|loinn5-kak4|菱角|n|水果:
 - 蔗|tsia3|甘蔗|n|水果:
 - 梅|bue5|梅子|n|水果:
@@ -405,6 +405,7 @@
 - 樱桃|eng1-tho5||n|水果:
 - 番茄仔|huan1-kio5-kiann2|小番茄|n|水果:
 - 椰子|ia5-tsi2||n|水果:
+- 桑垂|sng1-sui5/siang1-sui5|桑葚|n|水果:
 
 # -------------------------- 特产 SPECIALTIES --------------------------
 - 牛肉丸|gu5-nek8-inn5||n|特产:
@@ -447,6 +448,7 @@
 - 牛腩|gu5-nam5||n|特产:
 - 牛舌|gu5-tsih8||n|特产:
 - 牛鞭|gu5-pian1||n|特产:
+- 牛杂|gu5-tsap8||n|特产:
 - 胸口𦛨|heng1-khau2-la5|胸口油|n|特产:
 - 薯粉|tsur5-hun2|淀粉|n|特产:
 - 杂粮|tsap8-lionn5||n|特产:
@@ -523,6 +525,7 @@
 - 鹅肝|go5-kuann1||n|特产:
 - 鹅腱/鹅胗|go5-kin6|鹅胗|n|特产:
 - 鹅翼|go5-sit8|鹅翅|n|特产:
+- 鹅血|go5-hueh4||n|特产:
 - 鸡肉|koi1-nek8||n|特产:
 - 鸡翼|koi1-sit8|鸡翅|n|特产:
 - 鸡脚|koi1-kha1|鸡爪|n|特产:
@@ -539,6 +542,7 @@
 - 猪血|tur1-hueh4||n|特产:
 - 猪杂|tur1-tsap8||n|特产:
 - 猪脚|tur1-kha1||n|特产:
+- 猪骨|tur1-kut4||n|特产:
 - 肾子|sian6-tsi2|肾脏|n|特产:
 - 糯米猪肠|tsut8-bi2-tur1-tng5||n|特产:
 - 叉烧|tsha1-sio1||n|特产:
@@ -700,7 +704,7 @@
 - 双飞人|sang1-pue1-nang5||n|特产:
 - 平安膏|pheng5-an1-ko1||n|特产:
 - 凉水|liang5-tsui2|凉茶/中药|n|特产:
-- 老药桔|liang5-tsui2||n|特产:
+- 老药桔|lau6-ioh8-kit4||n|特产:
 - 王老吉|heng5-lau6-kit4||n|特产:
 - 杏仁露|heng6-jin5-lou3||n|特产:
 - 椰子汁|ia5-tsi2-tsap4||n|特产:
@@ -711,6 +715,8 @@
 - 雪糕|sorh4-ko1||n|特产:
 - 雪条|sorh4-tiau5|冰棒|n|特产:
 - 冰淇淋|piann1-khi5-lin5||n|特产:
+- 巧克力|kha2-khiok4-lat8||n|特产:
+- 朱古力|tsu1-kou2-lat8||n|特产:
 - 麦片|beh5-phian3||n|特产:
 - 啤酒|pi5-tsiu2||n|特产:
 - 涩啤|siap4-pi5|啤酒|n|特产:
@@ -1167,8 +1173,8 @@
 
 # -------------------------- 音乐 MUSICAL --------------------------
 - 音乐|im1-gauh8/im1-ngauh8||n|音乐:
-- 潮州音乐|tio5-tsiu1 -im1-gauh8||n|音乐:
-- 潮剧|tio5-kiah8||n|音乐:
+- 潮州音乐|tionn'5-tsiu1 -im1-gauh8||n|音乐:
+- 潮剧|tionn'5-kiah8||n|音乐:
 - 弦诗|hinn5-si1||n|音乐:
 - 笛套|tek8-thau3||n|音乐:
 - 英歌舞|eng1-ko1-bu2||n|音乐:
@@ -1180,7 +1186,7 @@
 - 丛声|tsang5-siann1||n|音乐:
 - 锣鼓|lo5-kou2||n|音乐:
 - 大锣鼓|tua7-lo5-kou2||n|音乐:
-- 潮州大锣鼓|tio5-tsiu1 -tua7-lo5-kou2||n|音乐:
+- 潮州大锣鼓|tionn'5-tsiu1 -tua7-lo5-kou2||n|音乐:
 - 文爿|bun5-poinn5|管弦乐部分|n|音乐:
 - 武爿|bu2-poinn5|打击乐部分|n|音乐:
 - 司鼓|si1-kou2||n|音乐:
@@ -1452,11 +1458,11 @@
 - ＊＊叫|tiauh4 tiauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
 - ＊＊叫|tih4 tiauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
 - ＊＊＊叫|tih4 tiauh4 liauh4 kio3|(模拟鱼虾等跳跃的样子)|o|拟声拟态/XX叫:
-- ＊一叫|tsa7 tsek8-kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
-- ＊下叫|tsa7 e6-kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
-- ＊＊叫|tsa7 tsa7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
-- ＊＊叫|tsi7 tsa7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
-- ＊＊＊叫|tsi7 tsa7 la7 kio3|(模拟开大火炒菜的声音)|o|拟声拟态/XX叫:
+- ＊一叫|tsa7 tsek8-kio3|嗞的一声(模拟开大火炒菜的声音，或起鸡皮疙瘩)|o|拟声拟态/XX叫:
+- ＊下叫|tsa7 e6-kio3|嗞的一声(模拟开大火炒菜的声音，或起鸡皮疙瘩)|o|拟声拟态/XX叫:
+- ＊＊叫|tsa7 tsa7 kio3|嗞嗞响(模拟开大火炒菜的声音，或起鸡皮疙瘩)|o|拟声拟态/XX叫:
+- ＊＊叫|tsi7 tsa7 kio3|嗞嗞响(模拟开大火炒菜的声音，或起鸡皮疙瘩)|o|拟声拟态/XX叫:
+- ＊＊＊叫|tsi7 tsa7 la7 kio3|嗞嗞响(模拟开大火炒菜的声音，或起鸡皮疙瘩)|o|拟声拟态/XX叫:
 - ＊一叫|sa7 tsek8-kio3|(模拟风沙的声音)|o|拟声拟态/XX叫:
 - ＊下叫|sa7 e6-kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
 - ＊＊叫|sa7 sa7 kio3|(模拟风或沙的声音)|o|拟声拟态/XX叫:
@@ -1472,6 +1478,11 @@
 - ＊＊叫|hauh4 hauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
 - ＊＊叫|hi4 hauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
 - ＊＊＊叫|hih4 hauh4 lauh4 kio3|(模拟大口进食的声音)|o|拟声拟态/XX叫:
+- ＊一叫|nga7 tsek8-kio3|(模拟大声哭喊的声音)|o|拟声拟态/XX叫:
+- ＊下叫|nga7 e6-kio3|(模拟大声哭喊的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|nga7 nga7 kio3|(模拟大声哭喊的声音)|o|拟声拟态/XX叫:
+- ＊＊叫|ngi7 nga7 kio3|(模拟大声哭喊的声音)|o|拟声拟态/XX叫:
+- ＊＊＊叫|ngi7 nga7 la7 kio3|(模拟大声哭喊的声音)|o|拟声拟态/XX叫:
 
 # -------------------------- 固定短语 形容词+“过”+名动词 THAN --------------------------
 - 硗过梦龙|khiau1-kue3-mang7-leng5||i|过:
@@ -1489,6 +1500,7 @@
 - ＊过破布|jiau5-kue3-phua3-pou3||i|过:
 - 熟过老豆酱|sek8-kue3-lau6-tau7-tsionn3||i|过:
 - 饱过蜘蛛|pa2-kue3-ti1-tu1||i|过:
+- 饱过胡蝇|pa2-kue3-ti1-tu1||i|过:
 - 易过食碗水|koi7-kue3-tsiah8-uann2-tsui2||i|过:
 - 易过食滚水|koi7-kue3-tsiah8-kun2-tsui2||i|过:
 - 易过食水|koi7-kue3-tsiah8-tsui2||i|过:
@@ -1516,7 +1528,8 @@
 - 响过雷|hiang2-kue3-lui5||i|过:
 - 响过拍碰鳔|hiang2-kue3-phah4-phong3-phio6||i|过:
 - 准过半仙|tsun2-kue3-puann3-sian1||i|过:
-- 准过拍鸟|tsun2-kue3-phah4-tsiau2||i|过:
+- 准过打鸟/准过拍鸟|tsun2-kue3-phah4-tsiau2||i|过:
+- 毒过蛇|tak8-kue3-tsua5||i|过:
 
 
 # -------------------------- 固定短语 名词+形容词叠词 NAA 式 --------------------------
@@ -2073,7 +2086,7 @@
 - 金正恩|kim1-tsiann3-urn1||nr|人名:
 - 特朗普|tek8-lang5-phou2||nr|人名:
 - 马克龙|be2-khiok4-leng5||nr|人名:
-- 奥巴马|o3-pa1-be2||nr|人名:
+- 奥巴马|onn'3-pa1-be2||nr|人名:
 - 布什|pu3-tsap8||nr|人名:
 - 萨达姆|sat4-tat8-m2||nr|人名:
 - 叶利钦|iap8-li6-khin1/hiap8-li6-khin1||nr|人名:
@@ -2215,19 +2228,19 @@
 - 老厝|lau6-tshu3||ns|地名:
 - 居委会|kur1-ui2-hue6||ns|地名:
 # 潮汕地名 历史区划
-- 潮汕|tio5-suann1||ns|地名:
-- 潮州|tio5-tsiu1||ns|地名:
+- 潮汕|tionn'5-suann1||ns|地名:
+- 潮州|tionn'5-tsiu1||ns|地名:
 - 汕头|suann1-thau5||ns|地名:
 - 揭阳|kit4-ionn5||ns|地名:
 - 府城|hu2-siann5||ns|地名:
-- 潮安|tio5-an1||ns|地名:
+- 潮安|tionn'5-an1||ns|地名:
 - 饶平|jiau5-pheng5||ns|地名:
 - 丰顺|hong1-sun6||ns|地名:
 - 澄海|theng5-hai2||ns|地名:
-- 潮阳|tio5-ionn5||ns|地名:
+- 潮阳|tionn'5-ionn5||ns|地名:
 - 普宁|phou2-leng5||ns|地名:
 - 惠来|hui6-lai5||ns|地名:
-- 南澳|nam5-o3||ns|地名:
+- 南澳|nam5-onn'3||ns|地名:
 - 大埔|tua7-pou1||ns|地名:
 - 海阳|hai2-iang5||ns|地名:
 - 陆丰|liok8-hong1||ns|地名:
@@ -2373,7 +2386,7 @@
 - 汤南|thng1-nam5||ns|地名:
 # 南澳
 - 后宅|au6-theh8||ns|地名:
-- 云澳|hun5-o3||ns|地名:
+- 云澳|hun5-onn'3||ns|地名:
 # 澄海
 - 澄城|theng5-siann5||ns|地名:
 - 莱芜|lai5-bu5||ns|地名:
@@ -2425,7 +2438,7 @@
 - 柘林|tsiah4-lann5||ns|地名:
 - 五祉|ngou2-tsi2||ns|地名:
 - 大榕|tua7-seng5||ns|地名:
-- 荔林|loinn7-lim5||ns|地名:
+- 荔林|loinn'7-lim5||ns|地名:
 - 方饶|pang1-jiau5||ns|地名:
 - 长教|tionn5-ka3||ns|地名:
 - 新圩|sin1-hur1||ns|地名:
@@ -2526,7 +2539,7 @@
 - 棉城|mian5-siann5||ns|地名:
 - 棉北|mian5-pak4||ns|地名:
 - 赤寮|tshiah8-liau5||ns|地名:
-- 潮南|tio5-nam5||ns|地名:
+- 潮南|tionn'5-nam5||ns|地名:
 - 陈店|tan5-tiam3||ns|地名:
 - 峡山|hap8-suann1||ns|地名:
 - 海门|hai2-mng5||ns|地名:
@@ -2573,7 +2586,7 @@
 - 台湾|thai5-uan1||ns|地名:
 - 香港|hiang1-kang2||ns|地名:
 - 九龙|kiu2-leng5||ns|地名:
-- 澳门|o3-mng5||ns|地名:
+- 澳门|onn'3-mng5||ns|地名:
 - 上海|siang6-hai2||ns|地名:
 - 天津|thian1-tsin1||ns|地名:
 - 西藏|sai1-tsang6||ns|地名:
@@ -2588,6 +2601,7 @@
 - 越南|uat8-nam5||ns|地名:
 - 马来西亚|be2-lai5-sai1-a1||ns|地名:
 - 新加坡|sin1-kia1-po1/sin1-kia1-pho1||ns|地名:
+- 石叻/实叻|sit8-lat8|新加坡|ns|地名:
 - 朝鲜|tsiau1-sian2||ns|地名:
 - 加拿大|kia1-na2-tai6||ns|地名:
 - 日本|jit8-png2||ns|地名:
