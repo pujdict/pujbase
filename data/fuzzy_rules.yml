@@ -200,6 +200,23 @@ UENG_As_ENG_UANG:
   - initial+final/^(k|kh|ng|g|h)ueng$/$1uang/
   - initial+final/^ueng$/eng/
   - final/^uek$/uak/
+# 注：合口一等“或” huek->hok “弘” hueng->hong，合口三等“域” huek->hiok “永” ueng->iong，这类字出现频率不会非常高，可能还是处理成文白比较合适
+UONG_As_UENG:
+  title: “弘”韵取旧文读层（赅入声）
+  note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。
+  desc: "{uong} → {ueng}; {uok} → {uek}"
+  ipa: "*-uoŋ > -ueŋ; *-uok̚ > -uek̚"
+  eg: [弘,或,国]
+  act:
+  - final/^uo(ng|k)$/ue$1/
+UONG_As_ONG:
+  title: “弘”韵取新文读层（赅入声）
+  note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取新文读层读音。
+  desc: "{uong} → {ueng}; {uok} → {uek}"
+  ipa: "*-uoŋ > -ueŋ; *-uok̚ > -uek̚"
+  eg: [弘,或,国]
+  act:
+  - final/^uo(ng|k)$/ue$1/
 IUONG_As_UENG:
   title: “荣”韵取旧文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。

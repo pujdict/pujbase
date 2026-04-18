@@ -29,6 +29,7 @@ ChaoZhou_FuCheng:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
@@ -74,6 +75,7 @@ XiQiang:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IOU
@@ -107,6 +109,7 @@ ChaoAn_FengHuang:
     # 凤凰这些字需要确认口语是不是只读 eng，如果是，也不太应该理解为吸收更晚近的文读 eng（凤凰地理位置上更偏，这种可能性不大），而应该理解为新的规则 *ueng → eng 的作用。——待调查。
     - UENG_As_ENG
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IAN_As_IEN
     - N_As_L_ForMEnding
@@ -147,6 +150,7 @@ ChaoAn_WenCi:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
@@ -188,6 +192,7 @@ ChaoAn_JinShi:
   - IURN_As_IN
   - IURM_As_IM
   - UENG_As_ENG_UANG
+  - UONG_As_ONG
   - IUONG_As_IONG
   - L_As_N_For_NN_NG
   - MU_As_BU_ForNasalEnding
@@ -231,6 +236,7 @@ FengShun_LiuHuang:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IEU
@@ -262,6 +268,7 @@ RaoPing_SanRao:
     - IURN_As_IN
     - IURM_As_OM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
@@ -290,6 +297,7 @@ RaoPing_HuangGang:
     - IURN_As_IN
     - IURM_As_OM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -330,6 +338,7 @@ ChengHai_ChengCheng:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IO_As_IE
     - IAU_As_IOU
@@ -360,6 +369,7 @@ ChengHai_WaiSha:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - IAU_As_IOU
     - L_As_N_For_NN_NG
@@ -393,6 +403,7 @@ ShanTou_ShiQu:
     - IURN_As_IN
     - IURM_As_IAM
     - UENG_As_ENG_UANG
+    - UONG_As_ONG
     - IUONG_As_IONG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -435,6 +446,7 @@ JieYang_RongCheng:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_IM
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -447,6 +459,7 @@ ChaoYang_MianCheng:
   area: 潮阳
   subarea: 棉城
   cat: [ChaoPu, LianJiang]
+  labiodental: true
   tones:
     citation: [ 21, 45, 41, 2, 33, 52, 32, 5 ]
     sandhi: [ 21, 52, 32, 5, 332, 32, 21, 3 ]
@@ -462,6 +475,7 @@ ChaoYang_MianCheng:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_IM
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -487,6 +501,7 @@ ChaoYang_DaHao:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_ONN
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -496,6 +511,7 @@ PuNing_LiuSha:
   area: 普宁
   subarea: 流沙
   cat: [ChaoPu, LianJiang]
+  labiodental: true
   tones:
     citation: [ 335, 52, 212, 32, 44, 25, 31, 54 ]
     sandhi: [ 33, 212, 55, 54, 31, 33, 33, 3 ]
@@ -511,6 +527,7 @@ PuNing_LiuSha:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_IM
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - N_As_NG
@@ -520,6 +537,7 @@ HuiLai_HuiCheng:
   area: 惠来
   subarea: 惠城
   cat: [ChaoPu, LianJiang]
+  labiodental: true
   tones:
     citation: [ 24, 552, 31, 32, 44, 213, 31, 54 ]
     sandhi: [ 33, 213, 44, 43, 31, 33, 33, 21 ]
@@ -535,6 +553,7 @@ HuiLai_HuiCheng:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_IM
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -544,6 +563,7 @@ LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
   cat: [ChaoPu, LianJiang]
+  labiodental: true
   tones:
     citation: [ 334, 552, 22, 3, 55, 24, 41, 54 ]
     sandhi: [ 33, 24, 55, 54, 32, 33, 33, 3 ]
@@ -561,6 +581,7 @@ LuFeng_SanJia:
     - URN_As_IN
     - IURN_As_IAN
     - IURM_As_OM
+    - UONG_As_UENG
     - IUONG_As_UENG
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
