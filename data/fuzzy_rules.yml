@@ -78,22 +78,6 @@ OU_As_AU:
   eg: [乌,雨,虎]
   act:
   - final/^ou(nn|h|nnh)?$/au$1/
-UE_As_UEI:
-  title: “锅”韵增生 [i] 尾（赅鼻化、入声）
-  note: 陆丰三甲等地的语音。
-  desc: "{ue} → {uei}; {uenn} → {ueinn}; {uek} → {ueik}; {ueh} → {ueih}"
-  ipa: "*-ue > -uei; *-ũẽ > -ũẽĩ; *-uek̚  > -ueik̚ ; *-ueʔ > -ueiʔ"
-  eg: [花,划,横]
-  act:
-  - final/^ue(k|nn|h|nnh)?$/uei$1/
-UE_As_OI:
-  title: “锅”韵转“挨”（赅鼻化、喉塞）
-  note: 陆丰三甲新派音。
-  desc: "{ue} → {oi}; {uenn} → {oinn}; {ueh} → {oih}"
-  ipa: "*-ue > -oi; *-ũẽ > -õĩ; *-ueʔ > -oiʔ"
-  eg: [花,划,横]
-  act:
-  - final/^ue(nn|h|nnh)?$/uei$1/
 HN_As_HNG:
   title: “欣”韵声化
   note: 潮州府城音。
@@ -212,11 +196,11 @@ UONG_As_UENG:
 UONG_As_ONG:
   title: “弘”韵取新文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取新文读层读音。
-  desc: "{uong} → {ueng}; {uok} → {uek}"
-  ipa: "*-uoŋ > -ueŋ; *-uok̚ > -uek̚"
+  desc: "{uong} → {ong}; {uok} → {ok}"
+  ipa: "*-uoŋ > -oŋ; *-uok̚ > -ok̚"
   eg: [弘,或,国]
   act:
-  - final/^uo(ng|k)$/ue$1/
+  - final/^uo(ng|k)$/o$1/
 IUONG_As_UENG:
   title: “荣”韵取旧文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。
@@ -233,6 +217,22 @@ IUONG_As_IONG:
   eg: [永,荣,域]
   act:
   - final/^iuo(ng|k)$/io$1/
+UE_As_UEI:
+  title: “锅”韵增生 [i] 尾（赅鼻化、入声）
+  note: 陆丰三甲等地的语音。
+  desc: "{ue} → {uei}; {uenn} → {ueinn}; {uek} → {ueik}; {ueh} → {ueih}"
+  ipa: "*-ue > -uei; *-ũẽ > -ũẽĩ; *-uek̚  > -ueik̚ ; *-ueʔ > -ueiʔ"
+  eg: [花,划,横]
+  act:
+  - final/^ue(k|nn|h|nnh)?$/uei$1/
+UEI_As_OI:
+  title: “锅”韵增生 [i] 尾后转“挨”（赅鼻化、喉塞）
+  note: 陆丰三甲新派音。
+  desc: "{uei} → {oi}; {ueinn} → {oinn}; {ueih} → {oih}"
+  ipa: "*-uei > -oi; *-ũẽĩ > -õĩ; *-ueiʔ > -oiʔ"
+  eg: [花,划,横]
+  act:
+  - final/^uei(nn|h|nnh)?$/oi$1/
 IO_As_IE:
   title: “腰”韵前化（赅鼻化、喉塞）
   note: 潮州、澄海等地语音。
@@ -482,7 +482,7 @@ URNG_As_NG:
   - initial+final/^(p|ph|m|b|t|th|n|l|k|kh|ng|g|ts|tsh|s|j)urng$/$1ng/
 IONG_As_ONG:
   title: 齿音声母后“雍”韵丢失介音（“而”声母、“畜”声旁除外，赅入声）
-  note: 韩江、榕江腔语音，练江腔此韵亦受影响变得不稳定，潮阳等地新派倾向于丢失介音。
+  note: 韩江、榕江腔语音，练江腔此韵亦受影响变得不稳定，潮阳、普宁等地新派倾向于丢失介音。
   desc: "“而”声母、“畜”声旁除外，齿音声母后 {iong} → {ong}"
   ipa: "*-ioŋ > -oŋ; *-iok̚  > -ok̚ "
   eg: [中,从,续]
@@ -491,7 +491,7 @@ IONG_As_ONG:
   - initial+final/^(t|n|l|ts|tsh|s)iok$/$1ok/
 JIONG_As_JONG:
   title: “而”声母后“雍”韵丢失介音（赅入声）
-  note: 韩江腔语音。
+  note: 韩江腔语音，榕江腔此音节保留介音。
   desc: "“而”声母后 {iong} → {ong}"
   ipa: "*dzioŋ > dzoŋ; *dziok̚  > dzok̚"
   eg: [绒,茸,褥]
