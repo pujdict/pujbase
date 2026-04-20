@@ -273,8 +273,8 @@
 - 西红柿|sai1-ang5-sai6||n|蔬菜:
 - 菠菱|pue1-leng5|菠菜|n|蔬菜:
 - 蕹菜|eng3-tshai3|空心菜|n|蔬菜:
-- 韭菜|ku1-tshai3||n|蔬菜:
-- 韭菜花|ku1-tshai3-hue1||n|蔬菜:
+- 韭菜|ku2-tshai3||n|蔬菜:
+- 韭菜花|ku2-tshai3-hue1||n|蔬菜:
 - 高丽|ko1-le6|包菜|n|蔬菜:
 - 高丽蕾|ko1-le6-lui5|包菜|n|蔬菜:
 - 葱|tshang1||n|蔬菜:
@@ -285,7 +285,7 @@
 - 冬瓜|tang1-kue1||n|蔬菜:
 - 角瓜|kak4-kue1||n|蔬菜:
 - 刺瓜|tshi3-kue1||n|蔬菜:
-- 荠葱/钱葱|tshinn'5-tshang1/tsinn5-tshang1|马蹄葱/马蹄/荸荠|n|蔬菜:
+- 荠葱/钱葱|tsinn'5-tshang1/tsinn5-tshang1|马蹄葱/马蹄/荸荠|n|蔬菜:
 - 苋菜|hoinn7-tshai3||n|蔬菜:
 - 莶椒|hiam1-tsio1|辣椒|n|蔬菜:
 - 猴栗|kau5-lat8|板栗|n|蔬菜:
@@ -315,7 +315,7 @@
 - 东洋菜|tang1-ionn5-tshai3|西洋菜|n|蔬菜:
     desc: 同“东洋草”
 - 芦笋|lou5-sun2||n|蔬菜:
-- 香菜骨/芳菜骨|phang1-tshai3-kut4|芦笋|n|蔬菜:
+- 香菜骨/芳菜骨|phang1-tshai3-kut4|莴笋|n|蔬菜:
 - 百合|peh4-hah8||n|蔬菜:
 - 芡实|khiam6-sit8||n|蔬菜:
 - 苦瓜|khou2-kue1||n|蔬菜:
@@ -483,7 +483,7 @@
 - 包芋泥|pau1-ou7-ni5|芋泥馅|n|特产:
 - 包笋|pau1-sun2|笋馅|n|特产:
 - 包菜|pau1-tshai3|蔬菜馅|n|特产:
-- 包韭菜|pau1-ku1-tshai3|韭菜馅|n|特产:
+- 包韭菜|pau1-ku2-tshai3|韭菜馅|n|特产:
 - 豆花|tau7-hue1||n|特产:
 - 草粿|tshau2-kue2|烧仙草|n|特产:
 - 甜粿|tiam5-kue2||n|特产:
@@ -496,7 +496,7 @@
 - 乒乓粿|pin1-pong5-kue2||n|特产:
 - 菜头粿|tshai3-thau5-kue2||n|特产:
 - 无米粿|bo5-bi2-kue2||n|特产:
-- 韭菜粿|ku1-tshai2-kue2||n|特产:
+- 韭菜粿|ku2-tshai2-kue2||n|特产:
 - 芋粿|ou7-kue2||n|特产:
 - 鲎粿|hau7-kue2||n|特产:
 - 栀粿|ki1-kue2||n|特产:
@@ -2615,6 +2615,40 @@
 - 丹麦|tan1-beh8||ns|地名:
 - 瑞士|sui6-sur6||ns|地名:
 - 瑞典|sui6-tian2||ns|地名:
+
+# -------------------------- 感叹词，按读音排序 EXCLAMATION  --------------------------
+- 啊|a2||e|感叹词:
+- 哎哟|ai7 io7|哎哟|e|感叹词:
+- 哎喳|ai2 tsa2|哎哟|e|感叹词:
+- 哎惨|ai2 tsham2|完了|e|感叹词:
+- 哇|ua2||e|感叹词:
+- 哇𡳞/哇浪|ua2 lan6/ua2--lan6|我的天/屌爆了|e|感叹词:
+- 哇便|ua2 pin6/ua2-pian6|我的天|e|感叹词:
+- 哇父|ua2 pe6|我的天|e|感叹词:
+- 哇塞|ua2 se2||e|感叹词:
+- 害事|hai7-sur5/hai7-sur7|坏事了/完了/完蛋了|e|感叹词:
+- 雨来|hou6--lai5/hou6 lai5||e|感叹词:
+- 咬塞|ka6-sat4||e|感叹词:
+- 哭父|khau3-pe6||e|感叹词:
+    informal: 靠北
+- 𡳞屎|lan6-sai2||e|感叹词:
+- 漉屎|lok4-sai2||e|感叹词:
+- 散哭父|suann3-khau3-pe6||e|感叹词:
+- 散肏姨|suann3-phu2-ai5/suann3-phu2-i5||e|感叹词:
+    informal: 散扑姨
+- 散肏母|suann3-phu2-bo2||e|感叹词:
+- 早啊蒙|tsa2-a3-mong5||e|感叹词:
+- 早啊你蒙|tsa2-a3-lur2-mong5||e|感叹词:
+- 早早|tsa2-tsa2||e|感叹词:
+- 早晨|tsa2-sin5||e|感叹词:
+- 肿|tseng2|完了|e|感叹词:
+- 肿去|tseng2--khur3|完了|e|感叹词:
+- 蛇咬|tsua5 ka6|难搞|e|感叹词:
+- 差块死|tsuah8-kor3-si2||e|感叹词:
+- 插啊痟/插啊𤞚|tshah4-a3-siau2||e|感叹词:
+- 惨|tsham2||e|感叹词:
+- 衬彩/凊彩|tshin3-tshai2|随便|e|感叹词:
+
 
 # -------------------------- 动词汇总，按读音排序 --------------------------
 
