@@ -16663,6 +16663,12 @@
    0,ian,2,0,0,:
 - 硯,砚:
    0,inn,7,1,0,:
+    aka_replace:
+     JieYang_RongCheng: ng,i,7
+     ChaoYang_DaHao: ng,i,7
+     ChaoYang_MianCheng: ng,i,7
+     PuNing_LiuSha: ng,i,7
+     HuiLai_HuiCheng: ng,i,7
    ng,inn,7,1,0,:
    0,ian,6,2,3,:
 - 雁,雁:
@@ -18049,6 +18055,12 @@
    0,ian,3,2,3,:
 - 院,院:
    0,inn,7,1,0,:
+    aka_replace:
+     JieYang_RongCheng: ng,i,7
+     ChaoYang_DaHao: ng,i,7
+     ChaoYang_MianCheng: ng,i,7
+     PuNing_LiuSha: ng,i,7
+     HuiLai_HuiCheng: ng,i,7
    # 潮正
    0,ian,6,2,3,:
    # 十仙庆寿：院子
@@ -18193,7 +18205,7 @@
    0,un,2,0,0,:
 - 蘊,蕴:
    0,un,2,0,0,:
-   0,un,6,0,0,:
+   0,un,7,0,0,:
 - 韻,韵:
    0,un,7,0,0,:
 - 匝,匝:
