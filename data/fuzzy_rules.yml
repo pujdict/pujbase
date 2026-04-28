@@ -104,12 +104,12 @@ URN_As_NG:
   - initial+final/^urn$/ng/
 URN_As_IN:
   title: “隐”韵转“因”（赅入声）
-  note: 练江腔语音。注：读喉塞的“乞”也归此规则。
+  note: 榕江、练江腔语音，榕江腔需配合“因”韵低化规则一起使用。
   desc: "{urn} → {in}; {urt} → {it}"
   ipa: "*-ɯn > -in; *-ɯt̚  > -it̚ "
   eg: [仅,斤,勤]
   act:
-  - final/^ur(n|t|h)$/i$1/
+  - final/^ur(n|t)$/i$1/
 IURN_As_IN:
   title: “彬”韵取文读层（赅入声）
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取文读层读音。
