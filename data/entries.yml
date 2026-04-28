@@ -1783,6 +1783,8 @@
    tsh,eng,3,2,3,:
 - 吃,吃:
    ng,urt,4,1,0,:
+    aka_replace:
+     HuiLai_HuiCheng: ng,ip,4
    kh,urt,4,2,0,:
 - 哧,哧:
    tsh,ur,1,0,0,:
@@ -1793,8 +1795,7 @@
 - 笞,笞:
    tsh,i,1,0,0,:
 - 喫,喫:
-   ng,urt,4,3,0,:
-   kh,iat,4,2,0,:
+   kh,oi,3,0,0,:
 - 摛,摛:
    l,i,5,0,0,:
 - 嗤,嗤:
@@ -11273,7 +11274,8 @@
 - 莆,莆:
    ph,u,5,0,0,:
 - 菩,菩:
-   ph,u,5,0,0,:
+   ph,u,5,2,0,:
+   ph,o,5,1,0,:
 - 脯,脯:
    p,ou,2,1,0,:
    p,u,2,2,3,:
@@ -11467,8 +11469,18 @@
 - 乞,乞:
    kh,urh,4,1,0,:
     "让、给": [["乞伊", "khurh4--i1", "给他"]]
-   kh,oih,4,1,0,:
-    "让、给（又音）":
+    aka_replace:
+     # 这个实际上相当于 khurt -> khit/khet 之后分别脱落韵尾变成 khurh khih kheh，但是例字仅有这一个，就不单开两条口音规则了
+     # 榕江为 kheh4 练江为 khih4
+     ChaoAn_JinShi: kh,eh,4
+     JieYang_RongCheng: kh,eh,4
+     ChaoYang_MianCheng: kh,ih,4
+     ChaoYang_DaHao: kh,ih,4
+     PuNing_LiuSha: kh,ih,4
+     HuiLai_HuiCheng: kh,ih,4
+     LuFeng_SanJia: kh,ih,4
+    aka:
+     ShanTou_ShiQu: kh,oih,4
    kh,urt,4,2,0,:
 - 芑,芑:
    kh,i,2,0,0,:
@@ -18243,10 +18255,12 @@
 - 崽,崽:
    ts,ai,2,0,0,:
 - 載,载:
-   ts,ainn',2,0,0,:
-    "量词":
-   ts,ai,3,0,0,:
-    "动词":
+   ts,ainn',2,2,0,:
+    "量词，表示一年":
+   ts,ai,3,2,0,:
+    "动词，用于合成词": [["运载", "un7-tsai3", ""]]
+   tsh,or,7,1,0,:
+    "装载、盛放，单独用作动词": [["物个袋来载", "mueh8-kai5-tor7 lai5-tshor7", "拿个袋子来装"]]
 - 再,再:
    ts,ai,3,0,0,:
 - 在,在:
