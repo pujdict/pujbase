@@ -523,3 +523,11 @@ NGU_As_U:
   eg: [娱,五,吴]
   act:
   - initial+final/^ngu$/u/
+MONG_As_MOU:
+  title: “蒙”音节丢失鼻韵尾
+  note: 潮安庵埠口音。
+  desc: "音节 {mong} → {mou}"
+  ipa: "*moŋ > mou"
+  eg: [蒙,摸,舞]
+  act:
+  - initial+final/^mong$/mou/
