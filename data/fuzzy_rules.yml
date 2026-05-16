@@ -190,7 +190,7 @@ UONG_As_UENG:
   note: 此规则仅为录入词汇时方便转读而设，榕江、练江腔习惯上取旧文读层读音。
   desc: "{uong} → {ueng}; {uok} → {uek}"
   ipa: "*-uoŋ > -ueŋ; *-uok̚ > -uek̚"
-  eg: [弘,或,国]
+  eg: [弘,或,惑]
   act:
   - final/^uo(ng|k)$/ue$1/
 UONG_As_ONG:
@@ -492,7 +492,7 @@ IONG_As_ONG:
 JIONG_As_JONG:
   title: “而”声母后“雍”韵丢失介音（赅入声）
   note: 韩江腔语音，榕江腔此音节保留介音。
-  desc: "“而”声母后 {iong} → {ong}"
+  desc: "{jiong} → {jong}; {jiok} → {jok}"
   ipa: "*dzioŋ > dzoŋ; *dziok̚  > dzok̚"
   eg: [绒,茸,褥]
   act:
@@ -531,3 +531,29 @@ MONG_As_MOU:
   eg: [蒙,摸,舞]
   act:
   - initial+final/^mong$/mou/
+PU_PHU_BU_Labiodentalize:
+  title: 声母“波”“颇”“无”合口呼唇齿化
+  note: 声母“波”“颇”“无”合口呼唇齿化，主要分布于练江腔的新派音。一般这三个声母的轻唇化会一起出现，但“毛”“何”声母不一定同时出现。
+  desc: "{pu} {phu} {bu} → {pfu} {pfhu} {bvu}"
+  ipa: "*pu- > p̪fu-; *phu- > p̪fʰu-; *bu- > b̪vu-"
+  eg: [肥,万,富]
+  act:
+  - initial+final/^pu(?!r)(.*)$/pfu$1/
+  - initial+final/^phu(?!r)(.*)$/pfhu$1/
+  - initial+final/^bu(?!r)(.*)$/bvu$1/
+MU_Labiodentalize:
+  title: 声母“毛”合口呼唇齿化
+  note: 声母“毛”合口呼轻唇化，主要分布于练江腔的新派音。
+  desc: "{mu} → {mvu}"
+  ipa: "*mu- > ɱu-"
+  eg: [微,每,美]
+  act:
+  - initial+final/^mu(?!r)(.*)$/mvu$1/
+HU_Labiodentalize_Half:
+  title: 声母“何”合口呼唇齿化（部分）
+  note: 声母“何”合口呼唇齿化，主要分布于练江腔的新派音。
+  desc: "{hu} → {fu}"
+  ipa: "*hu- > ɸu-"
+  eg: [分,非,腐]
+  act:
+  - initial+final/^hu(?!r)(i|n|ng|e)?$/fu$1/

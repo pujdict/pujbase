@@ -176,7 +176,7 @@ def add_phrase(phrases: Phrases, yaml_phrases):
                     )
                 )
             desc = v.get('desc')
-            if desc and not is_punctuation_full_width(desc[-1]):
+            if desc and not is_punctuation_full_width(list(desc)[-1]):
                 desc += '。'
             informal = v.get('informal')
             informal = informal.split('/') if informal else []
