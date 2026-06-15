@@ -3,7 +3,7 @@ UR_As_U:
   note: 练江腔标志性语音。
   ipa: "*-ɯ > -u"
   desc: "{ur} → {u}"
-  eg: [余,猪,书]
+  eg: [余,猪,之]
   act:
   - final/^ur$/u/
 OR_As_O:
@@ -11,7 +11,7 @@ OR_As_O:
   note: 潮汕大部分语音点的发音，今天仅剩潮安金石、沙溪等极少数语音点该韵母不圆唇。
   desc: "{or} → {o}"
   ipa: "*-ə > -o"
-  eg: [短,块,袋]
+  eg: [胎,块,袋]
   act:
   - final/^or$/o/
 OR_As_E:
@@ -19,7 +19,7 @@ OR_As_E:
   note: 陆丰三甲等地语音。
   desc: "{or} → {e}"
   ipa: "*-ə > -e"
-  eg: [短,块,袋]
+  eg: [胎,块,袋]
   act:
   - final/^or$/e/
 ORH_As_OH:
@@ -82,7 +82,7 @@ HN_As_HNG:
   title: “欣”韵声化
   note: 潮州府城音。
   desc: "音节 {hn} → {hng}"
-  ipa: "*hn̍ > ŋ̊ŋ̍; *n̍ > ŋ̍"
+  ipa: "*hn̍ > ŋ̊ŋ̍"
   eg: [欣,勋,尹]
   act:
   - initial+final/^(h?)n$/$1ng/
@@ -198,7 +198,7 @@ UONG_As_ONG:
   note: 此规则仅为录入词汇时方便转读而设，韩江腔习惯上取新文读层读音。
   desc: "{uong} → {ong}; {uok} → {ok}"
   ipa: "*-uoŋ > -oŋ; *-uok̚ > -ok̚"
-  eg: [弘,或,国]
+  eg: [弘,或,惑]
   act:
   - final/^uo(ng|k)$/o$1/
 IUONG_As_UENG:
@@ -291,7 +291,7 @@ IAM_As_IEM:
   - final/^ia(m|p)$/ie$1/
 UAM_As_UEM:
   title: “凡”韵高化（赅入声）
-  note: 备用。目前阳声韵存在高化现象的各地（以潮州为典型），此韵听感没有特别高。
+  note: 备用。目前阳声韵存在高化现象的各地（以潮州为典型），此韵听感没有特别高，但部分口音存在高化后丢闭口韵尾的情况。
   desc: "{uam} → {uem}; {uap} → {uep}"
   ipa: "*-uam > -uem; *-uap̚  > -uep̚ "
   eg: [凡,范,法]
