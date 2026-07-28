@@ -448,6 +448,14 @@ UAN_As_UANG:
   act:
   - final/^u(a|e)n$/u$1ng/
   - final/^u(a|e)t$/u$1k/
+OM_As_ONG:
+  title: 元音 [o] 后不闭口（赅入声）
+  desc: "{om} → {ong}, {op} → {ok}"
+  ipa: "*-om > -oŋ; *-op̚  > -ok̚"
+  eg: [砍,啑,霎]
+  act:
+  - final/^om$/ong/
+  - final/^op$/ok/
 K_As_H:
   title: 舌根入声韵尾并入喉塞韵尾
   note: 陆丰三甲新派音。
