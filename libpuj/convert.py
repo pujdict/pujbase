@@ -15,21 +15,31 @@
 
 from __future__ import annotations
 
-from typing import Callable, Optional
+import pathlib
+
+from typing import Callable, Optional, Union
+
+import libpuj.pujpb as pb
 
 from .pujcommon import (
+    Accent,
     ConversionError,
     DPPronunciation,
+    FuzzyRuleDescriptor,
     Pronunciation,
     Sentence,
 )
 
 __all__ = [
     'convert',
+    'load_accents',
     'ConversionError',
     'SUPPORTED_SOURCES',
     'SUPPORTED_TARGETS',
 ]
+
+# 口音（模糊音规则）对象的类型。
+FuzzyRuleLike = Optional[Accent]
 
 # 支持的源拼音方案标识。
 SUPPORTED_SOURCES = ('puj', 'dp')
@@ -79,21 +89,27 @@ _TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
 }
 
 
-def _make_word_converter(source: str, target: str) -> Callable[[str], str]:
+def _make_word_converter(source: str, target: str,
+                         fuzzy_rule: FuzzyRuleLike = None) -> Callable[[str], str]:
     """
     构造将单个拼音单词从 `source` 转换为 `target` 的函数。
+
+    若传入 `fuzzy_rule`（口音），则在解析后、格式化前应用口音模糊音规则
+    （`fuzzy_rule.fuzzy_result`）。
     """
     parser = _SOURCE_PARSERS[source]
     formatter = _TARGET_FORMATTERS[target]
 
     def word_converter(word: str) -> str:
-        return formatter(parser(word))
+        pron = parser(word)
+        if fuzzy_rule is not None:
+            pron = fuzzy_rule.fuzzy_result(pron)
+        return formatter(pron)
 
     return word_converter
 
 
-def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
-                      fuzzy_rule=None) -> str:
+def _convert_sentence(sentence: str, word_converter: Callable[[str], str]) -> str:
     """
     将一句由多个拼音单词组成的话逐词转换。
 
@@ -105,14 +121,10 @@ def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
     Args:
         sentence: 待转换的句子。
         word_converter: 将单个拼音单词转换为目标方案字符串的函数。
-        fuzzy_rule: 模糊音规则，目前暂不支持，传入 None。
 
     Returns:
         转换后的句子字符串。
     """
-    if fuzzy_rule is not None:
-        raise ConversionError(
-            f"暂不支持 fuzzyRule（模糊音规则），请传入 None。收到：{fuzzy_rule!r}")
     letter_case = Sentence.determine_letter_case(sentence)
     chunks: list[str] = []
 
@@ -126,8 +138,32 @@ def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
     return Sentence.change_letter_case(''.join(chunks), letter_case)
 
 
+def load_accents(accent_pb_path: Union[str, pathlib.Path]) -> dict[str, Accent]:
+    """
+    从 protobuf 数据文件加载全部口音（`Accent`）对象。
+
+    参考 `pujutils.PUJUtils.__init__` 的口音加载逻辑：先初始化
+    `FuzzyRuleDescriptor` 的规则描述符表，再逐个解析 `Accent`。
+
+    Args:
+        accent_pb_path: `accents.pb` 文件路径。
+
+    Returns:
+        以口音 id 为键、`Accent` 对象为值的字典。
+    """
+    accent_pb_path = pathlib.Path(accent_pb_path)
+    with open(accent_pb_path, 'rb') as f:
+        accents_raw = pb.Accents()
+        accents_raw.ParseFromString(f.read())
+    FuzzyRuleDescriptor.init_from_pb(accents_raw.fuzzy_rule_descriptors)
+    accents: dict[str, Accent] = {}
+    for a in accents_raw.accents:
+        accents[a.id] = Accent.from_pb(a)
+    return accents
+
+
 def convert(text: str, source: str = 'puj', target: str = 'puj',
-            fuzzy_rule: Optional[object] = None) -> str:
+            fuzzy_rule: FuzzyRuleLike = None) -> str:
     """
     将拼音 `text` 从 `source` 方案转换为 `target` 方案。
 
@@ -140,7 +176,8 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
         source: 源拼音方案，可选 `'puj'`、`'dp'`。
         target: 目标拼音方案，可选 `'apuj'`、`'puj'`、`'dp'`、
             `'ipa'`、`'xsampa'`。
-        fuzzy_rule: 模糊音规则，暂未支持，请保持为 None。
+        fuzzy_rule: 口音（`Accent`）对象，用于应用口音模糊音规则；
+            为 None 时不应用口音。
 
     Returns:
         转换后的拼音字符串。
@@ -154,8 +191,8 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
     if target not in SUPPORTED_TARGETS:
         raise ConversionError(
             f"不支持的目标拼音方案：{target!r}，可用：{', '.join(SUPPORTED_TARGETS)}")
-    word_converter = _make_word_converter(source, target)
-    return _convert_sentence(text, word_converter, fuzzy_rule=fuzzy_rule)
+    word_converter = _make_word_converter(source, target, fuzzy_rule)
+    return _convert_sentence(text, word_converter)
 
 
 # 为每种 (源, 目标) 组合生成便捷的"源方案 2 目标方案"函数，如：

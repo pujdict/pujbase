@@ -6,6 +6,7 @@
     python puj.py --convert puj2dp --text peng1
     python puj.py --convert puj2ipa --text tshout3
     python puj.py -c puj2xsampa -t iann5
+    python puj.py -c puj2apuj -t eu1 --accent ChaoZhou_FuCheng --accent-data dist/accents.pb
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ from libpuj import (
     SUPPORTED_TARGETS,
     ConversionError,
     convert,
+    load_accents,
 )
 
 # 允许通过 -h 打印帮助信息。
@@ -45,7 +47,19 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     help='需要转换的拼音（源拼音使用 ASCII 形式，如 peng1；'
          '也支持由空格与连字符分割的整句话）。',
 )
-def main(convert_spec: str, text: str) -> None:
+@click.option(
+    '--accent', '-a',
+    type=str,
+    default=None,
+    help='口音 id，指定后按该口音的模糊音规则转换（需配合 --accent-data）。',
+)
+@click.option(
+    '--accent-data',
+    type=click.Path(exists=True, dir_okay=False),
+    default=None,
+    help='口音数据文件（accents.pb）的路径，用于加载口音。',
+)
+def main(convert_spec: str, text: str, accent: str, accent_data: str) -> None:
     """潮汕方言白话字工具。"""
     if not text:
         raise click.UsageError("请通过 --text 指定需要转换的拼音。")
@@ -71,8 +85,26 @@ def main(convert_spec: str, text: str) -> None:
             param_hint='--convert',
         )
 
+    # 口音处理：给定 --accent 时必须加载口音数据。
+    fuzzy_rule = None
+    if accent is not None:
+        if accent_data is None:
+            raise click.UsageError(
+                "指定 --accent 时必须同时通过 --accent-data 指定口音数据文件。")
+        try:
+            accents = load_accents(accent_data)
+        except Exception as exc:
+            raise click.ClickException(f"加载口音数据失败：{exc}")
+        if accent not in accents:
+            available = "、".join(sorted(accents))
+            raise click.BadParameter(
+                f"未知口音：{accent!r}。可用口音：{available}。",
+                param_hint='--accent',
+            )
+        fuzzy_rule = accents[accent]
+
     try:
-        result = convert(text, source=source, target=target)
+        result = convert(text, source=source, target=target, fuzzy_rule=fuzzy_rule)
     except ConversionError as exc:
         raise click.ClickException(str(exc))
 
