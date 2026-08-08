@@ -269,6 +269,8 @@ class Pronunciation(AbstractPronunciation):
 
     @classmethod
     def __to_dp_initial_or_final(cls, part: str) -> str:
+        if not part:
+            return ''
         try_to_map_initial = cls.__puj_dp_initial_map.get(part, None)
         if try_to_map_initial:
             return try_to_map_initial
@@ -291,6 +293,8 @@ class Pronunciation(AbstractPronunciation):
 
     @classmethod
     def __from_dp_initial_or_final(cls, part: str) -> str:
+        if not part:
+            return ''
         try_to_map_initial = cls.__dp_puj_initial_map.get(part, None)
         if try_to_map_initial:
             return try_to_map_initial

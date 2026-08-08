@@ -18,6 +18,7 @@ classifiers = [
 dependencies = [
     "pyyaml==6.0.2",
     "protobuf==5.29.6",
+    "click==8.1.4",
 ]
 license = "AGPL-3.0-or-later AND CC-BY-SA-4.0"
 license-files = ["LICENSE-AGPL"]
