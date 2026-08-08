@@ -5,26 +5,8 @@
 拼音方案转换相关的便捷函数见 `libpuj.convert`。
 """
 
-from .convert import (
-    ConversionError,
-    SUPPORTED_SOURCES,
-    SUPPORTED_TARGETS,
-    convert,
-    puj2apuj,
-    puj2dp,
-    puj2ipa,
-    puj2puj,
-    puj2xsampa,
-)
+from . import convert as _convert_mod
 
-__all__ = [
-    'convert',
-    'puj2apuj',
-    'puj2puj',
-    'puj2dp',
-    'puj2ipa',
-    'puj2xsampa',
-    'ConversionError',
-    'SUPPORTED_SOURCES',
-    'SUPPORTED_TARGETS',
-]
+# 重新导出 convert 中公开的所有转换函数（puj2dp、dp2ipa、convert 等）。
+__all__ = list(_convert_mod.__all__)
+globals().update({name: getattr(_convert_mod, name) for name in _convert_mod.__all__})

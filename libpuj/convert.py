@@ -1,99 +1,101 @@
 # -*- coding: utf-8 -*-
 """
-白话字 (PUJ) 与其他拼音方案之间的转换 API。
+潮汕方言各拼音方案之间的转换 API。
 
-将 `pujcommon.Pronunciation` 上零散的转换方法封装为可直接调用的
-纯函数，供命令行工具 `puj.py` 及其他脚本复用。
+将 `pujcommon` 上零散的转换方法封装为可直接调用的纯函数，
+供命令行工具 `puj.py` 及其他脚本复用。
 
-目前仅支持源方案为白话字 (puj)，即 ASCII 形式的白话字
-（例如 `peng1`、`iann5`，声调以数字形式出现在拼音之后）。
+内部以 `Pronunciation`（白话字，ASCII 形式存储）作为中间表示：
+- 源方案解析器将单个拼音单词解析为 `Pronunciation`；
+- 目标方案格式化器将 `Pronunciation` 输出为目标方案字符串。
+
+目前支持的源方案：`puj`（白话字 ASCII 形式，如 `peng1`）、
+`dp`（潮拼，如 `bêng1`）。
 """
 
 from __future__ import annotations
 
 from typing import Callable, Optional
 
-from .pujcommon import Pronunciation, Sentence
+from .pujcommon import (
+    ConversionError,
+    DPPronunciation,
+    Pronunciation,
+    Sentence,
+)
 
 __all__ = [
-    'puj2apuj',
-    'puj2puj',
-    'puj2dp',
-    'puj2ipa',
-    'puj2xsampa',
     'convert',
+    'ConversionError',
     'SUPPORTED_SOURCES',
     'SUPPORTED_TARGETS',
 ]
 
-# 目前仅支持的白话字源方案标识。
-SUPPORTED_SOURCES = ('puj',)
-# 支持的目标方案标识。
+# 支持的源拼音方案标识。
+SUPPORTED_SOURCES = ('puj', 'dp')
+# 支持的目标拼音方案标识。
 SUPPORTED_TARGETS = ('apuj', 'puj', 'dp', 'ipa', 'xsampa')
 
 
-class ConversionError(ValueError):
-    """拼音转换过程中出现的错误，例如无法解析或使用了不支持的方案。"""
-
-
-def _parse_puj(text: str) -> Pronunciation:
-    """
-    将 ASCII 白话字（如 `peng1`）解析为 `Pronunciation`。
-
-    与 `Pronunciation.from_combination` 不同，此处对无调号输入给出
-    更友好的错误信息，并将缺失的调号视为 0。
-    """
-    if not text:
-        raise ConversionError("输入为空，无法解析白话字拼音。")
-    match = Pronunciation.REGEXP_WORD.match(text)
-    if not match:
-        raise ConversionError(f"无法解析白话字拼音：{text!r}")
-    initial = match.group('initial') or ''
-    final = match.group('final') or ''
-    tone_text = match.group('tone')
-    tone = int(tone_text) if tone_text else 0
-    return Pronunciation(initial, final, tone)
-
-
-def puj2apuj(text: str) -> str:
-    """白话字(ASCII 形式) 转 白话字(ASCII 形式)。"""
-    return _parse_puj(text).to_combination()
-
-
-def puj2puj(text: str) -> str:
-    """白话字(ASCII 形式) 转 白话字(书面形式，含调符)。"""
-    return _parse_puj(text).to_written()
-
-
-def puj2dp(text: str) -> str:
-    """白话字(ASCII 形式) 转 潮拼 (DP)。"""
-    return _parse_puj(text).to_dp().__str__()
-
-
-def puj2ipa(text: str) -> str:
-    """白话字(ASCII 形式) 转 国际音标 (IPA，书面形式)。"""
-    return _parse_puj(text).to_ipa().to_written()
-
-
-def puj2xsampa(text: str) -> str:
-    """白话字(ASCII 形式) 转 X-SAMPA 式国际音标。"""
-    return _parse_puj(text).to_ipa().__str__()
-
-
-# 目标方案名 -> 转换函数。
-_TARGET_CONVERTERS: dict[str, Callable[[str], str]] = {
-    'apuj': puj2apuj,
-    'puj': puj2puj,
-    'dp': puj2dp,
-    'ipa': puj2ipa,
-    'xsampa': puj2xsampa,
+# 源方案名 -> 解析函数（单个拼音单词 -> Pronunciation）。
+_SOURCE_PARSERS: dict[str, Callable[[str], Pronunciation]] = {
+    'puj': Pronunciation.from_written,
+    'dp': lambda x: Pronunciation.from_dp(DPPronunciation.from_written(x)),
 }
+
+
+def _pron_to_apuj(pron: Pronunciation) -> str:
+    """Pronunciation -> 白话字(ASCII 形式)。"""
+    return pron.to_combination()
+
+
+def _pron_to_puj(pron: Pronunciation) -> str:
+    """Pronunciation -> 白话字(书面形式，含调符)。"""
+    return pron.to_written()
+
+
+def _pron_to_dp(pron: Pronunciation) -> str:
+    """Pronunciation -> 潮拼 (DP)。"""
+    return pron.to_dp().__str__()
+
+
+def _pron_to_ipa(pron: Pronunciation) -> str:
+    """Pronunciation -> 国际音标 (IPA，书面形式)。"""
+    return pron.to_ipa().to_written()
+
+
+def _pron_to_xsampa(pron: Pronunciation) -> str:
+    """Pronunciation -> X-SAMPA 式国际音标。"""
+    return pron.to_ipa().__str__()
+
+
+# 目标方案名 -> 格式化函数（Pronunciation -> 目标方案字符串）。
+_TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
+    'apuj': _pron_to_apuj,
+    'puj': _pron_to_puj,
+    'dp': _pron_to_dp,
+    'ipa': _pron_to_ipa,
+    'xsampa': _pron_to_xsampa,
+}
+
+
+def _make_word_converter(source: str, target: str) -> Callable[[str], str]:
+    """
+    构造将单个拼音单词从 `source` 转换为 `target` 的函数。
+    """
+    parser = _SOURCE_PARSERS[source]
+    formatter = _TARGET_FORMATTERS[target]
+
+    def word_converter(word: str) -> str:
+        return formatter(parser(word))
+
+    return word_converter
 
 
 def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
                       fuzzy_rule=None) -> str:
     """
-    将一句由多个白话字拼音单词组成的话逐词转换。
+    将一句由多个拼音单词组成的话逐词转换。
 
     以空格与连字符（" ", "-", "--", "- ", " -", "-- ", " --" 等）分割单词，
     非单词片段（空格、连字符、标点等）原样保留。转换时先统一转为小写，
@@ -102,7 +104,7 @@ def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
 
     Args:
         sentence: 待转换的句子。
-        word_converter: 将单个白话字单词转换为目标方案字符串的函数。
+        word_converter: 将单个拼音单词转换为目标方案字符串的函数。
         fuzzy_rule: 模糊音规则，目前暂不支持，传入 None。
 
     Returns:
@@ -129,15 +131,13 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
     """
     将拼音 `text` 从 `source` 方案转换为 `target` 方案。
 
-    `text` 可以是一个白话字拼音单词，也可以是一句由空格与连字符
+    `text` 可以是一个拼音单词，也可以是一句由空格与连字符
     （" ", "-", "--", "- ", " -", "-- ", " --" 等）分割的句子；
     非拼音片段（标点等）会原样保留，并在转换结束后恢复原始大小写。
 
-    目前仅支持源方案为 `puj`（白话字 ASCII 形式）。
-
     Args:
         text: 待转换的一个拼音或一句拼音。
-        source: 源拼音方案，目前仅支持 `'puj'`。
+        source: 源拼音方案，可选 `'puj'`、`'dp'`。
         target: 目标拼音方案，可选 `'apuj'`、`'puj'`、`'dp'`、
             `'ipa'`、`'xsampa'`。
         fuzzy_rule: 模糊音规则，暂未支持，请保持为 None。
@@ -151,8 +151,28 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
     if source not in SUPPORTED_SOURCES:
         raise ConversionError(
             f"不支持的源拼音方案：{source!r}，可用：{', '.join(SUPPORTED_SOURCES)}")
-    converter = _TARGET_CONVERTERS.get(target)
-    if converter is None:
+    if target not in SUPPORTED_TARGETS:
         raise ConversionError(
             f"不支持的目标拼音方案：{target!r}，可用：{', '.join(SUPPORTED_TARGETS)}")
-    return _convert_sentence(text, converter, fuzzy_rule=fuzzy_rule)
+    word_converter = _make_word_converter(source, target)
+    return _convert_sentence(text, word_converter, fuzzy_rule=fuzzy_rule)
+
+
+# 为每种 (源, 目标) 组合生成便捷的"源方案 2 目标方案"函数，如：
+# puj2apuj、puj2puj、puj2dp、puj2ipa、puj2xsampa、dp2apuj、dp2dp 等。
+for _source in SUPPORTED_SOURCES:
+    for _target in SUPPORTED_TARGETS:
+        _name = f"{_source}2{_target}"
+
+        def _single_word_api(text: str,
+                             _parser=_SOURCE_PARSERS[_source],
+                             _formatter=_TARGET_FORMATTERS[_target]) -> str:
+            """将单个拼音单词从源方案转换为目标方案。"""
+            return _formatter(_parser(text))
+
+        _single_word_api.__name__ = _name
+        _single_word_api.__qualname__ = _name
+        _single_word_api.__doc__ = (
+            f"将单个拼音单词从 {_source!r} 方案转换为 {_target!r} 方案。")
+        globals()[_name] = _single_word_api
+        __all__.append(_name)

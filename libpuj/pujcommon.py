@@ -4,6 +4,10 @@ import re
 import unicodedata
 
 
+class ConversionError(ValueError):
+    """拼音转换过程中出现的错误，例如无法解析或使用了不支持的方案。"""
+
+
 @dataclasses.dataclass
 class AbstractPronunciation:
     initial: str = None
@@ -239,13 +243,21 @@ class Pronunciation(AbstractPronunciation):
 
     @classmethod
     def from_combination(cls, combination: str) -> 'Pronunciation':
+        """
+        将 ASCII 白话字（如 `peng1`）解析为 `Pronunciation`。
+
+        将缺失的调号视为 0；解析失败时抛出 `ConversionError`。
+        """
+        if not combination:
+            raise ConversionError("输入为空，无法解析白话字拼音。")
         match = cls.REGEXP_WORD.match(combination)
-        if match:
-            initial = match.group('initial') or ''
-            final = match.group('final')
-            tone = match.group('tone')
-            return cls(initial, final, int(tone))
-        return cls()
+        if not match:
+            raise ConversionError(f"无法解析白话字拼音：{combination!r}")
+        initial = match.group('initial') or ''
+        final = match.group('final') or ''
+        tone_text = match.group('tone')
+        tone = int(tone_text) if tone_text else 0
+        return cls(initial, final, tone)
 
     def to_combination(self) -> str:
         return (f"{self.initial if self.initial != '0' else ''}"
@@ -299,19 +311,22 @@ class Pronunciation(AbstractPronunciation):
         if try_to_map_initial:
             return try_to_map_initial
         part = unicodedata.normalize('NFC', part)
+        part = part.replace('er', 'or')
+        part = part.replace('ee', 'ê')
+        part = part.replace('e', 'ur')
         part = part.replace('ê', 'e')
-        part = part.replace('e', 'v')
-        part = part.replace('er', 'r')
         part = part.replace('ao', 'au')
-        if part[-1] == 'n':
-            part += 'n'
+        # 鼻化韵尾：DP nd -> PUJ n；DP n -> PUJ nn。
         if part.endswith('nd'):
             part = part[:-1]
+        elif part[-1] == 'n':
+            part += 'n'
+        # 入声韵尾：DP b/d/g -> PUJ p/t/k（注意 ng 是鼻化韵，不转为 nk）。
         if part[-1] == 'b':
             part = part[:-1] + 'p'
         if part[-1] == 'd':
             part = part[:-1] + 't'
-        if part[-1] == 'g':
+        if part[-1] == 'g' and not part.endswith('ng'):
             part = part[:-1] + 'k'
         return part
 
@@ -345,8 +360,43 @@ class DPPronunciation(AbstractPronunciation):
     潮拼拼音。
     """
 
+    # 潮拼单词正则，参考前端 SPuj.ts 的 regexpWordDp。
+    REGEXP_WORD = re.compile(
+        r"^(?P<initial>(bh|bf|pf|bhv|mv|ng|gh|b|p|m|f|v|d|t|n|l|g|k|h|z|c|s|r|0))?"
+        r"(?P<final>(?P<medial>(i|u)(?=[aeoiu]))?"
+        r"(?P<nucleus>ê|e|a|o|i|u|v|or|er|ng|m)"
+        r"(?P<coda>(i|u)?(m|nd|ng|n'?|b|d|g|h)*))"
+        r"(?P<tone>\d)?$",
+        re.IGNORECASE)
+
     def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         super().__init__(initial, final, tone)
+
+    @classmethod
+    def from_written(cls, written: str):
+        return cls.from_combination(written)
+
+    @classmethod
+    def from_combination(cls, combination: str) -> 'DPPronunciation':
+        """
+        将潮拼（如 `bêng1`）解析并转换为白话字 `Pronunciation`。
+
+        先解析为 `DPPronunciation`，再通过 `Pronunciation.from_dp` 转为白话字
+        （内部 ASCII 形式）。解析失败时抛出 `ConversionError`。
+        """
+        if not combination:
+            raise ConversionError("输入为空，无法解析潮拼。")
+        combination = unicodedata.normalize('NFC', combination)
+        match = cls.REGEXP_WORD.match(combination)
+        if not match:
+            raise ConversionError(f"无法解析潮拼：{combination!r}")
+        initial = match.group('initial') or ''
+        if initial == '0':
+            initial = ''
+        final = match.group('final') or ''
+        tone_text = match.group('tone')
+        tone = int(tone_text) if tone_text else 0
+        return cls(initial, final, tone)
 
 
 class IPAPronunciation(AbstractPronunciation):
@@ -475,7 +525,9 @@ class Sentence:
     @staticmethod
     def for_each_word_in_sentence(sentence: str, func_word = None, func_non_word = None):
         sentence = unicodedata.normalize('NFD', sentence)
-        regexp = re.compile(f"[a-zA-Z0-9']")
+        # 除 ASCII 字母/数字/撇号外，还包含组合附加符号（U+0300-U+036F），
+        # 使被 NFD 拆开的 ê(→e+◌̂)、ṳ、调符等保持在同一拼音单词内。
+        regexp = re.compile(r"[a-zA-Z0-9'\u0300-\u036f]")
         next_hyphen_count = 0
         i = 0
         while i < len(sentence):
