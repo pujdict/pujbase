@@ -26,6 +26,7 @@ from .pujcommon import (
     ConversionError,
     DPPronunciation,
     FuzzyRuleDescriptor,
+    IPAPronunciation,
     Pronunciation,
     Sentence,
 )
@@ -88,6 +89,21 @@ _TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
     'xsampa': _pron_to_xsampa,
 }
 
+# 目标方案名 -> 对应的输出音标类（用于判断该方案是否区分大小写）。
+_TARGET_OUTPUT_CLASS: dict[str, type] = {
+    'apuj': Pronunciation,
+    'puj': Pronunciation,
+    'dp': DPPronunciation,
+    'ipa': IPAPronunciation,
+    'xsampa': IPAPronunciation,
+}
+
+
+def _target_has_case(target: str) -> bool:
+    """目标方案是否区分大小写（国际音标等为 False）。"""
+    # has_case 是实例字段，需通过实例读取（如 IPAPronunciation().has_case == False）。
+    return _TARGET_OUTPUT_CLASS[target]().has_case
+
 
 def _make_word_converter(source: str, target: str,
                          fuzzy_rule: FuzzyRuleLike = None) -> Callable[[str], str]:
@@ -109,7 +125,8 @@ def _make_word_converter(source: str, target: str,
     return word_converter
 
 
-def _convert_sentence(sentence: str, word_converter: Callable[[str], str]) -> str:
+def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
+                      has_case: bool = True) -> str:
     """
     将一句由多个拼音单词组成的话逐词转换。
 
@@ -121,11 +138,12 @@ def _convert_sentence(sentence: str, word_converter: Callable[[str], str]) -> st
     Args:
         sentence: 待转换的句子。
         word_converter: 将单个拼音单词转换为目标方案字符串的函数。
+        has_case: 目标方案是否区分大小写。为 False（如国际音标）时不进行
+            大小写恢复，因为大小写在音标中表示不同音素。
 
     Returns:
         转换后的句子字符串。
     """
-    letter_case = Sentence.determine_letter_case(sentence)
     chunks: list[str] = []
 
     def on_word(word: str, next_hyphen_count: int) -> None:
@@ -134,8 +152,15 @@ def _convert_sentence(sentence: str, word_converter: Callable[[str], str]) -> st
     def on_non_word(non_word: str) -> None:
         chunks.append(non_word)
 
-    Sentence.for_each_word_in_sentence(sentence.lower(), on_word, on_non_word)
-    return Sentence.change_letter_case(''.join(chunks), letter_case)
+    if has_case:
+        Sentence.for_each_word_in_sentence(sentence.lower(), on_word, on_non_word)
+        result = ''.join(chunks)
+        letter_case = Sentence.determine_letter_case(sentence)
+        result = Sentence.change_letter_case(result, letter_case)
+    else:
+        Sentence.for_each_word_in_sentence(sentence, on_word, on_non_word)
+        result = ''.join(chunks)
+    return result
 
 
 def load_accents(accent_pb_path: Union[str, pathlib.Path]) -> dict[str, Accent]:
@@ -192,7 +217,7 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
         raise ConversionError(
             f"不支持的目标拼音方案：{target!r}，可用：{', '.join(SUPPORTED_TARGETS)}")
     word_converter = _make_word_converter(source, target, fuzzy_rule)
-    return _convert_sentence(text, word_converter)
+    return _convert_sentence(text, word_converter, has_case=_target_has_case(target))
 
 
 # 为每种 (源, 目标) 组合生成便捷的"源方案 2 目标方案"函数，如：

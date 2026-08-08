@@ -13,6 +13,9 @@ class AbstractPronunciation:
     initial: str = None
     final: str = None
     tone: int = 0
+    # 该方案输出是否存在大小写区分。为 False 时（如国际音标），
+    # 句子转换结束后不进行大小写转换，因为大小写在音标中表示不同音素。
+    has_case: bool = True
 
     def __str__(self):
         return f'{self.initial}{self.final}{self.tone}'
@@ -124,8 +127,8 @@ class Pronunciation(AbstractPronunciation):
     __puj_ipa_final_map = {
         'a': 'a',
         'o': 'o',
-        'v': 'M',
-        'r': '@',
+        'ur': 'M',
+        'or': '@',
         'e': 'e',
         'i': 'i',
         'u': 'u',
@@ -346,12 +349,19 @@ class Pronunciation(AbstractPronunciation):
             if nasalize:
                 final_tmp = final_tmp[:-2]
             final = ''
-            for i, c in enumerate(final_tmp):
-                final_map = self.__puj_ipa_final_map.get(c, '')
-                if final_map:
-                    final += final_map
-                if nasalize and c in self.__vowels:
-                    final += '~'
+            i = 0
+            while i < len(final_tmp):
+                for item in self.__puj_ipa_final_map.keys():
+                    print(item)
+                    if final_tmp[i:i + len(item)] == item:
+                        final += self.__puj_ipa_final_map[item]
+                        i += len(item)
+                        if nasalize and item in self.__vowels:
+                            final += '~'
+                        break
+                else:
+                    i += 1
+            print(final)
         return IPAPronunciation(initial, final, self.tone)
 
 
@@ -448,6 +458,8 @@ class IPAPronunciation(AbstractPronunciation):
 
     def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         super().__init__(initial, final, tone)
+        # 国际音标中大小写表示不同音素，因此不进行大小写转换。
+        self.has_case = False
 
     def to_written(self) -> str:
         initial = self.initial
