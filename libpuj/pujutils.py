@@ -11,6 +11,7 @@ from libpuj.pujcommon import (
     FuzzyRule as _FuzzyRule,
     FuzzyRuleDescriptor as _FuzzyRuleDescriptor,
     Pronunciation as _Pronunciation,
+    Sentence as _Sentence, Sentence,
 )
 
 from libpuj.pujcommon import Pronunciation
@@ -105,6 +106,10 @@ class PUJUtils:
                     0x3000 <= o <= 0x303F
             )
         return False
+
+    @staticmethod
+    def for_each_word_in_sentence(sentence: str, func_word = None, func_non_word = None):
+        return Sentence.for_each_word_in_sentence(sentence, func_word, func_non_word)
 
     @staticmethod
     def add_puj_tone_mark_word(word: str, tone: int | None = None) -> str:
