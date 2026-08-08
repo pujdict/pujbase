@@ -42,7 +42,8 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     '--text', '-t',
     type=str,
     default=None,
-    help='需要转换的一个拼音（源拼音使用 ASCII 形式，如 peng1）。',
+    help='需要转换的拼音（源拼音使用 ASCII 形式，如 peng1；'
+         '也支持由空格与连字符分割的整句话）。',
 )
 def main(convert_spec: str, text: str) -> None:
     """潮汕方言白话字工具。"""

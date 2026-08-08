@@ -472,6 +472,93 @@ class Sentence:
     word_groups: list[tuple[int, int, str]]
     """分词列表"""
 
+    @staticmethod
+    def for_each_word_in_sentence(sentence: str, func_word = None, func_non_word = None):
+        sentence = unicodedata.normalize('NFD', sentence)
+        regexp = re.compile(f"[a-zA-Z0-9']")
+        next_hyphen_count = 0
+        i = 0
+        while i < len(sentence):
+            cur = ''
+            if regexp.match(sentence[i]):
+                while i < len(sentence) and regexp.match(sentence[i]):
+                    cur += sentence[i]
+                    i += 1
+                next_hyphen_count = 0
+                if i < len(sentence) and sentence[i] == '-':
+                    next_hyphen_count += 1
+                    if i + 1 < len(sentence) and sentence[i + 1] == '-':
+                        next_hyphen_count += 1
+                if func_word:
+                    func_word(cur, next_hyphen_count)
+            else:
+                while i < len(sentence) and not regexp.match(sentence[i]):
+                    cur += sentence[i]
+                    i += 1
+                if func_non_word:
+                    func_non_word(cur)
+
+    # 句子字母大小写类别，与前端 SPuj.ts 的 ESentenceLetterCase 对应。
+    LETTER_CASE_NONE = 0
+    LETTER_CASE_LOWER = 1
+    LETTER_CASE_UPPER_FIRST_LETTER = 2
+    LETTER_CASE_UPPER = 3
+
+    _LETTER_RE = re.compile(r"[a-zA-Z]")
+    _LOWERCASE_LETTER_RE = re.compile(r"[a-z]")
+    _UPPER_FIRST_RE = re.compile(r"[a-zê]")
+
+    @staticmethod
+    def determine_letter_case(sentence: str) -> int:
+        """
+        判断句子的字母大小写类别（对应前端 ESentenceLetterCase）。
+
+        返回值：NONE=0、LOWER=1、UPPER_FIRST_LETTER=2、UPPER=3。
+        """
+        first_letter = True
+        has_lower = False
+        has_upper = False
+        letters_cnt = 0
+        for char in sentence:
+            if Sentence._LETTER_RE.match(char):
+                letters_cnt += 1
+                if Sentence._LOWERCASE_LETTER_RE.match(char):
+                    if first_letter:
+                        return Sentence.LETTER_CASE_LOWER
+                    has_lower = True
+                else:
+                    has_upper = True
+                first_letter = False
+        if (has_lower and has_upper) or (has_upper and letters_cnt == 1):
+            return Sentence.LETTER_CASE_UPPER_FIRST_LETTER
+        if has_upper:
+            return Sentence.LETTER_CASE_UPPER
+        return Sentence.LETTER_CASE_NONE
+
+    @staticmethod
+    def change_letter_case(sentence: str, letter_case: int) -> str:
+        """
+        将句子的大小写恢复为 `letter_case` 指定的类别。
+
+        其中 UPPER_FIRST_LETTER 会为每个以 ? ! . 结尾的句子片段
+        的起始字母（a-z 或 ê）大写。
+        """
+        if letter_case == Sentence.LETTER_CASE_LOWER:
+            return sentence.lower()
+        if letter_case == Sentence.LETTER_CASE_UPPER:
+            return sentence.upper()
+        if letter_case == Sentence.LETTER_CASE_UPPER_FIRST_LETTER:
+            res = list(sentence)
+            is_current_sentence_fixed = False
+            for i, char in enumerate(res):
+                if not is_current_sentence_fixed and Sentence._UPPER_FIRST_RE.match(char):
+                    res[i] = char.upper()
+                    is_current_sentence_fixed = True
+                if char in '?!.':
+                    is_current_sentence_fixed = False
+            return ''.join(res)
+        return sentence
+
 
 @dataclasses.dataclass
 class Paragraph:

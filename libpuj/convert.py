@@ -11,9 +11,9 @@
 
 from __future__ import annotations
 
-from typing import Callable
+from typing import Callable, Optional
 
-from .pujcommon import Pronunciation
+from .pujcommon import Pronunciation, Sentence
 
 __all__ = [
     'puj2apuj',
@@ -90,17 +90,57 @@ _TARGET_CONVERTERS: dict[str, Callable[[str], str]] = {
 }
 
 
-def convert(text: str, source: str = 'puj', target: str = 'puj') -> str:
+def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
+                      fuzzy_rule=None) -> str:
+    """
+    将一句由多个白话字拼音单词组成的话逐词转换。
+
+    以空格与连字符（" ", "-", "--", "- ", " -", "-- ", " --" 等）分割单词，
+    非单词片段（空格、连字符、标点等）原样保留。转换时先统一转为小写，
+    结束后再根据原始句子的字母大小写恢复（参考前端 SPuj.ts 的
+    `convertPlainPUJSentence`）。
+
+    Args:
+        sentence: 待转换的句子。
+        word_converter: 将单个白话字单词转换为目标方案字符串的函数。
+        fuzzy_rule: 模糊音规则，目前暂不支持，传入 None。
+
+    Returns:
+        转换后的句子字符串。
+    """
+    if fuzzy_rule is not None:
+        raise ConversionError(
+            f"暂不支持 fuzzyRule（模糊音规则），请传入 None。收到：{fuzzy_rule!r}")
+    letter_case = Sentence.determine_letter_case(sentence)
+    chunks: list[str] = []
+
+    def on_word(word: str, next_hyphen_count: int) -> None:
+        chunks.append(word_converter(word))
+
+    def on_non_word(non_word: str) -> None:
+        chunks.append(non_word)
+
+    Sentence.for_each_word_in_sentence(sentence.lower(), on_word, on_non_word)
+    return Sentence.change_letter_case(''.join(chunks), letter_case)
+
+
+def convert(text: str, source: str = 'puj', target: str = 'puj',
+            fuzzy_rule: Optional[object] = None) -> str:
     """
     将拼音 `text` 从 `source` 方案转换为 `target` 方案。
+
+    `text` 可以是一个白话字拼音单词，也可以是一句由空格与连字符
+    （" ", "-", "--", "- ", " -", "-- ", " --" 等）分割的句子；
+    非拼音片段（标点等）会原样保留，并在转换结束后恢复原始大小写。
 
     目前仅支持源方案为 `puj`（白话字 ASCII 形式）。
 
     Args:
-        text: 待转换的一个拼音。
+        text: 待转换的一个拼音或一句拼音。
         source: 源拼音方案，目前仅支持 `'puj'`。
         target: 目标拼音方案，可选 `'apuj'`、`'puj'`、`'dp'`、
             `'ipa'`、`'xsampa'`。
+        fuzzy_rule: 模糊音规则，暂未支持，请保持为 None。
 
     Returns:
         转换后的拼音字符串。
@@ -115,4 +155,4 @@ def convert(text: str, source: str = 'puj', target: str = 'puj') -> str:
     if converter is None:
         raise ConversionError(
             f"不支持的目标拼音方案：{target!r}，可用：{', '.join(SUPPORTED_TARGETS)}")
-    return converter(text)
+    return _convert_sentence(text, converter, fuzzy_rule=fuzzy_rule)

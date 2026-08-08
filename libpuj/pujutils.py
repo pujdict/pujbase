@@ -107,32 +107,6 @@ class PUJUtils:
         return False
 
     @staticmethod
-    def for_each_word_in_sentence(sentence: str, func_word = None, func_non_word = None):
-        sentence = unicodedata.normalize('NFD', sentence)
-        regexp = re.compile(f"[a-zA-Z0-9']")
-        next_hyphen_count = 0
-        i = 0
-        while i < len(sentence):
-            cur = ''
-            if regexp.match(sentence[i]):
-                while i < len(sentence) and regexp.match(sentence[i]):
-                    cur += sentence[i]
-                    i += 1
-                next_hyphen_count = 0
-                if i < len(sentence) and sentence[i] == '-':
-                    next_hyphen_count += 1
-                    if i + 1 < len(sentence) and sentence[i + 1] == '-':
-                        next_hyphen_count += 1
-                if func_word:
-                    func_word(cur, next_hyphen_count)
-            else:
-                while i < len(sentence) and not regexp.match(sentence[i]):
-                    cur += sentence[i]
-                    i += 1
-                if func_non_word:
-                    func_non_word(cur)
-
-    @staticmethod
     def add_puj_tone_mark_word(word: str, tone: int | None = None) -> str:
         """
         为单个字添加音调符号
