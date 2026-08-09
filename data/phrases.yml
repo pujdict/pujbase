@@ -591,6 +591,7 @@
 - 火腿肠|hue2-thui2-tng5||n|特产:
 - 灌肠|kuan3-tng5|腊肠|n|特产:
 - 啫喱|tsu1-li5|果冻/布丁|n|特产:
+- 薯片|tsur5-phian3||n|特产:
 - 圆|inn5|汤圆|n|特产:
 - 汤圆|thng1-inn5||n|特产:
 - 粽球|tsang3-kiu5|粽子|n|特产:
@@ -1139,6 +1140,8 @@
 - 中秋|tiong1-tshiu1||t|时节:
 - 重阳|teng5-iang5||t|时节:
 - 冬节|tang1-tsoih4|冬至|t|时节:
+- 星期|tshenn1-khi5|周末|t|时节:
+- 星期六日|tshenn1-khi5-lak8-jit8|周末|t|时节:
 - 食圆|tsiah8-inn5|吃汤圆|v/n|时节:
 - 拜祖公|pai3-tsou2-kong1|拜先祖|v/n|时节:
 - 拜老爷|pai3-lau6-ia5||v/n|时节:
@@ -1299,6 +1302,7 @@
 - 长裤|tng5-khou3|长裤|n|穿戴:
 - 短裤|tor2-khou3|长裤|n|穿戴:
 - 裤𰉗|khou3-kueh8/khou3-gueh8|裤衩/内裤|n|穿戴:
+- 三角裤𰉗|sann1-kak4-khou3-kueh8/sann1-kak4-khou3-gueh8|三角裤|n|穿戴:
 - 西装|sai1-tsuang1||n|穿戴:
 - 牛仔|gu5-kiann2|牛仔裤|n|穿戴:
 - ＊底裤|lang3-toi2-khou3|开档裤|n|穿戴:
@@ -1331,6 +1335,7 @@
 - 手链|tshiu2-lian7||n|穿戴:
 - 雨遮|hou6-tsia1|雨伞|n|穿戴:
 - 目镜|mak8-kiann3|眼镜|n|穿戴:
+- 墨镜|bak8-kiann3|墨镜|n|穿戴:
 - 钱袋|tsinn5-tor7|钱包|n|穿戴:
 - 耳机|jur2-ki1||n|穿戴:
 - 书包|tsur1-pau1||n|穿戴:
@@ -1410,6 +1415,10 @@
 - 耍游戏|sng2-iu5-hi3|玩游戏|v|起居:
 - 拍碰鳔|phah4-phong3-phio6|放爆竹|v|起居:
 - 射烟火|suh8-in1-hue2|放烟花|v|起居:
+- 钓女|tionn'3-ni2|泡妞|v|起居:
+- 滴茶|tih4-te5|泡茶|v|起居:
+- 食茶|tsiah8-te5|喝茶|v|起居:
+- 冲茶|tshiong1-te5|泡茶|v|起居:
 - 手电|tshiu2-tian6|手电筒|n|起居:
 - 电火|tian6-hue2|电灯|n|起居:
 - 电管|tian6-kng2|电灯管|n|起居:
@@ -1481,6 +1490,8 @@
 - 平方|pheng5-pang1||n|数学:
 - 立方|lip8-pang1||n|数学:
 - 元|nguan5|元(未知数)|n|数学:
+- 未知|bue7-tsai1||n|数学:
+- 已知|inn'2-tsai1||n|数学:
 - 未知数|bue7-tsai1-siau3|未知数|n|数学:
 - 一元|tsek8-nguan5|一元(未知数)|n|数学:
 - 一次|tsek8-tshur3|一次(幂)|n|数学:
@@ -1521,10 +1532,19 @@
 - 实数|sit8-siau3||n|数学:
 - 虚数|hur1-siau3||n|数学:
 - 复数|hok4-siau3||n|数学:
+- 次方|tshur3-pang1||n|数学:
+- 幂|mit8||n|数学:
+- 指数|tsi2-siau3||n|数学:
+- 对数|tui3-siau3||n|数学:
+- 单调|tuann1-tiau7||n|数学:
+- 递增|ti5-tseng1||n|数学:
+- 递减|ti5-kiam2||n|数学:
 - 值|tat8||n|数学:
 - 绝对值|tsorh8-tui3-tat8||n|数学:
 - 相同|siang1-tang5||n|数学:
 - 相反|siang1-huan2||n|数学:
+- 增加|tseng1-kia1||n|数学:
+- 减少|kiam2-tsio2||n|数学:
 - 和|hua5||n|数学:
 - 差|tsha1||n|数学:
 - 积|tseh4||n|数学:
@@ -1541,9 +1561,11 @@
 - 线性|suann3-senn3||n|数学:
 - 三角|sann1-kak4||n|数学:
 - 三角形|sann1-kak4-heng5||n|数学:
+- 正三角形|tsiann3-sann1-kak4-heng5||n|数学:
 - 等边|teng2-pian1||n|数学:
 - 等腰|teng2-io1||n|数学:
 - 四边形|si3-pian1-heng5||n|数学:
+- 平行四边形|pheng5-kiann5 si3-pian1-heng5||n|数学:
 - 五边形|ngou6-pian1-heng5||n|数学:
 - 多边形|to1-pian1-heng5||n|数学:
 - 矩形|kur2-heng5||n|数学:
@@ -1555,12 +1577,29 @@
 - 平行|pheng5-kiann5||n|数学:
 - 垂直|sui5-tit8||n|数学:
 - 相交|siang1-kau1||n|数学:
+- 垂线|sui5-suann3||n|数学:
+- 面积|min7-tseh4||n|数学:
+- 表面积|piau2-min7-tseh4||n|数学:
+- 体积|thi2-tseh4||n|数学:
+- 周长|tsiu1-tshiang5||n|数学:
+- 边长|pian1-tshiang5||n|数学:
+- 长|tshiang5||n|数学:
+- 长度|tshiang5-tou7||n|数学:
+- 宽|khuan1||n|数学:
+- 宽度|khuan1-tou7||n|数学:
+- 高|kau1||n|数学:
+- 高度|kau1-tou7||n|数学:
+- 中垂线|tiong1-sui5-suann3||n|数学:
 - 全等|tshuan5-teng2||n|数学:
 - 相似|siang1-sur6||n|数学:
 - 对称|tui3-tsheng3||n|数学:
+- 旋转|suan5-tsuan2||n|数学:
+- 平移|pheng5-i5||n|数学:
 - 端点|tuan1-tiam2||n|数学:
 - 线段|suann3-tng7||n|数学:
 - 直线|tit8-suann3||n|数学:
+- 曲线|khek4-suann3||n|数学:
+- 折线|tsih4-suann3||n|数学:
 - 射线|sia7-suann3||n|数学:
 - 角|kak4||n|数学:
 - 直角|tit8-kak4||n|数学:
@@ -1580,6 +1619,8 @@
 - 卦限|kue3-han6/khue3-han6||n|数学:
 - 集合|tsip8-hah8||n|数学:
 - 概率|khai3-lut8||n|数学:
+- 频率|phin5-lut8||n|数学:
+- 直方图|tit8-pang1-tou5||n|数学:
 - 统计|thong2-koi3||n|数学:
 - 数列|siau3-liat8||n|数学:
 - 等差|teng2-tsha1||n|数学:
@@ -1603,11 +1644,24 @@
 - 圆规|inn5-kui1||n|数学:
 - 三角板|sann1-kak4-pan2||n|数学:
 - 量角器|lionn5-kak4-khi3||n|数学:
+- 圆锥|inn5-tsui1||n|数学:
+- 圆柱|inn5-thiau6||n|数学:
+- 圆|inn5||n|数学:
+- 椭圆|tho2-inn5||n|数学:
+- 球|kiu5||n|数学:
 - 奥数|onn'3-siau3||n|数学:
 - 盈亏|iong5-khui1/eng5-khui1||n|数学:
 - 追及|tui1-kip4||n|数学:
 - 鸡兔同笼|koi1-thou3 tang5-lang5||n|数学:
 - 规划|kui1-ueh8||n|数学:
+
+# -------------------------- 物理 PHYSICS --------------------------
+- 物理|mueh8-li2||n|物理:
+- 杠杆|kong3-han2||n|物理:
+- 重量|tang6-liang6||n|物理:
+- 动量|tong6-liang6||n|物理:
+- 速度|sok4-tou7||n|物理:
+- 加速度|kia1-sok4-tou7||n|物理:
 
 # -------------------------- 中文 CHINESE --------------------------
 - 中文|tiong1-bun5||n|中文:
@@ -1949,6 +2003,99 @@
 - 土地莶莶|thou5-ti7 hiam1-hiam1||i|ABB:
 - 土地＊＊|thou5-ti7 ho1-ho1||i|ABB:
 
+# -------------------------- 量词 CLASSIFIER --------------------------
+# 以下所有示例，省去数量“一”。
+- 尾|bue2|条|q|量词:
+    desc: 鱼虾的量词
+    examples:
+    - [尾鱼, bue2-hur5, 一条鱼]
+    - [尾虾, bue2-he5, 一条虾]
+- 条|tiau5|条/根|q|量词:
+    examples:
+    - [条熏, tiau5-hun1, 一根烟]
+    - [条蛇, tiau5-hun1, 一条蛇]
+    - [条虫, tiau5-thang5, 一条虫]
+- 件|kiann6||q|量词:
+- 只|tsiah4||q|量词:
+    desc: 一般动物（不论大小，除了虫蛇）、家具都可以用
+    examples:
+    - [只马, tsiah4-be2, 一匹马]
+    - [只牛, tsiah4-gu5, 一头牛]
+    - [只虎, tsiah4-hounn'2, 一只老虎]
+    - [只椅, tsiah4-inn'2, 一把椅子]
+    - [只床, tsiah4-tshng5, 一只桌子]
+    - [只眠床, tsiah4-min5-tshng5, 一张床]
+- 个|kai5|个/台|q|量词:
+    examples:
+    - [个银, kai5-ngurn5, 一块钱]
+    - [个电脑, kai5-tian6-nau2, 一台电脑]
+    - [个冰箱, kai5-piann1-sionn1, 一台冰箱]
+- 间|koinn1|间/家|q|量词:
+    examples:
+    - [间房, koinn1-pang5, 一间房子]
+    - [间铺仔, koinn1-phou3-kiann2, 一家小商店]
+- 粒|liap8|粒/颗|q|量词:
+    desc: 小型物体量词，但相比于普通话，可以用于体积更大的物体，涵盖普通话中“粒”至“颗”的范围
+    examples:
+    - [粒篮球, liap8-lann5-kiu5, 一颗篮球]
+    - [粒米, liap8-bi2, 一粒米]
+    - [粒女, liap8-ni2, 一个小妞(俗)]
+    - [粒奶, liap8-ni6/liap8-ne6, 一个奶子(俗)]
+- 块|kor3||q|量词:
+- ＊|pit8|瓶|q|量词:
+- 㼦|kong2|瓶|q|量词:
+- 樽|tsun1|瓶/樽|q|量词:
+    desc: 一般用于酒瓶
+    examples:
+    - [樽酒, tsun1-tsiu2, 一瓶酒]
+- 支|ki1|支/条|q|量词:
+    desc: 条状物体、雨伞、手电筒、手机、烟酒等的量词
+    examples:
+    - [支手机, ki1-tshiu2-ki1, 一只手机]
+    - [支雨遮, ki1-hou6-tsia1, 一把雨伞]
+    - [支酒, ki1-tsiu2, 一瓶酒]
+    - [支熏, ki1-hun1, 一支烟]
+    - [支手电, ki1-tshiu2-tian6, 一直手电筒]
+    - [支𡳞, ki1-lan6, 一根阴茎]
+- 枝|ki1|枝|q|量词:
+- 丛|tsang5|棵/株|q|量词:
+    desc: 植物的量词
+    examples:
+    - [丛花, tsang5-hue1, 一株小花]
+    - [丛草, tsang5-tshau2, 一棵小草]
+    - [丛树, tsang5-tshiu7, 一棵树]
+- 掼|kuann6|袋/提|q|量词:
+- 袋|tor7||q|量词:
+- 爿/畔|poinn5|半|q|量词:
+- 𰉗|kueh8|半|q|量词:
+- 伐|huah8|步|q|量词:
+    desc: 一步的距离
+- 掠|liah8|掌|q|量词:
+    desc: 拇指与中指张开的距离
+- 指|tsoinn2||q|量词:
+- 片|phian3||q|量词:
+    desc: 指小片的物体，或用于书面语
+    examples:
+    - [一片痴情, tsek8-phian3- tshi1-tsheng5, 一片痴情]
+    - [一片薯片, tsek8-phian3- tsur5-phian3, 一片薯片]
+- 片|phinn3||q|量词:
+    desc: 翅膀、成对的门窗之一的量词（“一片翼”“一片门”）；或指一个片区的范围。
+    examples:
+    - [片翼, phinn3-sit8, 一片翅膀]
+    - [片门, phinn3-mng5, 一边的门]
+    - [片窗, phinn3-theng1, 一边的窗]
+    - [片墙, phinn3-tshionn5, 一片墙]
+- 锅|ue1||q|量词:
+- 捻|niam3|片/瓣|q|量词:
+    desc: 通常指橘子、柚子等水果中的一小块。
+    examples:
+    - [捻柑, niam3-kann1, 一片橘子]
+    - [捻柚, niam3-iu7, 一片柚子]
+- 瓣|hah4|片/瓣|q|量词:
+    desc: 花朵、菜叶的量词
+    examples:
+    - [瓣花, hah4-hue1, 一片花瓣]
+    - [瓣白菜, hah4-peh8-tshai3, 一片白菜]
 
 # -------------------------- 姓氏 SURNAMES --------------------------
 # 百家姓序，其余特殊读音在最后补充。非常用姓氏如果字表的常用字音已能覆盖，这里就不额外写出了。
