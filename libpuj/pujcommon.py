@@ -207,7 +207,7 @@ class Pronunciation(AbstractPronunciation):
         match = cls.REGEXP_WORD.match(written)
         if not match:
             return cls()
-        initial = match.group('initial') or '0'
+        initial = match.group('initial') or ''
         final = match.group('final')
         return cls(initial, final, tone)
 
@@ -295,6 +295,8 @@ class Pronunciation(AbstractPronunciation):
         part = part.replace('ur', 'e')
         part = part.replace('or', 'er')
         part = part.replace('au', 'ao')
+        if part.endswith("nn'"):
+            part = part[:-3] + "n'"
         if part[-1] == 'n':
             if part.endswith('nn'):
                 part = part[:-1]
@@ -347,9 +349,12 @@ class Pronunciation(AbstractPronunciation):
                 if final_tmp == 'm':
                     initial = self.__puj_ipa_final_map.get('m') + '_0'
         else:
-            nasalize = final_tmp.endswith('nn')
+            nasalize = 'nn' in final_tmp
             if nasalize:
-                final_tmp = final_tmp[:-2]
+                if "nn'" in final_tmp:
+                    final_tmp = final_tmp.replace("nn'", '')
+                else:
+                    final_tmp = final_tmp.replace('nn', '')
             final = ''
             i = 0
             while i < len(final_tmp):
