@@ -26,20 +26,14 @@ class AbstractPronunciation:
 
 class Pronunciation(AbstractPronunciation):
     """
-    ASCII 白话字拼音。内部存储为 ASCII 形式（特殊字母 ṳ o̤ 记录为 v r），可输出为书面形式。
+    ASCII 白话字拼音。内部存储为 ASCII 形式（特殊字母 ṳ o̤ 记录为 ur or），可输出为书面形式。
     """
     __special_vowels = {
-        "v": "ṳ",
         "ur": "ṳ",
-        "V": "Ṳ",
-        "r": "o̤",
-        "er": "o̤",
-        "R": "O̤",
+        "or": "o̤",
     }
     __vowel_order = [
-        'A', 'a', 'E', 'e', 'O', 'o', 'I', 'i', 'U', 'u', 'V', 'v', 'R', 'r',
-        __special_vowels['V'], __special_vowels['v'],
-        __special_vowels['R'], __special_vowels['r'],
+        'a', 'o', __special_vowels['ur'], 'ur', __special_vowels['or'], 'or', 'e', 'i', 'u',
     ]
     __vowels = set(__vowel_order)
     REGEXP_WORD = re.compile(
@@ -142,7 +136,17 @@ class Pronunciation(AbstractPronunciation):
         'p': 'p_}',
     }
 
-    def __init__(self, initial: str = None, final: str = None, tone: int = 0):
+    def __init__(self, initial: str = '', final: str = '', tone: int = 0):
+        if initial == '0' or initial is None:
+            initial = ''
+        elif initial == 'ch':
+            initial = 'ts'
+        elif initial == 'chh':
+            initial = 'tsh'
+        elif initial == 'z':
+            initial = 'j'
+        if final is None:
+            final = ''
         super().__init__(initial, final, tone)
 
     def __copy__(self):
@@ -192,11 +196,9 @@ class Pronunciation(AbstractPronunciation):
             if not (1 <= tone <= 8):
                 return cls()
             written = written[:-1]
-        # 特殊字符转 ASCII
-        written = written.replace(cls.__special_vowels['v'], 'v')
-        written = written.replace(cls.__special_vowels['V'], 'V')
-        written = written.replace(cls.__special_vowels['r'], 'r')
-        written = written.replace(cls.__special_vowels['R'], 'R')
+        # 特殊字符转 ASCII（书面 ṳ o̤ 转内部 ur or）
+        written = written.replace(cls.__special_vowels['ur'], 'ur')
+        written = written.replace(cls.__special_vowels['or'], 'or')
         # 入声做一次额外处理：4 声无调符，8 声的调符可能与 2 声或 5 声相同。
         # 这里简化了判断的依据。如果是入声韵并且有声调符号，那么就认为是 8 声。
         # 如果是入声韵并且前面没发现调符，就是 4 声。
@@ -218,7 +220,7 @@ class Pronunciation(AbstractPronunciation):
         if not final:
             return ''
         final = final.replace('ur', self.__special_vowels['ur'])
-        final = final.replace('or', self.__special_vowels['er'])
+        final = final.replace('or', self.__special_vowels['or'])
         coda_index = self.__get_coda_index(final)
         if coda_index == -1:
             return ''
@@ -239,8 +241,8 @@ class Pronunciation(AbstractPronunciation):
                 return 1
             if final.startswith(cls.__special_vowels['ur']):
                 return len(cls.__special_vowels['ur']) - 1
-            if final.startswith(cls.__special_vowels['er']):
-                return len(cls.__special_vowels['er']) - 1
+            if final.startswith(cls.__special_vowels['or']):
+                return len(cls.__special_vowels['or']) - 1
             return 0
         return -1
 
@@ -290,8 +292,8 @@ class Pronunciation(AbstractPronunciation):
         if try_to_map_initial:
             return try_to_map_initial
         part = part.replace('e', 'ê')
-        part = part.replace('v', 'e')
-        part = part.replace('r', 'er')
+        part = part.replace('ur', 'e')
+        part = part.replace('or', 'er')
         part = part.replace('au', 'ao')
         if part[-1] == 'n':
             if part.endswith('nn'):
@@ -352,7 +354,7 @@ class Pronunciation(AbstractPronunciation):
             i = 0
             while i < len(final_tmp):
                 for item in self.__puj_ipa_final_map.keys():
-                    print(item)
+                    # print(item)
                     if final_tmp[i:i + len(item)] == item:
                         final += self.__puj_ipa_final_map[item]
                         i += len(item)
@@ -361,7 +363,7 @@ class Pronunciation(AbstractPronunciation):
                         break
                 else:
                     i += 1
-            print(final)
+            # print(final)
         return IPAPronunciation(initial, final, self.tone)
 
 
@@ -415,6 +417,9 @@ class IPAPronunciation(AbstractPronunciation):
     此处存储声调为调序，并非实际调值。实际调值另外建模处理。
     """
 
+    has_case = False
+    """国际音标中大小写表示不同音素，因此不进行大小写转换。"""
+
     __x_sampa_ipa_map = {
         '__1': '¹', '__2': '²', '__3': '³', '__4': '⁴', '__5': '⁵', '__6': '⁶', '__7': '⁷', '__8': '⁸', '__9': '⁹',
         't`_m': 'ȶ', 'd`_m': 'ȡ', 'n`_m': 'ȵ', 'l`_m': 'ȴ', 'ts': 'ts', 'dz': 'dz', 'tS': 'tʃ',
@@ -455,11 +460,13 @@ class IPAPronunciation(AbstractPronunciation):
         '?': 'ʔ', '^\\': 'ğ', '^': 'ꜛ', '!': 'ꜜ', '&\\': 'ɶ̈', '&': 'ɶ',
         '*\\': '\\*', '$\\': 'ʀ̟', '$': '͢', ')': '͡', '(': '͜', '-\\\\': '\\\\', '-\\': '‿', '-': '',
         '||': '‖', '|': '|', '+\\': '⦀', ';': '¡'}
+    __ipa_x_sampa_map = {k: v for v, k in __x_sampa_ipa_map.items()}
 
     def __init__(self, initial: str = None, final: str = None, tone: int = 0):
         super().__init__(initial, final, tone)
-        # 国际音标中大小写表示不同音素，因此不进行大小写转换。
-        self.has_case = False
+
+    def to_x_sampa(self):
+        return f"{self.initial}{self.final}__{self.tone}"
 
     def to_written(self) -> str:
         initial = self.initial

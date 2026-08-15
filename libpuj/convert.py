@@ -75,9 +75,9 @@ def _pron_to_ipa(pron: Pronunciation) -> str:
     return pron.to_ipa().to_written()
 
 
-def _pron_to_xsampa(pron: Pronunciation) -> str:
+def _pron_to_x_sampa(pron: Pronunciation) -> str:
     """Pronunciation -> X-SAMPA 式国际音标。"""
-    return pron.to_ipa().__str__()
+    return pron.to_ipa().to_x_sampa()
 
 
 # 目标方案名 -> 格式化函数（Pronunciation -> 目标方案字符串）。
@@ -86,7 +86,7 @@ _TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
     'puj': _pron_to_puj,
     'dp': _pron_to_dp,
     'ipa': _pron_to_ipa,
-    'xsampa': _pron_to_xsampa,
+    'xsampa': _pron_to_x_sampa,
 }
 
 # 目标方案名 -> 对应的输出音标类（用于判断该方案是否区分大小写）。
@@ -101,8 +101,7 @@ _TARGET_OUTPUT_CLASS: dict[str, type] = {
 
 def _target_has_case(target: str) -> bool:
     """目标方案是否区分大小写（国际音标等为 False）。"""
-    # has_case 是实例字段，需通过实例读取（如 IPAPronunciation().has_case == False）。
-    return _TARGET_OUTPUT_CLASS[target]().has_case
+    return getattr(_TARGET_OUTPUT_CLASS[target], 'has_case')
 
 
 def _make_word_converter(source: str, target: str,
