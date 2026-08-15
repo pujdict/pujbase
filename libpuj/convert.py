@@ -25,6 +25,7 @@ from .pujcommon import (
     Accent,
     ConversionError,
     DPPronunciation,
+    Entry,
     FuzzyRuleDescriptor,
     IPAPronunciation,
     Pronunciation,
@@ -34,6 +35,8 @@ from .pujcommon import (
 __all__ = [
     'convert',
     'load_accents',
+    'load_entries',
+    'try_deaccent',
     'ConversionError',
     'SUPPORTED_SOURCES',
     'SUPPORTED_TARGETS',
@@ -184,6 +187,56 @@ def load_accents(accent_pb_path: Union[str, pathlib.Path]) -> dict[str, Accent]:
     for a in accents_raw.accents:
         accents[a.id] = Accent.from_pb(a)
     return accents
+
+
+def load_entries(entries_pb_path: Union[str, pathlib.Path]) -> dict[str, list[Entry]]:
+    """
+    从 protobuf 数据文件加载字表，并按汉字建立索引。
+
+    Args:
+        entries_pb_path: `entries.pb` 文件路径。
+
+    Returns:
+        以汉字为键、`Entry` 对象列表为值的字典。同一个字可能对应多个读音，
+        故值为列表；繁体与简体形式均会作为键收录。
+    """
+    entries_pb_path = pathlib.Path(entries_pb_path)
+    with open(entries_pb_path, 'rb') as f:
+        entries_raw = pb.Entries()
+        entries_raw.ParseFromString(f.read())
+    han_to_entry: dict[str, list[Entry]] = {}
+    for e in entries_raw.entries:
+        entry = Entry.from_pb(e)
+        han_to_entry.setdefault(e.char_sim, []).append(entry)
+        han_to_entry.setdefault(e.char, []).append(entry)
+    return han_to_entry
+
+
+def try_deaccent(char: str, accent_pron: str, accent: Accent,
+                 han_to_entry: dict[str, list[Entry]]) -> str:
+    """
+    尝试将某个带口音的拼音反推为标准音。
+
+    在字表中查找汉字 `char` 的各标准读音，将其应用口音 `accent` 的模糊音
+    规则，若得到的口音化读音与输入的 `accent_pron` 一致，则返回该标准读音；
+    否则原样返回输入的 `accent_pron`。
+
+    Args:
+        char: 汉字（繁体或简体均可）。
+        accent_pron: 带口音的拼音（ASCII 白话字形式，如 `lieng7`）。
+        accent: 口音对象。
+        han_to_entry: `load_entries` 返回的字表索引。
+
+    Returns:
+        找到匹配时的标准读音；否则返回原输入的 `accent_pron`。
+    """
+    input_pron = Pronunciation.from_combination(accent_pron)
+    input_comb = input_pron.to_combination()
+    for entry in han_to_entry.get(char, []):
+        accented = accent.fuzzy_result(entry.pron)
+        if accented.to_combination() == input_comb:
+            return entry.pron.to_combination()
+    return accent_pron
 
 
 def convert(text: str, source: str = 'puj', target: str = 'puj',

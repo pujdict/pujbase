@@ -21,10 +21,53 @@ from libpuj import (
     ConversionError,
     convert,
     load_accents,
+    load_entries,
+    try_deaccent,
 )
 
 # 允许通过 -h 打印帮助信息。
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+
+
+def _run_try_deaccent(input_text: str, accent: str, accent_data: str,
+                      entry_data: str) -> str:
+    """
+    执行"反推标准音"逻辑。
+
+    输入格式为 <汉字>/<带口音的拼音>，多个以空白分隔；例如：练/lieng7。
+    需指定 --accent、--accent-data 与 --entry-data。
+    """
+    if accent is None or accent_data is None or entry_data is None:
+        raise click.UsageError(
+            "--deaccent 需要同时指定 --accent、--accent-data 与 --entry-data。")
+
+    try:
+        accents = load_accents(accent_data)
+        han_to_entry = load_entries(entry_data)
+    except Exception as exc:
+        raise click.ClickException(f"加载数据失败：{exc}")
+
+    if accent not in accents:
+        available = "、".join(sorted(accents))
+        raise click.BadParameter(
+            f"未知口音：{accent!r}。可用口音：{available}。",
+            param_hint='--accent',
+        )
+    accent_obj = accents[accent]
+
+    results = []
+    for pair in input_text.split():
+        if '/' not in pair:
+            raise click.BadParameter(
+                f"无法解析输入 {pair!r}，格式应为 <汉字>/<带口音的拼音>。",
+                param_hint='--input',
+            )
+        char, accent_pron = pair.split('/', 1)
+        try:
+            results.append(try_deaccent(char, accent_pron, accent_obj, han_to_entry))
+        except ConversionError as exc:
+            raise click.ClickException(str(exc))
+    return " ".join(results)
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
@@ -61,7 +104,22 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     default=None,
     help='口音数据文件（accents.pb）的路径，用于加载口音。',
 )
-def main(convert_spec: str, input_text: str, accent: str, accent_data: str) -> None:
+@click.option(
+    '--deaccent',
+    is_flag=True,
+    default=False,
+    help='尝试将带口音的拼音反推为标准音。'
+         '输入格式为 <汉字>/<带口音的拼音>（如 练/lieng7），'
+         '需配合 --accent、--accent-data 与 --entry-data。',
+)
+@click.option(
+    '--entry-data',
+    type=click.Path(exists=True, dir_okay=False),
+    default=None,
+    help='字表数据文件（entries.pb）的路径，用于反推标准音时查找汉字读音。',
+)
+def main(convert_spec: str, input_text: str, accent: str, accent_data: str,
+         try_deaccent: bool, entry_data: str) -> None:
     """潮汕方言白话字工具。"""
     # 解析输入：- 表示从标准输入读取。
     if input_text == '-':
@@ -69,6 +127,12 @@ def main(convert_spec: str, input_text: str, accent: str, accent_data: str) -> N
     if not input_text:
         raise click.UsageError(
             "请通过 --input 指定需要转换的拼音，或使用 - 从标准输入读取。")
+
+    # 反推标准音模式：--deaccent。
+    if try_deaccent:
+        result = _run_try_deaccent(input_text, accent, accent_data, entry_data)
+        click.echo(result)
+        return
 
     # 解析 <源方案>2<目标方案>，例如 puj2dp -> (puj, dp)。
     parts = convert_spec.split('2')
