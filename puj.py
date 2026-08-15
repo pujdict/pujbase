@@ -3,10 +3,10 @@
 """潮汕方言拼音方案转换命令行工具。
 
 示例：
-    python puj.py --convert puj2dp --text peng1
-    python puj.py --convert puj2ipa --text tshout3
-    python puj.py -c puj2xsampa -t iann5
-    python puj.py -c puj2apuj -t eu1 --accent ChaoZhou_FuCheng --accent-data dist/accents.pb
+    python puj.py --convert puj2dp --input peng1
+    python puj.py --convert puj2ipa --input tshout3
+    python puj.py -c puj2xsampa -i iann5
+    echo "eu1" | python puj.py -c puj2apuj -i - --accent ChaoZhou_FuCheng --accent-data dist/accents.pb
 """
 
 from __future__ import annotations
@@ -41,11 +41,13 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     ),
 )
 @click.option(
-    '--text', '-t',
+    '--input', '-i',
+    'input_text',
     type=str,
     default=None,
-    help='需要转换的拼音（源拼音使用 ASCII 形式，如 peng1；'
-         '也支持由空格与连字符分割的整句话）。',
+    help='需要转换的拼音字符串（源拼音使用 ASCII 形式，如 peng1；'
+         '也支持由空格与连字符分割的整句话）。'
+         '若指定为 -，则从标准输入读取。',
 )
 @click.option(
     '--accent', '-a',
@@ -59,10 +61,14 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     default=None,
     help='口音数据文件（accents.pb）的路径，用于加载口音。',
 )
-def main(convert_spec: str, text: str, accent: str, accent_data: str) -> None:
+def main(convert_spec: str, input_text: str, accent: str, accent_data: str) -> None:
     """潮汕方言白话字工具。"""
-    if not text:
-        raise click.UsageError("请通过 --text 指定需要转换的拼音。")
+    # 解析输入：- 表示从标准输入读取。
+    if input_text == '-':
+        input_text = sys.stdin.read()
+    if not input_text:
+        raise click.UsageError(
+            "请通过 --input 指定需要转换的拼音，或使用 - 从标准输入读取。")
 
     # 解析 <源方案>2<目标方案>，例如 puj2dp -> (puj, dp)。
     parts = convert_spec.split('2')
@@ -104,7 +110,7 @@ def main(convert_spec: str, text: str, accent: str, accent_data: str) -> None:
         fuzzy_rule = accents[accent]
 
     try:
-        result = convert(text, source=source, target=target, fuzzy_rule=fuzzy_rule)
+        result = convert(input_text, source=source, target=target, fuzzy_rule=fuzzy_rule)
     except ConversionError as exc:
         raise click.ClickException(str(exc))
 
