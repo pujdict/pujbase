@@ -270,7 +270,7 @@ class Pronunciation(AbstractPronunciation):
     def to_combination(self) -> str:
         return (f"{self.initial if self.initial != '0' else ''}"
                 f"{self.final}"
-                f"{self.tone}")
+                f"{self.tone if self.tone else ''}")
 
     @classmethod
     def from_dp(cls, dp: 'DPPronunciation') -> 'Pronunciation':

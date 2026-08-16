@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import pathlib
 
-from typing import Callable, Optional, Union
+from typing import Callable, Optional, Union, Tuple
 
 import libpuj.pujpb as pb
 
@@ -116,24 +116,50 @@ def _target_has_case(target: str) -> bool:
     return getattr(_TARGET_OUTPUT_CLASS[target], 'has_case')
 
 
-def _make_word_converter(source: str, target: str,
-                         fuzzy_rule: FuzzyRuleLike = None) -> Callable[[str], str]:
+class WordConverter:
     """
-    构造将单个拼音单词从 `source` 转换为 `target` 的函数。
+    将单个拼音单词从 `source` 方案转换为 `target` 方案的转换器。
+
+    以可调用对象的形式逐词转换；若某个单词解析失败，记录错误并原样返回
+    该单词，转换完成后可通过 `has_error` / `errors` 判断是否发生错误，
+    从而让调用方决定是否以非零状态退出。
+
+    Attributes:
+        errors: 转换过程中记录的解析错误消息列表。
+    """
+
+    def __init__(self, source: str, target: str,
+                 fuzzy_rule: FuzzyRuleLike = None) -> None:
+        self.parser = _SOURCE_PARSERS[source]
+        self.formatter = _TARGET_FORMATTERS[target]
+        self.fuzzy_rule = fuzzy_rule
+        self.errors: list[str] = []
+
+    @property
+    def has_error(self) -> bool:
+        """是否发生过解析错误。"""
+        return bool(self.errors)
+
+    def __call__(self, word: str) -> str:
+        try:
+            pron = self.parser(word)
+        except ConversionError as e:
+            self.errors.append(str(e))
+            return word
+        if self.fuzzy_rule is not None:
+            pron = self.fuzzy_rule.fuzzy_result(pron)
+        return self.formatter(pron)
+
+
+def _make_word_converter(source: str, target: str,
+                         fuzzy_rule: FuzzyRuleLike = None) -> WordConverter:
+    """
+    构造将单个拼音单词从 `source` 转换为 `target` 的 `WordConverter`。
 
     若传入 `fuzzy_rule`（口音），则在解析后、格式化前应用口音模糊音规则
     （`fuzzy_rule.fuzzy_result`）。
     """
-    parser = _SOURCE_PARSERS[source]
-    formatter = _TARGET_FORMATTERS[target]
-
-    def word_converter(word: str) -> str:
-        pron = parser(word)
-        if fuzzy_rule is not None:
-            pron = fuzzy_rule.fuzzy_result(pron)
-        return formatter(pron)
-
-    return word_converter
+    return WordConverter(source, target, fuzzy_rule)
 
 
 def _convert_sentence(sentence: str, word_converter: Callable[[str], str],
@@ -249,7 +275,7 @@ def try_deaccent(char: str, accent_pron: str, accent: Accent,
 
 
 def convert(text: str, source: str = 'puj', target: str = 'puj',
-            fuzzy_rule: FuzzyRuleLike = None) -> str:
+            fuzzy_rule: FuzzyRuleLike = None) -> Tuple[str, list[str]]:
     """
     将拼音 `text` 从 `source` 方案转换为 `target` 方案。
 
@@ -278,7 +304,8 @@ def convert(text: str, source: str = 'puj', target: str = 'puj',
         raise ConversionError(
             f"不支持的目标拼音方案：{target!r}，可用：{', '.join(SUPPORTED_TARGETS)}")
     word_converter = _make_word_converter(source, target, fuzzy_rule)
-    return _convert_sentence(text, word_converter, has_case=_target_has_case(target))
+    result = _convert_sentence(text, word_converter, has_case=_target_has_case(target))
+    return result, word_converter.errors
 
 
 # 为每种 (源, 目标) 组合生成便捷的"源方案 2 目标方案"函数，如：

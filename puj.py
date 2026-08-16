@@ -174,11 +174,12 @@ def main(convert_spec: str, input_text: str, accent: str, accent_data: str,
         fuzzy_rule = accents[accent]
 
     try:
-        result = convert(input_text, source=source, target=target, fuzzy_rule=fuzzy_rule)
+        result, err = convert(input_text, source=source, target=target, fuzzy_rule=fuzzy_rule)
+        click.echo(result)
+        if err:
+            raise click.ClickException('；'.join(err))
     except ConversionError as exc:
         raise click.ClickException(str(exc))
-
-    click.echo(result)
 
 
 if __name__ == '__main__':
