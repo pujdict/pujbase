@@ -178,7 +178,8 @@ class Pronunciation(AbstractPronunciation):
         if not written:
             return cls()
         written = unicodedata.normalize('NFD', written)
-        tone = 0
+        # 如果没有找到调符，默认 1 声
+        tone = 1
         # 消除调符
         for i, possible_marks in enumerate(cls.__puj_possible_tone_marks):
             for possible_tone_mark in possible_marks:

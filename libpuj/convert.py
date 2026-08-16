@@ -29,6 +29,7 @@ from .pujcommon import (
     FuzzyRuleDescriptor,
     IPAPronunciation,
     Pronunciation,
+    PronunciationWilliamDuffus,
     Sentence,
 )
 
@@ -46,15 +47,17 @@ __all__ = [
 FuzzyRuleLike = Optional[Accent]
 
 # 支持的源拼音方案标识。
-SUPPORTED_SOURCES = ('puj', 'dp')
+SUPPORTED_SOURCES = ('apuj', 'puj', 'dp', 'duffus')
 # 支持的目标拼音方案标识。
-SUPPORTED_TARGETS = ('apuj', 'puj', 'dp', 'ipa', 'xsampa')
+SUPPORTED_TARGETS = ('apuj', 'puj', 'dp', 'ipa', 'xsampa', 'duffus')
 
 
 # 源方案名 -> 解析函数（单个拼音单词 -> Pronunciation）。
 _SOURCE_PARSERS: dict[str, Callable[[str], Pronunciation]] = {
+    'apuj': Pronunciation.from_combination,
     'puj': Pronunciation.from_written,
     'dp': lambda x: Pronunciation.from_dp(DPPronunciation.from_written(x)),
+    'duffus': PronunciationWilliamDuffus.from_written
 }
 
 
@@ -83,6 +86,10 @@ def _pron_to_x_sampa(pron: Pronunciation) -> str:
     return pron.to_ipa().to_x_sampa()
 
 
+def _pron_to_duffus(pron: Pronunciation) -> str:
+    return PronunciationWilliamDuffus(pron.initial, pron.final, pron.tone).to_written()
+
+
 # 目标方案名 -> 格式化函数（Pronunciation -> 目标方案字符串）。
 _TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
     'apuj': _pron_to_apuj,
@@ -90,6 +97,7 @@ _TARGET_FORMATTERS: dict[str, Callable[[Pronunciation], str]] = {
     'dp': _pron_to_dp,
     'ipa': _pron_to_ipa,
     'xsampa': _pron_to_x_sampa,
+    'duffus': _pron_to_duffus,
 }
 
 # 目标方案名 -> 对应的输出音标类（用于判断该方案是否区分大小写）。
@@ -99,6 +107,7 @@ _TARGET_OUTPUT_CLASS: dict[str, type] = {
     'dp': DPPronunciation,
     'ipa': IPAPronunciation,
     'xsampa': IPAPronunciation,
+    'duffus': PronunciationWilliamDuffus,
 }
 
 
