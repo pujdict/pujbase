@@ -119,7 +119,7 @@ def _run_try_deaccent(input_text: str, accent: str, accent_data: str,
     help='字表数据文件（entries.pb）的路径，用于反推标准音时查找汉字读音。',
 )
 def main(convert_spec: str, input_text: str, accent: str, accent_data: str,
-         try_deaccent: bool, entry_data: str) -> None:
+         deaccent: bool, entry_data: str) -> None:
     """潮汕方言白话字工具。"""
     # 解析输入：- 表示从标准输入读取。
     if input_text == '-':
@@ -129,7 +129,7 @@ def main(convert_spec: str, input_text: str, accent: str, accent_data: str,
             "请通过 --input 指定需要转换的拼音，或使用 - 从标准输入读取。")
 
     # 反推标准音模式：--deaccent。
-    if try_deaccent:
+    if deaccent:
         result = _run_try_deaccent(input_text, accent, accent_data, entry_data)
         click.echo(result)
         return
