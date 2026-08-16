@@ -75,7 +75,7 @@ def _run_try_deaccent(input_text: str, accent: str, accent_data: str,
     '--convert', '-c',
     'convert_spec',
     type=str,
-    default='puj2puj',
+    default='apuj2puj',
     show_default=True,
     help=(
         '转换类型，格式为 <源方案>2<目标方案>，如 puj2dp 表示白话字转潮拼。'
@@ -88,8 +88,8 @@ def _run_try_deaccent(input_text: str, accent: str, accent_data: str,
     'input_text',
     type=str,
     default=None,
-    help='需要转换的拼音字符串（源拼音使用 ASCII 形式，如 peng1；'
-         '也支持由空格与连字符分割的整句话）。'
+    help='需要转换的拼音字符串，'
+         '也支持由空格与连字符分割的整句话。'
          '若指定为 -，则从标准输入读取。',
 )
 @click.option(
