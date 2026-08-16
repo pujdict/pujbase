@@ -28,12 +28,13 @@ class Pronunciation(AbstractPronunciation):
     """
     ASCII 白话字拼音。内部存储为 ASCII 形式（特殊字母 ṳ o̤ 记录为 ur or），可输出为书面形式。
     """
-    __special_vowels = {
+    _special_vowels = {
         "ur": "ṳ",
         "or": "o̤",
+        "nn": "ⁿ",
     }
     __vowel_order = [
-        'a', 'o', __special_vowels['ur'], 'ur', __special_vowels['or'], 'or', 'e', 'i', 'u',
+        'a', 'o', _special_vowels['ur'], 'ur', _special_vowels['or'], 'or', 'e', 'i', 'u',
     ]
     __vowels = set(__vowel_order)
     REGEXP_WORD = re.compile(
@@ -197,8 +198,9 @@ class Pronunciation(AbstractPronunciation):
                 return cls()
             written = written[:-1]
         # 特殊字符转 ASCII（书面 ṳ o̤ 转内部 ur or）
-        written = written.replace(cls.__special_vowels['ur'], 'ur')
-        written = written.replace(cls.__special_vowels['or'], 'or')
+        written = written.replace(cls._special_vowels['ur'], 'ur')
+        written = written.replace(cls._special_vowels['or'], 'or')
+        written = written.replace(cls._special_vowels['nn'], 'nn')
         # 入声做一次额外处理：4 声无调符，8 声的调符可能与 2 声或 5 声相同。
         # 这里简化了判断的依据。如果是入声韵并且有声调符号，那么就认为是 8 声。
         # 如果是入声韵并且前面没发现调符，就是 4 声。
@@ -219,9 +221,9 @@ class Pronunciation(AbstractPronunciation):
         final = self.final
         if not final:
             return ''
-        final = final.replace('ur', self.__special_vowels['ur'])
-        final = final.replace('or', self.__special_vowels['or'])
-        coda_index = self.__get_coda_index(final)
+        final = final.replace('ur', self._special_vowels['ur'])
+        final = final.replace('or', self._special_vowels['or'])
+        coda_index = self._get_tone_mark_index(final)
         if coda_index == -1:
             return ''
         tone = self.tone
@@ -232,17 +234,17 @@ class Pronunciation(AbstractPronunciation):
         return f"{initial}{final}"
 
     @classmethod
-    def __get_coda_index(cls, final: str) -> int:
+    def _get_tone_mark_index(cls, final: str) -> int:
         """
         给定韵母求韵腹。
         """
         if final:
             if final[0].lower() in 'iu' and len(final) > 1 and final[1] in cls.__vowels:
                 return 1
-            if final.startswith(cls.__special_vowels['ur']):
-                return len(cls.__special_vowels['ur']) - 1
-            if final.startswith(cls.__special_vowels['or']):
-                return len(cls.__special_vowels['or']) - 1
+            if final.startswith(cls._special_vowels['ur']):
+                return len(cls._special_vowels['ur']) - 1
+            if final.startswith(cls._special_vowels['or']):
+                return len(cls._special_vowels['or']) - 1
             return 0
         return -1
 
@@ -370,6 +372,86 @@ class Pronunciation(AbstractPronunciation):
                     i += 1
             # print(final)
         return IPAPronunciation(initial, final, self.tone)
+
+
+class PronunciationWilliamDuffus(Pronunciation):
+    """
+    白话字拼音（卓威廉辞典版本）。
+    内部存储时，依然用本项目中的标准白话字记法。输入输出时再做特殊处理。
+    特征：
+    - 鼻化 ⁿ
+    - “余”ṳ
+    - 腭化 ch/chh/j 非腭化 ts/tsh/z
+    - 存在 oa 写法（用于声母 t th 之后，含鼻化情况。序言中还说有 oai，但正文没有）
+    """
+
+    REGEXP_WORD = re.compile(
+        r"^(?P<word>(?P<initial>(pfh|pf|phf|ph|p|mv(?=u)|bv(?=u)|f|m|b|th|t|l|kh|k|ng|n|g|h|tsh|ts|chh|ch|c|s|j|z|0))?(?P<final>(?P<medial>(y|yi|i|u|iu)(?=[aeoiu])|(o)(?=a))?(?P<nucleus>or|er|ur|ir|a|e|o|i|ṳ|u|o̤|ng|n|m)(?P<coda>(y|yi|i|u)?(m|ng|nn'?h|nn'?|n|p|t|k|h)?))(?P<tone>\d)?)$",
+        re.IGNORECASE)
+    PUJ_TONE_MARKS_MAP = [
+        "",  # 0
+        "",  # 1
+        "\u0301",  # 2 锐音符 ́
+        "\u0300",  # 3 抑音符 ̀
+        "",  # 4
+        "\u0302",  # 5 扬抑符 ̂
+        "\u0303",  # 6 波浪符 ̃
+        "\u0304",  # 7 长音符 ̄
+        "\u030D",  # 8 撇号，以竖线符 ̍ 代替
+    ]
+
+    def __init__(self, initial: str = '', final: str = '', tone: int = 0):
+        final = final.replace('oa', 'ua')
+        super().__init__(initial, final, tone)
+
+    @classmethod
+    def _get_tone_mark_index(cls, final: str) -> int:
+        """
+        特征：
+        oa 标注于 o
+        ua ui ue 标注于 u (含鼻化)
+        ueh 标注于 e
+        iu 标注于 u
+        """
+        if not final:
+            return -1
+        if 'nn' in final:
+            # 鼻化在后续计算没有用处
+            final = final[:-2]
+        if final.startswith('oa'):
+            return 0
+        if final == 'ueh':
+            return 1
+        if final.startswith('iu'):
+            return 1
+        if final in {'ua', 'ue', 'ui'}:
+            return 0
+        if final == 'iu':
+            return 1
+        return super()._get_tone_mark_index(final)
+
+    @classmethod
+    def from_written(cls, written: str) -> 'PronunciationWilliamDuffus':
+        res = super().from_written(written)
+        return cls(res.initial, res.final, res.tone)
+
+    def to_written(self) -> str:
+        final = self.final
+        if final == 'ua' or final == 'uann':
+            if self.initial in ['t', 'th']:
+                final = final.replace('ua', 'oa')
+        res = Pronunciation(self.initial, final, self.tone).to_written()
+        if res.startswith('tsh'):
+            if res.startswith('tshi') or res.startswith('tshe'):
+                res = res.replace('tsh', 'chh')
+        elif res.startswith('ts'):
+            if res.startswith('tsi') or res.startswith('tse'):
+                res = res.replace('ts', 'ch')
+        elif res.startswith('j'):
+            if not (res.startswith('ji') or res.startswith('je')):
+                res = res.replace('j', 'z')
+        res = res.replace('nn', self._special_vowels['nn'])
+        return res
 
 
 class DPPronunciation(AbstractPronunciation):
