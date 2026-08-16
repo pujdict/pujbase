@@ -45,6 +45,47 @@ ChaoZhou_FuCheng:
     - IONG_As_ONG
     - JIONG_As_JONG
     - NGU_As_U
+ChaoZhou_DuffusWilliam:
+  area: 潮州
+  subarea: ""
+  var: 清末(卓威廉) # -n -t，iam iap，ien iet，iau，or->o，mng png tng sng
+  cat: [ ChaoShan, HanJiang ]
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 23, 23, 32, 3, 212, 21, 21, 2 ]
+    sandhi_em: [ 23, 25, 52, 5, 212, 21, 21, 2 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+    group:
+      2-2: 25-21
+      2-5: 25-55
+      2-8: 25-5
+      3-2: 52-21
+      3-5: 52-55
+      3-8: 52-5
+      4-2: 5-21
+      4-5: 5-55
+      4-8: 5-5
+    specials:
+    - SMOOTH_2ND_3RD_4TH
+    - SMOOTH_NEUTRAL
+  rules:
+  - OR_As_O
+  - ORH_As_OH
+  - EU_As_IU
+  - UOINN_As_UINN
+  - IURN_As_IN
+  - IURM_As_IAM
+  - UENG_As_ENG_UANG
+  - UONG_As_ONG
+  - IUONG_As_IONG
+  - IO_As_IE
+  - IAN_As_IEN
+  - N_As_L_ForMEnding
+  - L_As_N_For_NN_NG
+  - MU_As_BU_ForNasalEnding
+  - IONG_As_ONG
+  - JIONG_As_JONG
+  - NGU_As_U
 XiQiang:
   area: 戏腔
   subarea: ""
