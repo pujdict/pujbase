@@ -45,7 +45,7 @@ ChaoZhou_FuCheng:
     - IONG_As_ONG
     - JIONG_As_JONG
     - NGU_As_U
-ChaoZhou_DuffusWilliam:
+ChaoZhou_WilliamDuffus:
   area: 潮州
   subarea: ""
   var: 清末(卓威廉) # -n -t，iam iap，ien iet，iau，or->o，mng png tng sng
