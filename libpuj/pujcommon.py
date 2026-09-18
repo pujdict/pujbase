@@ -463,9 +463,9 @@ class DPPronunciation(AbstractPronunciation):
     # 潮拼单词正则，参考前端 SPuj.ts 的 regexpWordDp。
     REGEXP_WORD = re.compile(
         r"^(?P<initial>(bh|bf|pf|bhv|mv|ng|gh|b|p|m|f|v|d|t|n|l|g|k|h|z|c|s|r|0))?"
-        r"(?P<final>(?P<medial>(i|u)(?=[aeoiu]))?"
-        r"(?P<nucleus>ê|e|a|o|i|u|v|or|er|ng|m)"
-        r"(?P<coda>(i|u)?(m|nd|ng|n'?|b|d|g|h)*))"
+        r"(?P<final>(?P<medial>(i|u)(?=[aêeoiu]))?"
+        r"(?P<nucleus>ê|e|a|o|i(?!o)|u|v|or|er|ng|m)"
+        r"(?P<coda>(i|u|o)?(m|nd|ng|n'?|b|d|g|h)*))"
         r"(?P<tone>\d)?$",
         re.IGNORECASE)
 
