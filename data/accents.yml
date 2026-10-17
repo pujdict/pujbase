@@ -17,6 +17,7 @@ ChaoZhou_FuCheng:
       4-2: 5-21
       4-5: 5-55
       4-8: 5-5
+      5-3: 21-212
     specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
@@ -36,6 +37,7 @@ ChaoZhou_FuCheng:
     - IAN_As_IEN
     - UAN_As_UEN
     - IAM_As_IEM
+    # TODO: 此条规则的细化
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
     - MU_As_BU_ForNasalEnding
@@ -179,6 +181,7 @@ ChaoAn_WenCi:
       4-2: 5-21
       4-5: 5-55
       4-8: 5-5
+      5-3: 221-212
     specials:
       - SMOOTH_2ND_3RD_4TH
       - SMOOTH_NEUTRAL
@@ -206,7 +209,10 @@ ChaoAn_WenCi:
 ChaoAn_JinShi:
   area: 潮安
   subarea: 金石
-  cat: [ChaoShan, RongJiang]
+  # 注：金石音虽有 ing -> eng，但不应认为是榕江腔。
+  # 榕江腔必须具有的特征是 *ueng 不会变成 (0-)eng/(k,kh,h-)uang，否则即为韩江腔。
+  # TODO: 文档中写一段关于韩、榕、连腔的区分的描述
+  cat: [ChaoShan, HanJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
     sandhi: [ 23, 23, 32, 3, 212, 21, 212, 2 ]
@@ -313,7 +319,6 @@ RaoPing_SanRao:
     - IUONG_As_IONG
     - N_As_L_ForMEnding
     - L_As_N_For_NN_NG
-    - BU_As_MU_ForNasalEnding
     - URN_As_URNG
     - AN_As_ANG
     - IAN_As_IANG
@@ -341,7 +346,7 @@ RaoPing_HuangGang:
     - UONG_As_ONG
     - IUONG_As_IONG
     - L_As_N_For_NN_NG
-    - MU_As_BU_ForNasalEnding
+    - BU_As_MU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
     - IONG_As_ONG
@@ -522,6 +527,45 @@ ChaoYang_MianCheng:
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
+# TODO: 提供一个新派&老派的 var 字段。潮普各口音都给一个唇齿化变体的新派。
+# 特别地：潮阳、普宁新派齿音声母后丢 i 介音；陆丰甲子音新派与老派差异巨大。
+#    - PU_PHU_BU_Labiodentalize
+#    - MU_Labiodentalize
+ChaoYang_HePing:
+  # 该口音载于【肖阳2023】广东潮阳方言同音字汇
+  # 潮阳各地口音中升调比较丰富的案例。其中阳平实现为升调。
+  # 声母这里按唇齿化的新派音记录。韵母方面与棉城无异。
+  area: 潮阳
+  subarea: 和平
+  cat: [ChaoPu, LianJiang]
+  labiodental: true
+  tones:
+    citation: [ 21, 55, 53, 2, 24, 53, 22, 5 ]
+    sandhi: [ 21, 53, 24, 5, 22, 21, 21, 2 ]
+    neutral: [ 22, 31, 22, 2, 22, 22, 22, 2 ]
+    group:
+      1-1: 24-21
+      6-1: 24-21
+      7-1: 24-21
+  rules:
+  - UR_As_U
+  - OR_As_O
+  - ORH_As_OH
+  - EU_As_IU
+  - OINN_As_AINN
+  - UOINN_As_UAINN
+  - HN_As_HURN
+  - URN_As_IN
+  - IURN_As_IAN
+  - IURM_As_IM
+  - UONG_As_UENG
+  - IUONG_As_UENG
+  - L_As_N_For_NN_NG
+  - MU_As_BU_ForNasalEnding
+  - N_As_NG
+  - NG_As_URNG
+  - PU_PHU_BU_Labiodentalize
+  - MU_Labiodentalize
 ChaoYang_DaHao:
   # 今天行政区划归汕头，但历史上长期归潮阳，并且其口音也是潮阳典型口音的一个变种。所以暂时记为潮阳。
   area: 潮阳
@@ -555,7 +599,7 @@ PuNing_LiuSha:
   labiodental: true
   tones:
     citation: [ 335, 52, 212, 32, 44, 25, 31, 54 ]
-    sandhi: [ 33, 212, 55, 54, 31, 33, 33, 3 ]
+    sandhi: [ 33, 212, 55, 54, 31, 33, 33, 32 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
     - UR_As_U
@@ -580,7 +624,7 @@ HuiLai_HuiCheng:
   cat: [ChaoPu, LianJiang]
   labiodental: true
   tones:
-    citation: [ 24, 552, 31, 32, 44, 213, 31, 54 ]
+    citation: [ 24, 552, 31, 21, 44, 213, 31, 43 ]
     sandhi: [ 33, 213, 44, 43, 31, 33, 33, 21 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
   rules:
@@ -606,9 +650,14 @@ LuFeng_SanJia:
   cat: [ChaoPu, LianJiang]
   labiodental: true
   tones:
-    citation: [ 334, 552, 22, 3, 55, 24, 41, 54 ]
-    sandhi: [ 33, 24, 55, 54, 32, 33, 33, 3 ]
+    citation: [ 334, 552, 212, 3, 55, 24, 41, 54 ]
+    sandhi: [ 33, 34, 55, 54, 32, 33, 33, 3 ]
+    sandhi_em: [ 33, 24, 55, 54, 32, 33, 33, 3 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+    group:
+      2-2: 24-552
+      2-5: 24-55
+      2-8: 24-54
   rules:
     - UR_As_U
     - OR_As_E
