@@ -224,7 +224,7 @@ UE_As_UEI:
   ipa: "*-ue > -uei; *-ũẽ > -ũẽĩ; *-uek̚  > -ueik̚ ; *-ueʔ > -ueiʔ"
   eg: [花,划,横]
   act:
-  - final/^ue(k|nn|h|nnh)?$/uei$1/
+  - final/^ue(k|nn'?|h|nn'?h)?$/uei$1/
 UEI_As_OI:
   title: “锅”韵增生 [i] 尾后转“挨”（赅鼻化、喉塞）
   note: 陆丰三甲新派音。
@@ -232,7 +232,7 @@ UEI_As_OI:
   ipa: "*-uei > -oi; *-ũẽĩ > -õĩ; *-ueiʔ > -oiʔ"
   eg: [花,划,横]
   act:
-  - final/^uei(nn|h|nnh)?$/oi$1/
+  - final/^uei(nn'?|h|nn'?h)?$/oi$1/
 IO_As_IE:
   title: “腰”韵前化（赅鼻化、喉塞）
   note: 潮州、澄海等地语音。
