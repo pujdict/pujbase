@@ -466,7 +466,7 @@ JieYang_RongCheng:
   cat: [ChaoShan, RongJiang]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
-    sandhi: [ 33, 23, 32, 3, 212, 21, 212, 2 ]
+    sandhi: [ 33, 23, 32, 3, 212, 21, 21, 2 ]
     sandhi_em: [ 23, 25, 52, 5, 212, 21, 212, 2 ]
     neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
     group:
@@ -648,6 +648,38 @@ PuNing_LiuSha:
     - L_As_N_For_NN_NG
     - N_As_NG
     - NG_As_URNG
+    - NGU_As_U
+PuNing_HongYang:
+  # 洪阳与榕城音系基本相同，特色在于前变调，声调整体类似榕城，但 2 3 4 声的前变调在所有情况下都实现为一个较低的变调，不会在后接 2 5 8 声时变成高调。
+  # 但这三个前变调感觉又不像榕城的 3 那样低，似乎稍微高一点，暂记为 4。
+  # 3声+2声的组合中2声没有变成低降。“所以” -> 24 52。
+  # -n -t 尾很少听到。来自洪阳的方展荣老师早期唱词中保留有 un/ut uan/uat 两个（典型唱段《蝼蚁尚知贪生求存》），也符合普宁大部分地区保留 un/ut uan/uat 的印象，但不稳定，时有时无，后期的唱词以及现在发抖音的视频也很少听到了，此处不录。
+  # 洪阳也有部分出现唇齿音的情况，此处不录。
+  area: 普宁
+  subarea: 洪阳
+  cat: [ChaoShan, RongJiang]
+  tones:
+    citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
+    sandhi: [ 33, 24, 42, 4, 212, 21, 21, 2 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+  rules:
+    - OR_As_O
+    - ORH_As_OH
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UINN
+    - HN_As_HURN
+    - URN_As_IN
+    - IURN_As_IAN
+    - IURM_As_IM
+    - UONG_As_UENG
+    - IUONG_As_UENG
+    - L_As_N_For_NN_NG
+    - MU_As_BU_ForNasalEnding
+    - IN_As_EN
+    - N_As_NG
+    - NG_As_URNG
+    - IONG_As_ONG
     - NGU_As_U
 HuiLai_HuiCheng:
   area: 惠来
