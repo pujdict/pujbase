@@ -162,6 +162,7 @@ def main():
     for k, v in yaml_entries.items():
         area = v['area']
         subarea = v['subarea']
+        variant = v.get('variant', '')
         rules = v['rules']
         rules = [fuzzy_rule_indices[rule] for rule in rules]
         tones = v['tones']
@@ -178,6 +179,7 @@ def main():
             id=k,
             area=area,
             subarea=subarea,
+            variant=variant,
             rules=rules,
             tones=tones,
             cat=cat,

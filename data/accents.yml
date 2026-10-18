@@ -50,7 +50,7 @@ ChaoZhou_FuCheng:
 ChaoZhou_WilliamDuffus:
   area: 潮州
   subarea: ""
-  var: 清末(卓威廉) # -n -t，iam iap，ien iet，iau，or->o，mng png tng sng
+  variant: 清末(卓威廉) # -n -t，iam iap，ien iet，iau，or->o，mng png tng sng
   cat: [ ChaoShan, HanJiang ]
   tones:
     citation: [ 33, 52, 212, 2, 55, 25, 22, 5 ]
@@ -504,6 +504,7 @@ JieYang_RongCheng:
 ChaoYang_MianCheng:
   area: 潮阳
   subarea: 棉城
+  variant: 老派
   cat: [ChaoPu, LianJiang]
   labiodental: true
   tones:
@@ -531,6 +532,36 @@ ChaoYang_MianCheng:
 # 特别地：潮阳、普宁新派齿音声母后丢 i 介音；陆丰甲子音新派与老派差异巨大。
 #    - PU_PHU_BU_Labiodentalize
 #    - MU_Labiodentalize
+ChaoYang_MianCheng_New:
+  area: 潮阳
+  subarea: 棉城
+  variant: 新派
+  cat: [ChaoPu, LianJiang]
+  labiodental: true
+  tones:
+    citation: [ 21, 45, 52, 2, 33, 52, 32, 5 ]
+    sandhi: [ 21, 52, 32, 5, 332, 32, 21, 3 ]
+    neutral: [ 332, 32, 332, 2, 332, 332, 332, 2 ]
+  rules:
+  - UR_As_U
+  - OR_As_O
+  - ORH_As_OH
+  - EU_As_IU
+  - OINN_As_AINN
+  - UOINN_As_UAINN
+  - HN_As_HURN
+  - URN_As_IN
+  - IURN_As_IAN
+  - IURM_As_IM
+  - UONG_As_UENG
+  - IUONG_As_UENG
+  - L_As_N_For_NN_NG
+  - MU_As_BU_ForNasalEnding
+  - N_As_NG
+  - IONG_As_ONG
+  - NG_As_URNG
+  - PU_PHU_BU_Labiodentalize
+  - MU_Labiodentalize
 ChaoYang_HePing:
   # 该口音载于【肖阳2023】广东潮阳方言同音字汇
   # 潮阳各地口音中升调比较丰富的案例。其中阳平实现为升调。
@@ -647,6 +678,7 @@ HuiLai_HuiCheng:
 LuFeng_SanJia:
   area: 陆丰
   subarea: 三甲
+  variant: 老派
   cat: [ChaoPu, LianJiang]
   labiodental: true
   tones:
@@ -677,3 +709,36 @@ LuFeng_SanJia:
     - MU_As_BU_ForNasalEnding
     - N_As_NG
     - NG_As_URNG
+LuFeng_SanJia_New:
+  area: 陆丰
+  subarea: 三甲
+  variant: 新派
+  cat: [ChaoPu, LianJiang]
+  labiodental: true
+  tones:
+    citation: [ 334, 552, 212, 3, 55, 24, 41, 54 ]
+    sandhi: [ 33, 24, 55, 54, 32, 33, 33, 3 ]
+    neutral: [ 22, 212, 21, 2, 22, 21, 22, 2 ]
+  rules:
+    - UR_As_U
+    - OR_As_E
+    - ORH_As_OH
+    - EU_As_IU
+    - OINN_As_AINN
+    - UOINN_As_UAINN
+    - HN_As_HURN
+    - OU_As_AU
+    - URN_As_IN
+    - IURN_As_IAN
+    - IURM_As_OM
+    - UONG_As_UENG
+    - IUONG_As_UENG
+    - UE_As_UEI
+    - UEI_As_OI
+    - L_As_N_For_NN_NG
+    - MU_As_BU_ForNasalEnding
+    - N_As_NG
+    - K_As_H
+    - NG_As_URNG
+    - PU_PHU_BU_Labiodentalize
+    - MU_Labiodentalize
